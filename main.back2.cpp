@@ -16,16 +16,16 @@ int main(int argc, const char **argv) {
   KEYBOARD keyboard;
   NAVE     nave("Seker.png");
 
-  nave.setX((coor_t)(screen->width / 2.0 - nave.get_width() / 2.0));
+  nave.setX((coor_t)(screen->width  / 2.0 - nave.get_width()  / 2.0));
   nave.setY((coor_t)(screen->height / 2.0 - nave.get_height() / 2.0));
-  nave.draw_bitmap(0);
 
+  nave.draw_bitmap(0);
   al_flip_display();
+
   SpaceShip.start_timer();
   int dir=UP;
 //  bool active=true;
 
-  cout << nave.get_height() << endl;
   while (!SpaceShip.game_over) {
     ALLEGRO_EVENT ev;
     al_wait_for_event(SpaceShip.get_event_queue(), &ev);
@@ -39,6 +39,29 @@ int main(int argc, const char **argv) {
         nave.moveY(-4.0);
         dir=DOWN;
       }
+      else if (keyboard.get_key_state(LEFT) && nave.getX() >= 4.0){
+        nave.moveX(-4.0);
+        dir=LEFT;
+      }
+      else if (keyboard.get_key_state(RIGHT) && nave.getY() <= screen->width - nave.get_width() - 4.0){
+        nave.moveX(4.0);
+        dir=RIGHT;
+      }
     }
+    else if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
+      break;
+    else if (ev.type == ALLEGRO_EVENT_KEY_DOWN)
+      keyboard.key_down_event(ev);
+    else if (ev.type == ALLEGRO_EVENT_KEY_UP)
+      keyboard.key_up_event(ev, SpaceShip);
+
+    if (SpaceShip.redraw && SpaceShip.event_queue_is_empty()){
+      SpaceShip.redraw = false;
+
+      SpaceShip.set_display_color(0,0,0);
+      nave.draw_nave();
+      al_flip_display();
+    }
+
   }
 }

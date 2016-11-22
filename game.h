@@ -33,7 +33,7 @@ class GAME {
 
     void set_display_color(int r, int g, int b);  /// Colorea el display
     void start_timer();                           /// Empieza el timer (FPS)
-    bool is_event_queue_empty();                  /// Verifica si la lista de eventos ya esta vacia
+    bool event_queue_is_empty();                  /// Verifica si la lista de eventos ya esta vacia
 
     ALLEGRO_DISPLAY*      get_display();          /// Devuelve la direccion del display
     ALLEGRO_EVENT_QUEUE*  get_event_queue();      /// Devuelve la direccion del event queue

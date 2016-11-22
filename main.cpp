@@ -64,7 +64,7 @@ int main(int argc, const char **argv) {
     else if (ev.type == ALLEGRO_EVENT_KEY_UP)
       keyboard.key_up_event(ev, SpaceShip);
 
-    if (SpaceShip.redraw && SpaceShip.is_event_queue_empty())
+    if (SpaceShip.redraw && SpaceShip.event_queue_is_empty())
     {
       SpaceShip.redraw = false;
 
