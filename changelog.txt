@@ -3,3 +3,7 @@
 -Creado un backup del main, para poder modificar el original
 2016-11-22
 -Espacio de la nave delimitado correctamente.
+-Agrega la imagen para los asteroides
+-Metodos diferentes para dibujar la nave y el asteroide
+-Nuevo metodo en bitmap, get_bitmap devuelve la direccion del bitmap.
+
