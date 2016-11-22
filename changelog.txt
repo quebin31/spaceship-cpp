@@ -1,3 +1,5 @@
 2016-11-21
 -Actualizado los constructores bitmap, y todas sus clases derivadas.
 -Creado un backup del main, para poder modificar el original
+2016-11-22
+-Espacio de la nave delimitado correctamente.
