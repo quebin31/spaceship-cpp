@@ -1,3 +1,7 @@
+//
+// Created by kevin on 21/11/16.
+//
+
 #include "game.h"
 #include "keyboard.h"
 #include "bitmap.h"
@@ -5,57 +9,51 @@
 
 using namespace std;
 
+#define NAVE_UP    0
+#define NAVE_RIGHT 32
+#define NAVE_LEFT  64
+
 SCREEN* screen = create_screen(640,480,60);
+int direction  = NAVE_UP;
 
 int main(int argc, const char **argv) {
   GAME     SpaceShip(screen);
   KEYBOARD keyboard;
-  NAVE     nave("Seker.png");
+  NAVE     nave("nave1.png");
 
-  nave.setX((coor_t)(screen->width / 2.0 - nave.get_width() / 2.0));
-  nave.setY((coor_t)(screen->height / 2.0 - nave.get_height() / 2.0));
-  nave.draw_bitmap(0);
+  nave.setX((coor_t)(screen->width  / 2.0 - nave.getW()  / 2.0));
+  nave.setY((coor_t)(screen->height / 2.0 - nave.getH() / 2.0));
 
+  nave.draw_nave(NAVE_UP);
   al_flip_display();
-  SpaceShip.start_timer();
-  int dir=UP;
-  bool active=true;
 
-  cout << nave.get_height() << endl;
-  while (!SpaceShip.game_over)
-  {
+  SpaceShip.start_timer();
+
+  while (!SpaceShip.game_over) {
     ALLEGRO_EVENT ev;
     al_wait_for_event(SpaceShip.get_event_queue(), &ev);
 
-    if (ev.type == ALLEGRO_EVENT_TIMER)
-    {
+    if (ev.type == ALLEGRO_EVENT_TIMER) {
       if (keyboard.get_key_state(UP) && nave.getY() >= 4.0){
         nave.moveY(-4.0);
-        dir=UP;
+        direction=NAVE_UP;
+        SpaceShip.redraw = true;
       }
-      else if (keyboard.get_key_state(DOWN) && nave.getY() <= screen->height - nave.get_height() - 4.0){
+      else if (keyboard.get_key_state(DOWN) && nave.getY() <= screen->height - nave.getH() - 4.0){
         nave.moveY(4.0);
-        dir=DOWN;
+        direction=NAVE_UP;
+        SpaceShip.redraw = true;
       }
       else if (keyboard.get_key_state(LEFT) && nave.getX() >= 4.0){
         nave.moveX(-4.0);
-        dir=LEFT;
+        direction=NAVE_LEFT;
+        SpaceShip.redraw = true;
       }
-      else if (keyboard.get_key_state(RIGHT) && nave.getX() <= screen->width - nave.get_width() - 4.0){
+      else if (keyboard.get_key_state(RIGHT) && nave.getX() <= screen->width - nave.getW() - 4.0) {
         nave.moveX(4.0);
-        dir=RIGHT;
+        direction = NAVE_RIGHT;
+        SpaceShip.redraw = true;
       }
-      else
-        active=false;
-      if (active){
-        nave.refresh_sourceX();
-      }
-      else
-        nave.change_sourceX(96);
-      if (nave.get_sourceX() >= al_get_bitmap_width(nave.get_bitmap()));
-        nave.change_sourceX(0);
-      nave.change_sourceY(dir);
-      SpaceShip.redraw = true;
     }
     else if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
       break;
@@ -64,15 +62,12 @@ int main(int argc, const char **argv) {
     else if (ev.type == ALLEGRO_EVENT_KEY_UP)
       keyboard.key_up_event(ev, SpaceShip);
 
-    if (SpaceShip.redraw && SpaceShip.event_queue_is_empty())
-    {
+    if (SpaceShip.redraw && SpaceShip.event_queue_is_empty()){
       SpaceShip.redraw = false;
-
       SpaceShip.set_display_color(0,0,0);
-      nave.draw_nave();
+      nave.draw_nave(direction);
       al_flip_display();
+      cout << "DEBUG: Printing nave " << direction << endl;
     }
   }
-
-  return 0;
 }

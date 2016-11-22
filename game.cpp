@@ -13,7 +13,55 @@ void destroy_screen(SCREEN *screen) { delete screen; }
 
 /// Constructor con SCREEN
 GAME::GAME(SCREEN *nscreen) {
-|0}
+  if (!al_init()) {
+    al_show_native_message_box(display,"Error","Error","Failed to initialize allegro!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
+    exit(EXIT_FAILURE);
+  }
+
+  if (!al_init_image_addon()) {
+    al_show_native_message_box(display,"Error","Error","Failed to initialize allegro!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
+    exit(EXIT_FAILURE);
+  }
+
+
+  if (!al_install_keyboard()) {
+    al_show_native_message_box(display,"Error","Error","Failed to initialize keyboard!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
+    exit(EXIT_FAILURE);
+  }
+
+  display = al_create_display(nscreen->width, nscreen->height);
+  if (!display) {
+    al_show_native_message_box(display,"Error","Error","Failed to initialize display!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
+    al_destroy_timer(timer);
+    exit(EXIT_FAILURE);
+  }
+
+  event_queue = al_create_event_queue();
+  if (!event_queue) {
+    al_show_native_message_box(display,"Error","Error","Failed to initialize bitmap!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
+    al_destroy_display(display);
+    al_destroy_timer(timer);
+    exit(EXIT_FAILURE);
+  }
+
+  timer = al_create_timer(1.0 / nscreen->fps);
+  if (!timer) {
+    al_show_native_message_box(display,"Error","Error","Failed to initialize timer!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
+    exit(EXIT_FAILURE);
+  }
+
+  screen = nscreen;
+
+  redraw = false;
+  game_over = false;
+  vidas = 3;
+
+  al_register_event_source(event_queue, al_get_display_event_source(display));
+  al_register_event_source(event_queue, al_get_timer_event_source(timer));
+  al_register_event_source(event_queue, al_get_keyboard_event_source());
+
+  set_display_color(0,0,0);
+}
 
 /// Destructor
 GAME::~GAME() {

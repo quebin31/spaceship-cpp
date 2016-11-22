@@ -6,6 +6,8 @@
 class BITMAP {
 protected:
   ALLEGRO_BITMAP *bitmap;                                     /// El bitmap en cuestión
+  int             width;
+  int             height;
   coor_t          posX;                                       /// Coordenada 'x'
   coor_t          posY;                                       /// Coordenada 'y'
   int             sourceX;                                    /// Coordenada 'x' de source
@@ -22,8 +24,10 @@ public:
   void moveX(coor_t dx);                                      /// Modifica el valor de 'x' aumentandolo/disminuyendo su valor
   void moveY(coor_t dy);                                      /// Modifica el valor de 'y' aumentandolo/disminuyendo su valor
 
-  int get_width();                                            /// Devuelve el valor del ancho
-  int get_height();                                           /// Devuelve el valor de la altura
+  int getW();                                                 /// Devuelve el ancho del bitmap
+  int getH();                                                 /// Devuelve la altura del bitmap
+  void setW(const int _w);                                    /// Cambia el valor del ancho
+  void setH(const int _h);                                    /// Cambia el valor de la altura
 
   void set_bitmap_color(int r, int g, int b, GAME& main);     /// Colorea el bitmap, y luego vuelve a seleccionar el display
   void draw_bitmap(int flags);                                /// Dibuja el bitmap
