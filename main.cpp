@@ -6,7 +6,7 @@
 #include "keyboard.h"
 #include "bitmap.h"
 #include "nave.h"
-#include "asteroid.h"
+#include "set_of_asteroids.h"
 
 using namespace std;
 
@@ -17,11 +17,13 @@ int main(int argc, const char **argv) {
   GAME     SpaceShip(screen);
   KEYBOARD keyboard;
   NAVE     nave("nave1.png");
+  SetOfAsteroids myAsters("asteroides.png");
 
   nave.setX((coor_t)(screen->width  / 2.0 - nave.getW()  / 2.0));
   nave.setY((coor_t)(screen->height / 2.0 - nave.getH()  / 2.0));
 
   nave.draw_nave(NAVE_UP);
+  myAsters.draw_asteroids();
   al_flip_display();
 
   SpaceShip.start_timer();
@@ -29,6 +31,7 @@ int main(int argc, const char **argv) {
   while (!SpaceShip.game_over) {
     ALLEGRO_EVENT ev;
     al_wait_for_event(SpaceShip.get_event_queue(), &ev);
+
 
     if (ev.type == ALLEGRO_EVENT_TIMER) {
       if (keyboard.get_key_state(UP) && nave.getY() >= 4.0){
@@ -51,6 +54,11 @@ int main(int argc, const char **argv) {
         direction = NAVE_RIGHT;
         SpaceShip.redraw = true;
       }
+      SpaceShip.set_display_color(0,0,0);
+      myAsters.move_asteroids();
+      myAsters.draw_asteroids();
+      nave.draw_nave(direction);
+      al_flip_display();
     }
     else if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
       break;
