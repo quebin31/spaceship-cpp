@@ -65,6 +65,7 @@ int main(int argc, const char **argv) {
       myAsters.draw_asteroids();
       nave.draw_nave(direction);
       al_flip_display();
+      cout << SpaceShip.get_timer_count() << endl;
 
     }
     else if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
@@ -81,4 +82,6 @@ int main(int argc, const char **argv) {
 //      al_flip_display();
 //    }
   }
+  cout << al_get_time() << endl;
+  return 0;
 }

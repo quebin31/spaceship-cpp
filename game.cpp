@@ -104,3 +104,7 @@ ALLEGRO_TIMER *GAME::get_timer() { return timer; }
 
 /// Devuelve la direccion del screen
 SCREEN *GAME::get_screen() { return screen; }
+
+int64_t GAME::get_timer_count() {
+  return al_get_timer_count(timer);
+}

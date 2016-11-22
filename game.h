@@ -39,6 +39,7 @@ class GAME {
     ALLEGRO_EVENT_QUEUE*  get_event_queue();      /// Devuelve la direccion del event queue
     ALLEGRO_TIMER*        get_timer();            /// Devuelve la direccion del timer
     SCREEN*               get_screen();           /// Devuelve la direccion del screen template
+    int64_t               get_timer_count();
 };
 
 #endif // GAME_H
