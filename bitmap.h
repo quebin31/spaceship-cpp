@@ -15,11 +15,11 @@ class BITMAP {
   public:
     BITMAP();
     BITMAP(const char* file);
-    BITMAP(int sz, bool img = false);                               /// Constructor que solo recibe un elemento, donde la altura y el ancho son iguales
-    BITMAP(int w, int h, bool img = false);                         /// Constructor que recibe la altura y el ancho
-    BITMAP(coor_t nx, coor_t ny, bool img = false);                 /// Constructor que solo recibe coordenadas 'x' y 'y'
-    BITMAP(coor_t nx, coor_t ny, int sz, bool img = false);         /// Constructor al igual que el primero, solo que este recibe coordenadas 'x' y 'y'
-    BITMAP(coor_t nx, coor_t ny, int w, int h, bool img = false);   /// Constructor al igual que el segundo, solo que este recibe coordenadas 'x' y 'y'
+//    BITMAP(int sz, bool img = false);                               /// Constructor que solo recibe un elemento, donde la altura y el ancho son iguales
+//    BITMAP(int w, int h, bool img = false);                         /// Constructor que recibe la altura y el ancho
+//    BITMAP(coor_t nx, coor_t ny, bool img = false);                 /// Constructor que solo recibe coordenadas 'x' y 'y'
+//    BITMAP(coor_t nx, coor_t ny, int sz, bool img = false);         /// Constructor al igual que el primero, solo que este recibe coordenadas 'x' y 'y'
+//    BITMAP(coor_t nx, coor_t ny, int w, int h, bool img = false);   /// Constructor al igual que el segundo, solo que este recibe coordenadas 'x' y 'y'
     ~BITMAP();                                                      /// Destructor de BITMAP
 
     void setX(coor_t nx);                                            /// Modifica el valor de 'x'

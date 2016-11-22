@@ -3,3 +3,8 @@
 //
 
 #include "asteroid.h"
+
+ASTEROID::ASTEROID(const char *file) : BITMAP(file) {
+
+}
+

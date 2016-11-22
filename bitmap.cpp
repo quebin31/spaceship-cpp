@@ -3,30 +3,30 @@
 BITMAP::BITMAP(const char* file){
     bitmap = al_load_bitmap(file);
 }
-/// Constructor
-BITMAP::BITMAP(int sz, bool img): width(sz), height(sz) {
-  if (!img) bitmap = al_create_bitmap(width,height);
-}
-
-/// Constructor
-BITMAP::BITMAP(int w, int h, bool img): width(w), height(h) {
-  if (!img) bitmap = al_create_bitmap(width,height);
-}
-
-/// Constructor
-BITMAP::BITMAP(coor_t nx, coor_t ny, bool img): x(nx), y(ny) {
-  if (!img) bitmap = al_create_bitmap(width,height);
-}
-
-/// Constructor
-BITMAP::BITMAP(coor_t nx, coor_t ny, int sz, bool img): x(nx), y(ny), width(sz), height(sz) {
-  if (!img) bitmap = al_create_bitmap(width,height);
-}
-
-/// Constructor
-BITMAP::BITMAP(coor_t nx, coor_t ny, int w, int h, bool img): x(nx), y(ny), width(w), height(h) {
-  if (!img) bitmap = al_create_bitmap(width,height);
-}
+///// Constructor
+//BITMAP::BITMAP(int sz, bool img): width(sz), height(sz) {
+//  if (!img) bitmap = al_create_bitmap(width,height);
+//}
+//
+///// Constructor
+//BITMAP::BITMAP(int w, int h, bool img): width(w), height(h) {
+//  if (!img) bitmap = al_create_bitmap(width,height);
+//}
+//
+///// Constructor
+//BITMAP::BITMAP(coor_t nx, coor_t ny, bool img): x(nx), y(ny) {
+//  if (!img) bitmap = al_create_bitmap(width,height);
+//}
+//
+///// Constructor
+//BITMAP::BITMAP(coor_t nx, coor_t ny, int sz, bool img): x(nx), y(ny), width(sz), height(sz) {
+//  if (!img) bitmap = al_create_bitmap(width,height);
+//}
+//
+///// Constructor
+//BITMAP::BITMAP(coor_t nx, coor_t ny, int w, int h, bool img): x(nx), y(ny), width(w), height(h) {
+//  if (!img) bitmap = al_create_bitmap(width,height);
+//}
 
 /// Destructor
 BITMAP::~BITMAP() { al_destroy_bitmap(bitmap); }

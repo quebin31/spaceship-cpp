@@ -8,7 +8,9 @@
 #include "bitmap.h"
 
 class ASTEROID: public BITMAP {
-
+private:
+public:
+  ASTEROID(const char* file);
 };
 
 
