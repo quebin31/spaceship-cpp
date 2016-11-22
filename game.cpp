@@ -61,7 +61,7 @@ GAME::GAME(SCREEN *nscreen) {
   cout << "GAME: La pantalla actual es de " << screen->width << "x" << screen->height << endl;
 
   redraw = false;
-  game_over = false;
+  game_over = true;
   vidas = 3;
 
   cout << "GAME: Registrando todos los eventos" << endl;

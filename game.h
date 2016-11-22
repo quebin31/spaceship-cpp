@@ -25,7 +25,7 @@ class GAME {
     SCREEN                *screen;                /// SCREEN
   public:
     bool                  redraw;                 /// Redibuja (bool), controla si se esta listo para redibujar
-    bool                  game_over;              /// Game Over (bool), controla el while principal del juego
+    bool                  game_over;              /// Game Over (bool), controla el while principal del jueg
     int                   vidas;                  /// Vidas del juego
 
     GAME(SCREEN* nscreen);                        /// Constructor de GAME en base a la pantalla

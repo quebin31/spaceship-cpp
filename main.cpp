@@ -7,6 +7,8 @@
 #include "bitmap.h"
 #include "nave.h"
 #include "asteroid.h"
+#include <allegro5/allegro_font.h>
+#include <allegro5/allegro_ttf.h>
 
 using namespace std;
 
@@ -21,49 +23,66 @@ int main(int argc, const char **argv) {
   nave.setX((coor_t)(screen->width  / 2.0 - nave.getW()  / 2.0));
   nave.setY((coor_t)(screen->height / 2.0 - nave.getH()  / 2.0));
 
-  nave.draw_nave(NAVE_UP);
-  al_flip_display();
+  al_init_font_addon();
+  al_init_ttf_addon();
 
-  SpaceShip.start_timer();
+  bool gamespace = false;
 
-  while (!SpaceShip.game_over) {
+  while(!gamespace){
+    ALLEGRO_FONT *font = al_load_font("PressStart2P.ttf", 30, 0);
+    al_draw_text(font, al_map_rgb(200,10,50), 640/2, 480/2, ALLEGRO_ALIGN_CENTRE,"ASTEROID GAME");
+    al_flip_display();
     ALLEGRO_EVENT ev;
     al_wait_for_event(SpaceShip.get_event_queue(), &ev);
 
-    if (ev.type == ALLEGRO_EVENT_TIMER) {
-      if (keyboard.get_key_state(UP) && nave.getY() >= 4.0){
-        nave.moveY(-4.0);
-        direction=NAVE_UP;
-        SpaceShip.redraw = true;
-      }
-      else if (keyboard.get_key_state(DOWN) && nave.getY() <= screen->height - nave.getH() - 4.0){
-        nave.moveY(4.0);
-        direction=NAVE_UP;
-        SpaceShip.redraw = true;
-      }
-      else if (keyboard.get_key_state(LEFT) && nave.getX() >= 4.0){
-        nave.moveX(-4.0);
-        direction=NAVE_LEFT;
-        SpaceShip.redraw = true;
-      }
-      else if (keyboard.get_key_state(RIGHT) && nave.getX() <= screen->width - nave.getW() - 4.0) {
-        nave.moveX(4.0);
-        direction = NAVE_RIGHT;
-        SpaceShip.redraw = true;
-      }
+    if (ev.type == ALLEGRO_EVENT_KEY_UP)
+      if(ev.keyboard.keycode==ALLEGRO_KEY_ESCAPE)
+        break;
+    else if (ev.type == ALLEGRO_EVENT_KEY_UP){
+      if (ev.keyboard.keycode==ALLEGRO_KEY_ENTER){
+        SpaceShip.game_over = false;
+        nave.draw_nave(NAVE_UP);
+        al_flip_display();
+        SpaceShip.start_timer();
+        }
     }
-    else if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
-      break;
-    else if (ev.type == ALLEGRO_EVENT_KEY_DOWN)
-      keyboard.key_down_event(ev);
-    else if (ev.type == ALLEGRO_EVENT_KEY_UP)
-      keyboard.key_up_event(ev, SpaceShip);
+    while (!SpaceShip.game_over) {
 
-    if (SpaceShip.redraw && SpaceShip.event_queue_is_empty()){
-      SpaceShip.redraw = false;
-      SpaceShip.set_display_color(0,0,0);
-      nave.draw_nave(direction);
-      al_flip_display();
+      if (ev.type == ALLEGRO_EVENT_TIMER) {
+        if (keyboard.get_key_state(UP) && nave.getY() >= 4.0){
+          nave.moveY(-4.0);
+          direction=NAVE_UP;
+          SpaceShip.redraw = true;
+        }
+        else if (keyboard.get_key_state(DOWN) && nave.getY() <= screen->height - nave.getH() - 4.0){
+          nave.moveY(4.0);
+          direction=NAVE_UP;
+          SpaceShip.redraw = true;
+        }
+        else if (keyboard.get_key_state(LEFT) && nave.getX() >= 4.0){
+          nave.moveX(-4.0);
+          direction=NAVE_LEFT;
+          SpaceShip.redraw = true;
+        }
+        else if (keyboard.get_key_state(RIGHT) && nave.getX() <= screen->width - nave.getW() - 4.0) {
+          nave.moveX(4.0);
+          direction = NAVE_RIGHT;
+          SpaceShip.redraw = true;
+        }
+      }
+      else if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
+        break;
+      else if (ev.type == ALLEGRO_EVENT_KEY_DOWN)
+        keyboard.key_down_event(ev);
+      else if (ev.type == ALLEGRO_EVENT_KEY_UP)
+        keyboard.key_up_event(ev, SpaceShip);
+
+      if (SpaceShip.redraw && SpaceShip.event_queue_is_empty()){
+        SpaceShip.redraw = false;
+        SpaceShip.set_display_color(0,0,0);
+        nave.draw_nave(direction);
+        al_flip_display();
+      }
     }
   }
 }
