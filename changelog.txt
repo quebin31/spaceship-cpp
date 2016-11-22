@@ -9,4 +9,6 @@
 -Nueva clase para almacenar Asteroides, usando la libreria STL (vector)
 -Nuevo metodo para SetOfAsteroids, move_asteroids mueve los asteroides.
 -Nuevo metodo para SetOfAsteroids, draw_asteroids dibuja los asteroides.
+-Agregada parcialemente la funcionalidad para disparar
+-Nueva clase GUN, usada dentro de NAVE para hacer alusion al arma
 
