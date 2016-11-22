@@ -6,12 +6,9 @@
 #include "keyboard.h"
 #include "bitmap.h"
 #include "nave.h"
+#include "asteroid.h"
 
 using namespace std;
-
-#define NAVE_UP    0
-#define NAVE_RIGHT 32
-#define NAVE_LEFT  64
 
 SCREEN* screen = create_screen(640,480,60);
 int direction  = NAVE_UP;
@@ -22,7 +19,7 @@ int main(int argc, const char **argv) {
   NAVE     nave("nave1.png");
 
   nave.setX((coor_t)(screen->width  / 2.0 - nave.getW()  / 2.0));
-  nave.setY((coor_t)(screen->height / 2.0 - nave.getH() / 2.0));
+  nave.setY((coor_t)(screen->height / 2.0 - nave.getH()  / 2.0));
 
   nave.draw_nave(NAVE_UP);
   al_flip_display();
@@ -67,7 +64,6 @@ int main(int argc, const char **argv) {
       SpaceShip.set_display_color(0,0,0);
       nave.draw_nave(direction);
       al_flip_display();
-      cout << "DEBUG: Printing nave " << direction << endl;
     }
   }
 }

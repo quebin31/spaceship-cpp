@@ -4,13 +4,15 @@
 #include "game.h"
 #include "bitmap.h"
 
+#define NAVE_UP    0
+#define NAVE_RIGHT 32
+#define NAVE_LEFT  64
+
 class NAVE: public BITMAP {
 public:
   NAVE(const char* file);
-  ALLEGRO_BITMAP* get_bitmap(void);
-  void draw_nave(const int _number);
-  void select(const int _election);
 
+  void draw_nave(const int _nave_no);
 };
 
 #endif // NAVE_H
