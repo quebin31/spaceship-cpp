@@ -54,11 +54,18 @@ int main(int argc, const char **argv) {
         direction = NAVE_RIGHT;
         SpaceShip.redraw = true;
       }
+
+      if (keyboard.get_key_state(CHAR_A)){
+        nave.shoot();
+        keyboard.change_key_state(CHAR_A, false);
+      }
+
       SpaceShip.set_display_color(0,0,0);
       myAsters.move_asteroids();
       myAsters.draw_asteroids();
       nave.draw_nave(direction);
       al_flip_display();
+
     }
     else if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
       break;
@@ -67,11 +74,11 @@ int main(int argc, const char **argv) {
     else if (ev.type == ALLEGRO_EVENT_KEY_UP)
       keyboard.key_up_event(ev, SpaceShip);
 
-    if (SpaceShip.redraw && SpaceShip.event_queue_is_empty()){
-      SpaceShip.redraw = false;
-      SpaceShip.set_display_color(0,0,0);
-      nave.draw_nave(direction);
-      al_flip_display();
-    }
+//    if (SpaceShip.redraw && SpaceShip.event_queue_is_empty()){
+//      SpaceShip.redraw = false;
+//      SpaceShip.set_display_color(0,0,0);
+//      nave.draw_nave(direction);
+//      al_flip_display();
+//    }
   }
 }
