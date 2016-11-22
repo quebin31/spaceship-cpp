@@ -5,7 +5,6 @@
 #include "bitmap.h"
 
 class NAVE: public BITMAP {
-private:
 public:
   NAVE(const char* file);
   void change_sourceX(int _sourceX);

@@ -18,8 +18,10 @@ int main(int argc, const char **argv) {
 
   al_flip_display();
   SpaceShip.start_timer();
-  int dir=UP; //DIRECCION
+  int dir=UP;
   bool active=true;
+
+  cout << nave.get_height() << endl;
   while (!SpaceShip.game_over)
   {
     ALLEGRO_EVENT ev;
