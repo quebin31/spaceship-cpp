@@ -73,13 +73,17 @@ GAME::GAME(SCREEN *nscreen) {
   cout << "GAME: La pantalla actual es de " << screen->width << "x" << screen->height << endl;
 
   redraw = false;
-  game_over = false;
+  game_over = true;
   vidas = 3;
 
   cout << "GAME: Registrando todos los eventos" << endl;
   al_register_event_source(event_queue, al_get_display_event_source(display));
   al_register_event_source(event_queue, al_get_timer_event_source(timer));
   al_register_event_source(event_queue, al_get_keyboard_event_source());
+
+  font1=al_load_font("PressStart2P.ttf",30,0);
+  font2=al_load_font("Joystick.otf",20,0);
+  cout << "GAME: Cargados los paquetes de fuente" << endl;
 
   set_display_color(0,0,0);
   cout << "GAME: All done." << endl;

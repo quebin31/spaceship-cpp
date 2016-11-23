@@ -25,9 +25,9 @@ class GAME {
     ALLEGRO_EVENT_QUEUE   *event_queue;           /// ALLEGRO_EVENT_QUEUE
     ALLEGRO_TIMER         *timer;                 /// ALLEGRO_TIMER
     SCREEN                *screen;                /// SCREEN
+  public:
     ALLEGRO_FONT          *font1;                 /// FONT FOR MAIN TITLE
     ALLEGRO_FONT          *font2;                 /// FONT FOR INSTRUCCIONS
-  public:
     bool                  redraw;                 /// Redibuja (bool), controla si se esta listo para redibujar
     bool                  game_over;              /// Game Over (bool), controla el while principal del jueg
     int                   vidas;                  /// Vidas del juego
