@@ -6,6 +6,7 @@ KEYBOARD::KEYBOARD() {
   key[1] = false;
   key[2] = false;
   key[3] = false;
+  key[4] = false;
 }
 
 /// Devuelve el estado de una key
@@ -29,6 +30,9 @@ void KEYBOARD::key_down_event(ALLEGRO_EVENT &ev) {
     case ALLEGRO_KEY_RIGHT:
       key[RIGHT] = true;
       break;
+    case ALLEGRO_KEY_A:
+      key[CHAR_A] = true;
+      break;
   }
 }
 
@@ -46,6 +50,9 @@ void KEYBOARD::key_up_event(ALLEGRO_EVENT &ev, GAME &main) {
       break;
     case ALLEGRO_KEY_RIGHT:
       key[RIGHT] = false;
+      break;
+    case ALLEGRO_KEY_A:
+      key[CHAR_A] = false;
       break;
     case ALLEGRO_KEY_ESCAPE:
       main.game_over = true;

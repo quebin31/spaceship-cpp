@@ -4,12 +4,12 @@
 #include "game.h"
 
 enum KEYS{
-  UP, RIGHT, LEFT, DOWN
+  UP, RIGHT, LEFT, DOWN, CHAR_A
 };
 
 class KEYBOARD {
   private:
-    bool key[4];
+    bool key[5];
   public:
     KEYBOARD();
 

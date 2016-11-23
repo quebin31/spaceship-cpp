@@ -53,6 +53,10 @@ void BITMAP::setH(const int _h) {
   height = _h;
 }
 
+ALLEGRO_BITMAP *BITMAP::get_bitmap() {
+  return bitmap;
+}
+
 
 
 

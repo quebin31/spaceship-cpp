@@ -27,6 +27,18 @@ GAME::GAME(SCREEN *nscreen) {
     exit(EXIT_FAILURE);
   }
 
+  cout << "GAME: Iniciando allegro font" << endl;
+  if (!al_init_font_addon()) {
+    al_show_native_message_box(display,"Error","Error","Failed to initialize allegro!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
+    exit(EXIT_FAILURE);
+  }
+
+  cout << "GAME: Iniciando allegro ttf" << endl;
+  if (!al_init_ttf_addon()) {
+    al_show_native_message_box(display,"Error","Error","Failed to initialize allegro!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
+    exit(EXIT_FAILURE);
+  }
+
   cout << "GAME: Iniciando el teclado" << endl;
   if (!al_install_keyboard()) {
     al_show_native_message_box(display,"Error","Error","Failed to initialize keyboard!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
@@ -61,7 +73,7 @@ GAME::GAME(SCREEN *nscreen) {
   cout << "GAME: La pantalla actual es de " << screen->width << "x" << screen->height << endl;
 
   redraw = false;
-  game_over = true;
+  game_over = false;
   vidas = 3;
 
   cout << "GAME: Registrando todos los eventos" << endl;
@@ -104,3 +116,13 @@ ALLEGRO_TIMER *GAME::get_timer() { return timer; }
 
 /// Devuelve la direccion del screen
 SCREEN *GAME::get_screen() { return screen; }
+
+/// Devuelve la fuente del titulo principal
+ALLEGRO_FONT *GAME::get_font1() { return font1;}
+
+/// Devuelve la fuente de los titulos de instrucciones
+ALLEGRO_FONT *GAME::get_font2() { return font2;}
+
+int64_t GAME::get_timer_count() {
+  return al_get_timer_count(timer);
+}
