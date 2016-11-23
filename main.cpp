@@ -93,6 +93,7 @@ int main(int argc, const char **argv) {
           else if (ev.type == ALLEGRO_EVENT_KEY_UP)
             keyboard.key_up_event(ev, SpaceShip);
 
+<<<<<<< HEAD
           if (SpaceShip.redraw && SpaceShip.event_queue_is_empty()){
             SpaceShip.redraw = false;
             SpaceShip.set_display_color(0,0,0);
@@ -104,6 +105,16 @@ int main(int argc, const char **argv) {
     }
     else if (eve.type==ALLEGRO_EVENT_DISPLAY_CLOSE)
       done=true;
+=======
+
+    // fixme: Realmente es necesario, mas arriba se dibuja la nave y los asteroides.
+//    if (SpaceShip.redraw && SpaceShip.event_queue_is_empty()){
+//      SpaceShip.redraw = false;
+//      SpaceShip.set_display_color(0,0,0);
+//      nave.draw_nave(direction);
+//      al_flip_display();
+//    }
+>>>>>>> 58cde2a331a7ca92acbc2bf3ecb9cadd83f7d854
   }
 
   cout << al_get_time() << endl;
