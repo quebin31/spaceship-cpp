@@ -8,20 +8,20 @@
 #include "nave.h"
 #include "set_of_asteroids.h"
 
-
 using namespace std;
 
 SCREEN* screen = create_screen(640,480,60);
 int direction  = NAVE_UP;
 
 int main(int argc, const char **argv) {
-  GAME     SpaceShip(screen);
-  KEYBOARD keyboard;
-  NAVE     nave("nave1.png");
+  GAME           SpaceShip(screen);
+  KEYBOARD       keyboard;
+  NAVE           nave("nave1.png");
   SetOfAsteroids myAsters("asteroides.png");
 
   nave.setX((coor_t)(screen->width  / 2.0 - nave.getW()  / 2.0));
   nave.setY((coor_t)(screen->height / 2.0 - nave.getH()  / 2.0));
+
   bool done=false;
   while (!done){
     SpaceShip.set_display_color(0,0,0);
@@ -32,13 +32,14 @@ int main(int argc, const char **argv) {
     SpaceShip.game_over=false;
     ALLEGRO_EVENT eve;
     al_wait_for_event(SpaceShip.get_event_queue() ,&eve);
-    if (eve.type==ALLEGRO_EVENT_KEY_UP){
-      if(eve.keyboard.keycode==ALLEGRO_KEY_ESCAPE){
+
+    if (eve.type == ALLEGRO_EVENT_KEY_UP){
+      if(eve.keyboard.keycode == ALLEGRO_KEY_ESCAPE){
         done=true;
       }
     }
-    else if(eve.type==ALLEGRO_EVENT_KEY_DOWN){
-      if(eve.keyboard.keycode==ALLEGRO_KEY_ENTER){
+    else if(eve.type == ALLEGRO_EVENT_KEY_DOWN){
+      if(eve.keyboard.keycode == ALLEGRO_KEY_ENTER){
 
         SpaceShip.set_display_color(0,0,0);
         nave.draw_nave(NAVE_UP);
@@ -76,7 +77,7 @@ int main(int argc, const char **argv) {
             if (keyboard.get_key_state(CHAR_A)){
               nave.shoot();
               keyboard.change_key_state(CHAR_A, false);
-              }
+            }
 
             SpaceShip.set_display_color(0,0,0);
             myAsters.move_asteroids();
@@ -92,17 +93,24 @@ int main(int argc, const char **argv) {
             keyboard.key_down_event(ev);
           else if (ev.type == ALLEGRO_EVENT_KEY_UP)
             keyboard.key_up_event(ev, SpaceShip);
+<<<<<<< HEAD
           if (SpaceShip.redraw && SpaceShip.event_queue_is_empty()){
+=======
+
+          // fixme: ¿Es necesaria esta parte?
+          /*if (SpaceShip.redraw && SpaceShip.event_queue_is_empty()){
+>>>>>>> 7b8fe6f5a7ebe56c105a7de2d6aa958800b5d20e
             SpaceShip.redraw = false;
             SpaceShip.set_display_color(0,0,0);
             nave.draw_nave(direction);
             al_flip_display();
-          }
+          }*/
         }
       }
     }
     else if (eve.type==ALLEGRO_EVENT_DISPLAY_CLOSE)
       done=true;
+<<<<<<< HEAD
     // fixme: Realmente es necesario, mas arriba se dibuja la nave y los asteroides.
 //    if (SpaceShip.redraw && SpaceShip.event_queue_is_empty()){
 //      SpaceShip.redraw = false;
@@ -110,6 +118,8 @@ int main(int argc, const char **argv) {
 //      nave.draw_nave(direction);
 //      al_flip_display();
 //    }
+=======
+>>>>>>> 7b8fe6f5a7ebe56c105a7de2d6aa958800b5d20e
   }
 
   cout << al_get_time() << endl;
