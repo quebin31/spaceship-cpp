@@ -8,7 +8,6 @@
 #include "nave.h"
 #include "set_of_asteroids.h"
 
-
 using namespace std;
 
 SCREEN* screen = create_screen(640,480,60);
