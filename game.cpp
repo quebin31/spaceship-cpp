@@ -85,6 +85,7 @@ GAME::GAME(SCREEN *nscreen) {
   font2=al_load_font("Joystick.otf",20,0);
   cout << "GAME: Cargados los paquetes de fuente" << endl;
 
+  al_set_window_position(display, 350, 180);
   set_display_color(0,0,0);
   cout << "GAME: All done." << endl;
 }
