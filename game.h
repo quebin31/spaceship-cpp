@@ -25,11 +25,11 @@ class GAME {
     ALLEGRO_EVENT_QUEUE   *event_queue;           /// ALLEGRO_EVENT_QUEUE
     ALLEGRO_TIMER         *timer;                 /// ALLEGRO_TIMER
     SCREEN                *screen;                /// SCREEN
+    ALLEGRO_FONT          *font1;                 /// Fuente para el titulo principal
+    ALLEGRO_FONT          *font2;                 /// Fuente para las instrucciones
   public:
-    ALLEGRO_FONT          *font1;                 /// FONT FOR MAIN TITLE
-    ALLEGRO_FONT          *font2;                 /// FONT FOR INSTRUCCIONS
     bool                  redraw;                 /// Redibuja (bool), controla si se esta listo para redibujar
-    bool                  game_over;              /// Game Over (bool), controla el while principal del jueg
+    bool                  game_over;              /// Game Over (bool), controla el while principal del juego
     int                   vidas;                  /// Vidas del juego
 
     GAME(SCREEN* nscreen);                        /// Constructor de GAME en base a la pantalla
@@ -45,7 +45,7 @@ class GAME {
     SCREEN*               get_screen();           /// Devuelve la direccion del screen template
     ALLEGRO_FONT*         get_font1();            /// Devuelve la fuente del titulo principal
     ALLEGRO_FONT*         get_font2();            /// Devuelve la fuente de los titulos para instrucciones
-    int64_t               get_timer_count();
+    int64_t               get_timer_count();      /// Devuelve la cantidad de frames desde que se inicio el timer
 };
 
 #endif // GAME_H

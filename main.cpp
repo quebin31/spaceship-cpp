@@ -13,7 +13,7 @@ using namespace std;
 SCREEN* screen = create_screen(640,480,60);
 int direction  = NAVE_UP;
 
-int main(int argc, const char **argv) {
+int main(int argc, const char **argv){
   GAME           SpaceShip(screen);
   KEYBOARD       keyboard;
   NAVE           nave("nave1.png");
@@ -21,13 +21,13 @@ int main(int argc, const char **argv) {
 
   nave.setX((coor_t)(screen->width  / 2.0 - nave.getW()  / 2.0));
   nave.setY((coor_t)(screen->height / 2.0 - nave.getH()  / 2.0));
+  bool done = false;
 
-  bool done=false;
   while (!done){
     SpaceShip.set_display_color(0,0,0);
-    al_draw_text(SpaceShip.font1, al_map_rgb(200,10,50), screen->width/2, screen->height/2, ALLEGRO_ALIGN_CENTRE,"ASTEROID GAME");
-    al_draw_text(SpaceShip.font2, al_map_rgb(20,30,60), screen->width/2, screen->height/2+60, ALLEGRO_ALIGN_CENTRE,"START (PRESS ENTER)");
-    al_draw_text(SpaceShip.font2, al_map_rgb(20,30,60), screen->width/2, screen->height/2+120, ALLEGRO_ALIGN_CENTRE,"EXIT (PRESS ESCAPE)");
+    al_draw_text(SpaceShip.get_font1(), al_map_rgb(200,10,50), screen->width/2, screen->height/2, ALLEGRO_ALIGN_CENTRE,"ASTEROID GAME");
+    al_draw_text(SpaceShip.get_font2(), al_map_rgb(20,30,60), screen->width/2, screen->height/2+60, ALLEGRO_ALIGN_CENTRE,"START (PRESS ENTER)");
+    al_draw_text(SpaceShip.get_font2(), al_map_rgb(20,30,60), screen->width/2, screen->height/2+120, ALLEGRO_ALIGN_CENTRE,"EXIT (PRESS ESCAPE)");
     al_flip_display();
     SpaceShip.game_over=false;
     ALLEGRO_EVENT eve;
