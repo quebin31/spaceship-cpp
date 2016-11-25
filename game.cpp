@@ -39,6 +39,18 @@ GAME::GAME(SCREEN *nscreen) {
     exit(EXIT_FAILURE);
   }
 
+  cout << "GAME: Iniciando allegro acodec" << endl;
+  if (!al_init_acodec_addon()) {
+    al_show_native_message_box(display,"Error","Error","Failed to initialize allegro!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
+    exit(EXIT_FAILURE);
+  }
+
+  cout << "GAME: Iniciando allegro audio" << endl;
+  if (!al_install_audio()) {
+    al_show_native_message_box(display,"Error","Error","Failed to initialize allegro!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
+    exit(EXIT_FAILURE);
+  }
+
   cout << "GAME: Iniciando el teclado" << endl;
   if (!al_install_keyboard()) {
     al_show_native_message_box(display,"Error","Error","Failed to initialize keyboard!", NULL, ALLEGRO_MESSAGEBOX_ERROR);

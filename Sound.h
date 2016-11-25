@@ -6,7 +6,7 @@
 
 class Sound{
 protected:
-  ALLEGRO_SAMPLE* move_sound;
+  ALLEGRO_SAMPLE* sound_move;
 public:
   Sound();
   ~Sound();
