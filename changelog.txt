@@ -17,4 +17,7 @@
 -Eliminado sound.h/cpp
 -Actualizado algunos headers en preparacion para hacer el codigo reusable en partes como mover la nave, dibujarla, etc...
 -Actualizado metodos de codigo reutilizable
--WIP: Generacion de asteroides
+-WIP: Generacion de asteroides, compilar el codigo source puede lanzar 
+error
+
+*WIP = Work In Progress
