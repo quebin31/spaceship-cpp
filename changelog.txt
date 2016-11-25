@@ -11,4 +11,8 @@
 -Nuevo metodo para ASTEROIDS, draw_asteroids dibuja los asteroides.
 -Agregada parcialemente la funcionalidad para disparar
 -Nueva clase GUN, usada dentro de NAVE para hacer alusion al arma
--Agregado a game.h loos files tff y font, para el uso de las fuentes. 
+-Agregado a game.h los files tff y font, para el uso de las fuentes. 
+2016-11-25
+-Eliminado la clase sound, incorporada su funcionalidad en la clase GAME en game.h/cpp
+-Eliminado sound.h/cpp
+-Actualizado algunos headers en preparacion para hacer el codigo reusable en partes como mover la nave, dibujarla, etc...
