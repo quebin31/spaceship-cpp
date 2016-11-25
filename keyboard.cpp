@@ -38,7 +38,7 @@ void KEYBOARD::key_down_event(ALLEGRO_EVENT &ev) {
 }
 
 /// Procedimiento cuando llegue un evento al soltar una tecla
-void KEYBOARD::key_up_event(ALLEGRO_EVENT& ev, GAME& main) {
+void KEYBOARD::key_up_event(ALLEGRO_EVENT& ev, GAME* main) {
   switch (ev.keyboard.keycode){
     case ALLEGRO_KEY_UP:
       key[UP] = false;
@@ -56,7 +56,7 @@ void KEYBOARD::key_up_event(ALLEGRO_EVENT& ev, GAME& main) {
       key[CHAR_A] = false;
       break;
     case ALLEGRO_KEY_ESCAPE:
-      main.game_over_or_pause = true;
+      main->game_over_or_pause = true;
       break;
   }
 }

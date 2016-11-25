@@ -26,7 +26,8 @@ class GAME {
     ALLEGRO_FONT          *font2;                 /// Fuente para las instrucciones
     ALLEGRO_SAMPLE        *move_sound;            /// Audio al mover la nave
   public:
-    bool                  game_over_or_pause;     /// Game Over Or Pause (bool), controla el while principal del juego
+    bool                  done;                   /// Done (bool), controla el while del programa
+    bool                  game_over_or_pause;     /// Game Over Or Pause (bool), controla el while del juego
     int                   vidas;                  /// Vidas del juego
 
     GAME(SCREEN* nscreen);                        /// Constructor de GAME en base a la pantalla
@@ -35,6 +36,7 @@ class GAME {
     void set_display_color(int r, int g, int b);  /// Colorea el display
     void start_timer();                           /// Empieza el timer (FPS)
     void wait_for_event(ALLEGRO_EVENT& ev);       /// Esperar por un evento
+    void manage_events(ALLEGRO_EVENT& ev, KEYBOARD& keyboard, NAVE& nave, ASTEROIDS& asters);
     void show_menu();                             /// Muestra el menu del juego
     void event_timer(KEYBOARD& keyboard, NAVE& nave, ASTEROIDS& asters);
     void play_move_sound();                       /// Reproduce move_sound
