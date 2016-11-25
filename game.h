@@ -10,6 +10,9 @@
 #include <allegro5/allegro_font.h>
 #include <allegro5/allegro_ttf.h>
 
+#define MAIN_MENU 0
+#define PAUSE     2
+
 typedef struct SCREEN {
   int width;      /// Ancho
   int height;     /// Alto
@@ -37,6 +40,7 @@ class GAME {
 
     void set_display_color(int r, int g, int b);  /// Colorea el display
     void start_timer();                           /// Empieza el timer (FPS)
+    void show_menu();                             /// Muestra el menu del juego
     bool event_queue_is_empty();                  /// Verifica si la lista de eventos ya esta vacia
 
     ALLEGRO_DISPLAY*      get_display();          /// Devuelve la direccion del display

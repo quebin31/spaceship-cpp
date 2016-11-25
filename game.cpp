@@ -92,10 +92,12 @@ GAME::GAME(SCREEN *nscreen) {
 
 /// Destructor
 GAME::~GAME() {
+  cout << "GAME: Finalizando el juego" << endl;
   al_destroy_display(display);
   al_destroy_timer(timer);
   al_destroy_event_queue(event_queue);
   destroy_screen(screen);
+  cout << "GAME: All done. Bye." << endl;
 }
 
 /// Cambia el color del display, y borra lo que tenga
@@ -105,7 +107,22 @@ void GAME::set_display_color(int r, int g, int b) {
 }
 
 /// Inicia el timer
-void GAME::start_timer() { al_start_timer(timer); }
+void GAME::start_timer() {
+  cout << "GAME: Iniciando el timer" << endl;
+  al_start_timer(timer);
+}
+
+/// Muestra el menu inicial o de pausa
+void GAME::show_menu() {
+  int64_t flag = al_get_timer_count(timer);
+  const char* state = (flag == 0) ? "INICIAR (PRESIONA ENTER)" : "RESUMIR (PRESIONA ENTER)";
+  const char* title = (flag == 0) ? "ASTEROID GAME" : "PAUSE";
+  set_display_color(0,0,0);
+  al_draw_text(font1, al_map_rgb(200,10,50), screen->width/2, screen->height/2, ALLEGRO_ALIGN_CENTRE, title);
+  al_draw_text(font2, al_map_rgb(20,30,60), screen->width/2, screen->height/2+60, ALLEGRO_ALIGN_CENTRE, state);
+  al_draw_text(font2, al_map_rgb(20,30,60), screen->width/2, screen->height/2+120, ALLEGRO_ALIGN_CENTRE,"SALIR (PRESIONA ESCAPE)");
+  al_flip_display();
+}
 
 /// Verifica si la cola de eventos esta vacia
 bool GAME::event_queue_is_empty() { return al_is_event_queue_empty(event_queue); }
