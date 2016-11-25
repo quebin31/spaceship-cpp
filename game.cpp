@@ -1,4 +1,7 @@
 #include "game.h"
+#include "keyboard.h"
+#include "nave.h"
+#include "set_of_asteroids.h"
 
 using namespace std;
 
@@ -14,7 +17,7 @@ SCREEN *create_screen(const int w, const int h, const float fps) {
 void destroy_screen(SCREEN *screen) { delete screen; }
 
 /// Constructor con SCREEN
-GAME::GAME(SCREEN *nscreen) {
+GAME::GAME(SCREEN *nscreen): screen(nscreen) {
   cout << "GAME: Iniciando allegro" << endl;
   if (!al_init()) {
     al_show_native_message_box(display,"Error","Error","Failed to initialize allegro!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
@@ -81,11 +84,9 @@ GAME::GAME(SCREEN *nscreen) {
     exit(EXIT_FAILURE);
   }
 
-  screen = nscreen;
   cout << "GAME: La pantalla actual es de " << screen->width << "x" << screen->height << endl;
 
-  redraw = false;
-  game_over = true;
+  game_over_or_pause = false;
   vidas = 3;
 
   cout << "GAME: Registrando todos los eventos" << endl;
@@ -93,9 +94,13 @@ GAME::GAME(SCREEN *nscreen) {
   al_register_event_source(event_queue, al_get_timer_event_source(timer));
   al_register_event_source(event_queue, al_get_keyboard_event_source());
 
-  font1=al_load_font("PressStart2P.ttf",30,0);
-  font2=al_load_font("Joystick.otf",20,0);
-  cout << "GAME: Cargados los paquetes de fuente" << endl;
+  cout << "GAME: Cargando las fuentes" << endl;
+  font1 = al_load_font("PressStart2P.ttf",30,0);
+  font2 = al_load_font("Joystick.otf",20,0);
+
+  cout << "GAME: Cargando el audio" << endl;
+  move_sound = al_load_sample("thrust.wav");
+  al_reserve_samples(1);
 
   al_set_window_position(display, 350, 180);
   set_display_color(0,0,0);
@@ -105,10 +110,13 @@ GAME::GAME(SCREEN *nscreen) {
 /// Destructor
 GAME::~GAME() {
   cout << "GAME: Finalizando el juego" << endl;
+  destroy_screen(screen);
   al_destroy_display(display);
   al_destroy_timer(timer);
   al_destroy_event_queue(event_queue);
-  destroy_screen(screen);
+  al_destroy_font(font1);
+  al_destroy_font(font2);
+  al_destroy_sample(move_sound);
   cout << "GAME: All done. Bye." << endl;
 }
 
@@ -122,6 +130,12 @@ void GAME::set_display_color(int r, int g, int b) {
 void GAME::start_timer() {
   cout << "GAME: Iniciando el timer" << endl;
   al_start_timer(timer);
+  game_over_or_pause = false;
+}
+
+/// Espera por un evento de SpaceShip
+void GAME::wait_for_event(ALLEGRO_EVENT &ev) {
+  al_wait_for_event(event_queue, &ev);
 }
 
 /// Muestra el menu inicial o de pausa
@@ -135,6 +149,40 @@ void GAME::show_menu() {
   al_draw_text(font2, al_map_rgb(20,30,60), screen->width/2, screen->height/2+120, ALLEGRO_ALIGN_CENTRE,"SALIR (PRESIONA ESCAPE)");
   al_flip_display();
 }
+
+void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS &asters) {
+  if (keyboard.get_key_state(UP) && nave.getY() >= 4.0) {
+    nave.moveY(-4.0);
+    nave.select_nave(NAVE_UP);
+    play_move_sound();
+  } else if (keyboard.get_key_state(RIGHT) && nave.getX() <= screen->width - nave.getW() - 4.0) {
+    nave.moveX(4.0);
+    nave.select_nave(NAVE_RIGHT);
+    play_move_sound();
+  } else if (keyboard.get_key_state(DOWN) && nave.getY() <= screen->height - nave.getH() - 4.0) {
+    nave.moveY(4.0);
+    nave.select_nave(NAVE_UP);
+    play_move_sound();
+  } else if (keyboard.get_key_state(LEFT) && nave.getX() >= 4.0) {
+    nave.moveX(-4.0);
+    nave.select_nave(NAVE_LEFT);
+    play_move_sound();
+  }
+
+  if (keyboard.get_key_state(CHAR_A)) {
+    nave.shoot();
+    keyboard.change_key_state(CHAR_A, false);
+  }
+
+  set_display_color(0, 0, 0);
+  asters.move_asteroids();
+  asters.draw_asteroids();
+  nave.draw_nave();
+  al_flip_display();
+}
+
+/// Reproduce el audio move_sound
+void GAME::play_move_sound() { al_play_sample(move_sound, 1.0, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0); }
 
 /// Verifica si la cola de eventos esta vacia
 bool GAME::event_queue_is_empty() { return al_is_event_queue_empty(event_queue); }
@@ -157,6 +205,7 @@ ALLEGRO_FONT *GAME::get_font1() { return font1;}
 /// Devuelve la fuente de los titulos de instrucciones
 ALLEGRO_FONT *GAME::get_font2() { return font2;}
 
-int64_t GAME::get_timer_count() {
-  return al_get_timer_count(timer);
-}
+
+int64_t GAME::get_timer_count() { return al_get_timer_count(timer); }
+
+

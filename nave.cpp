@@ -3,7 +3,7 @@
 
 using namespace std;
 
-NAVE::NAVE(const char *file): BITMAP(file){
+NAVE::NAVE(): BITMAP("nave1.png"){
   cout << "NAVE: Instanciando el objeto nave" << endl;
   width   = 32;
   height  = 32;
@@ -16,8 +16,16 @@ NAVE::NAVE(const char *file): BITMAP(file){
   cout << "NAVE: All done." << endl;
 }
 
+void NAVE::select_nave(const int direction) {
+  sourceX = direction;
+}
+
 void NAVE::shoot() {
   nave_gun.wasted_bullet();
+}
+
+void NAVE::draw_nave(){
+  al_draw_bitmap_region(bitmap, sourceX, sourceY, 32, 32, posX, posY, 0);
 }
 
 void NAVE::draw_nave(const int _nave_no){

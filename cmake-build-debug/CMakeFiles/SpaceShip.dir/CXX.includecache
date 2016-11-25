@@ -6,34 +6,14 @@
 
 #IncludeRegexTransform: 
 
-/home/kevin/IPOO/SpaceShip/asteroid.cpp
-asteroid.h
-/home/kevin/IPOO/SpaceShip/asteroid.h
-
-/home/kevin/IPOO/SpaceShip/asteroid.h
-game.h
-/home/kevin/IPOO/SpaceShip/game.h
-bitmap.h
-/home/kevin/IPOO/SpaceShip/bitmap.h
+/home/kevin/IPOO/SpaceShip/allegro_includes.h
+cstdio
+-
 vector
 -
-
-/home/kevin/IPOO/SpaceShip/bitmap.cpp
-bitmap.h
-/home/kevin/IPOO/SpaceShip/bitmap.h
-
-/home/kevin/IPOO/SpaceShip/bitmap.h
-game.h
-/home/kevin/IPOO/SpaceShip/game.h
-
-/home/kevin/IPOO/SpaceShip/game.cpp
-game.h
-/home/kevin/IPOO/SpaceShip/game.h
-
-/home/kevin/IPOO/SpaceShip/game.h
-types.h
-/home/kevin/IPOO/SpaceShip/types.h
-cstdio
+random
+-
+cstdlib
 -
 iostream
 -
@@ -47,32 +27,68 @@ allegro5/allegro_font.h
 -
 allegro5/allegro_ttf.h
 -
+allegro5/allegro_acodec.h
+-
+allegro5/allegro_audio.h
+-
+
+/home/kevin/IPOO/SpaceShip/asteroid.cpp
+asteroid.h
+/home/kevin/IPOO/SpaceShip/asteroid.h
+
+/home/kevin/IPOO/SpaceShip/asteroid.h
+bitmap.h
+/home/kevin/IPOO/SpaceShip/bitmap.h
+
+/home/kevin/IPOO/SpaceShip/bitmap.cpp
+bitmap.h
+/home/kevin/IPOO/SpaceShip/bitmap.h
+
+/home/kevin/IPOO/SpaceShip/bitmap.h
+allegro_includes.h
+/home/kevin/IPOO/SpaceShip/allegro_includes.h
+game.h
+/home/kevin/IPOO/SpaceShip/game.h
+
+/home/kevin/IPOO/SpaceShip/game.cpp
+game.h
+/home/kevin/IPOO/SpaceShip/game.h
+keyboard.h
+/home/kevin/IPOO/SpaceShip/keyboard.h
+nave.h
+/home/kevin/IPOO/SpaceShip/nave.h
+set_of_asteroids.h
+/home/kevin/IPOO/SpaceShip/set_of_asteroids.h
+
+/home/kevin/IPOO/SpaceShip/game.h
+allegro_includes.h
+/home/kevin/IPOO/SpaceShip/allegro_includes.h
 
 /home/kevin/IPOO/SpaceShip/gun.cpp
 gun.h
 /home/kevin/IPOO/SpaceShip/gun.h
 
 /home/kevin/IPOO/SpaceShip/gun.h
-bitmap.h
-/home/kevin/IPOO/SpaceShip/bitmap.h
+allegro_includes.h
+/home/kevin/IPOO/SpaceShip/allegro_includes.h
 
 /home/kevin/IPOO/SpaceShip/keyboard.cpp
 keyboard.h
 /home/kevin/IPOO/SpaceShip/keyboard.h
-
-/home/kevin/IPOO/SpaceShip/keyboard.h
 game.h
 /home/kevin/IPOO/SpaceShip/game.h
+
+/home/kevin/IPOO/SpaceShip/keyboard.h
+allegro_includes.h
+/home/kevin/IPOO/SpaceShip/allegro_includes.h
 
 /home/kevin/IPOO/SpaceShip/main.cpp
 game.h
 /home/kevin/IPOO/SpaceShip/game.h
-keyboard.h
-/home/kevin/IPOO/SpaceShip/keyboard.h
-bitmap.h
-/home/kevin/IPOO/SpaceShip/bitmap.h
 nave.h
 /home/kevin/IPOO/SpaceShip/nave.h
+keyboard.h
+/home/kevin/IPOO/SpaceShip/keyboard.h
 set_of_asteroids.h
 /home/kevin/IPOO/SpaceShip/set_of_asteroids.h
 
@@ -81,28 +97,16 @@ nave.h
 /home/kevin/IPOO/SpaceShip/nave.h
 
 /home/kevin/IPOO/SpaceShip/nave.h
-game.h
-/home/kevin/IPOO/SpaceShip/game.h
 bitmap.h
 /home/kevin/IPOO/SpaceShip/bitmap.h
 gun.h
 /home/kevin/IPOO/SpaceShip/gun.h
 
 /home/kevin/IPOO/SpaceShip/set_of_asteroids.cpp
-game.h
-/home/kevin/IPOO/SpaceShip/game.h
 set_of_asteroids.h
 /home/kevin/IPOO/SpaceShip/set_of_asteroids.h
 
 /home/kevin/IPOO/SpaceShip/set_of_asteroids.h
-vector
--
-random
--
-game.h
-/home/kevin/IPOO/SpaceShip/game.h
 asteroid.h
 /home/kevin/IPOO/SpaceShip/asteroid.h
-
-/home/kevin/IPOO/SpaceShip/types.h
 

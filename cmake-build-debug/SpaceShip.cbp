@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/kevin/IPOO/SpaceShip/allegro_includes.h">
+			<Option target="SpaceShip"/>
+		</Unit>
 		<Unit filename="/home/kevin/IPOO/SpaceShip/asteroid.cpp">
 			<Option target="SpaceShip"/>
 		</Unit>
@@ -127,9 +130,6 @@
 			<Option target="SpaceShip"/>
 		</Unit>
 		<Unit filename="/home/kevin/IPOO/SpaceShip/set_of_asteroids.h">
-			<Option target="SpaceShip"/>
-		</Unit>
-		<Unit filename="/home/kevin/IPOO/SpaceShip/types.h">
 			<Option target="SpaceShip"/>
 		</Unit>
 		<Unit filename="/home/kevin/IPOO/SpaceShip/CMakeLists.txt">

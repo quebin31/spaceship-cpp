@@ -1,13 +1,14 @@
 #ifndef BITMAP_H
 #define BITMAP_H
 
+#include "allegro_includes.h"
 #include "game.h"
 
 class BITMAP {
 protected:
   ALLEGRO_BITMAP *bitmap;                                     /// El bitmap en cuestión
-  int             width;
-  int             height;
+  int             width;                                      /// Ancho
+  int             height;                                     /// Altura
   coor_t          posX;                                       /// Coordenada 'x'
   coor_t          posY;                                       /// Coordenada 'y'
   int             sourceX;                                    /// Coordenada 'x' de source
