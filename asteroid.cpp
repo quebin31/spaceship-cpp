@@ -8,6 +8,7 @@ int myAster[] = {NO_1, NO_2, NO_3, NO_4, NO_5};
 vector<int> type_of_asters(myAster, myAster+5);
 
 ASTEROID::ASTEROID(const int _no_asteroid): BITMAP("asteroides.png") {
+  destroyed = false;
   width = 45;
   height = 45;
   posX = 0;

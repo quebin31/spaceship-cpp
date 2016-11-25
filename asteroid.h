@@ -19,6 +19,8 @@ extern int myAster[];
 extern vector<int> type_of_asters;
 
 class ASTEROID: public BITMAP {
+private:
+  bool destroyed;
 public:
   ASTEROID(const int _no_asteroid);
   void draw_asteroid(const int _asteroid_no) const;

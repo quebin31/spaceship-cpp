@@ -7,15 +7,29 @@
 
 #include "asteroid.h"
 
-class ASTEROIDS {
+class ROW_OF_ASTEROIDS
+{
 private:
-  vector<ASTEROID*> Asters;
-  int no_asteroids;
+  vector<ASTEROID*> row;
+public:
+  ROW_OF_ASTEROIDS();
+  int generate_random_no_of_asteroids();
+  int generate_random_type_of_asteroid();
+  coor_t generate_random_coorX();
+};
+
+class ASTEROIDS
+{
+private:
+  vector<ROW_OF_ASTEROIDS*> rows_of_asters;
 public:
   ASTEROIDS();
 
+  void generate_asteroids();
   void move_asteroids();
+  void delete_asteroids();
   void draw_asteroids();
+
 };
 
 

@@ -6,28 +6,48 @@
 
 using namespace std;
 
-ASTEROIDS::ASTEROIDS() {
-  no_asteroids = 0;
-  coor_t coorX = 10;
-  for (int i = 0; i < 5; i++){
-    ASTEROID* new_aster = new ASTEROID(type_of_asters[i]);
-    new_aster->setX(coorX);
-    new_aster->setY(10);
-    Asters.push_back(new_aster);
-    no_asteroids += 1;
-    coorX += 45*2;
-  }
+
+
+int ROW_OF_ASTEROIDS::generate_random_no_of_asteroids()
+{
+  random_device randomDevice;
+  mt19937 eng(randomDevice());
+  uniform_int_distribution<> distr(3, 7);
+  return distr(eng);
+}
+
+int ROW_OF_ASTEROIDS::generate_random_type_of_asteroid()
+{
+  random_device randomDevice;
+  mt19937 eng(randomDevice());
+  uniform_int_distribution<> distr(0, 5);
+  return distr(eng);
+}
+
+coor_t ROW_OF_ASTEROIDS::generate_random_coorX()
+{
+  random_device randomDevice;
+  mt19937 eng(randomDevice());
+  uniform_int_distribution<> distr(10, 625);
+  return distr(eng);
+}
+
+void ASTEROIDS::generate_asteroids()
+{
+
 }
 
 void ASTEROIDS::move_asteroids() {
-  for (int i = 0; i != no_asteroids; i++){
-    Asters.at(i)->moveY(1.0);
-  }
+
+}
+
+void ASTEROIDS::delete_asteroids() {
+
 }
 
 void ASTEROIDS::draw_asteroids() {
-  for (int i = 0; i < 5; i++){
-    Asters.at(i)->draw_asteroid();
-  }
+
 }
+
+
 
