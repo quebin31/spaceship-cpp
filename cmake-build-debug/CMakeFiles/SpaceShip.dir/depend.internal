@@ -14,8 +14,14 @@ CMakeFiles/SpaceShip.dir/bitmap.cpp.o
  /home/kevin/IPOO/SpaceShip/game.h
 CMakeFiles/SpaceShip.dir/game.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h
+ /home/kevin/IPOO/SpaceShip/asteroid.h
+ /home/kevin/IPOO/SpaceShip/bitmap.h
  /home/kevin/IPOO/SpaceShip/game.cpp
  /home/kevin/IPOO/SpaceShip/game.h
+ /home/kevin/IPOO/SpaceShip/gun.h
+ /home/kevin/IPOO/SpaceShip/keyboard.h
+ /home/kevin/IPOO/SpaceShip/nave.h
+ /home/kevin/IPOO/SpaceShip/set_of_asteroids.h
 CMakeFiles/SpaceShip.dir/gun.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h
  /home/kevin/IPOO/SpaceShip/gun.cpp

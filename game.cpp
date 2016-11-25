@@ -1,4 +1,7 @@
 #include "game.h"
+#include "keyboard.h"
+#include "nave.h"
+#include "set_of_asteroids.h"
 
 using namespace std;
 
@@ -127,6 +130,12 @@ void GAME::set_display_color(int r, int g, int b) {
 void GAME::start_timer() {
   cout << "GAME: Iniciando el timer" << endl;
   al_start_timer(timer);
+  game_over_or_pause = false;
+}
+
+/// Espera por un evento de SpaceShip
+void GAME::wait_for_event(ALLEGRO_EVENT &ev) {
+  al_wait_for_event(event_queue, &ev);
 }
 
 /// Muestra el menu inicial o de pausa
@@ -138,6 +147,37 @@ void GAME::show_menu() {
   al_draw_text(font1, al_map_rgb(200,10,50), screen->width/2, screen->height/2, ALLEGRO_ALIGN_CENTRE, title);
   al_draw_text(font2, al_map_rgb(20,30,60), screen->width/2, screen->height/2+60, ALLEGRO_ALIGN_CENTRE, state);
   al_draw_text(font2, al_map_rgb(20,30,60), screen->width/2, screen->height/2+120, ALLEGRO_ALIGN_CENTRE,"SALIR (PRESIONA ESCAPE)");
+  al_flip_display();
+}
+
+void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS &asters) {
+  if (keyboard.get_key_state(UP) && nave.getY() >= 4.0) {
+    nave.moveY(-4.0);
+    nave.select_nave(NAVE_UP);
+    play_move_sound();
+  } else if (keyboard.get_key_state(RIGHT) && nave.getX() <= screen->width - nave.getW() - 4.0) {
+    nave.moveX(4.0);
+    nave.select_nave(NAVE_RIGHT);
+    play_move_sound();
+  } else if (keyboard.get_key_state(DOWN) && nave.getY() <= screen->height - nave.getH() - 4.0) {
+    nave.moveY(4.0);
+    nave.select_nave(NAVE_UP);
+    play_move_sound();
+  } else if (keyboard.get_key_state(LEFT) && nave.getX() >= 4.0) {
+    nave.moveX(-4.0);
+    nave.select_nave(NAVE_LEFT);
+    play_move_sound();
+  }
+
+  if (keyboard.get_key_state(CHAR_A)) {
+    nave.shoot();
+    keyboard.change_key_state(CHAR_A, false);
+  }
+
+  set_display_color(0, 0, 0);
+  asters.move_asteroids();
+  asters.draw_asteroids();
+  nave.draw_nave();
   al_flip_display();
 }
 

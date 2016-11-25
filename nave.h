@@ -14,8 +14,10 @@ private:
 public:
   NAVE();
 
+  void select_nave(const int direction);
   void shoot();
   void get_ammo_info();
+  void draw_nave();
   void draw_nave(const int _nave_no);
 };
 

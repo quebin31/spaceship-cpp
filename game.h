@@ -3,6 +3,10 @@
 
 #include "allegro_includes.h"
 
+class KEYBOARD;
+class NAVE;
+class ASTEROIDS;
+
 typedef struct SCREEN {
   int width;      /// Ancho
   int height;     /// Alto
@@ -30,7 +34,9 @@ class GAME {
 
     void set_display_color(int r, int g, int b);  /// Colorea el display
     void start_timer();                           /// Empieza el timer (FPS)
+    void wait_for_event(ALLEGRO_EVENT& ev);       /// Esperar por un evento
     void show_menu();                             /// Muestra el menu del juego
+    void event_timer(KEYBOARD& keyboard, NAVE& nave, ASTEROIDS& asters);
     void play_move_sound();                       /// Reproduce move_sound
     bool event_queue_is_empty();                  /// Verifica si la lista de eventos ya esta vacia
 

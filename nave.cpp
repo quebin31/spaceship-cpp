@@ -16,8 +16,16 @@ NAVE::NAVE(): BITMAP("nave1.png"){
   cout << "NAVE: All done." << endl;
 }
 
+void NAVE::select_nave(const int direction) {
+  sourceX = direction;
+}
+
 void NAVE::shoot() {
   nave_gun.wasted_bullet();
+}
+
+void NAVE::draw_nave(){
+  al_draw_bitmap_region(bitmap, sourceX, sourceY, 32, 32, posX, posY, 0);
 }
 
 void NAVE::draw_nave(const int _nave_no){
