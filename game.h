@@ -1,23 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
-<<<<<<< HEAD
 #include "allegro_includes.h"
-=======
-#include "types.h"
-#include <cstdio>
-#include <iostream>
-#include <allegro5/allegro.h>
-#include <allegro5/allegro_image.h>
-#include <allegro5/allegro_native_dialog.h>
-#include <allegro5/allegro_font.h>
-#include <allegro5/allegro_ttf.h>
-#include <allegro5/allegro_acodec.h>
-#include <allegro5/allegro_audio.h>
-
-#define MAIN_MENU 0
-#define PAUSE     2
->>>>>>> 724a8db93a258487e85f9c7b3846ed888840c571
 
 typedef struct SCREEN {
   int width;      /// Ancho
@@ -30,14 +14,15 @@ void destroy_screen(SCREEN*);
 
 class GAME {
   private:
+    SCREEN                *screen;                /// SCREEN
     ALLEGRO_DISPLAY       *display;               /// ALLEGRO_DISPLAY
     ALLEGRO_EVENT_QUEUE   *event_queue;           /// ALLEGRO_EVENT_QUEUE
     ALLEGRO_TIMER         *timer;                 /// ALLEGRO_TIMER
-    SCREEN                *screen;                /// SCREEN
     ALLEGRO_FONT          *font1;                 /// Fuente para el titulo principal
     ALLEGRO_FONT          *font2;                 /// Fuente para las instrucciones
+    ALLEGRO_SAMPLE        *move_sound;            /// Audio al mover la nave
   public:
-    bool                  game_over_or_pause;              /// Game Over (bool), controla el while principal del juego
+    bool                  game_over_or_pause;     /// Game Over Or Pause (bool), controla el while principal del juego
     int                   vidas;                  /// Vidas del juego
 
     GAME(SCREEN* nscreen);                        /// Constructor de GAME en base a la pantalla
@@ -46,6 +31,7 @@ class GAME {
     void set_display_color(int r, int g, int b);  /// Colorea el display
     void start_timer();                           /// Empieza el timer (FPS)
     void show_menu();                             /// Muestra el menu del juego
+    void play_move_sound();                       /// Reproduce move_sound
     bool event_queue_is_empty();                  /// Verifica si la lista de eventos ya esta vacia
 
     ALLEGRO_DISPLAY*      get_display();          /// Devuelve la direccion del display

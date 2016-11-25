@@ -1,7 +1,4 @@
 #include "game.h"
-#include "keyboard.h"
-#include "nave.h"
-#include "set_of_asteroids.h"
 
 using namespace std;
 
@@ -17,7 +14,7 @@ SCREEN *create_screen(const int w, const int h, const float fps) {
 void destroy_screen(SCREEN *screen) { delete screen; }
 
 /// Constructor con SCREEN
-GAME::GAME(SCREEN *nscreen) {
+GAME::GAME(SCREEN *nscreen): screen(nscreen) {
   cout << "GAME: Iniciando allegro" << endl;
   if (!al_init()) {
     al_show_native_message_box(display,"Error","Error","Failed to initialize allegro!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
@@ -84,7 +81,6 @@ GAME::GAME(SCREEN *nscreen) {
     exit(EXIT_FAILURE);
   }
 
-  screen = nscreen;
   cout << "GAME: La pantalla actual es de " << screen->width << "x" << screen->height << endl;
 
   game_over_or_pause = false;
@@ -95,9 +91,13 @@ GAME::GAME(SCREEN *nscreen) {
   al_register_event_source(event_queue, al_get_timer_event_source(timer));
   al_register_event_source(event_queue, al_get_keyboard_event_source());
 
-  cout << "GAME: Cargados las fuentes" << endl;
+  cout << "GAME: Cargando las fuentes" << endl;
   font1 = al_load_font("PressStart2P.ttf",30,0);
   font2 = al_load_font("Joystick.otf",20,0);
+
+  cout << "GAME: Cargando el audio" << endl;
+  move_sound = al_load_sample("thrust.wav");
+  al_reserve_samples(1);
 
   al_set_window_position(display, 350, 180);
   set_display_color(0,0,0);
@@ -113,6 +113,7 @@ GAME::~GAME() {
   al_destroy_event_queue(event_queue);
   al_destroy_font(font1);
   al_destroy_font(font2);
+  al_destroy_sample(move_sound);
   cout << "GAME: All done. Bye." << endl;
 }
 
@@ -140,6 +141,9 @@ void GAME::show_menu() {
   al_flip_display();
 }
 
+/// Reproduce el audio move_sound
+void GAME::play_move_sound() { al_play_sample(move_sound, 1.0, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0); }
+
 /// Verifica si la cola de eventos esta vacia
 bool GAME::event_queue_is_empty() { return al_is_event_queue_empty(event_queue); }
 
@@ -161,4 +165,7 @@ ALLEGRO_FONT *GAME::get_font1() { return font1;}
 /// Devuelve la fuente de los titulos de instrucciones
 ALLEGRO_FONT *GAME::get_font2() { return font2;}
 
+
 int64_t GAME::get_timer_count() { return al_get_timer_count(timer); }
+
+

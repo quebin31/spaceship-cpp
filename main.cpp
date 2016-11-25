@@ -6,7 +6,6 @@
 #include "nave.h"
 #include "keyboard.h"
 #include "set_of_asteroids.h"
-#include "Sound.h"
 
 using namespace std;
 
@@ -15,7 +14,6 @@ int direction  = NAVE_UP;
 
 int main(int argc, const char **argv){
   GAME           SpaceShip(screen);
-  Sound          sound;
   KEYBOARD       keyboard;
   NAVE           nave;
   ASTEROIDS      asters;
@@ -50,35 +48,19 @@ int main(int argc, const char **argv){
             if (keyboard.get_key_state(UP) && nave.getY() >= 4.0) {
               nave.moveY(-4.0);
               direction = NAVE_UP;
-<<<<<<< HEAD
-            } else if (keyboard.get_key_state(DOWN) && nave.getY() <= screen->height - nave.getH() - 4.0) {
-              nave.moveY(4.0);
-              direction = NAVE_UP;
-            } else if (keyboard.get_key_state(LEFT) && nave.getX() >= 4.0) {
-              nave.moveX(-4.0);
-              direction = NAVE_LEFT;
+              SpaceShip.play_move_sound();
             } else if (keyboard.get_key_state(RIGHT) && nave.getX() <= screen->width - nave.getW() - 4.0) {
               nave.moveX(4.0);
               direction = NAVE_RIGHT;
-=======
-              SpaceShip.redraw = true;
-              sound.play_sound_move();
+              SpaceShip.play_move_sound();
             } else if (keyboard.get_key_state(DOWN) && nave.getY() <= screen->height - nave.getH() - 4.0) {
               nave.moveY(4.0);
               direction = NAVE_UP;
-              SpaceShip.redraw = true;
-              sound.play_sound_move();
+              SpaceShip.play_move_sound();
             } else if (keyboard.get_key_state(LEFT) && nave.getX() >= 4.0) {
               nave.moveX(-4.0);
               direction = NAVE_LEFT;
-              SpaceShip.redraw = true;
-              sound.play_sound_move();
-            } else if (keyboard.get_key_state(RIGHT) && nave.getX() <= screen->width - nave.getW() - 4.0) {
-              nave.moveX(4.0);
-              direction = NAVE_RIGHT;
-              SpaceShip.redraw = true;
-              sound.play_sound_move();
->>>>>>> 724a8db93a258487e85f9c7b3846ed888840c571
+              SpaceShip.play_move_sound();
             }
 
             if (keyboard.get_key_state(CHAR_A)) {
