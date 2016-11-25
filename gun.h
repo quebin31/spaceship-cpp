@@ -5,10 +5,9 @@
 #ifndef SPACESHIP_BULLETS_H
 #define SPACESHIP_BULLETS_H
 
+#include "allegro_includes.h"
 
-#include "bitmap.h"
-
-class GUN: public BITMAP {
+class GUN {
 private:
   int munition;
   int actual_munition;

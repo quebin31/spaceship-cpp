@@ -1,4 +1,7 @@
 #include "game.h"
+#include "keyboard.h"
+#include "nave.h"
+#include "set_of_asteroids.h"
 
 using namespace std;
 
@@ -72,8 +75,7 @@ GAME::GAME(SCREEN *nscreen) {
   screen = nscreen;
   cout << "GAME: La pantalla actual es de " << screen->width << "x" << screen->height << endl;
 
-  redraw = false;
-  game_over = true;
+  game_over_or_pause = false;
   vidas = 3;
 
   cout << "GAME: Registrando todos los eventos" << endl;
@@ -81,9 +83,9 @@ GAME::GAME(SCREEN *nscreen) {
   al_register_event_source(event_queue, al_get_timer_event_source(timer));
   al_register_event_source(event_queue, al_get_keyboard_event_source());
 
-  font1=al_load_font("PressStart2P.ttf",30,0);
-  font2=al_load_font("Joystick.otf",20,0);
-  cout << "GAME: Cargados los paquetes de fuente" << endl;
+  cout << "GAME: Cargados las fuentes" << endl;
+  font1 = al_load_font("PressStart2P.ttf",30,0);
+  font2 = al_load_font("Joystick.otf",20,0);
 
   al_set_window_position(display, 350, 180);
   set_display_color(0,0,0);
@@ -93,10 +95,12 @@ GAME::GAME(SCREEN *nscreen) {
 /// Destructor
 GAME::~GAME() {
   cout << "GAME: Finalizando el juego" << endl;
+  destroy_screen(screen);
   al_destroy_display(display);
   al_destroy_timer(timer);
   al_destroy_event_queue(event_queue);
-  destroy_screen(screen);
+  al_destroy_font(font1);
+  al_destroy_font(font2);
   cout << "GAME: All done. Bye." << endl;
 }
 
@@ -145,6 +149,4 @@ ALLEGRO_FONT *GAME::get_font1() { return font1;}
 /// Devuelve la fuente de los titulos de instrucciones
 ALLEGRO_FONT *GAME::get_font2() { return font2;}
 
-int64_t GAME::get_timer_count() {
-  return al_get_timer_count(timer);
-}
+int64_t GAME::get_timer_count() { return al_get_timer_count(timer); }

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-NAVE::NAVE(const char *file): BITMAP(file){
+NAVE::NAVE(): BITMAP("nave1.png"){
   cout << "NAVE: Instanciando el objeto nave" << endl;
   width   = 32;
   height  = 32;

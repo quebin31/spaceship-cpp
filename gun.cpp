@@ -4,6 +4,7 @@
 
 #include "gun.h"
 
+
 using namespace std;
 
 GUN::GUN(): munition(6), actual_munition(6) {}

@@ -5,9 +5,7 @@
 #ifndef GAMENAVE_ASTEROID_H
 #define GAMENAVE_ASTEROID_H
 
-#include "game.h"
 #include "bitmap.h"
-#include <vector>
 
 #define NO_1  0
 #define NO_2  45
@@ -20,11 +18,9 @@ using namespace std;
 extern int myAster[];
 extern vector<int> type_of_asters;
 
-
 class ASTEROID: public BITMAP {
 public:
-  ASTEROID(const char* file);
-  ASTEROID(const char* file, const int _no_asteroid);
+  ASTEROID(const int _no_asteroid);
   void draw_asteroid(const int _asteroid_no) const;
   void draw_asteroid() const;
 };

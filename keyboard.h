@@ -1,7 +1,9 @@
 #ifndef KEYBOARD_H
 #define KEYBOARD_H
 
-#include "game.h"
+#include "allegro_includes.h"
+
+class GAME;
 
 enum KEYS{
   UP, RIGHT, LEFT, DOWN, CHAR_A

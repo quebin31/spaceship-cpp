@@ -5,18 +5,14 @@
 #ifndef SPACESHIP_SET_OF_ASTEROIDS_H
 #define SPACESHIP_SET_OF_ASTEROIDS_H
 
-#include <vector>
-#include <random>
-#include "game.h"
 #include "asteroid.h"
 
-class SetOfAsteroids {
+class ASTEROIDS {
 private:
   vector<ASTEROID*> Asters;
   int no_asteroids;
 public:
-  SetOfAsteroids();
-  SetOfAsteroids(const char* file);
+  ASTEROIDS();
 
   void move_asteroids();
   void draw_asteroids();

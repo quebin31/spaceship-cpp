@@ -1,7 +1,6 @@
 #ifndef NAVE_H
 #define NAVE_H
 
-#include "game.h"
 #include "bitmap.h"
 #include "gun.h"
 
@@ -9,11 +8,11 @@
 #define NAVE_RIGHT 32
 #define NAVE_LEFT  64
 
-class NAVE: public BITMAP {
+class NAVE : public BITMAP {
 private:
   GUN nave_gun;
 public:
-  NAVE(const char* file);
+  NAVE();
 
   void shoot();
   void get_ammo_info();

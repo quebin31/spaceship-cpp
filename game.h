@@ -1,17 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "types.h"
-#include <cstdio>
-#include <iostream>
-#include <allegro5/allegro.h>
-#include <allegro5/allegro_image.h>
-#include <allegro5/allegro_native_dialog.h>
-#include <allegro5/allegro_font.h>
-#include <allegro5/allegro_ttf.h>
-
-#define MAIN_MENU 0
-#define PAUSE     2
+#include "allegro_includes.h"
 
 typedef struct SCREEN {
   int width;      /// Ancho
@@ -31,8 +21,7 @@ class GAME {
     ALLEGRO_FONT          *font1;                 /// Fuente para el titulo principal
     ALLEGRO_FONT          *font2;                 /// Fuente para las instrucciones
   public:
-    bool                  redraw;                 /// Redibuja (bool), controla si se esta listo para redibujar
-    bool                  game_over;              /// Game Over (bool), controla el while principal del juego
+    bool                  game_over_or_pause;              /// Game Over (bool), controla el while principal del juego
     int                   vidas;                  /// Vidas del juego
 
     GAME(SCREEN* nscreen);                        /// Constructor de GAME en base a la pantalla
