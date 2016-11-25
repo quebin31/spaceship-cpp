@@ -1,7 +1,23 @@
 #ifndef GAME_H
 #define GAME_H
 
+<<<<<<< HEAD
 #include "allegro_includes.h"
+=======
+#include "types.h"
+#include <cstdio>
+#include <iostream>
+#include <allegro5/allegro.h>
+#include <allegro5/allegro_image.h>
+#include <allegro5/allegro_native_dialog.h>
+#include <allegro5/allegro_font.h>
+#include <allegro5/allegro_ttf.h>
+#include <allegro5/allegro_acodec.h>
+#include <allegro5/allegro_audio.h>
+
+#define MAIN_MENU 0
+#define PAUSE     2
+>>>>>>> 724a8db93a258487e85f9c7b3846ed888840c571
 
 typedef struct SCREEN {
   int width;      /// Ancho
