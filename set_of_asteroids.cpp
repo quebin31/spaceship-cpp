@@ -103,8 +103,7 @@ ASTEROIDS_ENG::ASTEROIDS_ENG()
 //  rows_of_asters.push_back(new_row);
 }
 
-void ASTEROIDS_ENG::generate_asteroids()
-{
+void ASTEROIDS_ENG::generate_asteroids(){
 
 }
 
