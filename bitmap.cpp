@@ -46,10 +46,10 @@ void BITMAP::set_bitmap_color(int r, int g, int b, GAME &main) {
 /// Dibuja el bitmap
 void BITMAP::draw_bitmap(int flags) { al_draw_bitmap(bitmap, posX, posY, flags); }
 
-// fixme: siempre devuelve true, en el caso de comparar la nave y los asteroides
+/// Detecta colisiones entre bitmaps
 bool BITMAP::check_colision(const BITMAP &obj)const {
-  if (this->posX + this->width >= obj.posX || this->posX <= obj.posX + obj.width)
-    if (this->posY >= obj.posY + obj.height || this->posY + this->height <= obj.posY)
+  if (this->posX + this->width >= obj.posX && this->posX <= obj.posX + obj.width)
+    if (this->posY + this->height >= obj.posY && this->posY <= obj.posY + obj.height)
       return true;
   return false;
 }

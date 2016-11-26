@@ -18,13 +18,15 @@ ROW_OF_ASTEROIDS::ROW_OF_ASTEROIDS()
     row.push_back(new_aster);
   }
   this->no_of_asters = row.size();
+  reached_limit = false;
   cout << "ROW_OF_ASTEROIDS: Tamaño de la fila " << this->no_of_asters << endl;
 }
 
 ROW_OF_ASTEROIDS::~ROW_OF_ASTEROIDS()
 {
   for (int i = 0; i < no_of_asters; i++)
-      delete row.at(i);
+    delete row.at(i);
+  cout << "ROW_OF_ASTEROIDS: All deleted." << endl;
 }
 
 int ROW_OF_ASTEROIDS::generate_random_no_of_asteroids()
@@ -64,13 +66,11 @@ void ROW_OF_ASTEROIDS::move_asteroids()
   }
 }
 
-// fixme: por alguna razon la funcion cambia los valores de todos los asteroides de la fila por destroyed = true, podria deberse a un error en check colision ya que siempre imprime true
 void ROW_OF_ASTEROIDS::check_asteroids(const BITMAP &obj)
 {
   ASTEROID** aster = row.data();
   for (int i = 0; i < no_of_asters; i++)
   {
-    cout << "ROW_OF_ASTEROIDS: Colision " << obj.check_colision(**aster) << " para " << i << endl;
     if (!(*aster)->destroyed)
       if (obj.check_colision(**aster))
         (*aster)->destroyed = true;

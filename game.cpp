@@ -197,7 +197,6 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ROW_OF_ASTEROIDS &asters)
   }
 
   set_display_color(0, 0, 0);
-  // fixme: check_asteroids no cumple correctamente su trabajo
   asters.check_asteroids(nave);
   asters.move_asteroids();
   asters.draw_asteroids();

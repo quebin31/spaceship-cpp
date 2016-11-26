@@ -12,6 +12,7 @@ class ROW_OF_ASTEROIDS
 private:
   vector<ASTEROID*> row;
   unsigned long no_of_asters;
+  bool reached_limit;
 public:
   ROW_OF_ASTEROIDS();
   ~ROW_OF_ASTEROIDS();
