@@ -6,8 +6,9 @@
 #define SPACESHIP_BULLETS_H
 
 #include "allegro_includes.h"
+#include "bitmap.h"
 
-class GUN {
+class GUN : public BITMAP{
 private:
   int munition;
   int actual_munition;
@@ -18,6 +19,7 @@ public:
   const int get_actual_m() const;
   const int get_munition() const;
   void get_info();
+  void pop_bullet();
 };
 
 

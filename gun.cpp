@@ -7,7 +7,7 @@
 
 using namespace std;
 
-GUN::GUN(): munition(6), actual_munition(6) {}
+GUN::GUN(): BITMAP("bullet2.png"), munition(6), actual_munition(6) {}
 
 void GUN::wasted_bullet() {
   actual_munition -= 1;
@@ -25,4 +25,8 @@ void GUN::get_info() {
   cout << "Cargador con capacidad para " << munition << " balas, actualmente tiene " << actual_munition << " balas" << endl;
 }
 
+void GUN::pop_bullet(){
+  wasted_bullet();
+
+}
 
