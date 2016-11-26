@@ -11,7 +11,7 @@
 -Nuevo metodo para ASTEROIDS_ENG, draw_asteroids dibuja los asteroides.
 -Agregada parcialemente la funcionalidad para disparar
 -Nueva clase GUN, usada dentro de NAVE para hacer alusion al arma
--Agregado a game.h los files tff y font, para el uso de las fuentes. 
+-Agregado a game.h los files tff y font, para el uso de las fuentes.
 2016-11-25
 -Eliminado la clase sound, incorporada su funcionalidad en la clase GAME en game.h/cpp
 -Eliminado sound.h/cpp
@@ -19,15 +19,11 @@
 -Actualizado metodos de codigo reutilizable
 -WIP: Generacion de asteroides, compilar el codigo source puede lanzar error
 -WIP: Clase para almacenar un fila de asteroides, funciona correctamente
--WIP: check_colision, parece que no esta funcionando correctamente, ya 
-que siempre devuelve true, por lo que por el momento no se pueden 
-detectar colisiones entre la nave y la fila de los asteroides
--WIP: Clase para almacenar filas de asteroides, sera el engine de 
-asteroides 
--El juego funciona normal, con la fila de asteroides, si es que se 
-comenta la line "asters.check_asteroids(nave)", caso contrario, al 
-detectar la falsa colision, los asteroides nunca se dibujan y solo se 
-mira la nave
+-WIP: check_colision, parece que no esta funcionando correctamente, ya que siempre devuelve true, por lo que por el momento no se pueden detectar colisiones entre la nave y la fila de los asteroides
+-WIP: Clase para almacenar filas de asteroides, sera el engine de asteroides
+-El juego funciona normal, con la fila de asteroides, si es que se comenta la line "asters.check_asteroids(nave)", caso contrario, al detectar la falsa colision, los asteroides nunca se dibujan y solo se mira la nave
+-EXITO: La generacion y colision de asteroides en la clase ROW_OF_ASTEROIDS, funciona por ahora sin ningun problema.
+-WIP: Implementar ROW_OF_ASTEROIDS en ASTEROIDS_ENG (asteroids engine), y comprobar que funcione correctamente.
 
-*WIP = Work In Progress (Trabajo en progreso), se esperan errores al 
-momento de compilar o ejecutar el programa
+
+*WIP = Work In Progress (Trabajo en progreso), se esperan errores al momento de compilar o ejecutar el programa
