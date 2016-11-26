@@ -197,9 +197,7 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ROW_OF_ASTEROIDS &asters)
   }
 
   set_display_color(0, 0, 0);
-  asters.check_asteroids(nave);
-  asters.move_asteroids();
-  asters.draw_asteroids();
+  asters.manage_asteroids(nave);
   nave.draw_nave();
   al_flip_display();
 }

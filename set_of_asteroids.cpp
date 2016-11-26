@@ -61,7 +61,7 @@ void ROW_OF_ASTEROIDS::move_asteroids()
   for (int i = 0; i < no_of_asters; i++)
   {
     if (!(*aster)->destroyed)
-      (*aster)->moveY(1.8);
+      (*aster)->moveY(1.5);
     *aster++;
   }
 }
@@ -87,6 +87,20 @@ void ROW_OF_ASTEROIDS::draw_asteroids()
       (*aster)->draw_asteroid();
     *aster++;
   }
+}
+
+void ROW_OF_ASTEROIDS::manage_asteroids(const BITMAP& obj)
+{
+  check_asteroids(obj);
+  move_asteroids();
+  draw_asteroids();
+}
+
+
+ASTEROIDS_ENG::ASTEROIDS_ENG()
+{
+//  ROW_OF_ASTEROIDS* new_row = new ROW_OF_ASTEROIDS;
+//  rows_of_asters.push_back(new_row);
 }
 
 void ASTEROIDS_ENG::generate_asteroids()

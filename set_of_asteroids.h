@@ -23,6 +23,7 @@ public:
   void move_asteroids();
   void check_asteroids(const BITMAP &obj);
   void draw_asteroids();
+  void manage_asteroids(const BITMAP& obj);
 };
 
 

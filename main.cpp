@@ -49,6 +49,7 @@ int main(int argc, const char **argv){
       }
     }
   }
-  cout << SpaceShip.get_timer_count() << endl;
+  cout << "MAIN: Numero de fotogramas al terminar: " << SpaceShip.get_timer_count() << endl;
+  cout << "MAIN: Tiempo transcurrido: " << al_get_time() << endl;
   return 0;
 }
