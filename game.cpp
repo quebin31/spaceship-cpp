@@ -1,7 +1,7 @@
+#include <stdlib.h>
 #include "game.h"
 #include "keyboard.h"
 #include "nave.h"
-#include "set_of_asteroids.h"
 
 using namespace std;
 
@@ -197,6 +197,8 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ROW_OF_ASTEROIDS &asters)
   }
 
   set_display_color(0, 0, 0);
+  // fixme: check_asteroids no cumple correctamente su trabajo
+  asters.check_asteroids(nave);
   asters.move_asteroids();
   asters.draw_asteroids();
   nave.draw_nave();

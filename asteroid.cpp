@@ -11,6 +11,7 @@ ASTEROID::ASTEROID(const int _no_asteroid): BITMAP("asteroides.png") {
   destroyed = false;
   width = 45;
   height = 45;
+  cout << "ASTEROID: Dimensiones del asteroide " << width << "x" << height << endl;
   posX = 0;
   posY = 0;
   sourceX = _no_asteroid;
@@ -23,14 +24,6 @@ void ASTEROID::draw_asteroid(const int _asteroid_no) const {
 
 void ASTEROID::draw_asteroid() const {
   al_draw_bitmap_region(bitmap, sourceX, sourceY, 45, 45, posX, posY, 0);
-}
-
-bool ASTEROID::was_destroyed() {
-  return destroyed;
-}
-
-void ASTEROID::now_is_destroyed() {
-  destroyed = true;
 }
 
 

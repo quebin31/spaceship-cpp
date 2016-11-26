@@ -28,6 +28,14 @@ void BITMAP::moveY(float dy) { posY += dy; }
 coor_t BITMAP::getX() { return posX; }
 coor_t BITMAP::getY() { return posY; }
 
+/// Devuelve el valor del ancho/alura del bitmap
+int BITMAP::getW() { return width; }
+int BITMAP::getH() { return height; }
+
+/// Modifica el valor del ancho/altura del bitmap
+void BITMAP::setW(const int _w) { width = _w; }
+void BITMAP::setH(const int _h) { height = _h; }
+
 /// Colorea el bitmap
 void BITMAP::set_bitmap_color(int r, int g, int b, GAME &main) {
   al_set_target_bitmap(bitmap);
@@ -38,20 +46,12 @@ void BITMAP::set_bitmap_color(int r, int g, int b, GAME &main) {
 /// Dibuja el bitmap
 void BITMAP::draw_bitmap(int flags) { al_draw_bitmap(bitmap, posX, posY, flags); }
 
-int BITMAP::getW() {
-  return width;
-}
-
-int BITMAP::getH() {
-  return height;
-}
-
-void BITMAP::setW(const int _w) {
-  width = _w;
-}
-
-void BITMAP::setH(const int _h) {
-  height = _h;
+// fixme: siempre devuelve true, en el caso de comparar la nave y los asteroides
+bool BITMAP::check_colision(const BITMAP &obj)const {
+  if (this->posX + this->width >= obj.posX || this->posX <= obj.posX + obj.width)
+    if (this->posY >= obj.posY + obj.height || this->posY + this->height <= obj.posY)
+      return true;
+  return false;
 }
 
 ALLEGRO_BITMAP *BITMAP::get_bitmap() {

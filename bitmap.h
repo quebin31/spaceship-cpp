@@ -33,6 +33,7 @@ public:
 
   void set_bitmap_color(int r, int g, int b, GAME& main);     /// Colorea el bitmap, y luego vuelve a seleccionar el display
   void draw_bitmap(int flags);                                /// Dibuja el bitmap
+  bool check_colision(const BITMAP& obj) const;               /// Chequea si es que hay una colision o no
   ALLEGRO_BITMAP* get_bitmap();                               /// Devuelve la direccion del bitmap
 };
 

@@ -7,6 +7,7 @@ NAVE::NAVE(): BITMAP("nave1.png"){
   cout << "NAVE: Instanciando el objeto nave" << endl;
   width   = 32;
   height  = 32;
+  cout << "NAVE: Dimensiones del objeto nave " << width << "x" << height << endl;
   posX    = 0;
   posY    = 0;
   sourceX = 0;

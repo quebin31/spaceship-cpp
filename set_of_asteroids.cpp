@@ -18,15 +18,13 @@ ROW_OF_ASTEROIDS::ROW_OF_ASTEROIDS()
     row.push_back(new_aster);
   }
   this->no_of_asters = row.size();
+  cout << "ROW_OF_ASTEROIDS: Tamaño de la fila " << this->no_of_asters << endl;
 }
 
 ROW_OF_ASTEROIDS::~ROW_OF_ASTEROIDS()
 {
   for (int i = 0; i < no_of_asters; i++)
-  {
-    if (row.at(i) != nullptr)
       delete row.at(i);
-  }
 }
 
 int ROW_OF_ASTEROIDS::generate_random_no_of_asteroids()
@@ -57,23 +55,37 @@ unsigned long ROW_OF_ASTEROIDS::get_no_of_asters() { return this->no_of_asters; 
 
 void ROW_OF_ASTEROIDS::move_asteroids()
 {
+  ASTEROID** aster = row.data();
   for (int i = 0; i < no_of_asters; i++)
   {
-    if (row.at(i) != nullptr || row.at(i)->was_destroyed())
-    {
-      row.at(i)->moveY(1.8);
-    }
+    if (!(*aster)->destroyed)
+      (*aster)->moveY(1.8);
+    *aster++;
+  }
+}
+
+// fixme: por alguna razon la funcion cambia los valores de todos los asteroides de la fila por destroyed = true, podria deberse a un error en check colision ya que siempre imprime true
+void ROW_OF_ASTEROIDS::check_asteroids(const BITMAP &obj)
+{
+  ASTEROID** aster = row.data();
+  for (int i = 0; i < no_of_asters; i++)
+  {
+    cout << "ROW_OF_ASTEROIDS: Colision " << obj.check_colision(**aster) << " para " << i << endl;
+    if (!(*aster)->destroyed)
+      if (obj.check_colision(**aster))
+        (*aster)->destroyed = true;
+    *aster++;
   }
 }
 
 void ROW_OF_ASTEROIDS::draw_asteroids()
 {
+  ASTEROID** aster = row.data();
   for (int i = 0; i < no_of_asters; i++)
   {
-    if (row.at(i) != nullptr || row.at(i)->was_destroyed())
-    {
-      row.at(i)->draw_asteroid();
-    }
+    if (!(*aster)->destroyed)
+      (*aster)->draw_asteroid();
+    *aster++;
   }
 }
 
@@ -86,7 +98,7 @@ void ASTEROIDS_ENG::move_asteroids() {
 
 }
 
-void ASTEROIDS_ENG::delete_asteroids() {
+void ASTEROIDS_ENG::delete_asteroids(const BITMAP& obj) {
 
 }
 

@@ -20,6 +20,7 @@ public:
   coor_t generate_random_coorX();
   unsigned long get_no_of_asters();
   void move_asteroids();
+  void check_asteroids(const BITMAP &obj);
   void draw_asteroids();
 };
 
@@ -33,7 +34,7 @@ public:
 
   void generate_asteroids();
   void move_asteroids();
-  void delete_asteroids();
+  void delete_asteroids(const BITMAP& obj);
   void draw_asteroids();
 
 };

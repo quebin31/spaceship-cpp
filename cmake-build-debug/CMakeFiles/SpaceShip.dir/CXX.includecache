@@ -51,14 +51,14 @@ allegro_includes.h
 /home/kevin/IPOO/SpaceShip/allegro_includes.h
 
 /home/kevin/IPOO/SpaceShip/game.cpp
+stdlib.h
+-
 game.h
 /home/kevin/IPOO/SpaceShip/game.h
 keyboard.h
 /home/kevin/IPOO/SpaceShip/keyboard.h
 nave.h
 /home/kevin/IPOO/SpaceShip/nave.h
-set_of_asteroids.h
-/home/kevin/IPOO/SpaceShip/set_of_asteroids.h
 
 /home/kevin/IPOO/SpaceShip/game.h
 allegro_includes.h
