@@ -2,7 +2,8 @@
 #define BITMAP_H
 
 #include "allegro_includes.h"
-#include "game.h"
+
+class GAME;
 
 class BITMAP {
 protected:

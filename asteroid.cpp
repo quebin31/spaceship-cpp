@@ -25,6 +25,14 @@ void ASTEROID::draw_asteroid() const {
   al_draw_bitmap_region(bitmap, sourceX, sourceY, 45, 45, posX, posY, 0);
 }
 
+bool ASTEROID::was_destroyed() {
+  return destroyed;
+}
+
+void ASTEROID::now_is_destroyed() {
+  destroyed = true;
+}
+
 
 
 

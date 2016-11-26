@@ -164,7 +164,7 @@ void GAME::show_menu()
   al_flip_display();
 }
 
-void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS &asters) {
+void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ROW_OF_ASTEROIDS &asters) {
   if (keyboard.get_key_state(UP) && nave.getY() >= 4.0)
   {
     nave.moveY(-4.0);
@@ -197,11 +197,13 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS &asters) {
   }
 
   set_display_color(0, 0, 0);
+  asters.move_asteroids();
+  asters.draw_asteroids();
   nave.draw_nave();
   al_flip_display();
 }
 
-void GAME::manage_events(ALLEGRO_EVENT &ev, KEYBOARD& keyboard, NAVE& nave, ASTEROIDS& asters)
+void GAME::manage_events(ALLEGRO_EVENT &ev, KEYBOARD& keyboard, NAVE& nave, ROW_OF_ASTEROIDS& asters)
 {
   if (ev.type == ALLEGRO_EVENT_TIMER)
     event_timer(keyboard, nave, asters);

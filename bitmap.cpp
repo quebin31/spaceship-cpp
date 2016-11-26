@@ -1,4 +1,5 @@
 #include "bitmap.h"
+#include "game.h"
 
 ///Constructor
 BITMAP::BITMAP(): bitmap(nullptr), posX(0), posY(0), sourceX(0), sourceY(0) {}

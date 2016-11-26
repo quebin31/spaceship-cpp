@@ -43,12 +43,12 @@ bitmap.h
 /home/kevin/IPOO/SpaceShip/bitmap.cpp
 bitmap.h
 /home/kevin/IPOO/SpaceShip/bitmap.h
+game.h
+/home/kevin/IPOO/SpaceShip/game.h
 
 /home/kevin/IPOO/SpaceShip/bitmap.h
 allegro_includes.h
 /home/kevin/IPOO/SpaceShip/allegro_includes.h
-game.h
-/home/kevin/IPOO/SpaceShip/game.h
 
 /home/kevin/IPOO/SpaceShip/game.cpp
 game.h
@@ -63,6 +63,8 @@ set_of_asteroids.h
 /home/kevin/IPOO/SpaceShip/game.h
 allegro_includes.h
 /home/kevin/IPOO/SpaceShip/allegro_includes.h
+set_of_asteroids.h
+/home/kevin/IPOO/SpaceShip/set_of_asteroids.h
 
 /home/kevin/IPOO/SpaceShip/gun.cpp
 gun.h

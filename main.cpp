@@ -16,7 +16,7 @@ int main(int argc, const char **argv){
   GAME           SpaceShip(screen);
   KEYBOARD       keyboard;
   NAVE           nave;
-  ASTEROIDS      asters;
+  ROW_OF_ASTEROIDS rowasters;
 
   nave.setX((coor_t)(screen->width  / 2.0 - nave.getW()  / 2.0));
   nave.setY((coor_t)(screen->height / 2.0 - nave.getH()  / 2.0));
@@ -37,7 +37,6 @@ int main(int argc, const char **argv){
 
         SpaceShip.set_display_color(0, 0, 0);
         nave.draw_nave(NAVE_UP);
-        asters.draw_asteroids();
         al_flip_display();
         SpaceShip.start_timer();
 
@@ -45,7 +44,7 @@ int main(int argc, const char **argv){
         {
           ALLEGRO_EVENT ev;
           SpaceShip.wait_for_event(ev);
-          SpaceShip.manage_events(ev, keyboard, nave, asters);
+          SpaceShip.manage_events(ev, keyboard, nave, rowasters);
         }
       }
     }

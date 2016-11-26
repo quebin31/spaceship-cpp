@@ -11,19 +11,25 @@ class ROW_OF_ASTEROIDS
 {
 private:
   vector<ASTEROID*> row;
+  unsigned long no_of_asters;
 public:
   ROW_OF_ASTEROIDS();
+  ~ROW_OF_ASTEROIDS();
   int generate_random_no_of_asteroids();
   int generate_random_type_of_asteroid();
   coor_t generate_random_coorX();
+  unsigned long get_no_of_asters();
+  void move_asteroids();
+  void draw_asteroids();
 };
 
-class ASTEROIDS
+
+class ASTEROIDS_ENG
 {
 private:
   vector<ROW_OF_ASTEROIDS*> rows_of_asters;
 public:
-  ASTEROIDS();
+  ASTEROIDS_ENG();
 
   void generate_asteroids();
   void move_asteroids();
