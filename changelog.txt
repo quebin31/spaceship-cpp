@@ -17,7 +17,17 @@
 -Eliminado sound.h/cpp
 -Actualizado algunos headers en preparacion para hacer el codigo reusable en partes como mover la nave, dibujarla, etc...
 -Actualizado metodos de codigo reutilizable
--WIP: Generacion de asteroides, compilar el codigo source puede lanzar 
-error
+-WIP: Generacion de asteroides, compilar el codigo source puede lanzar error
+-WIP: Clase para almacenar un fila de asteroides, funciona correctamente
+-WIP: check_colision, parece que no esta funcionando correctamente, ya 
+que siempre devuelve true, por lo que por el momento no se pueden 
+detectar colisiones entre la nave y la fila de los asteroides
+-WIP: Clase para almacenar filas de asteroides, sera el engine de 
+asteroides 
+-El juego funciona normal, con la fila de asteroides, si es que se 
+comenta la line "asters.check_asteroids(nave)", caso contrario, al 
+detectar la falsa colision, los asteroides nunca se dibujan y solo se 
+mira la nave
 
-*WIP = Work In Progress
+*WIP = Work In Progress (Trabajo en progreso), se esperan errores al 
+momento de compilar o ejecutar el programa
