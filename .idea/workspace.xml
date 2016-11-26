@@ -13,17 +13,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cb19633-6a40-4c4e-b3e5-a12d3218cd4a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/SpaceShip" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip.dir/asteroid.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip.dir/asteroid.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip.dir/game.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip.dir/game.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip.dir/main.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/SpaceShip" afterPath="$PROJECT_DIR$/cmake-build-debug/SpaceShip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asteroid.cpp" afterPath="$PROJECT_DIR$/asteroid.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asteroid.h" afterPath="$PROJECT_DIR$/asteroid.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.cpp" afterPath="$PROJECT_DIR$/game.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.h" afterPath="$PROJECT_DIR$/game.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/set_of_asteroids.cpp" afterPath="$PROJECT_DIR$/set_of_asteroids.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/set_of_asteroids.h" afterPath="$PROJECT_DIR$/set_of_asteroids.h" />
     </list>
     <ignored path="SpaceShip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +51,7 @@
       <file leaf-file-name="set_of_asteroids.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/set_of_asteroids.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
+            <state relative-caret-position="636">
               <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
               <folding />
             </state>
@@ -431,12 +426,12 @@
       <workItem from="1480014467458" duration="2240000" />
       <workItem from="1480040737536" duration="9820000" />
       <workItem from="1480051133057" duration="2652000" />
-      <workItem from="1480094534608" duration="6601000" />
+      <workItem from="1480094534608" duration="7818000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53236000" />
+    <option name="totallyTimeSpent" value="54453000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -449,11 +444,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="-6" width="1350" height="747" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.133383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33486238" sideWeight="0.50298065" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -875,7 +870,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/set_of_asteroids.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="636">
           <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
           <folding />
         </state>
