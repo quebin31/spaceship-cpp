@@ -189,6 +189,10 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
     nave.select_nave(NAVE_LEFT);
     play_move_sound();
   }
+  else
+  {
+    nave.select_nave(NAVE_UP);
+  }
 
   if (keyboard.get_key_state(CHAR_A))
   {

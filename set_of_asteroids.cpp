@@ -68,7 +68,7 @@ void ROW_OF_ASTEROIDS::move_asteroids()
   for (int i = 0; i < no_of_asters; i++)
   {
     if (!row.at(i)->destroyed)
-      row.at(i)->moveY(1.5);
+      row.at(i)->moveY(1.8);
   }
 }
 
@@ -115,6 +115,7 @@ void ROW_OF_ASTEROIDS::manage_asteroids(const BITMAP& obj)
   move_asteroids();
   draw_asteroids();
 }
+
 
 
 

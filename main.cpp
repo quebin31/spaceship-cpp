@@ -20,7 +20,7 @@ int main(int argc, const char **argv){
   cout << "MAIN: Todos los objetos fueron creados correctamente" << endl;
 
   nave.setX((coor_t)(screen->width  / 2.0 - nave.getW()  / 2.0));
-  nave.setY((coor_t)(screen->height / 2.0 - nave.getH()  / 2.0));
+  nave.setY((coor_t)(screen->height / 2.0 - nave.getH()  / 2.0) + 200 );
 
   cout << "MAIN: Starting game " << endl;
   while (!SpaceShip.done){
