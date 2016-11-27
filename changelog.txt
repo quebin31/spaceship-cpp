@@ -31,3 +31,4 @@
 
 
 *WIP = Work In Progress (Trabajo en progreso), se esperan errores al momento de compilar o ejecutar el programa
+-Agregado los metodos managed, check y draw en gun.h y gun.cpp para disparar balas(bullet)

@@ -23,7 +23,6 @@ void NAVE::select_nave(const int direction) {
 
 void NAVE::shoot() {
   nave_gun.shoot_gun(posX, posY, middle_nave_x, -middle_nave_y);
-  cout << "PAN!" << endl;
 }
 
 void NAVE::admi_gun(){
