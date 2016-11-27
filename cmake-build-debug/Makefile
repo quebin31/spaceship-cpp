@@ -177,6 +177,33 @@ bitmap.cpp.s:
 	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/bitmap.cpp.s
 .PHONY : bitmap.cpp.s
 
+bullet.o: bullet.cpp.o
+
+.PHONY : bullet.o
+
+# target to build an object file
+bullet.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/bullet.cpp.o
+.PHONY : bullet.cpp.o
+
+bullet.i: bullet.cpp.i
+
+.PHONY : bullet.i
+
+# target to preprocess a source file
+bullet.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/bullet.cpp.i
+.PHONY : bullet.cpp.i
+
+bullet.s: bullet.cpp.s
+
+.PHONY : bullet.s
+
+# target to generate assembly for a file
+bullet.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/bullet.cpp.s
+.PHONY : bullet.cpp.s
+
 game.o: game.cpp.o
 
 .PHONY : game.o
@@ -354,6 +381,9 @@ help:
 	@echo "... bitmap.o"
 	@echo "... bitmap.i"
 	@echo "... bitmap.s"
+	@echo "... bullet.o"
+	@echo "... bullet.i"
+	@echo "... bullet.s"
 	@echo "... game.o"
 	@echo "... game.i"
 	@echo "... game.s"

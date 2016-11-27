@@ -50,6 +50,14 @@ game.h
 allegro_includes.h
 /home/kevin/IPOO/SpaceShip/allegro_includes.h
 
+/home/kevin/IPOO/SpaceShip/bullet.cpp
+bullet.h
+/home/kevin/IPOO/SpaceShip/bullet.h
+
+/home/kevin/IPOO/SpaceShip/bullet.h
+bitmap.h
+/home/kevin/IPOO/SpaceShip/bitmap.h
+
 /home/kevin/IPOO/SpaceShip/game.cpp
 stdlib.h
 -
@@ -73,6 +81,8 @@ gun.h
 /home/kevin/IPOO/SpaceShip/gun.h
 allegro_includes.h
 /home/kevin/IPOO/SpaceShip/allegro_includes.h
+bullet.h
+/home/kevin/IPOO/SpaceShip/bullet.h
 
 /home/kevin/IPOO/SpaceShip/keyboard.cpp
 keyboard.h
