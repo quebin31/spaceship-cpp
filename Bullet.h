@@ -1,15 +1,13 @@
 #ifndef BULLET_H
 #define BULLET_H
 
+#include "bitmap.h"
 
-class Bullet
-{
-  public:
-    Bullet();
+class Bullet: public BITMAP{
+private:
 
-  protected:
-
-  private:
+public:
+  Bullet();
 };
 
 #endif // BULLET_H

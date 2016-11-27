@@ -6,9 +6,9 @@
 #define SPACESHIP_BULLETS_H
 
 #include "allegro_includes.h"
-#include "bitmap.h"
+#include "Bullet.h"
 
-class GUN : public BITMAP{
+class GUN : public Bullet{
 private:
   int munition;
   int actual_munition;

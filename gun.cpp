@@ -7,7 +7,7 @@
 
 using namespace std;
 
-GUN::GUN(): BITMAP("bullet2.png"), munition(6), actual_munition(6) {}
+GUN::GUN(): munition(6), actual_munition(6) {}
 
 void GUN::wasted_bullet() {
   actual_munition -= 1;

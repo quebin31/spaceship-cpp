@@ -1,6 +1,3 @@
 #include "Bullet.h"
 
-Bullet::Bullet()
-{
-  //ctor
-}
+Bullet::Bullet(): BITMAP("bullet2.png") {}
