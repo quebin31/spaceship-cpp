@@ -1,3 +1,3 @@
 #include "bullet.h"
 
-Bullet::Bullet(): BITMAP("bullet2.png") {}
+BULLET::BULLET(): BITMAP("bullet2.png") {}

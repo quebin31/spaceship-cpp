@@ -8,8 +8,8 @@
 using namespace std;
 
 GUN::GUN(): munition(6), actual_munition(6) {
-  for (int i=0;i<this->actual_munition;i++){
-    Bullet* bullet = new Bullet;
+  for (int i=0; i < actual_munition; i++){
+    BULLET* bullet = new BULLET;
     this->bullets.push_back(bullet);
   }
 }

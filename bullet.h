@@ -3,11 +3,11 @@
 
 #include "bitmap.h"
 
-class Bullet: public BITMAP{
+class BULLET: public BITMAP{
 private:
 
 public:
-  Bullet();
+  BULLET();
 };
 
 #endif // BULLET_H

@@ -13,6 +13,7 @@ private:
   vector<ASTEROID*> row;
   unsigned long no_of_asters;
 public:
+  bool reached_limit;
   bool all_destroyed;
   ROW_OF_ASTEROIDS();
   ~ROW_OF_ASTEROIDS();

@@ -10,11 +10,11 @@
 
 using namespace std;
 
-class GUN : public Bullet{
+class GUN : public BULLET{
 private:
   int munition;
   int actual_munition;
-  vector<Bullet*> bullets;
+  vector<BULLET*> bullets;
 public:
   GUN();
   void wasted_bullet();
