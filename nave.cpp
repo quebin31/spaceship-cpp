@@ -27,7 +27,7 @@ void NAVE::shoot() {
 }
 
 void NAVE::admi_gun(){
-  nave_gun.managed_gun();
+  nave_gun.manage_gun();
 }
 
 void NAVE::draw_nave(){

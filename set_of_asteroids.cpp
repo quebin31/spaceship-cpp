@@ -159,7 +159,7 @@ void ASTEROIDS_ENG::check_asteroids(const BITMAP& obj)
   ROW_OF_ASTEROIDS** row = rows_of_asters.data();
   for (int i = 0; i < no_of_rows; i++)
   {
-    rows_of_asters.at(i)->move_asteroids();
+    rows_of_asters.at(i)->check_asteroids(obj);
   }
 }
 

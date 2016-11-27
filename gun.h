@@ -10,7 +10,7 @@
 
 using namespace std;
 
-class GUN : public BULLET{
+class GUN {
 private:
   int munition;
   int actual_munition;                  /// At the reserve
@@ -19,6 +19,7 @@ private:
 public:
   GUN();
   ~GUN();
+
   void wasted_bullet();
   const int get_actual_m() const;
   const int get_munition() const;
@@ -26,7 +27,7 @@ public:
   void shoot_gun(int X, int Y, int middle_nave_X, int middle_nave_Y);
   void check_gun();
   void draw_bullets();
-  void managed_gun();
+  void manage_gun();
 };
 
 
