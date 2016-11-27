@@ -196,8 +196,8 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
 
   if (keyboard.get_key_state(CHAR_A))
   {
+    nave.select_nave(NAVE_UP);
     nave.shoot();
-    keyboard.change_key_state(CHAR_A, false);
   }
 
   set_display_color(0, 0, 0);
