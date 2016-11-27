@@ -26,6 +26,8 @@
 -EXITO: La generacion y colision de asteroides en la clase ROW_OF_ASTEROIDS, funciona por ahora sin ningun problema.
 -WIP: Implementar ROW_OF_ASTEROIDS en ASTEROIDS_ENG (asteroids engine), y comprobar que funcione correctamente.
 -Agregado el metodo manage_asteroids, para realizar el chequeo, movimiento y dibujado de los asteroides.
+-Clase ASTEROID_ENG, funcionando correctamente, solo falta añadir que pueda eliminar filas cuando ya no las necesita.
+
 
 
 *WIP = Work In Progress (Trabajo en progreso), se esperan errores al momento de compilar o ejecutar el programa
