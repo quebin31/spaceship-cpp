@@ -8,18 +8,19 @@
 #include "allegro_includes.h"
 #include "Bullet.h"
 
+using namespace std;
+
 class GUN : public Bullet{
 private:
   int munition;
   int actual_munition;
+  vector<Bullet*> bullets;
 public:
   GUN();
-
   void wasted_bullet();
   const int get_actual_m() const;
   const int get_munition() const;
   void get_info();
-  void pop_bullet();
 };
 
 
