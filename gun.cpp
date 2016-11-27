@@ -35,7 +35,7 @@ void GUN::get_info() {
 }
 
 void GUN::shoot_gun(int X, int Y, int middle_nave_X, int middle_nave_Y){
-  if(this->bullet_in_screen < this->munition){
+  if(true/*this->bullet_in_screen < this->munition*/){
     BULLET* bullet = new BULLET;
     this->bullets.push_back(bullet);
     bullet->setX(X+middle_nave_X);
