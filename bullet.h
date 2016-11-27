@@ -4,9 +4,9 @@
 #include "bitmap.h"
 
 class BULLET: public BITMAP{
-private:
-
 public:
+  bool destroyed;
+  bool colision;
   BULLET();
 };
 

@@ -1,3 +1,11 @@
 #include "bullet.h"
 
-BULLET::BULLET(): BITMAP("bullet2.png") {}
+using namespace std;
+
+BULLET::BULLET(): BITMAP("bullet2.png") {
+  colision=false;
+  destroyed=false;
+}
+
+
+

@@ -203,6 +203,7 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   set_display_color(0, 0, 0);
   asters.manage_asteroids(nave, this);
   nave.draw_nave();
+  nave.admi_gun();
   al_flip_display();
 }
 

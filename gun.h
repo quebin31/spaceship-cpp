@@ -13,14 +13,20 @@ using namespace std;
 class GUN : public BULLET{
 private:
   int munition;
-  int actual_munition;
+  int actual_munition;                  /// At the reserve
+  int bullet_in_screen;                 /// In the screen
   vector<BULLET*> bullets;
 public:
   GUN();
+  ~GUN();
   void wasted_bullet();
   const int get_actual_m() const;
   const int get_munition() const;
   void get_info();
+  void shoot_gun(int X, int Y, int middle_nave_X, int middle_nave_Y);
+  void check_gun();
+  void draw_bullets();
+  void managed_gun();
 };
 
 
