@@ -107,6 +107,8 @@ gun.h
 /home/kevin/IPOO/SpaceShip/set_of_asteroids.cpp
 set_of_asteroids.h
 /home/kevin/IPOO/SpaceShip/set_of_asteroids.h
+game.h
+/home/kevin/IPOO/SpaceShip/game.h
 
 /home/kevin/IPOO/SpaceShip/set_of_asteroids.h
 asteroid.h

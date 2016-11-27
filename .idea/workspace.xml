@@ -13,10 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cb19633-6a40-4c4e-b3e5-a12d3218cd4a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip.dir/bitmap.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip.dir/bitmap.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/SpaceShip" afterPath="$PROJECT_DIR$/cmake-build-debug/SpaceShip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.cpp" afterPath="$PROJECT_DIR$/game.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.h" afterPath="$PROJECT_DIR$/game.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/set_of_asteroids.cpp" afterPath="$PROJECT_DIR$/set_of_asteroids.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/set_of_asteroids.h" afterPath="$PROJECT_DIR$/set_of_asteroids.h" />
@@ -42,36 +42,33 @@
       <file leaf-file-name="set_of_asteroids.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/set_of_asteroids.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+            <state relative-caret-position="231">
+              <caret line="43" column="54" lean-forward="false" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="set_of_asteroids.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="set_of_asteroids.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/set_of_asteroids.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-298">
-              <caret line="63" column="25" lean-forward="false" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
+            <state relative-caret-position="-495">
+              <caret line="101" column="33" lean-forward="false" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
               <folding>
-                <element signature="e#93#592#0" expanded="false" />
-                <element signature="e#594#750#0" expanded="false" />
-                <element signature="e#752#935#0" expanded="false" />
-                <element signature="e#937#1121#0" expanded="false" />
-                <element signature="e#1123#1302#0" expanded="false" />
-                <element signature="e#1586#1848#0" expanded="false" />
-                <element signature="e#1850#2052#0" expanded="false" />
+                <element signature="e#40#69#0" expanded="true" />
+                <element signature="e#771#954#0" expanded="false" />
+                <element signature="e#956#1140#0" expanded="false" />
+                <element signature="e#1142#1321#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="52" column="65" lean-forward="false" selection-start-line="52" selection-start-column="65" selection-end-line="52" selection-end-column="65" />
+            <state relative-caret-position="201">
+              <caret line="51" column="57" lean-forward="false" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
               <folding>
                 <element signature="e#40#57#0" expanded="true" />
               </folding>
@@ -79,20 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nave.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nave.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="81" lean-forward="false" selection-start-line="9" selection-start-column="81" selection-end-line="9" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="asteroid.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/asteroid.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
+            <state relative-caret-position="345">
               <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
               <folding />
             </state>
@@ -112,8 +99,8 @@
       <file leaf-file-name="game.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="51" column="59" lean-forward="false" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
+            <state relative-caret-position="182">
+              <caret line="39" column="99" lean-forward="false" selection-start-line="39" selection-start-column="99" selection-end-line="39" selection-end-column="99" />
               <folding>
                 <element signature="e#31#60#0" expanded="true" />
               </folding>
@@ -124,8 +111,8 @@
       <file leaf-file-name="game.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="199" column="32" lean-forward="false" selection-start-line="199" selection-start-column="32" selection-end-line="199" selection-end-column="32" />
+            <state relative-caret-position="2">
+              <caret line="199" column="32" lean-forward="true" selection-start-line="199" selection-start-column="32" selection-end-line="199" selection-end-column="32" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -136,7 +123,7 @@
       <file leaf-file-name="bitmap.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bitmap.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
+            <state relative-caret-position="377">
               <caret line="35" column="62" lean-forward="false" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
               <folding />
             </state>
@@ -146,7 +133,7 @@
       <file leaf-file-name="bitmap.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bitmap.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="720">
               <caret line="48" column="36" lean-forward="false" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -182,16 +169,16 @@
         <option value="$PROJECT_DIR$/nave.h" />
         <option value="$PROJECT_DIR$/keyboard.h" />
         <option value="$PROJECT_DIR$/keyboard.cpp" />
-        <option value="$PROJECT_DIR$/game.h" />
         <option value="$PROJECT_DIR$/bitmap.h" />
         <option value="$PROJECT_DIR$/nave.cpp" />
         <option value="$PROJECT_DIR$/asteroid.cpp" />
         <option value="$PROJECT_DIR$/bitmap.cpp" />
         <option value="$PROJECT_DIR$/asteroid.h" />
-        <option value="$PROJECT_DIR$/set_of_asteroids.h" />
-        <option value="$PROJECT_DIR$/game.cpp" />
-        <option value="$PROJECT_DIR$/set_of_asteroids.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/game.h" />
+        <option value="$PROJECT_DIR$/game.cpp" />
+        <option value="$PROJECT_DIR$/set_of_asteroids.h" />
+        <option value="$PROJECT_DIR$/set_of_asteroids.cpp" />
       </list>
     </option>
   </component>
@@ -483,12 +470,13 @@
       <workItem from="1480051133057" duration="2652000" />
       <workItem from="1480094534608" duration="7818000" />
       <workItem from="1480118879766" duration="11753000" />
-      <workItem from="1480178307241" duration="2472000" />
+      <workItem from="1480178307241" duration="3726000" />
+      <workItem from="1480205039783" duration="5752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68678000" />
+    <option name="totallyTimeSpent" value="75684000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -559,7 +547,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -815,21 +803,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sound.h" />
     <entry file="file://$PROJECT_DIR$/sound.cpp" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="198" lean-forward="false" selection-start-line="6" selection-start-column="198" selection-end-line="6" selection-end-column="198" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyboard.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/keyboard.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -843,7 +816,7 @@
         <state relative-caret-position="45">
           <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
           <folding>
-            <element signature="e#31#50#0" expanded="true" />
+            <element signature="e#31#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -856,25 +829,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asteroid.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitmap.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="35" column="62" lean-forward="false" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bitmap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="720">
           <caret line="48" column="36" lean-forward="false" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -884,62 +841,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/asteroid.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
+        <state relative-caret-position="345">
           <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/set_of_asteroids.h">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        <state relative-caret-position="300">
+          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/set_of_asteroids.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
-          <caret line="63" column="25" lean-forward="false" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
-          <folding>
-            <element signature="e#93#592#0" expanded="false" />
-            <element signature="e#594#750#0" expanded="false" />
-            <element signature="e#752#935#0" expanded="false" />
-            <element signature="e#937#1121#0" expanded="false" />
-            <element signature="e#1123#1302#0" expanded="false" />
-            <element signature="e#1586#1848#0" expanded="false" />
-            <element signature="e#1850#2052#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="199" column="32" lean-forward="false" selection-start-line="199" selection-start-column="32" selection-end-line="199" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="51" column="59" lean-forward="false" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
+        <state relative-caret-position="182">
+          <caret line="39" column="99" lean-forward="false" selection-start-line="39" selection-start-column="99" selection-end-line="39" selection-end-column="99" />
           <folding>
             <element signature="e#31#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bitmap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="35" column="62" lean-forward="false" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asteroid.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyboard.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="199" column="32" lean-forward="true" selection-start-line="199" selection-start-column="32" selection-end-line="199" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/set_of_asteroids.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="43" column="54" lean-forward="false" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="52" column="65" lean-forward="false" selection-start-line="52" selection-start-column="65" selection-end-line="52" selection-end-column="65" />
+        <state relative-caret-position="201">
+          <caret line="51" column="57" lean-forward="false" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
           <folding>
             <element signature="e#40#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/set_of_asteroids.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-495">
+          <caret line="101" column="33" lean-forward="false" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
+          <folding>
+            <element signature="e#40#69#0" expanded="true" />
+            <element signature="e#771#954#0" expanded="false" />
+            <element signature="e#956#1140#0" expanded="false" />
+            <element signature="e#1142#1321#0" expanded="false" />
           </folding>
         </state>
       </provider>

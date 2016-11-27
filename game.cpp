@@ -164,7 +164,7 @@ void GAME::show_menu()
   al_flip_display();
 }
 
-void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ROW_OF_ASTEROIDS &asters) {
+void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   if (keyboard.get_key_state(UP) && nave.getY() >= 4.0)
   {
     nave.moveY(-4.0);
@@ -197,12 +197,12 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ROW_OF_ASTEROIDS &asters)
   }
 
   set_display_color(0, 0, 0);
-  asters.manage_asteroids(nave);
+  asters.manage_asteroids(nave, this);
   nave.draw_nave();
   al_flip_display();
 }
 
-void GAME::manage_events(ALLEGRO_EVENT &ev, KEYBOARD& keyboard, NAVE& nave, ROW_OF_ASTEROIDS& asters)
+void GAME::manage_events(ALLEGRO_EVENT &ev, KEYBOARD& keyboard, NAVE& nave, ASTEROIDS_ENG& asters)
 {
   if (ev.type == ALLEGRO_EVENT_TIMER)
     event_timer(keyboard, nave, asters);
@@ -238,7 +238,6 @@ ALLEGRO_FONT *GAME::get_font1() { return font1;}
 /// Devuelve la fuente de los titulos de instrucciones
 ALLEGRO_FONT *GAME::get_font2() { return font2;}
 
-
-int64_t GAME::get_timer_count() { return al_get_timer_count(timer); }
+int64_t GAME::get_timer_count()const { return al_get_timer_count(timer); }
 
 

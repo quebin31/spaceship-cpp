@@ -54,6 +54,7 @@ CMakeFiles/SpaceShip.dir/nave.cpp.o: ../nave.h
 CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o: ../allegro_includes.h
 CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o: ../asteroid.h
 CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o: ../bitmap.h
+CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o: ../game.h
 CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o: ../set_of_asteroids.cpp
 CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o: ../set_of_asteroids.h
 

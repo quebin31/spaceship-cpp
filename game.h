@@ -37,9 +37,9 @@ class GAME {
     void set_display_color(int r, int g, int b);                                                  /// Colorea el display
     void start_timer();                                                                           /// Empieza el timer (FPS)
     void wait_for_event(ALLEGRO_EVENT& ev);                                                       /// Esperar por un evento
-    void manage_events(ALLEGRO_EVENT& ev, KEYBOARD& keyboard, NAVE& nave, ROW_OF_ASTEROIDS& asters);     /// Administrador de eventos
+    void manage_events(ALLEGRO_EVENT& ev, KEYBOARD& keyboard, NAVE& nave, ASTEROIDS_ENG& asters); /// Administrador de eventos
     void show_menu();                                                                             /// Muestra el menu del juego
-    void event_timer(KEYBOARD& keyboard, NAVE& nave, ROW_OF_ASTEROIDS& asters);                          /// Administrador de evento timer
+    void event_timer(KEYBOARD& keyboard, NAVE& nave, ASTEROIDS_ENG& asters);                          /// Administrador de evento timer
     void play_move_sound();                                                                       /// Reproduce move_sound
     bool event_queue_is_empty();                                                                  /// Verifica si la lista de eventos ya esta vacia
 
@@ -49,7 +49,7 @@ class GAME {
     SCREEN*               get_screen();                                                           /// Devuelve la direccion del screen template
     ALLEGRO_FONT*         get_font1();                                                            /// Devuelve la fuente del titulo principal
     ALLEGRO_FONT*         get_font2();                                                            /// Devuelve la fuente de los titulos para instrucciones
-    int64_t               get_timer_count();                                                      /// Devuelve la cantidad de frames desde que se inicio el timer
+    int64_t               get_timer_count()const;                                                      /// Devuelve la cantidad de frames desde que se inicio el timer
 };
 
 #endif // GAME_H
