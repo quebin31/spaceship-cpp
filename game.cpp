@@ -204,7 +204,7 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
     nave.select_nave(NAVE_UP);
   }
 
-  if (keyboard.get_key_state(CHAR_A) && get_timer_count()%20 == 0)
+  if (keyboard.get_key_state(CHAR_A) && get_timer_count()%10 == 0)
   {
     nave.select_nave(NAVE_UP);
     nave.shoot();
@@ -263,5 +263,3 @@ int GAME::get_framework_W() {
 int GAME::get_framework_H() {
   return framework->getH();
 }
-
-
