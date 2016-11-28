@@ -22,22 +22,23 @@ void LINKED_LIST<T>::pushback(NODE<T>* node){
 }
 template <class T>
 void LINKED_LIST<T>::delete_in(int index){
+  NODE<T>* temp;
+  NODE<T>* cur;
+  NODE<T>* pre;
   if (this->lsize == 0 || index >= this->lsize){
     std::cout << "Error al eliminar elemento" << std::endl;
     return;
   }
-  Node<T>* temp;
+
   else if (index==0){
     temp = this->head;
     delete this->head;
     this->head = temp;
     return;
   }
-  Node<T>* cur;
-  Node<T>* pre;
-  pre=this->head;
-  cur=this->head->next;
   else {
+    pre=this->head;
+    cur=this->head->next;
     for (int i=0;i<index;i++){
       pre=cur;
       cur=cur->next;
