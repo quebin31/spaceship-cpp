@@ -2,6 +2,8 @@
 #include "game.h"
 #include "keyboard.h"
 #include "nave.h"
+#include "set_of_asteroids.h"
+#include "bitmap.h"
 
 using namespace std;
 
@@ -17,7 +19,7 @@ SCREEN *create_screen(const int w, const int h, const float fps) {
 void destroy_screen(SCREEN *screen) { delete screen; }
 
 /// Constructor con SCREEN
-GAME::GAME(SCREEN *nscreen): screen(nscreen)
+GAME::GAME(SCREEN *ndisplay, int framewk_w, int framewk_h) : screen(ndisplay)
 {
   cout << "GAME: Iniciando allegro" << endl;
   if (!al_init())
@@ -69,7 +71,7 @@ GAME::GAME(SCREEN *nscreen): screen(nscreen)
   }
 
   cout << "GAME: Iniciando el display" << endl;
-  display = al_create_display(nscreen->width, nscreen->height);
+  display = al_create_display(screen->width, screen->height);
   if (!display)
   {
     al_show_native_message_box(display,"Error","Error","Failed to initialize display!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
@@ -88,7 +90,7 @@ GAME::GAME(SCREEN *nscreen): screen(nscreen)
   }
 
   cout << "GAME: Iniciando el timer" << endl;
-  timer = al_create_timer(1.0 / nscreen->fps);
+  timer = al_create_timer(1.0 / screen->fps);
   if (!timer)
   {
     al_show_native_message_box(display,"Error","Error","Failed to initialize timer!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
@@ -114,8 +116,14 @@ GAME::GAME(SCREEN *nscreen): screen(nscreen)
   move_sound = al_load_sample("thrust.wav");
   al_reserve_samples(1);
 
+  cout << "GAME: Cargando marco" << endl;
+  framework = new BITMAP("marco.png");
+  framework->setW(framewk_w);
+  framework->setH(framewk_h);
+
+
   al_set_window_position(display, 350, 180);
-  set_display_color(0,0,0);
+  set_display_color(26,26,26);
   cout << "GAME: All done." << endl;
 }
 
@@ -130,6 +138,7 @@ GAME::~GAME()
   al_destroy_font(font1);
   al_destroy_font(font2);
   al_destroy_sample(move_sound);
+  delete framework;
   cout << "GAME: All done. Bye." << endl;
 }
 
@@ -157,7 +166,7 @@ void GAME::show_menu()
   int64_t flag = al_get_timer_count(timer);
   const char* state = (flag == 0) ? "INICIAR (PRESIONA ENTER)" : "RESUMIR (PRESIONA ENTER)";
   const char* title = (flag == 0) ? "ASTEROID GAME" : "PAUSE";
-  set_display_color(0,0,0);
+  set_display_color(26,26,26);
   al_draw_text(font1, al_map_rgb(200,10,50), screen->width/2, screen->height/2, ALLEGRO_ALIGN_CENTRE, title);
   al_draw_text(font2, al_map_rgb(20,30,60), screen->width/2, screen->height/2+60, ALLEGRO_ALIGN_CENTRE, state);
   al_draw_text(font2, al_map_rgb(20,30,60), screen->width/2, screen->height/2+120, ALLEGRO_ALIGN_CENTRE,"SALIR (PRESIONA ESCAPE)");
@@ -165,25 +174,25 @@ void GAME::show_menu()
 }
 
 void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
-  if (keyboard.get_key_state(UP) && nave.getY() >= 4.0)
+  if (keyboard.get_key_state(UP) && nave.getY() >= 4.0 + 76)
   {
     nave.moveY(-4.0);
     nave.select_nave(NAVE_UP);
     play_move_sound();
   }
-  else if (keyboard.get_key_state(RIGHT) && nave.getX() <= screen->width - nave.getW() - 4.0)
+  else if (keyboard.get_key_state(RIGHT) && nave.getX() <= framework->getW() - nave.getW() - 4.0)
   {
     nave.moveX(4.0);
     nave.select_nave(NAVE_RIGHT);
     play_move_sound();
   }
-  else if (keyboard.get_key_state(DOWN) && nave.getY() <= screen->height - nave.getH() - 4.0)
+  else if (keyboard.get_key_state(DOWN) && nave.getY() <= framework->getH() - nave.getH() - 4.0)
   {
     nave.moveY(4.0);
     nave.select_nave(NAVE_UP);
     play_move_sound();
   }
-  else if (keyboard.get_key_state(LEFT) && nave.getX() >= 4.0)
+  else if (keyboard.get_key_state(LEFT) && nave.getX() >= 4.0 + 40)
   {
     nave.moveX(-4.0);
     nave.select_nave(NAVE_LEFT);
@@ -200,10 +209,11 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
     nave.shoot();
   }
 
-  set_display_color(0, 0, 0);
+  set_display_color(26,26,26);
   asters.manage_asteroids(nave, this);
   nave.draw_nave();
   nave.admi_gun();
+  framework->draw_bitmap(0);
   al_flip_display();
 }
 
@@ -244,5 +254,13 @@ ALLEGRO_FONT *GAME::get_font1() { return font1;}
 ALLEGRO_FONT *GAME::get_font2() { return font2;}
 
 int64_t GAME::get_timer_count()const { return al_get_timer_count(timer); }
+
+int GAME::get_framework_W() {
+  return framework->getW();
+}
+
+int GAME::get_framework_H() {
+  return framework->getH();
+}
 
 

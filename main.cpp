@@ -13,14 +13,14 @@ SCREEN* screen = create_screen(640,480,60);
 int direction  = NAVE_UP;
 
 int main(int argc, const char **argv){
-  GAME           SpaceShip(screen);
+  GAME           SpaceShip(screen, 600, 440);
   KEYBOARD       keyboard;
   NAVE           nave;
   ASTEROIDS_ENG  asters;
   cout << "MAIN: Todos los objetos fueron creados correctamente" << endl;
 
-  nave.setX((coor_t)(screen->width  / 2.0 - nave.getW()  / 2.0));
-  nave.setY((coor_t)(screen->height / 2.0 - nave.getH()  / 2.0) + 200 );
+  nave.setX((coor_t)(SpaceShip.get_framework_W()  / 2.0 - nave.getW()  / 2.0));
+  nave.setY((coor_t)(SpaceShip.get_framework_H()  / 2.0 - nave.getH()  / 2.0 + 200));
 
   cout << "MAIN: Starting game " << endl;
   while (!SpaceShip.done){
