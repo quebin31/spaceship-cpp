@@ -32,7 +32,7 @@ class GAME {
     bool                  game_over_or_pause;                                                     /// Game Over Or Pause (bool), controla el while del juego
     int                   vidas;                                                                  /// Vidas del juego
 
-    GAME(SCREEN *ndisplay, int framewk_w, int framewk_h);                                         /// Constructor de GAME en base a la pantalla
+    GAME(SCREEN *ndisplay);                                                                       /// Constructor de GAME en base a la pantalla
     ~GAME();                                                                                      /// Destructor
 
     void set_display_color(int r, int g, int b);                                                  /// Colorea el display

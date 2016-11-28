@@ -19,7 +19,7 @@ SCREEN *create_screen(const int w, const int h, const float fps) {
 void destroy_screen(SCREEN *screen) { delete screen; }
 
 /// Constructor con SCREEN
-GAME::GAME(SCREEN *ndisplay, int framewk_w, int framewk_h) : screen(ndisplay)
+GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
 {
   cout << "GAME: Iniciando allegro" << endl;
   if (!al_init())
@@ -118,6 +118,7 @@ GAME::GAME(SCREEN *ndisplay, int framewk_w, int framewk_h) : screen(ndisplay)
 
   cout << "GAME: Cargando marco" << endl;
   framework = new BITMAP("marco.png");
+  int framewk_w = 600, framewk_h = 440;
   framework->setW(framewk_w);
   framework->setH(framewk_h);
 
@@ -180,7 +181,7 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
     nave.select_nave(NAVE_UP);
     play_move_sound();
   }
-  else if (keyboard.get_key_state(RIGHT) && nave.getX() <= framework->getW() - nave.getW() - 4.0)
+  else if (keyboard.get_key_state(RIGHT) && nave.getX() <= framework->getW() - nave.getW() - 4.0 )
   {
     nave.moveX(4.0);
     nave.select_nave(NAVE_RIGHT);
