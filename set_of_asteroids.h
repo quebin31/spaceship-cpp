@@ -33,12 +33,14 @@ class ASTEROIDS_ENG
 private:
   vector<ROW_OF_ASTEROIDS*> rows_of_asters;
   unsigned long no_of_rows;
+  int fps_to_gen;
 public:
   ASTEROIDS_ENG();
   ~ASTEROIDS_ENG();
 
   void generate_row();
   void delete_row(ROW_OF_ASTEROIDS* obj);
+  int generate_random_fps();
   void move_asteroids();
   void check_asteroids(const BITMAP& obj);
   void draw_asteroids();

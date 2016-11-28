@@ -122,6 +122,7 @@ void ROW_OF_ASTEROIDS::manage_asteroids(const BITMAP& obj)
 ASTEROIDS_ENG::ASTEROIDS_ENG()
 {
   generate_row();
+  fps_to_gen = generate_random_fps();
 }
 
 ASTEROIDS_ENG::~ASTEROIDS_ENG()
@@ -145,6 +146,14 @@ void ASTEROIDS_ENG::generate_row()
 void ASTEROIDS_ENG::delete_row(ROW_OF_ASTEROIDS* obj)
 {
   delete obj;
+}
+
+int ASTEROIDS_ENG::generate_random_fps()
+{
+  random_device randomDevice;
+  mt19937 eng(randomDevice());
+  uniform_int_distribution<> distr(90, 120);
+  return distr(eng);
 }
 
 void ASTEROIDS_ENG::move_asteroids() {
@@ -174,10 +183,11 @@ void ASTEROIDS_ENG::draw_asteroids()
 
 void ASTEROIDS_ENG::manage_asteroids(const BITMAP &obj, const GAME* game) {
   int64_t frames = game->get_timer_count();
-  if (frames % 90 == 0)
+  if (frames % fps_to_gen == 0)
   {
     cout << "ASTEROIDS_ENG: frames = " << frames << endl;
     generate_row();
+    fps_to_gen = generate_random_fps();
   }
   for (int i = 0; i < no_of_rows; i++)
   {
