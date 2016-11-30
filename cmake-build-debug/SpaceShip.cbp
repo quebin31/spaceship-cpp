@@ -123,6 +123,12 @@
 		<Unit filename="/home/kevin/IPOO/SpaceShip/keyboard.h">
 			<Option target="SpaceShip"/>
 		</Unit>
+		<Unit filename="/home/kevin/IPOO/SpaceShip/linked_list.cpp">
+			<Option target="SpaceShip"/>
+		</Unit>
+		<Unit filename="/home/kevin/IPOO/SpaceShip/linked_list.h">
+			<Option target="SpaceShip"/>
+		</Unit>
 		<Unit filename="/home/kevin/IPOO/SpaceShip/main.cpp">
 			<Option target="SpaceShip"/>
 		</Unit>

@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o"
   "CMakeFiles/SpaceShip.dir/gun.cpp.o"
   "CMakeFiles/SpaceShip.dir/bullet.cpp.o"
+  "CMakeFiles/SpaceShip.dir/linked_list.cpp.o"
   "SpaceShip.pdb"
   "SpaceShip"
 )

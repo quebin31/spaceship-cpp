@@ -38,6 +38,9 @@ CMakeFiles/SpaceShip.dir/keyboard.cpp.o: ../game.h
 CMakeFiles/SpaceShip.dir/keyboard.cpp.o: ../keyboard.cpp
 CMakeFiles/SpaceShip.dir/keyboard.cpp.o: ../keyboard.h
 
+CMakeFiles/SpaceShip.dir/linked_list.cpp.o: ../linked_list.cpp
+CMakeFiles/SpaceShip.dir/linked_list.cpp.o: ../linked_list.h
+
 CMakeFiles/SpaceShip.dir/main.cpp.o: ../allegro_includes.h
 CMakeFiles/SpaceShip.dir/main.cpp.o: ../asteroid.h
 CMakeFiles/SpaceShip.dir/main.cpp.o: ../bitmap.h
