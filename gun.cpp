@@ -55,7 +55,7 @@ void GUN::check_gun(){
         --this->bullet_in_screen;
       }
       if (!this->bullets.at(i)->destroyed)
-        this->bullets.at(i)->moveY(-1.4);
+        this->bullets.at(i)->moveY(-3.5);
     }
   }
 }
