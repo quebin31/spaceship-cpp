@@ -5,7 +5,7 @@
 #include "game.h"
 #include "nave.h"
 #include "keyboard.h"
-#include "set_of_asteroids.h"
+#include "asteroids_engine.h"
 
 using namespace std;
 
@@ -41,7 +41,7 @@ int main(int argc, const char **argv){
     else if(event.type == ALLEGRO_EVENT_KEY_DOWN && event.keyboard.keycode == ALLEGRO_KEY_ENTER)
     {
       SpaceShip.set_display_color(0, 0, 0);
-      nave.draw_nave(NAVE_UP);
+      nave.draw_nave();
       al_flip_display();
       SpaceShip.start_timer();
 

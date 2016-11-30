@@ -3,9 +3,10 @@
 
 #include "bitmap.h"
 
-class BULLET: public BITMAP{
-public:
-  BULLET();
+class BULLET: public BITMAP
+{
+  public:
+    BULLET();                               /// Constructor
 };
 
 #endif // BULLET_H

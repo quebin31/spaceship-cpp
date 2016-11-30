@@ -7,29 +7,27 @@
 
 #include "allegro_includes.h"
 #include "bullet.h"
-#include "set_of_asteroids.h"
+#include "asteroids_engine.h"
 
 using namespace std;
 
 class GUN {
-private:
-  int munition;
-  int actual_munition;                  /// At the reserve
-  int bullet_in_screen;                 /// In the screen
-  vector<BULLET*> bullets;
-public:
-  GUN();
-  ~GUN();
+  private:
+    int munition;                                                                   /// Municion del arma
+    int actual_munition;                                                            /// Municion disponible
+    int bullets_in_screen;                                                           /// Balas en pantalla
+    vector<BULLET*> bullets;                                                        /// Vector que guarda todas las balas que han sido creadas
 
-  void wasted_bullet();
-  const int get_actual_m() const;
-  const int get_munition() const;
-  void get_info();
-  void shoot_gun(coor_t X, coor_t Y, int middle_nave_X, int middle_nave_Y);
-  void check_bullets(const ASTEROIDS_ENG& obj);
-  void move_bullets();
-  void draw_bullets();
-  void manage_gun(const ASTEROIDS_ENG& obj);
+  public:
+    GUN();                                                                          /// Constructor
+    ~GUN();                                                                         /// Destructor
+
+    void shoot_gun(coor_t X, coor_t Y, int middle_nave_X, int middle_nave_Y);       /// Disparar una bala
+
+    void check_bullets(const ASTEROIDS_ENG& obj);                                   /// Verifica el estado de las balas
+    void move_bullets();                                                            /// Mueve las balas
+    void draw_bullets();                                                            /// Dibuja las balas
+    void manage_gun(const ASTEROIDS_ENG& obj);                                      /// Encapsulamiento de los 3 metodos anteriores
 };
 
 

@@ -93,6 +93,12 @@
 		<Unit filename="/home/kevin/IPOO/SpaceShip/asteroid.h">
 			<Option target="SpaceShip"/>
 		</Unit>
+		<Unit filename="/home/kevin/IPOO/SpaceShip/asteroids_engine.cpp">
+			<Option target="SpaceShip"/>
+		</Unit>
+		<Unit filename="/home/kevin/IPOO/SpaceShip/asteroids_engine.h">
+			<Option target="SpaceShip"/>
+		</Unit>
 		<Unit filename="/home/kevin/IPOO/SpaceShip/bitmap.cpp">
 			<Option target="SpaceShip"/>
 		</Unit>
@@ -123,12 +129,6 @@
 		<Unit filename="/home/kevin/IPOO/SpaceShip/keyboard.h">
 			<Option target="SpaceShip"/>
 		</Unit>
-		<Unit filename="/home/kevin/IPOO/SpaceShip/linked_list.cpp">
-			<Option target="SpaceShip"/>
-		</Unit>
-		<Unit filename="/home/kevin/IPOO/SpaceShip/linked_list.h">
-			<Option target="SpaceShip"/>
-		</Unit>
 		<Unit filename="/home/kevin/IPOO/SpaceShip/main.cpp">
 			<Option target="SpaceShip"/>
 		</Unit>
@@ -136,12 +136,6 @@
 			<Option target="SpaceShip"/>
 		</Unit>
 		<Unit filename="/home/kevin/IPOO/SpaceShip/nave.h">
-			<Option target="SpaceShip"/>
-		</Unit>
-		<Unit filename="/home/kevin/IPOO/SpaceShip/set_of_asteroids.cpp">
-			<Option target="SpaceShip"/>
-		</Unit>
-		<Unit filename="/home/kevin/IPOO/SpaceShip/set_of_asteroids.h">
 			<Option target="SpaceShip"/>
 		</Unit>
 		<Unit filename="/home/kevin/IPOO/SpaceShip/CMakeLists.txt">

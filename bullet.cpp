@@ -2,7 +2,10 @@
 
 using namespace std;
 
-BULLET::BULLET(): BITMAP("bullet2.png") {
+/* Constructor default
+ * width, height (10): Tamaño de la bala que sera usado para futura deteccion de colisiones */
+BULLET::BULLET(): BITMAP("bullet2.png")
+{
   width = 10;
   height = 10;
   destroyed = false;

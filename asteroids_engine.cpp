@@ -2,7 +2,7 @@
 // Created by kevin on 22/11/16.
 //
 
-#include "set_of_asteroids.h"
+#include "asteroids_engine.h"
 #include "game.h"
 
 using namespace std;

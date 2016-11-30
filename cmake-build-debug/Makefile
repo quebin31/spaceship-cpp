@@ -150,6 +150,33 @@ asteroid.cpp.s:
 	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/asteroid.cpp.s
 .PHONY : asteroid.cpp.s
 
+asteroids_engine.o: asteroids_engine.cpp.o
+
+.PHONY : asteroids_engine.o
+
+# target to build an object file
+asteroids_engine.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.o
+.PHONY : asteroids_engine.cpp.o
+
+asteroids_engine.i: asteroids_engine.cpp.i
+
+.PHONY : asteroids_engine.i
+
+# target to preprocess a source file
+asteroids_engine.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.i
+.PHONY : asteroids_engine.cpp.i
+
+asteroids_engine.s: asteroids_engine.cpp.s
+
+.PHONY : asteroids_engine.s
+
+# target to generate assembly for a file
+asteroids_engine.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.s
+.PHONY : asteroids_engine.cpp.s
+
 bitmap.o: bitmap.cpp.o
 
 .PHONY : bitmap.o
@@ -285,33 +312,6 @@ keyboard.cpp.s:
 	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/keyboard.cpp.s
 .PHONY : keyboard.cpp.s
 
-linked_list.o: linked_list.cpp.o
-
-.PHONY : linked_list.o
-
-# target to build an object file
-linked_list.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/linked_list.cpp.o
-.PHONY : linked_list.cpp.o
-
-linked_list.i: linked_list.cpp.i
-
-.PHONY : linked_list.i
-
-# target to preprocess a source file
-linked_list.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/linked_list.cpp.i
-.PHONY : linked_list.cpp.i
-
-linked_list.s: linked_list.cpp.s
-
-.PHONY : linked_list.s
-
-# target to generate assembly for a file
-linked_list.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/linked_list.cpp.s
-.PHONY : linked_list.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -366,33 +366,6 @@ nave.cpp.s:
 	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/nave.cpp.s
 .PHONY : nave.cpp.s
 
-set_of_asteroids.o: set_of_asteroids.cpp.o
-
-.PHONY : set_of_asteroids.o
-
-# target to build an object file
-set_of_asteroids.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o
-.PHONY : set_of_asteroids.cpp.o
-
-set_of_asteroids.i: set_of_asteroids.cpp.i
-
-.PHONY : set_of_asteroids.i
-
-# target to preprocess a source file
-set_of_asteroids.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.i
-.PHONY : set_of_asteroids.cpp.i
-
-set_of_asteroids.s: set_of_asteroids.cpp.s
-
-.PHONY : set_of_asteroids.s
-
-# target to generate assembly for a file
-set_of_asteroids.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.s
-.PHONY : set_of_asteroids.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -405,6 +378,9 @@ help:
 	@echo "... asteroid.o"
 	@echo "... asteroid.i"
 	@echo "... asteroid.s"
+	@echo "... asteroids_engine.o"
+	@echo "... asteroids_engine.i"
+	@echo "... asteroids_engine.s"
 	@echo "... bitmap.o"
 	@echo "... bitmap.i"
 	@echo "... bitmap.s"
@@ -420,18 +396,12 @@ help:
 	@echo "... keyboard.o"
 	@echo "... keyboard.i"
 	@echo "... keyboard.s"
-	@echo "... linked_list.o"
-	@echo "... linked_list.i"
-	@echo "... linked_list.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... nave.o"
 	@echo "... nave.i"
 	@echo "... nave.s"
-	@echo "... set_of_asteroids.o"
-	@echo "... set_of_asteroids.i"
-	@echo "... set_of_asteroids.s"
 .PHONY : help
 
 

@@ -4,10 +4,16 @@
 
 #include "asteroid.h"
 
+/* myAster[], contiene los macros para la eleccion de asteroides
+ * type_of_asters, contiene los valores antes mencionados */
 int myAster[] = {NO_1, NO_2, NO_3, NO_4, NO_5};
 vector<int> type_of_asters(myAster, myAster+5);
 
-ASTEROID::ASTEROID(const int _no_asteroid): BITMAP("asteroides.png") {
+/* Constructor ASTEROID
+ * type_aster, tipo de asteroid que sera (1,2,3,4,5)
+ * "asteroides.png", direccion de la imagen de los asteroides */
+ASTEROID::ASTEROID(const int _no_asteroid): BITMAP("asteroides.png")
+{
   destroyed = false;
   width = 45;
   height = 45;
@@ -17,15 +23,16 @@ ASTEROID::ASTEROID(const int _no_asteroid): BITMAP("asteroides.png") {
   sourceY = 0;
 }
 
-void ASTEROID::draw_asteroid(const int _asteroid_no) const {
-  al_draw_bitmap_region(bitmap, _asteroid_no, sourceY, 45, 45, posX, posY, 0);
-}
-
-void ASTEROID::draw_asteroid() const {
+/* Metodo draw_asteroid
+ * Agiliza el proceso de dibujado del asteroide */
+void ASTEROID::draw_asteroid() const
+{
   al_draw_bitmap_region(bitmap, sourceX, sourceY, 45, 45, posX, posY, 0);
 }
-
-
+void ASTEROID::draw_asteroid()
+{
+  al_draw_bitmap_region(bitmap, sourceX, sourceY, 45, 45, posX, posY, 0);
+}
 
 
 
