@@ -11,10 +11,7 @@ class ROW_OF_ASTEROIDS
 {
 private:
   vector<ASTEROID*> row;
-  unsigned long no_of_asters;
 public:
-  bool reached_limit;
-  bool all_destroyed;
   ROW_OF_ASTEROIDS();
   ~ROW_OF_ASTEROIDS();
   int generate_random_no_of_asteroids();
@@ -22,6 +19,8 @@ public:
   coor_t generate_random_coorX();
   coor_t generate_random_coorY();
 
+  bool empty_row();
+  bool reached_limit();
   void move_asteroids();
   void check_asteroids(BITMAP* obj);
   void draw_asteroids();
@@ -42,7 +41,7 @@ public:
   void generate_row();
   void delete_row(ROW_OF_ASTEROIDS* obj);
   int generate_random_fps();
-  bool check_asteroids(BITMAP* obj)const;
+  void check_asteroids(BITMAP* obj)const;
   void manage_asteroids(BITMAP* obj, const GAME* game);
 
 };

@@ -18,16 +18,13 @@ ROW_OF_ASTEROIDS::ROW_OF_ASTEROIDS()
     new_aster->setY(generate_random_coorY());
     row.push_back(new_aster);
   }
-  this->no_of_asters = row.size();
-  reached_limit = false;
-  all_destroyed = false;
-  cout << "ROW_OF_ASTEROIDS: Tamaño de la fila " << this->no_of_asters << endl;
+  cout << "ROW_OF_ASTEROIDS: Tamaño de la fila " << row.size() << endl;
 }
 
 ROW_OF_ASTEROIDS::~ROW_OF_ASTEROIDS()
 {
-  for (int i = 0; i < no_of_asters; i++)
-    delete row.at(i);
+  for (int i = 0; i < row.size(); i++)
+    delete row[i];
   cout << "ROW_OF_ASTEROIDS: All deleted." << endl;
 }
 
@@ -63,32 +60,40 @@ coor_t ROW_OF_ASTEROIDS::generate_random_coorY()
   return distr(eng);
 }
 
+bool ROW_OF_ASTEROIDS::empty_row()
+{
+  return row.empty();
+}
+
+bool ROW_OF_ASTEROIDS::reached_limit()
+{
+  int count = 0;
+  for (unsigned int i = 0; i < row.size(); i++)
+  {
+    if (row[i]->getY() >= 480) count++;
+  }
+  return (count == row.size());
+}
+
 void ROW_OF_ASTEROIDS::move_asteroids()
 {
-  if (all_destroyed || reached_limit){
-    return;
-  }
-  if (row[0]->getY() >= 480)
+  for (unsigned int i = 0; i < row.size(); i++)
   {
-    reached_limit = true;
-    cout << "ROW_OF_ASTEROIDS: Alcanzo el limite" << endl;
-  }
-  for (int i = 0; i < no_of_asters; i++)
-  {
-    if (!row[i]->destroyed)
-      row[i]->moveY(1.8);
+    row[i]->moveY(1.8);
   }
 }
 
 void ROW_OF_ASTEROIDS::check_asteroids(BITMAP* obj)
 {
-  if (all_destroyed || reached_limit){
-    return;
-  }
-  int no_of_destroyed = 0;
-  for (int i = 0; i < no_of_asters; i++)
+  for (unsigned int i = 0; i < row.size(); i++)
   {
-    if (!row[i]->destroyed)
+    if (row[i]->getY() == 480)
+    {
+      delete row[i];
+      row.erase(row.begin()+i);
+//      cout << "ROA: Deleted an asteroid, alcanzo el limite" << endl;
+    }
+    else if (!row[i]->destroyed)
     {
       if (obj->check_colision(*row[i]))
       {
@@ -98,25 +103,18 @@ void ROW_OF_ASTEROIDS::check_asteroids(BITMAP* obj)
     }
     else
     {
-      no_of_destroyed += 1;
+      delete row[i];
+      row.erase(row.begin()+i);
+//      cout << "ROA: Deleted an asteroid, colision" << endl;
     }
-  }
-  if (no_of_destroyed == no_of_asters)
-  {
-    all_destroyed = true;
-    cout << "ROW_OF_ASTEROID: All destroyed = true" << endl;
   }
 }
 
 void ROW_OF_ASTEROIDS::draw_asteroids()
 {
-  if (all_destroyed || reached_limit){
-    return;
-  }
-  for (int i = 0; i < no_of_asters; i++)
+  for (unsigned int i = 0; i < row.size(); i++)
   {
-    if (!row.at(i)->destroyed)
-      row.at(i)->draw_asteroid();
+    row[i]->draw_asteroid();
   }
 }
 
@@ -136,9 +134,9 @@ ASTEROIDS_ENG::ASTEROIDS_ENG()
 
 ASTEROIDS_ENG::~ASTEROIDS_ENG()
 {
-  for (int i = 0; i < no_of_rows; i++)
+  for (int i = 0; i < rows_of_asters.size(); i++)
   {
-    delete_row(rows_of_asters.at(i));
+    delete_row(rows_of_asters[i]);
   }
   cout << "ASTEROIDS_ENG: Deleted all rows" << endl;
 }
@@ -165,8 +163,9 @@ int ASTEROIDS_ENG::generate_random_fps()
   return distr(eng);
 }
 
-bool ASTEROIDS_ENG::check_asteroids(BITMAP* obj)const {
-  for (unsigned int i = 0; i < no_of_rows; i++)
+void ASTEROIDS_ENG::check_asteroids(BITMAP* obj)const
+{
+  for (unsigned int i = 0; i < rows_of_asters.size(); i++)
   {
     rows_of_asters[i]->check_asteroids(obj);
   }
@@ -176,12 +175,25 @@ void ASTEROIDS_ENG::manage_asteroids(BITMAP *obj, const GAME* game) {
   int64_t frames = game->get_timer_count();
   if (frames % fps_to_gen == 0)
   {
-    cout << "ASTEROIDS_ENG: frames = " << frames << endl;
+//    cout << "ASTEROIDS_ENG: frames = " << frames << endl;
     generate_row();
     fps_to_gen = generate_random_fps();
   }
-  for (int i = 0; i < no_of_rows; i++)
+  for (unsigned int i = 0; i < rows_of_asters.size(); i++)
   {
-    rows_of_asters[i]->manage_asteroids(obj);
+    if (rows_of_asters[i]->empty_row())
+    {
+      delete_row(rows_of_asters[i]);
+      rows_of_asters.erase(rows_of_asters.begin()+i);
+//      cout << "ASTEROIDS_ENG: Deleted a row, empty" << endl;
+    }
+    else if (rows_of_asters[i]->reached_limit())
+    {
+      delete_row(rows_of_asters[i]);
+      rows_of_asters.erase(rows_of_asters.begin()+i);
+//      cout << "ASTEROIDS_ENG: Deleted a row, alcanzo el limite" << endl;
+    }
+    else
+      rows_of_asters[i]->manage_asteroids(obj);
   }
 }

@@ -41,7 +41,7 @@ void GUN::check_bullets(const ASTEROIDS_ENG& obj){
       {
         delete bullets[i];
         bullets.erase(bullets.begin() + i);
-        cout << "GUN: Deleted a bulllet, alcanzo el limite" << endl;
+//        cout << "GUN: Deleted a bulllet, alcanzo el limite" << endl;
       }
       else if (!bullets[i]->destroyed)
       {
@@ -51,7 +51,7 @@ void GUN::check_bullets(const ASTEROIDS_ENG& obj){
       {
         delete bullets[i];
         bullets.erase(bullets.begin() + i);
-        cout << "GUN: Deleted a bulllet, colisiono" << endl;
+//        cout << "GUN: Deleted a bulllet, colisiono" << endl;
       }
     }
   }
@@ -65,7 +65,6 @@ void GUN::move_bullets() {
       bullets[i]->moveY(-3.0);
     }
   }
-
 }
 
 void GUN::draw_bullets(){
