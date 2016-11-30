@@ -15,6 +15,7 @@ protected:
   int             sourceX;                                    /// Coordenada 'x' de source
   int             sourceY;                                    /// Coordenada 'y' de source
 public:
+  bool destroyed;
   BITMAP();                                                   /// Constructor default
   BITMAP(const char* file);                                   /// Constructor que recibe la imagen
   ~BITMAP();                                                  /// Destructor de BITMAP

@@ -85,6 +85,8 @@ allegro_includes.h
 /home/kevin/IPOO/SpaceShip/allegro_includes.h
 bullet.h
 /home/kevin/IPOO/SpaceShip/bullet.h
+set_of_asteroids.h
+/home/kevin/IPOO/SpaceShip/set_of_asteroids.h
 
 /home/kevin/IPOO/SpaceShip/keyboard.cpp
 keyboard.h

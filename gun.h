@@ -7,6 +7,7 @@
 
 #include "allegro_includes.h"
 #include "bullet.h"
+#include "set_of_asteroids.h"
 
 using namespace std;
 
@@ -24,10 +25,11 @@ public:
   const int get_actual_m() const;
   const int get_munition() const;
   void get_info();
-  void shoot_gun(int X, int Y, int middle_nave_X, int middle_nave_Y);
-  void check_gun();
+  void shoot_gun(coor_t X, coor_t Y, int middle_nave_X, int middle_nave_Y);
+  void check_bullets(const ASTEROIDS_ENG& obj);
+  void move_bullets();
   void draw_bullets();
-  void manage_gun();
+  void manage_gun(const ASTEROIDS_ENG& obj);
 };
 
 

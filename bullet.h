@@ -5,8 +5,6 @@
 
 class BULLET: public BITMAP{
 public:
-  bool destroyed;
-  bool colision;
   BULLET();
 };
 

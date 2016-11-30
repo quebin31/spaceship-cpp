@@ -21,7 +21,7 @@ public:
   void shoot();
   void get_ammo_info();
   void draw_nave();
-  void admi_gun();
+  void admi_gun(const ASTEROIDS_ENG& obj);
   void draw_nave(const int _nave_no);
 };
 

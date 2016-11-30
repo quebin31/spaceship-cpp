@@ -3,7 +3,8 @@
 using namespace std;
 
 BULLET::BULLET(): BITMAP("bullet2.png") {
-  colision  = false;
+  width = 10;
+  height = 10;
   destroyed = false;
 }
 

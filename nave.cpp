@@ -5,6 +5,7 @@ using namespace std;
 
 NAVE::NAVE(): BITMAP("nave1.png"){
   cout << "NAVE: Instanciando el objeto nave" << endl;
+  destroyed = false;
   width   = 32;
   height  = 32;
   cout << "NAVE: Dimensiones del objeto nave " << width << "x" << height << endl;
@@ -25,8 +26,8 @@ void NAVE::shoot() {
   nave_gun.shoot_gun(posX, posY, middle_nave_x, -middle_nave_y);
 }
 
-void NAVE::admi_gun(){
-  nave_gun.manage_gun();
+void NAVE::admi_gun(const ASTEROIDS_ENG& obj){
+  nave_gun.manage_gun(obj);
 }
 
 void NAVE::draw_nave(){

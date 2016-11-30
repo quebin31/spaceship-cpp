@@ -20,11 +20,12 @@ public:
   int generate_random_no_of_asteroids();
   int generate_random_type_of_asteroid();
   coor_t generate_random_coorX();
+  coor_t generate_random_coorY();
 
   void move_asteroids();
-  void check_asteroids(const BITMAP &obj);
+  void check_asteroids(BITMAP* obj);
   void draw_asteroids();
-  void manage_asteroids(const BITMAP& obj);
+  void manage_asteroids(BITMAP* obj);
 };
 
 
@@ -41,10 +42,8 @@ public:
   void generate_row();
   void delete_row(ROW_OF_ASTEROIDS* obj);
   int generate_random_fps();
-  void move_asteroids();
-  void check_asteroids(const BITMAP& obj);
-  void draw_asteroids();
-  void manage_asteroids(const BITMAP& obj, const GAME* game);
+  bool check_asteroids(BITMAP* obj)const;
+  void manage_asteroids(BITMAP* obj, const GAME* game);
 
 };
 

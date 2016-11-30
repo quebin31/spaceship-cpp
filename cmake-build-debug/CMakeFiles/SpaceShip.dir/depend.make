@@ -28,10 +28,12 @@ CMakeFiles/SpaceShip.dir/game.cpp.o: ../nave.h
 CMakeFiles/SpaceShip.dir/game.cpp.o: ../set_of_asteroids.h
 
 CMakeFiles/SpaceShip.dir/gun.cpp.o: ../allegro_includes.h
+CMakeFiles/SpaceShip.dir/gun.cpp.o: ../asteroid.h
 CMakeFiles/SpaceShip.dir/gun.cpp.o: ../bitmap.h
 CMakeFiles/SpaceShip.dir/gun.cpp.o: ../bullet.h
 CMakeFiles/SpaceShip.dir/gun.cpp.o: ../gun.cpp
 CMakeFiles/SpaceShip.dir/gun.cpp.o: ../gun.h
+CMakeFiles/SpaceShip.dir/gun.cpp.o: ../set_of_asteroids.h
 
 CMakeFiles/SpaceShip.dir/keyboard.cpp.o: ../allegro_includes.h
 CMakeFiles/SpaceShip.dir/keyboard.cpp.o: ../game.h
@@ -53,11 +55,13 @@ CMakeFiles/SpaceShip.dir/main.cpp.o: ../nave.h
 CMakeFiles/SpaceShip.dir/main.cpp.o: ../set_of_asteroids.h
 
 CMakeFiles/SpaceShip.dir/nave.cpp.o: ../allegro_includes.h
+CMakeFiles/SpaceShip.dir/nave.cpp.o: ../asteroid.h
 CMakeFiles/SpaceShip.dir/nave.cpp.o: ../bitmap.h
 CMakeFiles/SpaceShip.dir/nave.cpp.o: ../bullet.h
 CMakeFiles/SpaceShip.dir/nave.cpp.o: ../gun.h
 CMakeFiles/SpaceShip.dir/nave.cpp.o: ../nave.cpp
 CMakeFiles/SpaceShip.dir/nave.cpp.o: ../nave.h
+CMakeFiles/SpaceShip.dir/nave.cpp.o: ../set_of_asteroids.h
 
 CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o: ../allegro_includes.h
 CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o: ../asteroid.h
