@@ -37,13 +37,21 @@ void GUN::shoot_gun(coor_t X, coor_t Y, int middle_nave_X, int middle_nave_Y){
 void GUN::check_bullets(const ASTEROIDS_ENG& obj){
   if (!bullets.empty()){
     for (unsigned int i = 0; i < bullets.size(); i++) {
-      if (!bullets[i]->destroyed)
+      if (bullets[i]->getY() <= 50)
+      {
+        delete bullets[i];
+        bullets.erase(bullets.begin() + i);
+        cout << "GUN: Deleted a bulllet, alcanzo el limite" << endl;
+      }
+      else if (!bullets[i]->destroyed)
+      {
         obj.check_asteroids(bullets[i]);
+      }
       else
       {
         delete bullets[i];
         bullets.erase(bullets.begin() + i);
-        cout << "GUN: Deleted a bulllet" << endl;
+        cout << "GUN: Deleted a bulllet, colisiono" << endl;
       }
     }
   }
