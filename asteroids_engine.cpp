@@ -152,7 +152,6 @@ void ROW_OF_ASTEROIDS::move_and_draw_asteroids()
   draw_asteroids();
 }
 
-
 ASTEROIDS_ENG::ASTEROIDS_ENG()
 {
   generate_row();
