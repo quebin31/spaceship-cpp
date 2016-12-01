@@ -40,6 +40,18 @@ asteroid.h
 bitmap.h
 /home/kevin/IPOO/SpaceShip/bitmap.h
 
+/home/kevin/IPOO/SpaceShip/asteroids_engine.cpp
+asteroids_engine.h
+/home/kevin/IPOO/SpaceShip/asteroids_engine.h
+nave.h
+/home/kevin/IPOO/SpaceShip/nave.h
+game.h
+/home/kevin/IPOO/SpaceShip/game.h
+
+/home/kevin/IPOO/SpaceShip/asteroids_engine.h
+asteroid.h
+/home/kevin/IPOO/SpaceShip/asteroid.h
+
 /home/kevin/IPOO/SpaceShip/bitmap.cpp
 bitmap.h
 /home/kevin/IPOO/SpaceShip/bitmap.h
@@ -67,8 +79,8 @@ keyboard.h
 /home/kevin/IPOO/SpaceShip/keyboard.h
 nave.h
 /home/kevin/IPOO/SpaceShip/nave.h
-set_of_asteroids.h
-/home/kevin/IPOO/SpaceShip/set_of_asteroids.h
+asteroids_engine.h
+/home/kevin/IPOO/SpaceShip/asteroids_engine.h
 bitmap.h
 /home/kevin/IPOO/SpaceShip/bitmap.h
 
@@ -85,8 +97,8 @@ allegro_includes.h
 /home/kevin/IPOO/SpaceShip/allegro_includes.h
 bullet.h
 /home/kevin/IPOO/SpaceShip/bullet.h
-set_of_asteroids.h
-/home/kevin/IPOO/SpaceShip/set_of_asteroids.h
+asteroids_engine.h
+/home/kevin/IPOO/SpaceShip/asteroids_engine.h
 
 /home/kevin/IPOO/SpaceShip/keyboard.cpp
 keyboard.h
@@ -98,14 +110,6 @@ game.h
 allegro_includes.h
 /home/kevin/IPOO/SpaceShip/allegro_includes.h
 
-/home/kevin/IPOO/SpaceShip/linked_list.cpp
-linked_list.h
-/home/kevin/IPOO/SpaceShip/linked_list.h
-
-/home/kevin/IPOO/SpaceShip/linked_list.h
-iostream
--
-
 /home/kevin/IPOO/SpaceShip/main.cpp
 game.h
 /home/kevin/IPOO/SpaceShip/game.h
@@ -113,8 +117,8 @@ nave.h
 /home/kevin/IPOO/SpaceShip/nave.h
 keyboard.h
 /home/kevin/IPOO/SpaceShip/keyboard.h
-set_of_asteroids.h
-/home/kevin/IPOO/SpaceShip/set_of_asteroids.h
+asteroids_engine.h
+/home/kevin/IPOO/SpaceShip/asteroids_engine.h
 
 /home/kevin/IPOO/SpaceShip/nave.cpp
 nave.h
@@ -125,14 +129,4 @@ bitmap.h
 /home/kevin/IPOO/SpaceShip/bitmap.h
 gun.h
 /home/kevin/IPOO/SpaceShip/gun.h
-
-/home/kevin/IPOO/SpaceShip/set_of_asteroids.cpp
-set_of_asteroids.h
-/home/kevin/IPOO/SpaceShip/set_of_asteroids.h
-game.h
-/home/kevin/IPOO/SpaceShip/game.h
-
-/home/kevin/IPOO/SpaceShip/set_of_asteroids.h
-asteroid.h
-/home/kevin/IPOO/SpaceShip/asteroid.h
 

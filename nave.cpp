@@ -29,9 +29,26 @@ NAVE::NAVE(): BITMAP("nave1.png")
 void NAVE::select_nave(const int direction) { sourceX = direction; }
 void NAVE::draw_nave(){ al_draw_bitmap_region(bitmap, sourceX, sourceY, 32, 32, posX, posY, 0); }
 
-/* Metodos para administrar el arma de la nave
- * shoot: llama al metodo de nave_gun que se encarga de crear y dibujar una nueva bala en pantalla
- * manage_gun: se encarga de mover las balas, detectar si colisionaron o llegaron al limite de la pantalla para ser borradas */
+
+/* Metodo shoot
+ * Llama al metodo de nave_gun que se encarga de crear y dibujar una nueva bala en pantalla */
 void NAVE::shoot() { nave_gun.shoot_gun(posX, posY, middle_nave_x, -middle_nave_y); }
-void NAVE::manage_gun(const ASTEROIDS_ENG &obj){ nave_gun.manage_gun(obj); }
+
+/* Metodo check_colisions
+ * Verifica colisiones entre nave y asteroides
+ * Y tambien entre balas y asteroides */
+void NAVE::check_colisions(ASTEROIDS_ENG &obj)
+{
+  obj.check_asteroids(this);
+}
+
+void NAVE::move_and_draw_bullets()
+{
+  nave_gun.move_bullets();
+  nave_gun.draw_bullets();
+}
+
+GUN* NAVE::get_gun() {
+  return &(this->nave_gun);
+}
 

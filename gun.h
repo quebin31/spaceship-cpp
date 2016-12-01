@@ -24,10 +24,9 @@ class GUN {
 
     void shoot_gun(coor_t X, coor_t Y, int middle_nave_X, int middle_nave_Y);       /// Disparar una bala
 
-    void check_bullets(const ASTEROIDS_ENG& obj);                                   /// Verifica el estado de las balas
+    void check_bullets(BITMAP& obj);                                                /// Verifica el estado de las balas
     void move_bullets();                                                            /// Mueve las balas
     void draw_bullets();                                                            /// Dibuja las balas
-    void manage_gun(const ASTEROIDS_ENG& obj);                                      /// Encapsulamiento de los 3 metodos anteriores
 };
 
 

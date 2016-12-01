@@ -44,21 +44,19 @@ void GUN::shoot_gun(coor_t X, coor_t Y, int middle_nave_X, int middle_nave_Y)
  * Recorre el vector de las balas, si es que la coordenada Y de una bala llega a ser igual que 50, se destruye dicha bala, ya que alcanzo el limite de la pantalla
  * Si es que la bala en la posicion i, fue destruida se borra del heap, y tambien se borra del vector
  * Y en caso no paso nada de lo anterior simplemente se verifica si es que esa bala, no choco con ningun asteroide todavia */
-void GUN::check_bullets(const ASTEROIDS_ENG& obj){
+void GUN::check_bullets(BITMAP& obj){
   for (unsigned int i = 0; i < bullets.size(); i++)
   {
-    if (bullets[i]->getY() == 50)
+    if (bullets[i]->getY() == 50 || bullets[i]->destroyed)
     {
       delete bullets[i];
       bullets.erase(bullets.begin() + i);
     }
-    else if (bullets[i]->destroyed)
+    else if (obj.check_colision(bullets[i]))
     {
-      delete bullets[i];
-      bullets.erase(bullets.begin() + i);
+      bullets[i]->destroyed = true;
+      obj.destroyed = true;
     }
-    else
-      obj.check_asteroids(bullets[i]);
   }
 }
 
@@ -80,12 +78,4 @@ void GUN::draw_bullets()
   {
     if (!bullets[i]->destroyed) bullets[i]->draw_bitmap(0);
   }
-}
-
-/* Metodo manage_gun
- * Encapsulamiento de los 3 metodos anteriores para un manejo más eficiente de los 3 */
-void GUN::manage_gun(const ASTEROIDS_ENG& obj){
-  check_bullets(obj);
-  move_bullets();
-  draw_bullets();
 }

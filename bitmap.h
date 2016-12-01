@@ -37,6 +37,8 @@ class BITMAP {
     void draw_bitmap(int flags);                                /// Dibuja el bitmap
     bool check_colision(const BITMAP& obj) const;               /// Chequea si es que hay una colision o no
     bool check_colision(const BITMAP& obj);                     /// Chequea si es que hay una colision o no
+    bool check_colision(const BITMAP* obj) const;               /// Chequea si es que hay una colision o no
+    bool check_colision(const BITMAP* obj);                     /// Chequea si es que hay una colision o no
 };
 
 #endif // BITMAP_H

@@ -7,24 +7,28 @@
 
 #include "asteroid.h"
 
+class NAVE;
+
 class ROW_OF_ASTEROIDS
 {
 private:
-  vector<ASTEROID*> row;
+  vector<ASTEROID*> row;                                            /// Vector que almacena punteros a ASTEROID
 public:
-  ROW_OF_ASTEROIDS();
-  ~ROW_OF_ASTEROIDS();
-  int generate_random_no_of_asteroids();
-  int generate_random_type_of_asteroid();
-  coor_t generate_random_coorX();
-  coor_t generate_random_coorY();
+  ROW_OF_ASTEROIDS();                                               /// Constructor
+  ~ROW_OF_ASTEROIDS();                                              /// Destructor
 
-  bool empty_row();
-  bool reached_limit();
-  void move_asteroids();
-  void check_asteroids(BITMAP* obj);
-  void draw_asteroids();
-  void manage_asteroids(BITMAP* obj);
+  int generate_random_no_of_asteroids();                            /// Genera aleatoriamente un numero de asteroides
+  int generate_random_type_of_asteroid();                           /// Genera aleatoriamente un tipo de asteroide
+  coor_t generate_random_coorX();                                   /// Genera aleatoriamente una coordenada X
+  coor_t generate_random_coorY();                                   /// Genera aleatoriamente una coordenada Y
+
+  bool empty_row();                                                 /// Verifica si la fila de asteroides esta vacia
+  bool reached_limit();                                             /// Verifica si todos los asteroides llegaron al limite de la pantalla
+
+  void check_asteroids(NAVE* nave);                                 /// Verifica el estado de los asteroides
+  void move_asteroids();                                            /// Mueve los asteroides
+  void draw_asteroids();                                            /// Dibuja los asteroides
+  void move_and_draw_asteroids();                                   /// Encapsulamiento de las 2 funciones anteriores
 };
 
 
@@ -40,9 +44,11 @@ public:
 
   void generate_row();
   void delete_row(ROW_OF_ASTEROIDS* obj);
+
   int generate_random_fps();
-  void check_asteroids(BITMAP* obj)const;
-  void manage_asteroids(BITMAP* obj, const GAME* game);
+
+  void check_asteroids(NAVE* nave);
+  void move_draw_and_gen_asteroids(const GAME* game);
 
 };
 

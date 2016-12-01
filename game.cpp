@@ -211,9 +211,10 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   }
 
   set_display_color(26,26,26);
-  asters.manage_asteroids(&nave, this);
+  nave.check_colisions(asters);
+  nave.move_and_draw_bullets();
+  asters.move_draw_and_gen_asteroids(this);
   nave.draw_nave();
-  nave.manage_gun(asters);
   framework->draw_bitmap(0);
   al_flip_display();
 }

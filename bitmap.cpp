@@ -69,5 +69,17 @@ bool BITMAP::check_colision(const BITMAP &obj)
       return true;
   return false;
 }
-
-
+bool BITMAP::check_colision(const BITMAP *obj) const
+{
+  if (this->posX + this->width >= obj->posX && this->posX <= obj->posX + obj->width)
+    if (this->posY + this->height >= obj->posY && this->posY <= obj->posY + obj->height)
+      return true;
+  return false;
+}
+bool BITMAP::check_colision(const BITMAP *obj)
+{
+  if (this->posX + this->width >= obj->posX && this->posX <= obj->posX + obj->width)
+    if (this->posY + this->height >= obj->posY && this->posY <= obj->posY + obj->height)
+      return true;
+  return false;
+}

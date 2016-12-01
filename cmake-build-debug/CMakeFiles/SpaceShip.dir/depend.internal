@@ -6,6 +6,16 @@ CMakeFiles/SpaceShip.dir/asteroid.cpp.o
  /home/kevin/IPOO/SpaceShip/asteroid.cpp
  /home/kevin/IPOO/SpaceShip/asteroid.h
  /home/kevin/IPOO/SpaceShip/bitmap.h
+CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.o
+ /home/kevin/IPOO/SpaceShip/allegro_includes.h
+ /home/kevin/IPOO/SpaceShip/asteroid.h
+ /home/kevin/IPOO/SpaceShip/asteroids_engine.cpp
+ /home/kevin/IPOO/SpaceShip/asteroids_engine.h
+ /home/kevin/IPOO/SpaceShip/bitmap.h
+ /home/kevin/IPOO/SpaceShip/bullet.h
+ /home/kevin/IPOO/SpaceShip/game.h
+ /home/kevin/IPOO/SpaceShip/gun.h
+ /home/kevin/IPOO/SpaceShip/nave.h
 CMakeFiles/SpaceShip.dir/bitmap.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h
  /home/kevin/IPOO/SpaceShip/bitmap.cpp
@@ -19,6 +29,7 @@ CMakeFiles/SpaceShip.dir/bullet.cpp.o
 CMakeFiles/SpaceShip.dir/game.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h
  /home/kevin/IPOO/SpaceShip/asteroid.h
+ /home/kevin/IPOO/SpaceShip/asteroids_engine.h
  /home/kevin/IPOO/SpaceShip/bitmap.h
  /home/kevin/IPOO/SpaceShip/bullet.h
  /home/kevin/IPOO/SpaceShip/game.cpp
@@ -26,26 +37,23 @@ CMakeFiles/SpaceShip.dir/game.cpp.o
  /home/kevin/IPOO/SpaceShip/gun.h
  /home/kevin/IPOO/SpaceShip/keyboard.h
  /home/kevin/IPOO/SpaceShip/nave.h
- /home/kevin/IPOO/SpaceShip/set_of_asteroids.h
 CMakeFiles/SpaceShip.dir/gun.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h
  /home/kevin/IPOO/SpaceShip/asteroid.h
+ /home/kevin/IPOO/SpaceShip/asteroids_engine.h
  /home/kevin/IPOO/SpaceShip/bitmap.h
  /home/kevin/IPOO/SpaceShip/bullet.h
  /home/kevin/IPOO/SpaceShip/gun.cpp
  /home/kevin/IPOO/SpaceShip/gun.h
- /home/kevin/IPOO/SpaceShip/set_of_asteroids.h
 CMakeFiles/SpaceShip.dir/keyboard.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h
  /home/kevin/IPOO/SpaceShip/game.h
  /home/kevin/IPOO/SpaceShip/keyboard.cpp
  /home/kevin/IPOO/SpaceShip/keyboard.h
-CMakeFiles/SpaceShip.dir/linked_list.cpp.o
- /home/kevin/IPOO/SpaceShip/linked_list.cpp
- /home/kevin/IPOO/SpaceShip/linked_list.h
 CMakeFiles/SpaceShip.dir/main.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h
  /home/kevin/IPOO/SpaceShip/asteroid.h
+ /home/kevin/IPOO/SpaceShip/asteroids_engine.h
  /home/kevin/IPOO/SpaceShip/bitmap.h
  /home/kevin/IPOO/SpaceShip/bullet.h
  /home/kevin/IPOO/SpaceShip/game.h
@@ -53,20 +61,12 @@ CMakeFiles/SpaceShip.dir/main.cpp.o
  /home/kevin/IPOO/SpaceShip/keyboard.h
  /home/kevin/IPOO/SpaceShip/main.cpp
  /home/kevin/IPOO/SpaceShip/nave.h
- /home/kevin/IPOO/SpaceShip/set_of_asteroids.h
 CMakeFiles/SpaceShip.dir/nave.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h
  /home/kevin/IPOO/SpaceShip/asteroid.h
+ /home/kevin/IPOO/SpaceShip/asteroids_engine.h
  /home/kevin/IPOO/SpaceShip/bitmap.h
  /home/kevin/IPOO/SpaceShip/bullet.h
  /home/kevin/IPOO/SpaceShip/gun.h
  /home/kevin/IPOO/SpaceShip/nave.cpp
  /home/kevin/IPOO/SpaceShip/nave.h
- /home/kevin/IPOO/SpaceShip/set_of_asteroids.h
-CMakeFiles/SpaceShip.dir/set_of_asteroids.cpp.o
- /home/kevin/IPOO/SpaceShip/allegro_includes.h
- /home/kevin/IPOO/SpaceShip/asteroid.h
- /home/kevin/IPOO/SpaceShip/bitmap.h
- /home/kevin/IPOO/SpaceShip/game.h
- /home/kevin/IPOO/SpaceShip/set_of_asteroids.cpp
- /home/kevin/IPOO/SpaceShip/set_of_asteroids.h

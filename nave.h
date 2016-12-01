@@ -22,7 +22,10 @@ class NAVE : public BITMAP {
     void draw_nave();                                 /// Metodo para simplificar el proceso de dibujo de la nave
 
     void shoot();                                     /// Accion de disparar
-    void manage_gun(const ASTEROIDS_ENG &obj);        /// Metodo para administrar la el arma de la nave
+    void check_colisions(ASTEROIDS_ENG &obj);   /// Metodo para verificar las colisiones (nave con asteroides, balas con asteroides)
+    void move_and_draw_bullets();                     /// Metodo para mover y dibujar las balas
+
+    GUN* get_gun();                                   /// Devuelve la direccion del arma
 };
 
 #endif // NAVE_H
