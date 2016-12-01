@@ -30,7 +30,9 @@ class GAME {
   public:
     bool                  done;                                                                   /// Done (bool), controla el while del programa
     bool                  game_over_or_pause;                                                     /// Game Over Or Pause (bool), controla el while del juego
+    bool                  invulnerable;                                                           /// Invulnerable (bool), controla si es que la nave es invulnerable o no
     int                   vidas;                                                                  /// Vidas del juego
+    int64_t               destroyed_at;                                                           /// Momento en el que la nave fue destruida
 
     GAME(SCREEN *ndisplay);                                                                       /// Constructor de GAME en base a la pantalla
     ~GAME();                                                                                      /// Destructor
@@ -50,7 +52,7 @@ class GAME {
     SCREEN*               get_screen();                                                           /// Devuelve la direccion del screen template
     ALLEGRO_FONT*         get_font1();                                                            /// Devuelve la fuente del titulo principal
     ALLEGRO_FONT*         get_font2();                                                            /// Devuelve la fuente de los titulos para instrucciones
-    int64_t               get_timer_count()const;                                                 /// Devuelve la cantidad de frames desde que se inicio el timer
+    int64_t               get_timer_count() const;                                                /// Devuelve la cantidad de frames desde que se inicio el timer
     int                   get_framework_W();                                                      /// Devuelve el ancho del framework
     int                   get_framework_H();                                                      /// Devuelve la altura del framework
 };

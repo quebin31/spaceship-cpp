@@ -7,6 +7,8 @@
 
 using namespace std;
 
+/* SCREEN create_screen
+ * Crea una nueva plantilla para la pantalla */
 SCREEN *create_screen(const int w, const int h, const float fps) {
   SCREEN* temp = new SCREEN;
 
@@ -16,9 +18,29 @@ SCREEN *create_screen(const int w, const int h, const float fps) {
 
   return temp;
 }
+
+/* SCREEN destroy_screen
+ * Destruye la plantilla de la pantalla */
 void destroy_screen(SCREEN *screen) { delete screen; }
 
-/// Constructor con SCREEN
+/* Constructor GAME
+ * al_init() inicia el plugin de Allegro, si es que devuelve falso (fallo), muestra un mensaje del fallo y cierra el programa
+ * al_init_image_addon() inicia el plugin de imagen de Allegro, si es que devuelve falso (fallo), muestra un mensaje del fallo y cierra el programa
+ * al_init_font_addon() inicia el plugin de fuentes de Allegro, si es que devuelve falso (fallo), muestra un mensaje del fallo y cierra el programa
+ * al_init_ttf_addon() inicia el plugin de ttf de Allegro, si es que devuelve falso (fallo), muestra un mensaje del fallo y cierra el programa
+ * al_init_acodec_addon() inicia el plugin de acodec de Allegro, si es que devuelve falso (fallo), muestra un mensaje del fallo y cierra el programa
+ * al_install_audio() inicia el servicio de audio, para que pueda ser controlado por Allegro
+ * al_install_keyboard() inicia el servicio del teclado, para que pueda ser controlado por Allegro
+ * al_create_display(), crea un display nuevo de Allegro
+ * al_create_event_queue(), crea una cola de eventos, donde se guardaran todos los eventos por venir (FPS, teclado, etc)
+ * al_create_timer(), crea el timer, que manda un nuevo evento cada cierto tiempo (1/60 segundos es lo normal)
+ * done, (bool) controla el while principal del juego
+ * gameover_or_pause, (bool) controla el while de la actividad del juego
+ * vidas, (int) vidas que tiene el jugador antes de perder el juego
+ * al_register_event_source, registra los diferentes eventos que ocurriran durante el juego
+ * al_load_font, carga fuentes y las guarda (font1, font2)
+ * al_load_sample, carga audio y lo guarda (move_sound)
+ * framework, (marco del juego), un simple bitmap que funciona como marco del juego*/
 GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
 {
   cout << "GAME: Iniciando allegro" << endl;
@@ -101,7 +123,9 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
 
   done = false;
   game_over_or_pause = false;
+  invulnerable = false;
   vidas = 3;
+  destroyed_at = 0;
 
   cout << "GAME: Registrando todos los eventos" << endl;
   al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -128,7 +152,16 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   cout << "GAME: All done." << endl;
 }
 
-/// Destructor
+/* Desctructor GAME
+ * Destruye todos los objetos creados anteriormente:
+ * screen
+ * display
+ * timer
+ * event_queue
+ * font1
+ * font2
+ * move_sound
+ * framework*/
 GAME::~GAME()
 {
   cout << "GAME: Finalizando el juego" << endl;
@@ -143,14 +176,16 @@ GAME::~GAME()
   cout << "GAME: All done. Bye." << endl;
 }
 
-/// Cambia el color del display, y borra lo que tenga
+/* Metodo set_display_color
+ * Recolorea el display, haciendo que todos los objetos que estaban en pantalla sean sobrepuestos por el nuevo color */
 void GAME::set_display_color(int r, int g, int b)
 {
   al_set_target_bitmap(al_get_backbuffer(display));
   al_clear_to_color(al_map_rgb(r,g,b));
 }
 
-/// Inicia el timer
+/* Metodo start_timer
+ * Inicia el timer del juego, para que mande un evento cada 1/60 segundos */
 void GAME::start_timer()
 {
   cout << "GAME: Iniciando el timer" << endl;
@@ -158,15 +193,32 @@ void GAME::start_timer()
   game_over_or_pause = false;
 }
 
-/// Espera por un evento de SpaceShip
+/* Metodo wait_for_event
+ * Espera la señal de algun evento y lo guarda en un receptor que luego sera usado para saber de que tipo de evento se trataba y asi poder actuar al respecto */
 void GAME::wait_for_event(ALLEGRO_EVENT &ev) { al_wait_for_event(event_queue, &ev); }
 
-/// Muestra el menu inicial o de pausa
+/* Metodo show_menu
+ * Muestra el menu del juego, dependiendo de si el juego recien se inicio muestra la pantalla de bienvenida, en caso contrario, muestra la pantalla de pausa */
 void GAME::show_menu()
 {
   int64_t flag = al_get_timer_count(timer);
-  const char* state = (flag == 0) ? "INICIAR (PRESIONA ENTER)" : "RESUMIR (PRESIONA ENTER)";
-  const char* title = (flag == 0) ? "ASTEROID GAME" : "PAUSE";
+  char* title;
+  char* state;
+  if (flag == 0)
+  {
+    title = "ASTEROID GAME";
+    state = "INICIAR (PRESIONA ENTER)";
+  }
+  else if (vidas == 0)
+  {
+    title = "GAME OVER";
+    state = "REINICIAR (PRESIONA ENTER)";
+  }
+  else
+  {
+    title = "PAUSE";
+    state = "RESUMIR (PRESIONA ENTER)";
+  }
   set_display_color(26,26,26);
   al_draw_text(font1, al_map_rgb(200,10,50), screen->width/2, screen->height/2, ALLEGRO_ALIGN_CENTRE, title);
   al_draw_text(font2, al_map_rgb(20,30,60), screen->width/2, screen->height/2+60, ALLEGRO_ALIGN_CENTRE, state);
@@ -174,6 +226,13 @@ void GAME::show_menu()
   al_flip_display();
 }
 
+/* Metodo event_timer
+ * Cuando la señal del evento recibida sea del tipo de timer, se realizaran las siguientes acciones:
+ * Se verificara el estado de las teclas, de acuerdo a eso se movera la nave y se seleccionara su posicion (hacia donde mira)
+ * Tambien se puede verificar, si se apreto la tecla A, que hace que dispare la nave, pero solo dispara cada cierto tiempo
+ * Se limpia el display, se verifican las colisiones de la nave con los asteroides (lo que incluye choce nave con asteroide, y balas con asteroides)
+ * Luego se mueven y dibujan las balas, tambien los asteroides y en caso se necesite tambien se genera una nueva fila de asteroides
+ * Se dibuja la nave, y se dibuja el marco del juego, por ultimo se muestra el display.*/
 void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   if (keyboard.get_key_state(UP) && nave.getY() >= 4.0 + 76)
   {
@@ -204,10 +263,35 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
     nave.select_nave(NAVE_UP);
   }
 
-  if (keyboard.get_key_state(CHAR_A) && get_timer_count()%10 == 0)
+  if (keyboard.get_key_state(CHAR_A) && get_timer_count()%18 == 0)
   {
-//    nave.select_nave(NAVE_UP);
     nave.shoot();
+  }
+
+  if (!invulnerable)
+  {
+    if (nave.destroyed)
+    {
+      vidas -= 1;
+      invulnerable = true;
+      destroyed_at = get_timer_count();
+    }
+  }
+  else
+  {
+    if (nave.destroyed)
+    {
+      if (get_timer_count() == destroyed_at + 90)
+      {
+        invulnerable = false;
+        nave.destroyed = false;
+      }
+    }
+  }
+
+  if (vidas == 0)
+  {
+    game_over_or_pause = true;
   }
 
   set_display_color(26,26,26);

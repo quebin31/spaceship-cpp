@@ -47,7 +47,7 @@ void GUN::shoot_gun(coor_t X, coor_t Y, int middle_nave_X, int middle_nave_Y)
 void GUN::check_bullets(BITMAP& obj){
   for (unsigned int i = 0; i < bullets.size(); i++)
   {
-    if (bullets[i]->getY() == 50 || bullets[i]->destroyed)
+    if (bullets[i]->getY() <= 50 or bullets[i]->destroyed)
     {
       delete bullets[i];
       bullets.erase(bullets.begin() + i);
