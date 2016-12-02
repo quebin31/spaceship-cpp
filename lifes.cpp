@@ -1,6 +1,3 @@
 #include "lifes.h"
 
-lifes::lifes()
-{
-  //ctor
-}
+LIFE::LIFE(): BITMAP("lifes.png"), status(false) {}
