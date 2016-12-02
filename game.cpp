@@ -146,7 +146,6 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   framework->setW(framewk_w);
   framework->setH(framewk_h);
 
-
   al_set_window_position(display, 350, 180);
   set_display_color(26,26,26);
   cout << "GAME: All done." << endl;
