@@ -41,7 +41,8 @@
 -RC: Metodo modificados en gun, check bullets, ahora solo detecta colisiones de balas entre bitmaps
 -RC: Metodo modificado en asteroid_eng, check_asteroids, ahora solo recibe un objeto nave, dentro se llama a check_bullets y check_colision.
 -RC: Metodo renombrado, manage_asteroids ahora es move_draw_and_gen_asteroids, que recibe un objeto game, para poder generar una fila de asteroides nueva despues de un numero de frames, dentro de este metodo se llama a move_and_draw_asteroids (row_of_asteroids).
+-LIFE= Clase creada para las imagenes spritesheet que representan las vidas de la nave con corazones
+
 
 *RC = Refactoring code (Rehaciendo codigo), modificacion del codigo, para mejorar su funcionalidad, comentar lo que esta sin comentar.
 *WIP = Work In Progress (Trabajo en progreso), se esperan errores al momento de compilar o ejecutar el programa
--LIFE= Clase creada para las imagenes spritesheet que representan las vidas de la nave con corazones
