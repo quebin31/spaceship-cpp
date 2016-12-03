@@ -38,7 +38,6 @@ void GUN::shoot_gun(coor_t X, coor_t Y, int middle_nave_X, int middle_nave_Y)
   bullets_in_screen += 1;
 }
 
-
 /* Metodo check_bullets
  * Ya que las balas unicamente interactuan con los asteroides, y los asteroides son manejados por ASTEROID_ENG, se recibe como argumento el motor de los asteroides
  * Recorre el vector de las balas, si es que la coordenada Y de una bala llega a ser igual que 50, se destruye dicha bala, ya que alcanzo el limite de la pantalla

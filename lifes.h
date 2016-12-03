@@ -1,14 +1,11 @@
 #ifndef LIFES_H
 #define LIFES_H
 
-#include <vector>
 #include "bitmap.h"
-#define movex 20
 
 using namespace std;
 
-class LIFE : public BITMAP
-{
+class LIFE: public BITMAP{
   protected:
     bool status;
   public:
