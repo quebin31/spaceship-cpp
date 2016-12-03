@@ -146,14 +146,9 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   framework->setW(framewk_w);
   framework->setH(framewk_h);
   life1 = new LIFE;
-  //life2 = new LIFE;
-  //life3 = new LIFE;
   life1->setX(40);
   life1->setY(40);
-  //life2->setX(70);
-  //life2->setY(40);
-  //life3->setX(100);
-  //life3->setY(40);
+
   al_set_window_position(display, 350, 180);
   set_display_color(26,26,26);
   cout << "GAME: All done." << endl;
@@ -181,8 +176,6 @@ GAME::~GAME()
   al_destroy_sample(move_sound);
   delete framework;
   delete life1;
-  delete life2;
-  delete life3;
   cout << "GAME: All done. Bye." << endl;
 }
 
@@ -311,8 +304,6 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   nave.draw_nave();
   framework->draw_bitmap(0);
   life1->draw_life();
-  //life2->draw_life();
-  //life3->draw_life();
   al_flip_display();
 }
 
