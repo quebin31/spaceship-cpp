@@ -126,6 +126,8 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   invulnerable = false;
   vidas = 3;
   destroyed_at = 0;
+  score = 0;
+  string_score = "SCORE: ";
 
   cout << "GAME: Registrando todos los eventos" << endl;
   al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -135,6 +137,7 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   cout << "GAME: Cargando las fuentes" << endl;
   font1 = al_load_font("PressStart2P.ttf",30,0);
   font2 = al_load_font("Joystick.otf",20,0);
+  font_score = al_load_font("PressStart2P.ttf", 12,0);
 
   cout << "GAME: Cargando el audio" << endl;
   move_sound = al_load_sample("thrust.wav");
@@ -182,6 +185,7 @@ GAME::~GAME()
   al_destroy_event_queue(event_queue);
   al_destroy_font(font1);
   al_destroy_font(font2);
+  al_destroy_font(font_score);
   al_destroy_sample(move_sound);
   delete framework;
   delete life1;
@@ -319,6 +323,8 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   for (int i=0; i<n_hearts; i++){
     this->hearts[i]->draw_life();
   }
+
+  al_draw_text(font_score,al_map_rgb(100,100,100),440,45,0,string_score);
   al_flip_display();
 }
 
