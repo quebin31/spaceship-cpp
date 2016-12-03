@@ -13,15 +13,7 @@ class LIFE : public BITMAP
     bool status;
   public:
     LIFE();
-};
-
-class SET_OF_HEARTS
-{
-  protected:
-    vector<LIFE*> HEARTS;
-  public:
-    SET_OF_HEARTS();
-    ~SET_OF_HEARTS();
+    void draw_life();
 };
 
 #endif // LIFES_H
