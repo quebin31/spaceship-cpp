@@ -145,9 +145,6 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   int framewk_w = 600, framewk_h = 440;
   framework->setW(framewk_w);
   framework->setH(framewk_h);
-  life1 = new LIFE;
-  life1->setX(40);
-  life1->setY(40);
 
   al_set_window_position(display, 350, 180);
   set_display_color(26,26,26);
@@ -175,7 +172,6 @@ GAME::~GAME()
   al_destroy_font(font2);
   al_destroy_sample(move_sound);
   delete framework;
-  delete life1;
   cout << "GAME: All done. Bye." << endl;
 }
 
@@ -303,7 +299,7 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   asters.move_draw_and_gen_asteroids(this);
   nave.draw_nave();
   framework->draw_bitmap(0);
-  life1->draw_life();
+  lifes.draw_hearts();
   al_flip_display();
 }
 
