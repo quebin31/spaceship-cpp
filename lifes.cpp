@@ -12,8 +12,8 @@ SET_OF_HEARTS::SET_OF_HEARTS() {
 }
 
 SET_OF_HEARTS::~SET_OF_HEARTS(){
-  for (unsigned int i=0;i<this->HEARTS.size();i++){
-    delete this->HEARTS[i];
+  for (unsigned int i = 0; i<HEARTS.size(); i++){
+    delete HEARTS[i];
     cout << "Heart deleted" << endl;
   }
 }
