@@ -1,27 +1,19 @@
 #ifndef LIFES_H
 #define LIFES_H
 
-#include <vector>
+#include "allegro_includes.h"
 #include "bitmap.h"
-#define movex 20
-
+#define n_hearts 3
 using namespace std;
 
-class LIFE : public BITMAP
-{
+class LIFE: public BITMAP{
   protected:
     bool status;
   public:
     LIFE();
-};
-
-class SET_OF_HEARTS
-{
-  protected:
-    vector<LIFE*> HEARTS;
-  public:
-    SET_OF_HEARTS();
-    ~SET_OF_HEARTS();
+    void draw_life();
+    void change_state(bool stat);
+    void check_life();
 };
 
 #endif // LIFES_H

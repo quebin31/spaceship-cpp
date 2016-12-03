@@ -4,6 +4,7 @@
 #include "nave.h"
 #include "asteroids_engine.h"
 #include "bitmap.h"
+#include <stdio.h>
 
 using namespace std;
 
@@ -126,6 +127,9 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   invulnerable = false;
   vidas = 3;
   destroyed_at = 0;
+  score = 0;
+  string_score = "SCORE: ";
+  string_points = reinterpret_cast<char*>(&score);
 
   cout << "GAME: Registrando todos los eventos" << endl;
   al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -135,6 +139,7 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   cout << "GAME: Cargando las fuentes" << endl;
   font1 = al_load_font("PressStart2P.ttf",30,0);
   font2 = al_load_font("Joystick.otf",20,0);
+  font_score = al_load_font("PressStart2P.ttf", 12,0);
 
   cout << "GAME: Cargando el audio" << endl;
   move_sound = al_load_sample("thrust.wav");
@@ -145,6 +150,18 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   int framewk_w = 600, framewk_h = 440;
   framework->setW(framewk_w);
   framework->setH(framewk_h);
+  life1 = new LIFE;
+  life2 = new LIFE;
+  life3 = new LIFE;
+  life1->setX(40);
+  life1->setY(40);
+  life2->setX(70);
+  life2->setY(40);
+  life3->setX(100);
+  life3->setY(40);
+  this->hearts.push_back(life1);
+  this->hearts.push_back(life2);
+  this->hearts.push_back(life3);
 
   al_set_window_position(display, 350, 180);
   set_display_color(26,26,26);
@@ -170,8 +187,13 @@ GAME::~GAME()
   al_destroy_event_queue(event_queue);
   al_destroy_font(font1);
   al_destroy_font(font2);
+  al_destroy_font(font_score);
   al_destroy_sample(move_sound);
   delete framework;
+  delete life1;
+  delete life2;
+  delete life3;
+
   cout << "GAME: All done. Bye." << endl;
 }
 
@@ -272,6 +294,7 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
     if (nave.destroyed)
     {
       vidas -= 1;
+      this->hearts[vidas]->change_state(true);
       invulnerable = true;
       destroyed_at = get_timer_count();
     }
@@ -299,6 +322,10 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   asters.move_draw_and_gen_asteroids(this);
   nave.draw_nave();
   framework->draw_bitmap(0);
+  for (int i=0; i<n_hearts; i++){
+    this->hearts[i]->draw_life();
+  }
+  al_draw_text(font_score,al_map_rgb(100,100,100),440,45,0,strcat(string_score, string_points));
   al_flip_display();
 }
 
