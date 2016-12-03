@@ -2,12 +2,13 @@
 #define GAME_H
 
 #include "allegro_includes.h"
+#include "set_of_hearts.h"
 
 class KEYBOARD;
 class NAVE;
 class ASTEROIDS_ENG;
 class BITMAP;
-class LIFE;
+class SET_OF_HEARTS;
 
 typedef struct SCREEN {
   int width;      /// Ancho
@@ -28,7 +29,7 @@ class GAME {
     ALLEGRO_FONT          *font2;                                                                 /// Fuente para las instrucciones
     ALLEGRO_SAMPLE        *move_sound;                                                            /// Audio al mover la nave
     BITMAP                *framework;                                                             /// Fondo para el juego
-    LIFE                  *heart;                                                                 /// Corazon que representa las vidas de la nave
+    SET_OF_HEARTS         life;
   public:
     bool                  done;                                                                   /// Done (bool), controla el while del programa
     bool                  game_over_or_pause;                                                     /// Game Over Or Pause (bool), controla el while del juego

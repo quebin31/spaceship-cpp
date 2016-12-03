@@ -145,6 +145,7 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   int framewk_w = 600, framewk_h = 440;
   framework->setW(framewk_w);
   framework->setH(framewk_h);
+  life.init_hearts();
 
   al_set_window_position(display, 350, 180);
   set_display_color(26,26,26);
@@ -299,6 +300,7 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   asters.move_draw_and_gen_asteroids(this);
   nave.draw_nave();
   framework->draw_bitmap(0);
+  life.draw_hearts();
   al_flip_display();
 }
 
