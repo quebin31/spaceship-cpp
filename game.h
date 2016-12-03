@@ -32,6 +32,7 @@ class GAME {
     LIFE                  *life1;
     LIFE                  *life2;
     LIFE                  *life3;
+    vector<LIFE*>         hearts;
   public:
     bool                  done;                                                                   /// Done (bool), controla el while del programa
     bool                  game_over_or_pause;                                                     /// Game Over Or Pause (bool), controla el while del juego

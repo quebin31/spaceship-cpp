@@ -154,6 +154,9 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   life2->setY(40);
   life3->setX(100);
   life3->setY(40);
+  this->hearts.push_back(life1);
+  this->hearts.push_back(life2);
+  this->hearts.push_back(life3);
 
   al_set_window_position(display, 350, 180);
   set_display_color(26,26,26);
@@ -285,6 +288,7 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
     if (nave.destroyed)
     {
       vidas -= 1;
+      this->hearts[vidas]->change_state(true);
       invulnerable = true;
       destroyed_at = get_timer_count();
     }
@@ -312,9 +316,9 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   asters.move_draw_and_gen_asteroids(this);
   nave.draw_nave();
   framework->draw_bitmap(0);
-  life1->draw_life();
-  life2->draw_life();
-  life3->draw_life();
+  for (int i=0; i<n_hearts; i++){
+    this->hearts[i]->draw_life();
+  }
   al_flip_display();
 }
 

@@ -12,6 +12,8 @@ class LIFE: public BITMAP{
   public:
     LIFE();
     void draw_life();
+    void change_state(bool stat);
+    void check_life();
 };
 
 #endif // LIFES_H
