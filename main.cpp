@@ -12,7 +12,8 @@ using namespace std;
 SCREEN* screen = create_screen(640,480,60);
 int direction  = NAVE_UP;
 
-int main(int argc, const char **argv){
+int main(int argc, const char **argv)
+{
   GAME           SpaceShip(screen);
   KEYBOARD       keyboard;
   NAVE           nave;

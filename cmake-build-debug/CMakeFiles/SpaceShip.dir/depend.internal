@@ -15,14 +15,12 @@ CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.o
  /home/kevin/IPOO/SpaceShip/bullet.h
  /home/kevin/IPOO/SpaceShip/game.h
  /home/kevin/IPOO/SpaceShip/gun.h
- /home/kevin/IPOO/SpaceShip/lifes.h
  /home/kevin/IPOO/SpaceShip/nave.h
 CMakeFiles/SpaceShip.dir/bitmap.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h
  /home/kevin/IPOO/SpaceShip/bitmap.cpp
  /home/kevin/IPOO/SpaceShip/bitmap.h
  /home/kevin/IPOO/SpaceShip/game.h
- /home/kevin/IPOO/SpaceShip/lifes.h
 CMakeFiles/SpaceShip.dir/bullet.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h
  /home/kevin/IPOO/SpaceShip/bitmap.h
@@ -38,7 +36,6 @@ CMakeFiles/SpaceShip.dir/game.cpp.o
  /home/kevin/IPOO/SpaceShip/game.h
  /home/kevin/IPOO/SpaceShip/gun.h
  /home/kevin/IPOO/SpaceShip/keyboard.h
- /home/kevin/IPOO/SpaceShip/lifes.h
  /home/kevin/IPOO/SpaceShip/nave.h
 CMakeFiles/SpaceShip.dir/gun.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h
@@ -50,11 +47,9 @@ CMakeFiles/SpaceShip.dir/gun.cpp.o
  /home/kevin/IPOO/SpaceShip/gun.h
 CMakeFiles/SpaceShip.dir/keyboard.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h
- /home/kevin/IPOO/SpaceShip/bitmap.h
  /home/kevin/IPOO/SpaceShip/game.h
  /home/kevin/IPOO/SpaceShip/keyboard.cpp
  /home/kevin/IPOO/SpaceShip/keyboard.h
- /home/kevin/IPOO/SpaceShip/lifes.h
 CMakeFiles/SpaceShip.dir/lifes.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h
  /home/kevin/IPOO/SpaceShip/bitmap.h
@@ -69,7 +64,6 @@ CMakeFiles/SpaceShip.dir/main.cpp.o
  /home/kevin/IPOO/SpaceShip/game.h
  /home/kevin/IPOO/SpaceShip/gun.h
  /home/kevin/IPOO/SpaceShip/keyboard.h
- /home/kevin/IPOO/SpaceShip/lifes.h
  /home/kevin/IPOO/SpaceShip/main.cpp
  /home/kevin/IPOO/SpaceShip/nave.h
 CMakeFiles/SpaceShip.dir/nave.cpp.o

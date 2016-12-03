@@ -2,7 +2,6 @@
 #define GAME_H
 
 #include "allegro_includes.h"
-#include "lifes.h"
 
 class KEYBOARD;
 class NAVE;
