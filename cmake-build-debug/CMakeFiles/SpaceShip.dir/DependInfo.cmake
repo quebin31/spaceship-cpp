@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kevin/IPOO/SpaceShip/game.cpp" "/home/kevin/IPOO/SpaceShip/cmake-build-debug/CMakeFiles/SpaceShip.dir/game.cpp.o"
   "/home/kevin/IPOO/SpaceShip/gun.cpp" "/home/kevin/IPOO/SpaceShip/cmake-build-debug/CMakeFiles/SpaceShip.dir/gun.cpp.o"
   "/home/kevin/IPOO/SpaceShip/keyboard.cpp" "/home/kevin/IPOO/SpaceShip/cmake-build-debug/CMakeFiles/SpaceShip.dir/keyboard.cpp.o"
+  "/home/kevin/IPOO/SpaceShip/lifes.cpp" "/home/kevin/IPOO/SpaceShip/cmake-build-debug/CMakeFiles/SpaceShip.dir/lifes.cpp.o"
   "/home/kevin/IPOO/SpaceShip/main.cpp" "/home/kevin/IPOO/SpaceShip/cmake-build-debug/CMakeFiles/SpaceShip.dir/main.cpp.o"
   "/home/kevin/IPOO/SpaceShip/nave.cpp" "/home/kevin/IPOO/SpaceShip/cmake-build-debug/CMakeFiles/SpaceShip.dir/nave.cpp.o"
   )

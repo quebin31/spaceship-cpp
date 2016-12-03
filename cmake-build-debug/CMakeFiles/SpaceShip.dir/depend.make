@@ -14,12 +14,14 @@ CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.o: ../bitmap.h
 CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.o: ../bullet.h
 CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.o: ../game.h
 CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.o: ../gun.h
+CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.o: ../lifes.h
 CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.o: ../nave.h
 
 CMakeFiles/SpaceShip.dir/bitmap.cpp.o: ../allegro_includes.h
 CMakeFiles/SpaceShip.dir/bitmap.cpp.o: ../bitmap.cpp
 CMakeFiles/SpaceShip.dir/bitmap.cpp.o: ../bitmap.h
 CMakeFiles/SpaceShip.dir/bitmap.cpp.o: ../game.h
+CMakeFiles/SpaceShip.dir/bitmap.cpp.o: ../lifes.h
 
 CMakeFiles/SpaceShip.dir/bullet.cpp.o: ../allegro_includes.h
 CMakeFiles/SpaceShip.dir/bullet.cpp.o: ../bitmap.h
@@ -35,6 +37,7 @@ CMakeFiles/SpaceShip.dir/game.cpp.o: ../game.cpp
 CMakeFiles/SpaceShip.dir/game.cpp.o: ../game.h
 CMakeFiles/SpaceShip.dir/game.cpp.o: ../gun.h
 CMakeFiles/SpaceShip.dir/game.cpp.o: ../keyboard.h
+CMakeFiles/SpaceShip.dir/game.cpp.o: ../lifes.h
 CMakeFiles/SpaceShip.dir/game.cpp.o: ../nave.h
 
 CMakeFiles/SpaceShip.dir/gun.cpp.o: ../allegro_includes.h
@@ -46,9 +49,16 @@ CMakeFiles/SpaceShip.dir/gun.cpp.o: ../gun.cpp
 CMakeFiles/SpaceShip.dir/gun.cpp.o: ../gun.h
 
 CMakeFiles/SpaceShip.dir/keyboard.cpp.o: ../allegro_includes.h
+CMakeFiles/SpaceShip.dir/keyboard.cpp.o: ../bitmap.h
 CMakeFiles/SpaceShip.dir/keyboard.cpp.o: ../game.h
 CMakeFiles/SpaceShip.dir/keyboard.cpp.o: ../keyboard.cpp
 CMakeFiles/SpaceShip.dir/keyboard.cpp.o: ../keyboard.h
+CMakeFiles/SpaceShip.dir/keyboard.cpp.o: ../lifes.h
+
+CMakeFiles/SpaceShip.dir/lifes.cpp.o: ../allegro_includes.h
+CMakeFiles/SpaceShip.dir/lifes.cpp.o: ../bitmap.h
+CMakeFiles/SpaceShip.dir/lifes.cpp.o: ../lifes.cpp
+CMakeFiles/SpaceShip.dir/lifes.cpp.o: ../lifes.h
 
 CMakeFiles/SpaceShip.dir/main.cpp.o: ../allegro_includes.h
 CMakeFiles/SpaceShip.dir/main.cpp.o: ../asteroid.h
@@ -58,6 +68,7 @@ CMakeFiles/SpaceShip.dir/main.cpp.o: ../bullet.h
 CMakeFiles/SpaceShip.dir/main.cpp.o: ../game.h
 CMakeFiles/SpaceShip.dir/main.cpp.o: ../gun.h
 CMakeFiles/SpaceShip.dir/main.cpp.o: ../keyboard.h
+CMakeFiles/SpaceShip.dir/main.cpp.o: ../lifes.h
 CMakeFiles/SpaceShip.dir/main.cpp.o: ../main.cpp
 CMakeFiles/SpaceShip.dir/main.cpp.o: ../nave.h
 

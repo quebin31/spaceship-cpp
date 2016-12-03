@@ -312,6 +312,33 @@ keyboard.cpp.s:
 	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/keyboard.cpp.s
 .PHONY : keyboard.cpp.s
 
+lifes.o: lifes.cpp.o
+
+.PHONY : lifes.o
+
+# target to build an object file
+lifes.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/lifes.cpp.o
+.PHONY : lifes.cpp.o
+
+lifes.i: lifes.cpp.i
+
+.PHONY : lifes.i
+
+# target to preprocess a source file
+lifes.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/lifes.cpp.i
+.PHONY : lifes.cpp.i
+
+lifes.s: lifes.cpp.s
+
+.PHONY : lifes.s
+
+# target to generate assembly for a file
+lifes.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/lifes.cpp.s
+.PHONY : lifes.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -396,6 +423,9 @@ help:
 	@echo "... keyboard.o"
 	@echo "... keyboard.i"
 	@echo "... keyboard.s"
+	@echo "... lifes.o"
+	@echo "... lifes.i"
+	@echo "... lifes.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

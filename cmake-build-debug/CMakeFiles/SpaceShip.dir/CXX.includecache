@@ -87,6 +87,8 @@ bitmap.h
 /home/kevin/IPOO/SpaceShip/game.h
 allegro_includes.h
 /home/kevin/IPOO/SpaceShip/allegro_includes.h
+lifes.h
+/home/kevin/IPOO/SpaceShip/lifes.h
 
 /home/kevin/IPOO/SpaceShip/gun.cpp
 gun.h
@@ -109,6 +111,16 @@ game.h
 /home/kevin/IPOO/SpaceShip/keyboard.h
 allegro_includes.h
 /home/kevin/IPOO/SpaceShip/allegro_includes.h
+
+/home/kevin/IPOO/SpaceShip/lifes.cpp
+lifes.h
+/home/kevin/IPOO/SpaceShip/lifes.h
+
+/home/kevin/IPOO/SpaceShip/lifes.h
+vector
+-
+bitmap.h
+/home/kevin/IPOO/SpaceShip/bitmap.h
 
 /home/kevin/IPOO/SpaceShip/main.cpp
 game.h
