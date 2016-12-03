@@ -4,6 +4,7 @@
 #include "nave.h"
 #include "asteroids_engine.h"
 #include "bitmap.h"
+#include <stdio.h>
 
 using namespace std;
 
@@ -128,6 +129,7 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   destroyed_at = 0;
   score = 0;
   string_score = "SCORE: ";
+  string_points = reinterpret_cast<char*>(&score);
 
   cout << "GAME: Registrando todos los eventos" << endl;
   al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -323,7 +325,7 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   for (int i=0; i<n_hearts; i++){
     this->hearts[i]->draw_life();
   }
-  al_draw_text(font_score,al_map_rgb(100,100,100),440,45,0,string_score);
+  al_draw_text(font_score,al_map_rgb(100,100,100),440,45,0,strcat(string_score, string_points));
   al_flip_display();
 }
 

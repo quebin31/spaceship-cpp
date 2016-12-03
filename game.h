@@ -3,7 +3,6 @@
 
 #include "allegro_includes.h"
 #include "lifes.h"
-#include <string>
 
 class KEYBOARD;
 class NAVE;
@@ -35,8 +34,10 @@ class GAME {
     LIFE                  *life2;
     LIFE                  *life3;
     vector<LIFE*>         hearts;
-    long                  score;
-    char*                string_score;
+    int                   score;
+    char*                 string_points;
+    char*                 string_score;
+    char*                 string_final;
   public:
     bool                  done;                                                                   /// Done (bool), controla el while del programa
     bool                  game_over_or_pause;                                                     /// Game Over Or Pause (bool), controla el while del juego
