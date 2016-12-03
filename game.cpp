@@ -323,7 +323,6 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   for (int i=0; i<n_hearts; i++){
     this->hearts[i]->draw_life();
   }
-
   al_draw_text(font_score,al_map_rgb(100,100,100),440,45,0,string_score);
   al_flip_display();
 }
