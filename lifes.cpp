@@ -1,6 +1,6 @@
 #include "lifes.h"
 
-LIFE::LIFE(): BITMAP("hearts.png"), status(false) {}
+LIFE::LIFE(): BITMAP("lifes.png"), status(false) {}
 
 SET_OF_HEARTS::SET_OF_HEARTS() {
   for (unsigned int i = 0; i < HEARTS.size(); i++){
