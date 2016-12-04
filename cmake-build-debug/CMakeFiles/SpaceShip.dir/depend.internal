@@ -36,6 +36,7 @@ CMakeFiles/SpaceShip.dir/game.cpp.o
  /home/kevin/IPOO/SpaceShip/game.h
  /home/kevin/IPOO/SpaceShip/gun.h
  /home/kevin/IPOO/SpaceShip/keyboard.h
+ /home/kevin/IPOO/SpaceShip/lifes.h
  /home/kevin/IPOO/SpaceShip/nave.h
 CMakeFiles/SpaceShip.dir/gun.cpp.o
  /home/kevin/IPOO/SpaceShip/allegro_includes.h

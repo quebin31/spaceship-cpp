@@ -83,6 +83,8 @@ asteroids_engine.h
 /home/kevin/IPOO/SpaceShip/asteroids_engine.h
 bitmap.h
 /home/kevin/IPOO/SpaceShip/bitmap.h
+lifes.h
+/home/kevin/IPOO/SpaceShip/lifes.h
 
 /home/kevin/IPOO/SpaceShip/game.h
 allegro_includes.h
@@ -115,8 +117,8 @@ lifes.h
 /home/kevin/IPOO/SpaceShip/lifes.h
 
 /home/kevin/IPOO/SpaceShip/lifes.h
-vector
--
+allegro_includes.h
+/home/kevin/IPOO/SpaceShip/allegro_includes.h
 bitmap.h
 /home/kevin/IPOO/SpaceShip/bitmap.h
 

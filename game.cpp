@@ -4,7 +4,7 @@
 #include "nave.h"
 #include "asteroids_engine.h"
 #include "bitmap.h"
-#include <stdio.h>
+#include "lifes.h"
 
 using namespace std;
 
@@ -127,9 +127,6 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   invulnerable = false;
   vidas = 3;
   destroyed_at = 0;
-  score = 0;
-  string_score = "SCORE: ";
-  string_points = reinterpret_cast<char*>(&score);
 
   cout << "GAME: Registrando todos los eventos" << endl;
   al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -150,18 +147,8 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   int framewk_w = 600, framewk_h = 440;
   framework->setW(framewk_w);
   framework->setH(framewk_h);
-  life1 = new LIFE;
-  life2 = new LIFE;
-  life3 = new LIFE;
-  life1->setX(40);
-  life1->setY(40);
-  life2->setX(70);
-  life2->setY(40);
-  life3->setX(100);
-  life3->setY(40);
-  this->hearts.push_back(life1);
-  this->hearts.push_back(life2);
-  this->hearts.push_back(life3);
+
+  game_lifes = new LIFES;
 
   al_set_window_position(display, 350, 180);
   set_display_color(26,26,26);
@@ -190,10 +177,7 @@ GAME::~GAME()
   al_destroy_font(font_score);
   al_destroy_sample(move_sound);
   delete framework;
-  delete life1;
-  delete life2;
-  delete life3;
-
+  delete game_lifes;
   cout << "GAME: All done. Bye." << endl;
 }
 
@@ -223,8 +207,8 @@ void GAME::wait_for_event(ALLEGRO_EVENT &ev) { al_wait_for_event(event_queue, &e
 void GAME::show_menu()
 {
   int64_t flag = al_get_timer_count(timer);
-  char* title;
-  char* state;
+  string title;
+  string state;
   if (flag == 0)
   {
     title = "ASTEROID GAME";
@@ -241,8 +225,8 @@ void GAME::show_menu()
     state = "RESUMIR (PRESIONA ENTER)";
   }
   set_display_color(26,26,26);
-  al_draw_text(font1, al_map_rgb(200,10,50), screen->width/2, screen->height/2, ALLEGRO_ALIGN_CENTRE, title);
-  al_draw_text(font2, al_map_rgb(20,30,60), screen->width/2, screen->height/2+60, ALLEGRO_ALIGN_CENTRE, state);
+  al_draw_text(font1, al_map_rgb(200,10,50), screen->width/2, screen->height/2, ALLEGRO_ALIGN_CENTRE, title.c_str());
+  al_draw_text(font2, al_map_rgb(20,30,60), screen->width/2, screen->height/2+60, ALLEGRO_ALIGN_CENTRE, state.c_str());
   al_draw_text(font2, al_map_rgb(20,30,60), screen->width/2, screen->height/2+120, ALLEGRO_ALIGN_CENTRE,"SALIR (PRESIONA ESCAPE)");
   al_flip_display();
 }
@@ -294,9 +278,9 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
     if (nave.destroyed)
     {
       vidas -= 1;
-      this->hearts[vidas]->change_state(true);
       invulnerable = true;
       destroyed_at = get_timer_count();
+      game_lifes->lost_a_life();
     }
   }
   else
@@ -322,10 +306,7 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   asters.move_draw_and_gen_asteroids(this);
   nave.draw_nave();
   framework->draw_bitmap(0);
-  for (int i=0; i<n_hearts; i++){
-    this->hearts[i]->draw_life();
-  }
-  al_draw_text(font_score,al_map_rgb(100,100,100),440,45,0,strcat(string_score, string_points));
+  game_lifes->draw_lifes();
   al_flip_display();
 }
 

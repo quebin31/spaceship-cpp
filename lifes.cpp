@@ -1,26 +1,69 @@
 #include "lifes.h"
 
-<<<<<<< HEAD
-LIFE::LIFE(): BITMAP("lifes.png"), status(false) {}
-=======
 using namespace std;
->>>>>>> 4c5ac0340952ef0053aef19789a101c5e53360c4
 
-LIFE::LIFE(): BITMAP("lifes.png"){
-  this->status=false;
+LIFE::LIFE(): BITMAP("lifes.png")
+{
+  width = 30;
+  height = 30;
+  sourceX = HEART_ALIVE;
+  sourceY = 0;
+  destroyed = false;
 }
 
-void LIFE::draw_life() {
-  check_life();
-  al_draw_bitmap_region(bitmap, sourceX, sourceY, 30, 30, posX, posY, 0);
+void LIFE::draw_life() { al_draw_bitmap_region(bitmap, sourceX, sourceY, width, height, posX, posY, 0); }
+
+void LIFE::lost_life()
+{
+  sourceX = HEART_DEAD;
+  destroyed = true;
 }
 
-void LIFE::change_state(bool stat){
-  this->status=stat;
+void LIFE::recovery_life()
+{
+  sourceX = HEART_ALIVE;
+  destroyed = false;
 }
 
-void LIFE::check_life(){
-  if (this->status==true){
-    sourceX=30;
+
+
+LIFES::LIFES()
+{
+  coor_t coorX = 50;
+  for (unsigned int i = 0; i < NO_OF_HEARTS; i++)
+  {
+    LIFE* new_life = new LIFE;
+    new_life->setY(35);
+    new_life->setX(coorX);
+    lifes.push_back(new_life);
+    coorX += 35;
+  }
+  cout << "LIFES: Created" << endl;
+}
+
+LIFES::~LIFES()
+{
+  for (int i = 0; i < NO_OF_HEARTS; i++)
+  {
+    delete lifes[i];
+  }
+  cout << "LIFES: Deleted" << endl;
+}
+
+void LIFES::draw_lifes()
+{
+  for (int i = 0; i < NO_OF_HEARTS; i++)
+    lifes[i]->draw_life();
+}
+
+void LIFES::lost_a_life()
+{
+  for (int i = NO_OF_HEARTS - 1; i >= 0; i--)
+  {
+    if (!lifes[i]->destroyed)
+    {
+      lifes[i]->lost_life();
+      return;
+    }
   }
 }

@@ -3,17 +3,33 @@
 
 #include "allegro_includes.h"
 #include "bitmap.h"
-#define n_hearts 3
+
+#define NO_OF_HEARTS 3
+
+#define HEART_ALIVE 0
+#define HEART_DEAD  30
+
 using namespace std;
 
-class LIFE: public BITMAP{
-  protected:
-    bool status;
+class LIFE: public BITMAP
+{
   public:
     LIFE();
     void draw_life();
-    void change_state(bool stat);
-    void check_life();
+    void lost_life();
+    void recovery_life();
+};
+
+class LIFES
+{
+  private:
+    vector<LIFE*> lifes;
+  public:
+    LIFES();
+    ~LIFES();
+
+    void draw_lifes();
+    void lost_a_life();
 };
 
 #endif // LIFES_H

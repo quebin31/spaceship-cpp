@@ -27,11 +27,11 @@ ASTEROID::ASTEROID(const int _no_asteroid): BITMAP("asteroides.png")
  * Agiliza el proceso de dibujado del asteroide */
 void ASTEROID::draw_asteroid() const
 {
-  al_draw_bitmap_region(bitmap, sourceX, sourceY, 45, 45, posX, posY, 0);
+  al_draw_bitmap_region(bitmap, sourceX, sourceY, width, height, posX, posY, 0);
 }
 void ASTEROID::draw_asteroid()
 {
-  al_draw_bitmap_region(bitmap, sourceX, sourceY, 45, 45, posX, posY, 0);
+  al_draw_bitmap_region(bitmap, sourceX, sourceY, width, height, posX, posY, 0);
 }
 
 

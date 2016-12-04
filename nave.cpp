@@ -27,7 +27,7 @@ NAVE::NAVE(): BITMAP("nave1.png")
  * select_nave: utiliza macros, para saber en que posicion debe mirar la nave
  * draw_nave: dibuja la nave, agilizando el proceso */
 void NAVE::select_nave(const int direction) { sourceX = direction; }
-void NAVE::draw_nave(){ al_draw_bitmap_region(bitmap, sourceX, sourceY, 32, 32, posX, posY, 0); }
+void NAVE::draw_nave(){ al_draw_bitmap_region(bitmap, sourceX, sourceY, width, height, posX, posY, 0); }
 
 
 /* Metodo shoot

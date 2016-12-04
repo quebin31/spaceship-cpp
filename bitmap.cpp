@@ -17,6 +17,7 @@ BITMAP::BITMAP(const char* file)
   posY = 0;
   sourceX = 0;
   sourceY = 0;
+  destroyed = false;
 }
 
 /* Destructor de la clase bitmap, llama una funcion del add-on Allegro

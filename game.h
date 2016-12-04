@@ -2,13 +2,12 @@
 #define GAME_H
 
 #include "allegro_includes.h"
-#include "lifes.h"
 
 class KEYBOARD;
 class NAVE;
 class ASTEROIDS_ENG;
 class BITMAP;
-class LIFE;
+class LIFES;
 
 typedef struct SCREEN {
   int width;      /// Ancho
@@ -30,14 +29,7 @@ class GAME {
     ALLEGRO_FONT          *font_score;
     ALLEGRO_SAMPLE        *move_sound;                                                            /// Audio al mover la nave
     BITMAP                *framework;                                                             /// Fondo para el juego
-    LIFE                  *life1;
-    LIFE                  *life2;
-    LIFE                  *life3;
-    vector<LIFE*>         hearts;
-    int                   score;
-    char*                 string_points;
-    char*                 string_score;
-    char*                 string_final;
+    LIFES                 *game_lifes;                                                            /// Vidas del juego
   public:
     bool                  done;                                                                   /// Done (bool), controla el while del programa
     bool                  game_over_or_pause;                                                     /// Game Over Or Pause (bool), controla el while del juego
