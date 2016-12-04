@@ -46,3 +46,4 @@
 
 *RC = Refactoring code (Rehaciendo codigo), modificacion del codigo, para mejorar su funcionalidad, comentar lo que esta sin comentar.
 *WIP = Work In Progress (Trabajo en progreso), se esperan errores al momento de compilar o ejecutar el programa
+-Para imprimir score, se ha usado publicamente la gun de la nave, asi puedo llamarla en el game, *se resolvera a la par de reinicio del juego despues de un game over
