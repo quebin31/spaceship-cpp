@@ -21,7 +21,7 @@ class GUN {
   public:
     GUN();                                                                          /// Constructor
     ~GUN();                                                                         /// Destructor
-
+    int score;
     void shoot_gun(coor_t X, coor_t Y, int middle_nave_X, int middle_nave_Y);       /// Disparar una bala
 
     void check_bullets(BITMAP& obj);                                                /// Verifica el estado de las balas

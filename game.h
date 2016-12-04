@@ -27,9 +27,11 @@ class GAME {
     ALLEGRO_FONT          *font1;                                                                 /// Fuente para el titulo principal
     ALLEGRO_FONT          *font2;                                                                 /// Fuente para las instrucciones
     ALLEGRO_FONT          *font_score;
+    ALLEGRO_FONT          *font_points;
     ALLEGRO_SAMPLE        *move_sound;                                                            /// Audio al mover la nave
     BITMAP                *framework;                                                             /// Fondo para el juego
     LIFES                 *game_lifes;                                                            /// Vidas del juego
+    char                  word[20];
   public:
     bool                  done;                                                                   /// Done (bool), controla el while del programa
     bool                  game_over_or_pause;                                                     /// Game Over Or Pause (bool), controla el while del juego

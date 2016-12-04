@@ -5,6 +5,7 @@
 #include "asteroids_engine.h"
 #include "bitmap.h"
 #include "lifes.h"
+#include "itoa.h"
 
 using namespace std;
 
@@ -137,6 +138,7 @@ GAME::GAME(SCREEN *ndisplay) : screen(ndisplay)
   font1 = al_load_font("PressStart2P.ttf",30,0);
   font2 = al_load_font("Joystick.otf",20,0);
   font_score = al_load_font("PressStart2P.ttf", 12,0);
+  font_points = al_load_font("PressStart2P.ttf", 12,0);
 
   cout << "GAME: Cargando el audio" << endl;
   move_sound = al_load_sample("thrust.wav");
@@ -175,6 +177,7 @@ GAME::~GAME()
   al_destroy_font(font1);
   al_destroy_font(font2);
   al_destroy_font(font_score);
+  al_destroy_font(font_points);
   al_destroy_sample(move_sound);
   delete framework;
   delete game_lifes;
@@ -307,6 +310,8 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   nave.draw_nave();
   framework->draw_bitmap(0);
   game_lifes->draw_lifes();
+  al_draw_text(font_score,al_map_rgb(110,110,100),400,45,0,"SCORE:");
+  al_draw_text(font_points,al_map_rgb(110,110,100),500,45,0,itoa(nave.nave_gun.score,word));
   al_flip_display();
 }
 

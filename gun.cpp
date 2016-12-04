@@ -12,7 +12,7 @@ using namespace std;
  * munition (6): tamaño del cargador
  * actual_munition(6): balas disponibles
  * bullets_in_screen(0): numero de balas en la pantalla */
-GUN::GUN(): munition(6), actual_munition(6), bullets_in_screen(0) {}
+GUN::GUN(): munition(6), actual_munition(6), bullets_in_screen(0), score(0) {}
 
 /* Destructor GUN
  * Recorre el vector, borrando todas las balas al momento en el que el juego termina */
@@ -55,6 +55,7 @@ void GUN::check_bullets(BITMAP& obj){
     {
       bullets[i]->destroyed = true;
       obj.destroyed = true;
+      ++this->score;
     }
   }
 }
