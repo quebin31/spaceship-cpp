@@ -13,10 +13,8 @@
 
 class NAVE : public BITMAP {
   private:
-
-
-  public:
     GUN nave_gun;                                     /// Objeto para administrar el arma de la nave
+  public:
     NAVE();                                           /// Constructor para la nave
 
     void select_nave(const int direction);            /// Seleccionar la posicion en la que mira la nave

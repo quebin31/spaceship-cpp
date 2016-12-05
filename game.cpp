@@ -311,7 +311,7 @@ void GAME::event_timer(KEYBOARD &keyboard, NAVE &nave, ASTEROIDS_ENG &asters) {
   framework->draw_bitmap(0);
   game_lifes->draw_lifes();
   al_draw_text(font_score,al_map_rgb(110,110,100),400,45,0,"SCORE:");
-  al_draw_text(font_points,al_map_rgb(110,110,100),500,45,0,itoa(nave.nave_gun.score,word));
+  al_draw_text(font_points,al_map_rgb(110,110,100),500,45,0,itoa(nave.get_gun()->score,word));
   al_flip_display();
 }
 

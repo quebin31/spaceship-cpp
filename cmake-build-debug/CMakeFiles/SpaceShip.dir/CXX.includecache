@@ -85,6 +85,8 @@ bitmap.h
 /home/kevin/IPOO/SpaceShip/bitmap.h
 lifes.h
 /home/kevin/IPOO/SpaceShip/lifes.h
+itoa.h
+/home/kevin/IPOO/SpaceShip/itoa.h
 
 /home/kevin/IPOO/SpaceShip/game.h
 allegro_includes.h
@@ -101,6 +103,10 @@ bullet.h
 /home/kevin/IPOO/SpaceShip/bullet.h
 asteroids_engine.h
 /home/kevin/IPOO/SpaceShip/asteroids_engine.h
+
+/home/kevin/IPOO/SpaceShip/itoa.h
+iostream
+-
 
 /home/kevin/IPOO/SpaceShip/keyboard.cpp
 keyboard.h

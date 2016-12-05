@@ -4,7 +4,7 @@ project(SpaceShip)
 #Flags c++14
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
-set(SOURCE_FILES main.cpp game.cpp game.h keyboard.cpp keyboard.h bitmap.cpp bitmap.h nave.cpp nave.h allegro_includes.h asteroid.cpp asteroid.h asteroids_engine.cpp asteroids_engine.h gun.cpp gun.h bullet.h bullet.cpp lifes.cpp lifes.h)
+set(SOURCE_FILES main.cpp game.cpp game.h keyboard.cpp keyboard.h bitmap.cpp bitmap.h nave.cpp nave.h allegro_includes.h asteroid.cpp asteroid.h asteroids_engine.cpp asteroids_engine.h gun.cpp gun.h bullet.h bullet.cpp lifes.cpp lifes.h itoa.h)
 add_executable(SpaceShip ${SOURCE_FILES})
 
 #Includes
