@@ -43,6 +43,7 @@ class OBJS_FACADE
     void draw_objects();
     void draw_information();
 
+    bool no_hearts();
 };
 
 

@@ -11,7 +11,44 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="910078bb-c2f7-4c4a-9fab-d00cfa6b45c1" name="Default" comment="" />
+    <list default="true" id="910078bb-c2f7-4c4a-9fab-d00cfa6b45c1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/asteroids_interface.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/asteroids_interface.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/bitmap.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/bitmap.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/bullet.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/bullet.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/heart.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/heart.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/image.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/image.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/main.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/tools_and_headers/int_to_string.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/tools_and_headers/int_to_string.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/SpaceShip2" afterPath="$PROJECT_DIR$/cmake-build-debug/SpaceShip2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitmap_interfaces/game_facade.cpp" afterPath="$PROJECT_DIR$/bitmap_interfaces/game_facade.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitmap_interfaces/game_facade.h" afterPath="$PROJECT_DIR$/bitmap_interfaces/game_facade.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/SpaceShip2.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/SpaceShip2.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game_interfaces/main_game.cpp" afterPath="$PROJECT_DIR$/game_interfaces/main_game.cpp" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,13 +65,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main_game.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main_game.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game_interfaces/main_game.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#102#154#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_game.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game_interfaces/main_game.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="178" column="33" lean-forward="false" selection-start-line="178" selection-start-column="33" selection-end-line="178" selection-end-column="33" />
+              <folding>
+                <element signature="e#40#62#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,18 +102,18 @@
       <file leaf-file-name="hearts_interface.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bitmap_interfaces/hearts_interface.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+            <state relative-caret-position="465">
+              <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heart.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bitmap_objects/heart.h">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="60">
+              <caret line="16" column="35" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -83,9 +132,31 @@
       <file leaf-file-name="asteroids_interface.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bitmap_interfaces/asteroids_interface.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+            <state relative-caret-position="377">
+              <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game_facade.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bitmap_interfaces/game_facade.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game_facade.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bitmap_interfaces/game_facade.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+              <folding>
+                <element signature="e#39#63#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,7 +164,7 @@
       <file leaf-file-name="asteroids_interface.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bitmap_interfaces/asteroids_interface.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="1095">
               <caret line="73" column="25" lean-forward="false" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
               <folding />
             </state>
@@ -116,6 +187,9 @@
       <replace>screen_game</replace>
       <replace>MAIN_GAME::instance()</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -154,7 +228,6 @@
         <option value="$PROJECT_DIR$/bitmap_objects/heart.h" />
         <option value="$PROJECT_DIR$/bitmap_objects/image.h" />
         <option value="$PROJECT_DIR$/bitmap_objects/image.cpp" />
-        <option value="$PROJECT_DIR$/bitmap_interfaces/game_facade.h" />
         <option value="$PROJECT_DIR$/bitmap_interfaces/asteroids_interface.h" />
         <option value="$PROJECT_DIR$/bitmap_objects/bitmap.h" />
         <option value="$PROJECT_DIR$/bitmap_objects/bitmap.cpp" />
@@ -163,13 +236,15 @@
         <option value="$PROJECT_DIR$/bitmap_interfaces/bullet_interface.h" />
         <option value="$PROJECT_DIR$/bitmap_interfaces/bullet_interface.cpp" />
         <option value="$PROJECT_DIR$/tools_and_headers/int_to_string.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/bitmap_interfaces/game_facade.cpp" />
-        <option value="$PROJECT_DIR$/game_interfaces/main_game.cpp" />
         <option value="$PROJECT_DIR$/bitmap_interfaces/hearts_interface.h" />
         <option value="$PROJECT_DIR$/bitmap_objects/heart.cpp" />
         <option value="$PROJECT_DIR$/bitmap_interfaces/hearts_interface.cpp" />
         <option value="$PROJECT_DIR$/bitmap_interfaces/asteroids_interface.cpp" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/bitmap_interfaces/game_facade.h" />
+        <option value="$PROJECT_DIR$/bitmap_interfaces/game_facade.cpp" />
+        <option value="$PROJECT_DIR$/game_interfaces/main_game.cpp" />
       </list>
     </option>
   </component>
@@ -187,7 +262,7 @@
     <option name="height" value="747" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -200,9 +275,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -210,6 +283,7 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.C/C++" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.SpaceShip2">
     <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SpaceShip2" TARGET_NAME="SpaceShip2" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
@@ -383,7 +457,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="SpaceShip2" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$USER_HOME$/IPOO/SpaceShip2/resources" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SpaceShip2" TARGET_NAME="SpaceShip2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SpaceShip2" RUN_TARGET_NAME="SpaceShip2">
+    <configuration default="false" name="SpaceShip2" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$/resources" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SpaceShip2" TARGET_NAME="SpaceShip2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SpaceShip2" RUN_TARGET_NAME="SpaceShip2">
       <envs />
       <method />
     </configuration>
@@ -409,12 +483,14 @@
       <workItem from="1481308995159" duration="418000" />
       <workItem from="1481309472289" duration="55000" />
       <workItem from="1481309597551" duration="716000" />
-      <workItem from="1481312022363" duration="2619000" />
+      <workItem from="1481312022363" duration="3062000" />
+      <workItem from="1481315184414" duration="974000" />
+      <workItem from="1481316163388" duration="311000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54929000" />
+    <option name="totallyTimeSpent" value="56657000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,8 +510,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -446,6 +521,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -482,14 +558,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bitmap_interfaces/game_facade.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bitmap_interfaces/game_facade.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -680,14 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitmap_interfaces/game_facade.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bitmap_interfaces/bullet_interface.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
@@ -710,17 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitmap_interfaces/game_facade.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="136" column="19" lean-forward="false" selection-start-line="136" selection-start-column="19" selection-end-line="136" selection-end-column="19" />
-          <folding>
-            <element signature="e#39#63#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -732,28 +781,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game_interfaces/main_game.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bitmap_objects/heart.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -774,36 +805,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitmap_interfaces/hearts_interface.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitmap_interfaces/asteroids_interface.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bitmap_interfaces/asteroids_interface.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="1095">
           <caret line="73" column="25" lean-forward="false" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="435">
+            <caret line="29" column="56" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitmap_interfaces/hearts_interface.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="16" column="35" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game_interfaces/main_game.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#102#154#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitmap_interfaces/asteroids_interface.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitmap_interfaces/game_facade.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_interfaces/main_game.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="178" column="33" lean-forward="false" selection-start-line="178" selection-start-column="33" selection-end-line="178" selection-end-column="33" />
+          <folding>
+            <element signature="e#40#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bitmap_interfaces/game_facade.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <element signature="e#39#63#0" expanded="true" />
           </folding>
         </state>
       </provider>

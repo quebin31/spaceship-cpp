@@ -170,7 +170,13 @@ void MAIN_GAME::event_timer()
 {
   if ((*KEYBOARD::get())[ESC])
   {
-    gameover_or_pause = true;
+    gameover_or_pause = PAUSE;
+    return;
+  }
+
+  if (objects->no_hearts())
+  {
+    gameover_or_pause = GAMEOVER;
     return;
   }
 

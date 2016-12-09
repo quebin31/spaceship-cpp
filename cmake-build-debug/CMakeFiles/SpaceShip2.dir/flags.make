@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/IPOO/SpaceShip2/usr/include/allegro5 
+CXX_INCLUDES = -I/home/kevin/IPOO/SpaceShip2/usr/include/allegro5 
 

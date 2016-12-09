@@ -6,141 +6,141 @@
 
 #IncludeRegexTransform: 
 
-/home/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.cpp
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.cpp
 asteroids_interface.h
-/home/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.h
 
-/home/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.h
 ../bitmap_objects/asteroid.h
-/home/IPOO/SpaceShip2/bitmap_objects/asteroid.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.h
 
-/home/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.cpp
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.cpp
 bullet_interface.h
-/home/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
 
-/home/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
 ../tools_and_headers/spaceship_includes.h
-/home/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
+/home/kevin/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
 ../bitmap_objects/bullet.h
-/home/IPOO/SpaceShip2/bitmap_objects/bullet.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.h
 
-/home/IPOO/SpaceShip2/bitmap_interfaces/game_facade.cpp
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/game_facade.cpp
 game_facade.h
-/home/IPOO/SpaceShip2/bitmap_interfaces/game_facade.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/game_facade.h
 ../game_interfaces/keyboard.h
-/home/IPOO/SpaceShip2/game_interfaces/keyboard.h
+/home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.h
 ../game_interfaces/main_game.h
-/home/IPOO/SpaceShip2/game_interfaces/main_game.h
+/home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.h
 
-/home/IPOO/SpaceShip2/bitmap_interfaces/game_facade.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/game_facade.h
 ../bitmap_objects/image.h
-/home/IPOO/SpaceShip2/bitmap_objects/image.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/image.h
 ../bitmap_objects/nave.h
-/home/IPOO/SpaceShip2/bitmap_objects/nave.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
 asteroids_interface.h
-/home/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.h
 bullet_interface.h
-/home/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
 hearts_interface.h
-/home/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h
 
-/home/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.cpp
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.cpp
 hearts_interface.h
-/home/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h
 
-/home/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h
 ../bitmap_objects/heart.h
-/home/IPOO/SpaceShip2/bitmap_objects/heart.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.h
 
-/home/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp
 asteroid.h
-/home/IPOO/SpaceShip2/bitmap_objects/asteroid.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.h
 
-/home/IPOO/SpaceShip2/bitmap_objects/asteroid.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.h
 bitmap.h
-/home/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
 
-/home/IPOO/SpaceShip2/bitmap_objects/bitmap.cpp
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.cpp
 bitmap.h
-/home/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
 
-/home/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
 ../tools_and_headers/spaceship_includes.h
-/home/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
+/home/kevin/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
 
-/home/IPOO/SpaceShip2/bitmap_objects/bullet.cpp
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.cpp
 bullet.h
-/home/IPOO/SpaceShip2/bitmap_objects/bullet.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.h
 
-/home/IPOO/SpaceShip2/bitmap_objects/bullet.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.h
 bitmap.h
-/home/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
 
-/home/IPOO/SpaceShip2/bitmap_objects/heart.cpp
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.cpp
 heart.h
-/home/IPOO/SpaceShip2/bitmap_objects/heart.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.h
 
-/home/IPOO/SpaceShip2/bitmap_objects/heart.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.h
 bitmap.h
-/home/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
 
-/home/IPOO/SpaceShip2/bitmap_objects/image.cpp
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/image.cpp
 image.h
-/home/IPOO/SpaceShip2/bitmap_objects/image.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/image.h
 
-/home/IPOO/SpaceShip2/bitmap_objects/image.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/image.h
 bitmap.h
-/home/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
 
-/home/IPOO/SpaceShip2/bitmap_objects/nave.cpp
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.cpp
 nave.h
-/home/IPOO/SpaceShip2/bitmap_objects/nave.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
 ../bitmap_interfaces/bullet_interface.h
-/home/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
 
-/home/IPOO/SpaceShip2/bitmap_objects/nave.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
 bitmap.h
-/home/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
 
-/home/IPOO/SpaceShip2/game_interfaces/keyboard.cpp
+/home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.cpp
 keyboard.h
-/home/IPOO/SpaceShip2/game_interfaces/keyboard.h
+/home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.h
 
-/home/IPOO/SpaceShip2/game_interfaces/keyboard.h
+/home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.h
 ../tools_and_headers/spaceship_includes.h
-/home/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
+/home/kevin/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
 
-/home/IPOO/SpaceShip2/game_interfaces/main_game.cpp
+/home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.cpp
 main_game.h
-/home/IPOO/SpaceShip2/game_interfaces/main_game.h
+/home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.h
 keyboard.h
-/home/IPOO/SpaceShip2/game_interfaces/keyboard.h
+/home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.h
 
-/home/IPOO/SpaceShip2/game_interfaces/main_game.h
+/home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.h
 ../tools_and_headers/spaceship_includes.h
-/home/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
+/home/kevin/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
 ../bitmap_interfaces/game_facade.h
-/home/IPOO/SpaceShip2/bitmap_interfaces/game_facade.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/game_facade.h
 
-/home/IPOO/SpaceShip2/main.cpp
+/home/kevin/IPOO/SpaceShip2/main.cpp
 iostream
 -
 game_interfaces/main_game.h
-/home/IPOO/SpaceShip2/game_interfaces/main_game.h
+/home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.h
 
-/home/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp
+/home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp
 iostream
 -
 int_to_string.h
-/home/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
+/home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
 
-/home/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
+/home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
 string
 -
 vector
 -
 
-/home/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
+/home/kevin/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
 cstdio
 -
 vector
@@ -166,5 +166,5 @@ allegro5/allegro_acodec.h
 allegro5/allegro_audio.h
 -
 int_to_string.h
-/home/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
+/home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
 

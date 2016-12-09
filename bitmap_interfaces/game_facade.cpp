@@ -164,3 +164,8 @@ void OBJS_FACADE::draw_information()
   al_draw_text(score_font,al_map_rgb(110,110,100),500,45,0,score.c_str());
   hearts->draw_hearts();
 }
+
+bool OBJS_FACADE::no_hearts()
+{
+  return hearts->empty();
+}

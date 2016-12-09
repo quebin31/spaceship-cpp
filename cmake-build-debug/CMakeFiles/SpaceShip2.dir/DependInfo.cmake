@@ -4,20 +4,20 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/asteroids_interface.cpp.o"
-  "/home/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.o"
-  "/home/IPOO/SpaceShip2/bitmap_interfaces/game_facade.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o"
-  "/home/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o"
-  "/home/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.o"
-  "/home/IPOO/SpaceShip2/bitmap_objects/bitmap.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/bitmap.cpp.o"
-  "/home/IPOO/SpaceShip2/bitmap_objects/bullet.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/bullet.cpp.o"
-  "/home/IPOO/SpaceShip2/bitmap_objects/heart.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/heart.cpp.o"
-  "/home/IPOO/SpaceShip2/bitmap_objects/image.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/image.cpp.o"
-  "/home/IPOO/SpaceShip2/bitmap_objects/nave.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.o"
-  "/home/IPOO/SpaceShip2/game_interfaces/keyboard.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o"
-  "/home/IPOO/SpaceShip2/game_interfaces/main_game.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o"
-  "/home/IPOO/SpaceShip2/main.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/main.cpp.o"
-  "/home/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp" "/home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/tools_and_headers/int_to_string.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/asteroids_interface.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/game_facade.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/bitmap.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/bullet.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/heart.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/bitmap_objects/image.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/image.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/main.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/main.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/tools_and_headers/int_to_string.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
