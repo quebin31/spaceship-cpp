@@ -1,19 +1,44 @@
 cmake_minimum_required(VERSION 3.6)
-project(SpaceShip)
+project(SpaceShip2)
 
-#Flags c++14
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES main.cpp game.cpp game.h keyboard.cpp keyboard.h bitmap.cpp bitmap.h nave.cpp nave.h allegro_includes.h asteroid.cpp asteroid.h asteroids_engine.cpp asteroids_engine.h gun.cpp gun.h bullet.h bullet.cpp lifes.cpp lifes.h itoa.h)
-add_executable(SpaceShip ${SOURCE_FILES})
+set(SOURCE_FILES main.cpp
+        tools_and_headers/spaceship_includes.h
+        tools_and_headers/int_to_string.h
+        tools_and_headers/int_to_string.cpp
+        bitmap_objects/bitmap.cpp
+        bitmap_objects/bitmap.h
+        bitmap_objects/nave.cpp
+        bitmap_objects/nave.h
+        bitmap_objects/asteroid.cpp
+        bitmap_objects/asteroid.h
+        bitmap_objects/bullet.cpp
+        bitmap_objects/bullet.h
+        bitmap_objects/heart.cpp
+        bitmap_objects/heart.h
+        bitmap_objects/image.cpp
+        bitmap_objects/image.h
+        bitmap_interfaces/hearts_interface.cpp
+        bitmap_interfaces/hearts_interface.h
+        bitmap_interfaces/asteroids_interface.cpp
+        bitmap_interfaces/asteroids_interface.h
+        bitmap_interfaces/bullet_interface.cpp
+        bitmap_interfaces/bullet_interface.h
+        bitmap_interfaces/game_facade.cpp
+        bitmap_interfaces/game_facade.h
+        game_interfaces/keyboard.cpp
+        game_interfaces/keyboard.h
+        game_interfaces/main_game.cpp
+        game_interfaces/main_game.h)
 
-#Includes
+add_executable(SpaceShip2 ${SOURCE_FILES})
+
 include_directories(usr/include/allegro5)
 
-#Linking Allegro 5 libs
 link_directories(usr/lib)
 
-target_link_libraries(SpaceShip allegro_acodec
+target_link_libraries(SpaceShip2 allegro_acodec
         allegro_audio
         allegro_color
         allegro_dialog
@@ -25,4 +50,3 @@ target_link_libraries(SpaceShip allegro_acodec
         allegro_ttf
         allegro_font
         allegro)
-

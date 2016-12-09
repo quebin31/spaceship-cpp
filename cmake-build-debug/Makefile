@@ -48,10 +48,10 @@ RM = /opt/clion/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kevin/IPOO/SpaceShip
+CMAKE_SOURCE_DIR = /home/IPOO/SpaceShip2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kevin/IPOO/SpaceShip/cmake-build-debug
+CMAKE_BINARY_DIR = /home/IPOO/SpaceShip2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kevin/IPOO/SpaceShip/cmake-build-debug/CMakeFiles /home/kevin/IPOO/SpaceShip/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles /home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kevin/IPOO/SpaceShip/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,233 +111,341 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SpaceShip
+# Target rules for targets named SpaceShip2
 
 # Build rule for target.
-SpaceShip: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 SpaceShip
-.PHONY : SpaceShip
+SpaceShip2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 SpaceShip2
+.PHONY : SpaceShip2
 
 # fast build rule for target.
-SpaceShip/fast:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/build
-.PHONY : SpaceShip/fast
+SpaceShip2/fast:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/build
+.PHONY : SpaceShip2/fast
 
-asteroid.o: asteroid.cpp.o
+bitmap_interfaces/asteroids_interface.o: bitmap_interfaces/asteroids_interface.cpp.o
 
-.PHONY : asteroid.o
-
-# target to build an object file
-asteroid.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/asteroid.cpp.o
-.PHONY : asteroid.cpp.o
-
-asteroid.i: asteroid.cpp.i
-
-.PHONY : asteroid.i
-
-# target to preprocess a source file
-asteroid.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/asteroid.cpp.i
-.PHONY : asteroid.cpp.i
-
-asteroid.s: asteroid.cpp.s
-
-.PHONY : asteroid.s
-
-# target to generate assembly for a file
-asteroid.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/asteroid.cpp.s
-.PHONY : asteroid.cpp.s
-
-asteroids_engine.o: asteroids_engine.cpp.o
-
-.PHONY : asteroids_engine.o
+.PHONY : bitmap_interfaces/asteroids_interface.o
 
 # target to build an object file
-asteroids_engine.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.o
-.PHONY : asteroids_engine.cpp.o
+bitmap_interfaces/asteroids_interface.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/asteroids_interface.cpp.o
+.PHONY : bitmap_interfaces/asteroids_interface.cpp.o
 
-asteroids_engine.i: asteroids_engine.cpp.i
+bitmap_interfaces/asteroids_interface.i: bitmap_interfaces/asteroids_interface.cpp.i
 
-.PHONY : asteroids_engine.i
+.PHONY : bitmap_interfaces/asteroids_interface.i
 
 # target to preprocess a source file
-asteroids_engine.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.i
-.PHONY : asteroids_engine.cpp.i
+bitmap_interfaces/asteroids_interface.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/asteroids_interface.cpp.i
+.PHONY : bitmap_interfaces/asteroids_interface.cpp.i
 
-asteroids_engine.s: asteroids_engine.cpp.s
+bitmap_interfaces/asteroids_interface.s: bitmap_interfaces/asteroids_interface.cpp.s
 
-.PHONY : asteroids_engine.s
+.PHONY : bitmap_interfaces/asteroids_interface.s
 
 # target to generate assembly for a file
-asteroids_engine.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/asteroids_engine.cpp.s
-.PHONY : asteroids_engine.cpp.s
+bitmap_interfaces/asteroids_interface.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/asteroids_interface.cpp.s
+.PHONY : bitmap_interfaces/asteroids_interface.cpp.s
 
-bitmap.o: bitmap.cpp.o
+bitmap_interfaces/bullet_interface.o: bitmap_interfaces/bullet_interface.cpp.o
 
-.PHONY : bitmap.o
+.PHONY : bitmap_interfaces/bullet_interface.o
 
 # target to build an object file
-bitmap.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/bitmap.cpp.o
-.PHONY : bitmap.cpp.o
+bitmap_interfaces/bullet_interface.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.o
+.PHONY : bitmap_interfaces/bullet_interface.cpp.o
 
-bitmap.i: bitmap.cpp.i
+bitmap_interfaces/bullet_interface.i: bitmap_interfaces/bullet_interface.cpp.i
 
-.PHONY : bitmap.i
+.PHONY : bitmap_interfaces/bullet_interface.i
 
 # target to preprocess a source file
-bitmap.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/bitmap.cpp.i
-.PHONY : bitmap.cpp.i
+bitmap_interfaces/bullet_interface.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.i
+.PHONY : bitmap_interfaces/bullet_interface.cpp.i
 
-bitmap.s: bitmap.cpp.s
+bitmap_interfaces/bullet_interface.s: bitmap_interfaces/bullet_interface.cpp.s
 
-.PHONY : bitmap.s
+.PHONY : bitmap_interfaces/bullet_interface.s
 
 # target to generate assembly for a file
-bitmap.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/bitmap.cpp.s
-.PHONY : bitmap.cpp.s
+bitmap_interfaces/bullet_interface.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.s
+.PHONY : bitmap_interfaces/bullet_interface.cpp.s
 
-bullet.o: bullet.cpp.o
+bitmap_interfaces/game_facade.o: bitmap_interfaces/game_facade.cpp.o
 
-.PHONY : bullet.o
+.PHONY : bitmap_interfaces/game_facade.o
 
 # target to build an object file
-bullet.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/bullet.cpp.o
-.PHONY : bullet.cpp.o
+bitmap_interfaces/game_facade.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o
+.PHONY : bitmap_interfaces/game_facade.cpp.o
 
-bullet.i: bullet.cpp.i
+bitmap_interfaces/game_facade.i: bitmap_interfaces/game_facade.cpp.i
 
-.PHONY : bullet.i
+.PHONY : bitmap_interfaces/game_facade.i
 
 # target to preprocess a source file
-bullet.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/bullet.cpp.i
-.PHONY : bullet.cpp.i
+bitmap_interfaces/game_facade.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.i
+.PHONY : bitmap_interfaces/game_facade.cpp.i
 
-bullet.s: bullet.cpp.s
+bitmap_interfaces/game_facade.s: bitmap_interfaces/game_facade.cpp.s
 
-.PHONY : bullet.s
+.PHONY : bitmap_interfaces/game_facade.s
 
 # target to generate assembly for a file
-bullet.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/bullet.cpp.s
-.PHONY : bullet.cpp.s
+bitmap_interfaces/game_facade.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.s
+.PHONY : bitmap_interfaces/game_facade.cpp.s
 
-game.o: game.cpp.o
+bitmap_interfaces/hearts_interface.o: bitmap_interfaces/hearts_interface.cpp.o
 
-.PHONY : game.o
+.PHONY : bitmap_interfaces/hearts_interface.o
 
 # target to build an object file
-game.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/game.cpp.o
-.PHONY : game.cpp.o
+bitmap_interfaces/hearts_interface.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o
+.PHONY : bitmap_interfaces/hearts_interface.cpp.o
 
-game.i: game.cpp.i
+bitmap_interfaces/hearts_interface.i: bitmap_interfaces/hearts_interface.cpp.i
 
-.PHONY : game.i
+.PHONY : bitmap_interfaces/hearts_interface.i
 
 # target to preprocess a source file
-game.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/game.cpp.i
-.PHONY : game.cpp.i
+bitmap_interfaces/hearts_interface.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.i
+.PHONY : bitmap_interfaces/hearts_interface.cpp.i
 
-game.s: game.cpp.s
+bitmap_interfaces/hearts_interface.s: bitmap_interfaces/hearts_interface.cpp.s
 
-.PHONY : game.s
+.PHONY : bitmap_interfaces/hearts_interface.s
 
 # target to generate assembly for a file
-game.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/game.cpp.s
-.PHONY : game.cpp.s
+bitmap_interfaces/hearts_interface.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.s
+.PHONY : bitmap_interfaces/hearts_interface.cpp.s
 
-gun.o: gun.cpp.o
+bitmap_objects/asteroid.o: bitmap_objects/asteroid.cpp.o
 
-.PHONY : gun.o
+.PHONY : bitmap_objects/asteroid.o
 
 # target to build an object file
-gun.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/gun.cpp.o
-.PHONY : gun.cpp.o
+bitmap_objects/asteroid.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.o
+.PHONY : bitmap_objects/asteroid.cpp.o
 
-gun.i: gun.cpp.i
+bitmap_objects/asteroid.i: bitmap_objects/asteroid.cpp.i
 
-.PHONY : gun.i
+.PHONY : bitmap_objects/asteroid.i
 
 # target to preprocess a source file
-gun.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/gun.cpp.i
-.PHONY : gun.cpp.i
+bitmap_objects/asteroid.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.i
+.PHONY : bitmap_objects/asteroid.cpp.i
 
-gun.s: gun.cpp.s
+bitmap_objects/asteroid.s: bitmap_objects/asteroid.cpp.s
 
-.PHONY : gun.s
+.PHONY : bitmap_objects/asteroid.s
 
 # target to generate assembly for a file
-gun.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/gun.cpp.s
-.PHONY : gun.cpp.s
+bitmap_objects/asteroid.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.s
+.PHONY : bitmap_objects/asteroid.cpp.s
 
-keyboard.o: keyboard.cpp.o
+bitmap_objects/bitmap.o: bitmap_objects/bitmap.cpp.o
 
-.PHONY : keyboard.o
+.PHONY : bitmap_objects/bitmap.o
 
 # target to build an object file
-keyboard.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/keyboard.cpp.o
-.PHONY : keyboard.cpp.o
+bitmap_objects/bitmap.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/bitmap.cpp.o
+.PHONY : bitmap_objects/bitmap.cpp.o
 
-keyboard.i: keyboard.cpp.i
+bitmap_objects/bitmap.i: bitmap_objects/bitmap.cpp.i
 
-.PHONY : keyboard.i
+.PHONY : bitmap_objects/bitmap.i
 
 # target to preprocess a source file
-keyboard.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/keyboard.cpp.i
-.PHONY : keyboard.cpp.i
+bitmap_objects/bitmap.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/bitmap.cpp.i
+.PHONY : bitmap_objects/bitmap.cpp.i
 
-keyboard.s: keyboard.cpp.s
+bitmap_objects/bitmap.s: bitmap_objects/bitmap.cpp.s
 
-.PHONY : keyboard.s
+.PHONY : bitmap_objects/bitmap.s
 
 # target to generate assembly for a file
-keyboard.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/keyboard.cpp.s
-.PHONY : keyboard.cpp.s
+bitmap_objects/bitmap.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/bitmap.cpp.s
+.PHONY : bitmap_objects/bitmap.cpp.s
 
-lifes.o: lifes.cpp.o
+bitmap_objects/bullet.o: bitmap_objects/bullet.cpp.o
 
-.PHONY : lifes.o
+.PHONY : bitmap_objects/bullet.o
 
 # target to build an object file
-lifes.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/lifes.cpp.o
-.PHONY : lifes.cpp.o
+bitmap_objects/bullet.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/bullet.cpp.o
+.PHONY : bitmap_objects/bullet.cpp.o
 
-lifes.i: lifes.cpp.i
+bitmap_objects/bullet.i: bitmap_objects/bullet.cpp.i
 
-.PHONY : lifes.i
+.PHONY : bitmap_objects/bullet.i
 
 # target to preprocess a source file
-lifes.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/lifes.cpp.i
-.PHONY : lifes.cpp.i
+bitmap_objects/bullet.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/bullet.cpp.i
+.PHONY : bitmap_objects/bullet.cpp.i
 
-lifes.s: lifes.cpp.s
+bitmap_objects/bullet.s: bitmap_objects/bullet.cpp.s
 
-.PHONY : lifes.s
+.PHONY : bitmap_objects/bullet.s
 
 # target to generate assembly for a file
-lifes.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/lifes.cpp.s
-.PHONY : lifes.cpp.s
+bitmap_objects/bullet.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/bullet.cpp.s
+.PHONY : bitmap_objects/bullet.cpp.s
+
+bitmap_objects/heart.o: bitmap_objects/heart.cpp.o
+
+.PHONY : bitmap_objects/heart.o
+
+# target to build an object file
+bitmap_objects/heart.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/heart.cpp.o
+.PHONY : bitmap_objects/heart.cpp.o
+
+bitmap_objects/heart.i: bitmap_objects/heart.cpp.i
+
+.PHONY : bitmap_objects/heart.i
+
+# target to preprocess a source file
+bitmap_objects/heart.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/heart.cpp.i
+.PHONY : bitmap_objects/heart.cpp.i
+
+bitmap_objects/heart.s: bitmap_objects/heart.cpp.s
+
+.PHONY : bitmap_objects/heart.s
+
+# target to generate assembly for a file
+bitmap_objects/heart.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/heart.cpp.s
+.PHONY : bitmap_objects/heart.cpp.s
+
+bitmap_objects/image.o: bitmap_objects/image.cpp.o
+
+.PHONY : bitmap_objects/image.o
+
+# target to build an object file
+bitmap_objects/image.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/image.cpp.o
+.PHONY : bitmap_objects/image.cpp.o
+
+bitmap_objects/image.i: bitmap_objects/image.cpp.i
+
+.PHONY : bitmap_objects/image.i
+
+# target to preprocess a source file
+bitmap_objects/image.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/image.cpp.i
+.PHONY : bitmap_objects/image.cpp.i
+
+bitmap_objects/image.s: bitmap_objects/image.cpp.s
+
+.PHONY : bitmap_objects/image.s
+
+# target to generate assembly for a file
+bitmap_objects/image.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/image.cpp.s
+.PHONY : bitmap_objects/image.cpp.s
+
+bitmap_objects/nave.o: bitmap_objects/nave.cpp.o
+
+.PHONY : bitmap_objects/nave.o
+
+# target to build an object file
+bitmap_objects/nave.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.o
+.PHONY : bitmap_objects/nave.cpp.o
+
+bitmap_objects/nave.i: bitmap_objects/nave.cpp.i
+
+.PHONY : bitmap_objects/nave.i
+
+# target to preprocess a source file
+bitmap_objects/nave.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.i
+.PHONY : bitmap_objects/nave.cpp.i
+
+bitmap_objects/nave.s: bitmap_objects/nave.cpp.s
+
+.PHONY : bitmap_objects/nave.s
+
+# target to generate assembly for a file
+bitmap_objects/nave.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.s
+.PHONY : bitmap_objects/nave.cpp.s
+
+game_interfaces/keyboard.o: game_interfaces/keyboard.cpp.o
+
+.PHONY : game_interfaces/keyboard.o
+
+# target to build an object file
+game_interfaces/keyboard.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o
+.PHONY : game_interfaces/keyboard.cpp.o
+
+game_interfaces/keyboard.i: game_interfaces/keyboard.cpp.i
+
+.PHONY : game_interfaces/keyboard.i
+
+# target to preprocess a source file
+game_interfaces/keyboard.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.i
+.PHONY : game_interfaces/keyboard.cpp.i
+
+game_interfaces/keyboard.s: game_interfaces/keyboard.cpp.s
+
+.PHONY : game_interfaces/keyboard.s
+
+# target to generate assembly for a file
+game_interfaces/keyboard.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.s
+.PHONY : game_interfaces/keyboard.cpp.s
+
+game_interfaces/main_game.o: game_interfaces/main_game.cpp.o
+
+.PHONY : game_interfaces/main_game.o
+
+# target to build an object file
+game_interfaces/main_game.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o
+.PHONY : game_interfaces/main_game.cpp.o
+
+game_interfaces/main_game.i: game_interfaces/main_game.cpp.i
+
+.PHONY : game_interfaces/main_game.i
+
+# target to preprocess a source file
+game_interfaces/main_game.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.i
+.PHONY : game_interfaces/main_game.cpp.i
+
+game_interfaces/main_game.s: game_interfaces/main_game.cpp.s
+
+.PHONY : game_interfaces/main_game.s
+
+# target to generate assembly for a file
+game_interfaces/main_game.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.s
+.PHONY : game_interfaces/main_game.cpp.s
 
 main.o: main.cpp.o
 
@@ -345,7 +453,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -354,7 +462,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -363,35 +471,35 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-nave.o: nave.cpp.o
+tools_and_headers/int_to_string.o: tools_and_headers/int_to_string.cpp.o
 
-.PHONY : nave.o
+.PHONY : tools_and_headers/int_to_string.o
 
 # target to build an object file
-nave.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/nave.cpp.o
-.PHONY : nave.cpp.o
+tools_and_headers/int_to_string.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/tools_and_headers/int_to_string.cpp.o
+.PHONY : tools_and_headers/int_to_string.cpp.o
 
-nave.i: nave.cpp.i
+tools_and_headers/int_to_string.i: tools_and_headers/int_to_string.cpp.i
 
-.PHONY : nave.i
+.PHONY : tools_and_headers/int_to_string.i
 
 # target to preprocess a source file
-nave.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/nave.cpp.i
-.PHONY : nave.cpp.i
+tools_and_headers/int_to_string.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/tools_and_headers/int_to_string.cpp.i
+.PHONY : tools_and_headers/int_to_string.cpp.i
 
-nave.s: nave.cpp.s
+tools_and_headers/int_to_string.s: tools_and_headers/int_to_string.cpp.s
 
-.PHONY : nave.s
+.PHONY : tools_and_headers/int_to_string.s
 
 # target to generate assembly for a file
-nave.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceShip.dir/build.make CMakeFiles/SpaceShip.dir/nave.cpp.s
-.PHONY : nave.cpp.s
+tools_and_headers/int_to_string.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/tools_and_headers/int_to_string.cpp.s
+.PHONY : tools_and_headers/int_to_string.cpp.s
 
 # Help Target
 help:
@@ -401,37 +509,49 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... SpaceShip"
-	@echo "... asteroid.o"
-	@echo "... asteroid.i"
-	@echo "... asteroid.s"
-	@echo "... asteroids_engine.o"
-	@echo "... asteroids_engine.i"
-	@echo "... asteroids_engine.s"
-	@echo "... bitmap.o"
-	@echo "... bitmap.i"
-	@echo "... bitmap.s"
-	@echo "... bullet.o"
-	@echo "... bullet.i"
-	@echo "... bullet.s"
-	@echo "... game.o"
-	@echo "... game.i"
-	@echo "... game.s"
-	@echo "... gun.o"
-	@echo "... gun.i"
-	@echo "... gun.s"
-	@echo "... keyboard.o"
-	@echo "... keyboard.i"
-	@echo "... keyboard.s"
-	@echo "... lifes.o"
-	@echo "... lifes.i"
-	@echo "... lifes.s"
+	@echo "... SpaceShip2"
+	@echo "... bitmap_interfaces/asteroids_interface.o"
+	@echo "... bitmap_interfaces/asteroids_interface.i"
+	@echo "... bitmap_interfaces/asteroids_interface.s"
+	@echo "... bitmap_interfaces/bullet_interface.o"
+	@echo "... bitmap_interfaces/bullet_interface.i"
+	@echo "... bitmap_interfaces/bullet_interface.s"
+	@echo "... bitmap_interfaces/game_facade.o"
+	@echo "... bitmap_interfaces/game_facade.i"
+	@echo "... bitmap_interfaces/game_facade.s"
+	@echo "... bitmap_interfaces/hearts_interface.o"
+	@echo "... bitmap_interfaces/hearts_interface.i"
+	@echo "... bitmap_interfaces/hearts_interface.s"
+	@echo "... bitmap_objects/asteroid.o"
+	@echo "... bitmap_objects/asteroid.i"
+	@echo "... bitmap_objects/asteroid.s"
+	@echo "... bitmap_objects/bitmap.o"
+	@echo "... bitmap_objects/bitmap.i"
+	@echo "... bitmap_objects/bitmap.s"
+	@echo "... bitmap_objects/bullet.o"
+	@echo "... bitmap_objects/bullet.i"
+	@echo "... bitmap_objects/bullet.s"
+	@echo "... bitmap_objects/heart.o"
+	@echo "... bitmap_objects/heart.i"
+	@echo "... bitmap_objects/heart.s"
+	@echo "... bitmap_objects/image.o"
+	@echo "... bitmap_objects/image.i"
+	@echo "... bitmap_objects/image.s"
+	@echo "... bitmap_objects/nave.o"
+	@echo "... bitmap_objects/nave.i"
+	@echo "... bitmap_objects/nave.s"
+	@echo "... game_interfaces/keyboard.o"
+	@echo "... game_interfaces/keyboard.i"
+	@echo "... game_interfaces/keyboard.s"
+	@echo "... game_interfaces/main_game.o"
+	@echo "... game_interfaces/main_game.i"
+	@echo "... game_interfaces/main_game.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... nave.o"
-	@echo "... nave.i"
-	@echo "... nave.s"
+	@echo "... tools_and_headers/int_to_string.o"
+	@echo "... tools_and_headers/int_to_string.i"
+	@echo "... tools_and_headers/int_to_string.s"
 .PHONY : help
 
 
