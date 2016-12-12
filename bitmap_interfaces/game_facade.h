@@ -36,6 +36,7 @@ class OBJS_FACADE
 
     void check_bullets_with_asteroids();
     void check_nave_with_asteroids();
+    void check_nave_with_powerups();
     void receive_score();
 
     void update_objects();

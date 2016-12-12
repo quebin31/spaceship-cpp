@@ -4,6 +4,8 @@
 
 #include "bitmap.h"
 
+/* BITMAP
+ * Constructor para cargar imagenes */
 BITMAP::BITMAP(const char* file)
 {
   bitmap = al_load_bitmap(file);
@@ -14,36 +16,60 @@ BITMAP::BITMAP(const char* file)
   destroyed = false;
 }
 
-BITMAP::~BITMAP() { if (bitmap != nullptr) al_destroy_bitmap(bitmap); }
 
-double BITMAP::getX() const { return posX; }
+/* ~BITMAP (virtual)
+ * Puede ser sobreescrito, pero no es una obligacion.
+ * Destruye la imagen cargada.*/
+BITMAP::~BITMAP()
+{ if (bitmap != nullptr) al_destroy_bitmap(bitmap); }
 
-double BITMAP::getY() const { return posY; }
+/* getX, getY
+ * Devuelve posX / posY */
+double BITMAP::getX() const
+{ return posX; }
+double BITMAP::getY() const
+{ return posY; }
 
-void BITMAP::setX(const double x) { posX = x; }
+/* setX, setY
+ * Modifica posX / posY */
+void BITMAP::setX(const double x)
+{ posX = x; }
+void BITMAP::setY(const double y)
+{ posY = y; }
 
-void BITMAP::setY(const double y) { posY = y; }
+/* moveX, moveY
+ * Aumenta/disminuye el valor de posX / posY, dependiendo del parametro que reciba (double) */
+void BITMAP::moveX(const double dx)
+{ posX += dx; }
+void BITMAP::moveY(const double dy)
+{ posY += dy; }
 
-void BITMAP::moveX(const float dx) { posX += dx; }
+/* getW, getH
+ * Devuelve width/height */
+int BITMAP::getW() const
+{ return width; }
+int BITMAP::getH() const
+{ return height; }
 
-void BITMAP::moveY(const float dy) { posY += dy; }
+/* setSourceX, setSourceY
+ * Modifica el valor de x / y para dibujar la imagen por regiones */
+void BITMAP::setSourceX(const int sourceX)
+{ this->sourceX = sourceX; }
+void BITMAP::setSourceY(const int sourceY)
+{ this->sourceY = sourceY; }
 
-void BITMAP::setW(const int width) { this->width = width; }
+/* setDestroyed
+ * Modifica el valor de destroyed */
+void BITMAP::setDestroyed(const bool destroyed)
+{ this->destroyed = destroyed; }
 
-void BITMAP::setH(const int height) { this->height = height; }
+/* getDestroyed
+ * Devuelve el valor de destroyed */
+bool BITMAP::getDestroyed() const
+{ return destroyed; }
 
-int BITMAP::getW() const { return width; }
-
-int BITMAP::getH() const { return height; }
-
-void BITMAP::setSourceX(const int sourceX) { this->sourceX = sourceX; }
-
-void BITMAP::setSourceY(const int sourceY) { this->sourceY = sourceY; }
-
-void BITMAP::setDestroyed(const bool destroyed) { this->destroyed = destroyed; }
-
-bool BITMAP::getDestroyed() const { return destroyed; }
-
+/* check_colision_with -> BITMAP
+ * Verifica si hay o no colision entre this y el bitmap del parametro */
 bool BITMAP::check_colision_with(BITMAP* some)
 {
   if (this->posX + this->width >= some->posX && this->posX <= some->posX + some->width)

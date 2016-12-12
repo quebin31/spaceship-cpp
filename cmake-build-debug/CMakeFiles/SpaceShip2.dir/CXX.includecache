@@ -19,8 +19,6 @@ bullet_interface.h
 /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
 
 /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
-../tools_and_headers/spaceship_includes.h
-/home/kevin/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
 ../bitmap_objects/bullet.h
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.h
 
@@ -51,6 +49,14 @@ hearts_interface.h
 /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h
 ../bitmap_objects/heart.h
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.h
+
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.cpp
+powerups_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.h
+
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.h
+../bitmap_objects/power_up.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
 
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp
 asteroid.h
@@ -99,6 +105,14 @@ nave.h
 /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
 
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
+bitmap.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.cpp
+power_up.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
+
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
 bitmap.h
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
 

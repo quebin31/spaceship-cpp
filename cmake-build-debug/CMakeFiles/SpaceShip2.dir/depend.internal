@@ -38,6 +38,13 @@ CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.h
  /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
  /home/kevin/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o
+ /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.cpp
+ /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.h
+ /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+ /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
+ /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
+ /home/kevin/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
 CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.o
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.h
@@ -73,6 +80,12 @@ CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.o
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.cpp
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
+ /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
+ /home/kevin/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
+CMakeFiles/SpaceShip2.dir/bitmap_objects/power_up.cpp.o
+ /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+ /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.cpp
+ /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
  /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
  /home/kevin/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
 CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o

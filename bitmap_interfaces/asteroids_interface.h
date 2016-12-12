@@ -7,19 +7,27 @@
 
 #include "../bitmap_objects/asteroid.h"
 
-class NAVE;
+class ASTEROIDS_STORE
+{
+  private:
+    static std::vector<ASTEROID*> store;
+
+  public:
+    ASTEROIDS_STORE() {}
+    ~ASTEROIDS_STORE();
+
+    static ASTEROID* check_for_store();
+    static void put_on_store(ASTEROID* aster);
+};
 
 class ASTEROIDS
 {
   private:
     std::vector<ASTEROID*> aster;
-    std::vector<ASTEROID*> store;
     int fps_to_gen;
 
-    ASTEROID* check_for_store();
-
-    int  generate_random_fps_count();
     int  generate_random_num_of_asters();
+    int  generate_random_fps_count();
     void create_new_row();
 
   public:
@@ -27,12 +35,13 @@ class ASTEROIDS
     ~ASTEROIDS();
 
     void update_asteroids(int64_t frame_count);
-    std::size_t size();
-    bool empty();
 
     ASTEROID* operator[](std::size_t index);
     ASTEROID* at(std::size_t index);
-    void put_on_store(std::size_t index);
+    std::size_t size();
+    bool empty();
+
+    void erase(std::size_t index);
 };
 
 

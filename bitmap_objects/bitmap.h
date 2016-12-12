@@ -13,8 +13,8 @@ class BITMAP
     ALLEGRO_BITMAP *bitmap;
     int             width;
     int             height;
-    double           posX;
-    double           posY;
+    double          posX;
+    double          posY;
     int             sourceX;
     int             sourceY;
     bool            destroyed;
@@ -28,11 +28,9 @@ class BITMAP
     void setX(const double x);
     void setY(const double y);
 
-    void moveX(const float dx);
-    void moveY(const float dy);
+    void moveX(const double dx);
+    void moveY(const double dy);
 
-    void setW(const int width);
-    void setH(const int height);
     int getW() const;
     int getH() const;
 

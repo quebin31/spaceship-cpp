@@ -13,26 +13,29 @@ int main(int argc, const char **argv)
 
     if (event.type == ALLEGRO_EVENT_KEY_UP && event.keyboard.keycode == ALLEGRO_KEY_ESCAPE)
     {
-      MAIN_GAME::get()->set_main_activity_state(EXIT);
+      MAIN_GAME::get()->set_main_activity_state(true);
       cout << "MAIN: Saliendo" << endl;
     }
     else if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
     {
-      MAIN_GAME::get()->set_main_activity_state(EXIT);
+      MAIN_GAME::get()->set_main_activity_state(true);
       cout << "MAIN: Saliendo" << endl;
     }
-    else if(event.type == ALLEGRO_EVENT_KEY_DOWN && event.keyboard.keycode == ALLEGRO_KEY_ENTER)
+    else if(event.type == ALLEGRO_EVENT_KEY_UP && event.keyboard.keycode == ALLEGRO_KEY_ENTER)
     {
       MAIN_GAME::get()->start_timer();
 
       while (!MAIN_GAME::get()->get_game_activity_state())
       {
+
         ALLEGRO_EVENT ev;
         MAIN_GAME::get()->wait_for_event(ev);
         MAIN_GAME::get()->manage_event(ev);
       }
     }
   }
+
   cout << "MAIN: Tiempo transcurrido: " << al_get_time() << endl;
+  MAIN_GAME::del();
   return 0;
 }

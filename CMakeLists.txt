@@ -19,12 +19,16 @@ set(SOURCE_FILES main.cpp
         bitmap_objects/heart.h
         bitmap_objects/image.cpp
         bitmap_objects/image.h
+        bitmap_objects/power_up.cpp
+        bitmap_objects/power_up.h
         bitmap_interfaces/hearts_interface.cpp
         bitmap_interfaces/hearts_interface.h
         bitmap_interfaces/asteroids_interface.cpp
         bitmap_interfaces/asteroids_interface.h
         bitmap_interfaces/bullet_interface.cpp
         bitmap_interfaces/bullet_interface.h
+        bitmap_interfaces/powerups_interface.cpp
+        bitmap_interfaces/powerups_interface.h
         bitmap_interfaces/game_facade.cpp
         bitmap_interfaces/game_facade.h
         game_interfaces/keyboard.cpp

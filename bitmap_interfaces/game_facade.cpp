@@ -66,16 +66,19 @@ void OBJS_FACADE::check_bullets_with_asteroids()
     if ((*nave_gun)[i]->getY() <= 0)
     {
       (*nave_gun)[i]->setDestroyed(true);
-      nave_gun->put_on_store(i);
+      nave_gun->erase(i);
     }
     if ((*nave_gun)[i]->getDestroyed())
-      nave_gun->put_on_store(i);
-
+    {
+      nave_gun->erase(i);
+    }
     for (std::size_t j = 0; j < asteroids->size(); j++)
     {
       if ((*nave_gun)[i]->check_colision_with((*asteroids)[j]))
-        nave_gun->inc_score();
+        nave_gun->incScore();
     }
+    if (MAIN_GAME::get()->get_timer_count()%150 == 0)
+      nave_gun->decScore();
   }
 }
 
@@ -85,7 +88,7 @@ void OBJS_FACADE::check_nave_with_asteroids()
   {
     if (nave->getWhenDestroyed() + 90 == MAIN_GAME::get()->get_timer_count())
     {
-      std::cout << "Haciendo vulnerable\n";
+      std::cout << "NAVE: Haciendo vulnerable\n";
       nave->make_vulnerable();
     }
   }
@@ -96,45 +99,51 @@ void OBJS_FACADE::check_nave_with_asteroids()
       if (asteroids->at(i)->getY() >= 480)
       {
         (*asteroids)[i]->setDestroyed(true);
-        asteroids->put_on_store(i);
+        asteroids->erase(i);
       }
 
       if ((*asteroids)[i]->getDestroyed())
-        asteroids->put_on_store(i);
+        asteroids->erase(i);
 
       if ((*asteroids)[i]->check_colision_with(nave))
       {
         nave->make_invulnerable(MAIN_GAME::get()->get_timer_count());
         hearts->lost_heart();
-        std::cout << "Haciendo invulnerable\n";
+
+        std::cout << "NAVE: Haciendo invulnerable\n";
         return;
       }
     }
   }
 }
 
+void OBJS_FACADE::check_nave_with_powerups()
+{
+
+}
+
 void OBJS_FACADE::receive_score() { score = int_to_string(nave_gun->getScore()); }
 
 void OBJS_FACADE::update_objects()
 {
-  if ((*KEYBOARD::get())[UP] and nave->getY() >= 4.5 + 76)
+  if ((*KEYBOARD::get())[UP] && nave->getY() >= 4.3 + 76)
   {
-    nave->moveY(-4.5);
+    nave->moveY(-4.3);
     nave->setSourceX(NAVE_UP);
   }
-  else if ((*KEYBOARD::get())[DOWN] and nave->getY() <= frame->getH() - nave->getH() - 4.5)
+  else if ((*KEYBOARD::get())[DOWN] && nave->getY() <= frame->getH() - nave->getH() - 4.3)
   {
-    nave->moveY(4.5);
+    nave->moveY(4.3);
     nave->setSourceX(NAVE_UP);
   }
-  else if ((*KEYBOARD::get())[LEFT] && nave->getX() >= 4.5 + 40)
+  else if ((*KEYBOARD::get())[LEFT] && nave->getX() >= 4.3 + 40)
   {
-    nave->moveX(-4.5);
+    nave->moveX(-4.3);
     nave->setSourceX(NAVE_LEFT);
   }
-  else if ((*KEYBOARD::get())[RIGHT] && nave->getX() <= frame->getW() - nave->getW() - 4.5 )
+  else if ((*KEYBOARD::get())[RIGHT] && nave->getX() <= frame->getW() - nave->getW() - 4.3 )
   {
-    nave->moveX(4.5);
+    nave->moveX(4.3);
     nave->setSourceX(NAVE_RIGHT);
   }
   else
@@ -142,7 +151,7 @@ void OBJS_FACADE::update_objects()
     nave->setSourceX(NAVE_UP);
   }
 
-  if ((*KEYBOARD::get())[CHAR_A] && MAIN_GAME::get()->get_timer_count()%18 == 0)
+  if ((*KEYBOARD::get())[CHAR_A] && MAIN_GAME::get()->get_timer_count()%13 == 0)
   {
     nave->shoot_gun();
   }
@@ -152,9 +161,8 @@ void OBJS_FACADE::update_objects()
   asteroids->update_asteroids(MAIN_GAME::get()->get_timer_count());
 }
 
-void OBJS_FACADE::draw_objects() {
-  update_objects();
-}
+void OBJS_FACADE::draw_objects()
+{ update_objects(); }
 
 void OBJS_FACADE::draw_information()
 {
@@ -166,6 +174,4 @@ void OBJS_FACADE::draw_information()
 }
 
 bool OBJS_FACADE::no_hearts()
-{
-  return hearts->empty();
-}
+{ return hearts->empty(); }

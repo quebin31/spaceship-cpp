@@ -3,18 +3,18 @@
 //
 
 #include "bullet_interface.h"
-
-BULLET *NAVE_GUN::check_for_store()
-{
-  if (not store.empty())
-  {
-    BULLET* bullet = store.back();
-    store.pop_back();
-    bullet->reset_bitmap();
-    return bullet;
-  }
-  return new BULLET;
-}
+//
+//BULLET *NAVE_GUN::check_for_store()
+//{
+//  if (!store.empty())
+//  {
+//    BULLET* bullet = store.back();
+//    store.pop_back();
+//    bullet->reset_bitmap();
+//    return bullet;
+//  }
+//  return new BULLET;
+//}
 
 NAVE_GUN::NAVE_GUN(): score(0) {}
 
@@ -22,13 +22,11 @@ NAVE_GUN::~NAVE_GUN()
 {
   for (int i = 0; i < bullets.size(); i++)
     delete bullets[i];
-  for (int i = 0; i < store.size(); i++)
-    delete store[i];
 }
 
-void NAVE_GUN::create_bullet(const float naveX, const float naveY)
+void NAVE_GUN::create_bullet(const double naveX, const double naveY)
 {
-  BULLET* new_bullet = check_for_store();
+  BULLET* new_bullet = BULLETS_STORE::check_for_store();
   new_bullet->setX(naveX+middle_nave_x);
   new_bullet->setY(naveY-middle_nave_y);
   bullets.push_back(new_bullet);
@@ -44,18 +42,67 @@ void NAVE_GUN::update_bullets()
     }
 }
 
-BULLET *NAVE_GUN::operator[](std::size_t index) { return bullets[index]; }
+BULLET *NAVE_GUN::operator[](std::size_t index)
+{ return bullets[index]; }
 
-void NAVE_GUN::put_on_store(std::size_t index)
+BULLET *NAVE_GUN::at(std::size_t index)
+{ return bullets.at(index); }
+
+void NAVE_GUN::erase(std::size_t index)
 {
-  store.push_back(bullets[index]);
-  bullets.erase(bullets.begin()+index);
+  BULLET *temp = bullets[index];
+  BULLETS_STORE::put_on_store(temp);
+  bullets.erase(bullets.begin() + index);
 }
 
-std::size_t NAVE_GUN::size() { return bullets.size(); }
-bool NAVE_GUN::empty() { return bullets.empty(); }
+std::size_t NAVE_GUN::size()
+{ return bullets.size(); }
+
+bool NAVE_GUN::empty()
+{ return bullets.empty(); }
+
+void NAVE_GUN::incScore()
+{ score += 5; }
+
+void NAVE_GUN::decScore()
+{
+  score -= (score >= 2)? 2 : score;
+}
+
+void NAVE_GUN::incScorein(const int incS)
+{ score += incS; }
+
+void NAVE_GUN::decScorein(const int decS)
+{
+  score -= (score >= 30)? 30 : score;
+}
+
+int NAVE_GUN::getScore()
+{ return score; }
 
 
-int NAVE_GUN::getScore() { return score; }
+std::vector<BULLET*> BULLETS_STORE::store;
 
-void NAVE_GUN::inc_score() { score += 5; }
+BULLETS_STORE::~BULLETS_STORE()
+{
+  for (int i = 0; i < store.size(); i++)
+    delete store[i];
+}
+
+BULLET *BULLETS_STORE::check_for_store()
+{
+  if (!store.empty())
+  {
+    BULLET* bullet = store.back();
+    store.pop_back();
+    return bullet;
+  }
+  return new BULLET;
+}
+
+void BULLETS_STORE::put_on_store(BULLET *bullet)
+{
+  bullet->reset_bitmap();
+  store.push_back(bullet);
+}
+

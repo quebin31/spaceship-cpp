@@ -5,6 +5,10 @@
 #include "nave.h"
 #include "../bitmap_interfaces/bullet_interface.h"
 
+/* NAVE
+ * Carga una imagen para nave.
+ * Selecciona el sourceX.
+ * Configura los valores de altura y ancho */
 NAVE::NAVE(): BITMAP("nave1.png")
 {
   nave_gun     = new NAVE_GUN;
@@ -13,32 +17,61 @@ NAVE::NAVE(): BITMAP("nave1.png")
   sourceX      = NAVE_UP;
 }
 
+/* ~NAVE
+ * Aparte de destruir la imagen que cargó, tambien destruye nave_gun */
 NAVE::~NAVE()
 {
-  al_destroy_bitmap(bitmap);
   delete nave_gun;
+  std::cout << "Destruyendo la nave" << std::endl;
 }
 
-void NAVE::draw_bitmap(const int flags)
-{
-  al_draw_bitmap_region(bitmap, sourceX, sourceY, width, height, posX, posY, flags);
-}
-
+/* shoot_gun
+ * Invoca el metodo del arma (nave_gun) -> create_bullet.
+ * Crea una nueva bala, de acuerdo a la posicion actual de la nave */
 void NAVE::shoot_gun()
-{
-  nave_gun->create_bullet(posX, posY);
-}
+{ nave_gun->create_bullet(posX, posY); }
 
+/* update_bullets
+ * Invoca el metodo del arma (nave_gun) -> update_bullets
+ * Mueve y dibuja las balas.*/
 void NAVE::update_bullets()
-{
-  nave_gun->update_bullets();
-}
+{ nave_gun->update_bullets(); }
 
+/* getGun
+ * Devuelve por referencia nave_gun */
 NAVE_GUN *NAVE::getGun()
+{ return nave_gun; }
+
+/* make_invulnerable
+ * Vuelve invulnerable a la nave.
+ * El valor de destroyed se cambia a true.
+ * El valor de destroyed_at guarda el numero de fotogramas que se habian contado hasta ese momento
+ * Ademas, reduce la puntacion en 30 (si es que se puede). */
+void NAVE::make_invulnerable(const int64_t fps_count)
 {
-  return nave_gun;
+  destroyed    = true;
+  destroyed_at = fps_count;
+  nave_gun->decScorein(30);
 }
 
+/* make_vulnerable
+ * Vuelve vulnerable a la nave.
+ * El valor de destroyed se cambia a false. */
+void NAVE::make_vulnerable()
+{ destroyed = false; }
+
+/* getWhenDestroyed
+ * Devuelve destroyed_at (que marca el numero de fotogramas contandos al momento en el que la nave colisiono) */
+int64_t NAVE::getWhenDestroyed()
+{ return destroyed_at; }
+
+/* draw_bitmap
+ * Dibuja la nave de acuerdo a sourceX, sourceY (dibujado por region) */
+void NAVE::draw_bitmap(const int flags)
+{ al_draw_bitmap_region(bitmap, sourceX, sourceY, width, height, float (posX), float (posY), flags); }
+
+/* reset_bitmap
+ * Resetea todos los miembros datos de la clase NAVE */
 void NAVE::reset_bitmap()
 {
   posX         = 0;
@@ -48,16 +81,6 @@ void NAVE::reset_bitmap()
   destroyed    = false;
   destroyed_at = 0;
 }
-
-void NAVE::make_invulnerable(const int64_t fps_count)
-{
-  destroyed    = true;
-  destroyed_at = fps_count;
-}
-
-int64_t NAVE::getWhenDestroyed() { return destroyed_at; }
-
-void NAVE::make_vulnerable() { destroyed    = false; }
 
 
 

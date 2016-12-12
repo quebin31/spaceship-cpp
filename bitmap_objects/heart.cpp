@@ -4,6 +4,8 @@
 
 #include "heart.h"
 
+/* HEART
+ * Carga una imagen al bitmap que contiene los sprites de corazones y selecciona la coordenada que corresponde al corazon con vida. */
 HEART::HEART(): BITMAP("lifes.png")
 {
   width = 30;
@@ -12,17 +14,23 @@ HEART::HEART(): BITMAP("lifes.png")
   sourceY = 0;
 }
 
+/* broken_heart
+ * Modifica el valor de sourceX (coordenada x de la imagen) para que coincida con el corazon muerto.
+ * Cambia el valor de destroyed por true */
 void HEART::broken_heart()
 {
   sourceX = HEART_DEAD;
   destroyed = true;
 }
 
+/* draw_bitmap
+ * Dibuja el bitmap por regiones (sourceX, sourceY) */
 void HEART::draw_bitmap(const int flags)
-{
-  al_draw_bitmap_region(bitmap,sourceX,sourceY,width,height,posX,posY,flags);
-}
+{ al_draw_bitmap_region(bitmap,sourceX,sourceY,width,height,float (posX),float (posY),flags); }
 
+/* reset_bitmap
+ * Resetea HEART, elige la coordenada x de la imagen que coincide con la imagen del corazon vivo.
+ * Cambia el valor de destroyed por false */
 void HEART::reset_bitmap()
 {
   sourceX = HEART_ALIVE;

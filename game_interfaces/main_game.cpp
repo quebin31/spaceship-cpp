@@ -136,9 +136,9 @@ bool MAIN_GAME::get_main_activity_state() { return done_main; }
 
 bool MAIN_GAME::get_game_activity_state() { return gameover_or_pause; }
 
-void MAIN_GAME::set_main_activity_state(const bool state) { done_main = not done_main; }
+void MAIN_GAME::set_main_activity_state(const bool state) { done_main = state; }
 
-void MAIN_GAME::set_game_activity_state(const bool state) { gameover_or_pause = not gameover_or_pause; }
+void MAIN_GAME::set_game_activity_state(const bool state) { gameover_or_pause = state; }
 
 void MAIN_GAME::show_menu() { objects->show_menu(); }
 
@@ -146,8 +146,11 @@ void MAIN_GAME::wait_for_event(ALLEGRO_EVENT &event) { al_wait_for_event(event_q
 
 void MAIN_GAME::start_timer()
 {
-  al_start_timer(timer);
+  if (get_timer_count() == 0)
+    al_start_timer(timer);
+
   gameover_or_pause = false;
+  (*KEYBOARD::get()).set_state_to(ESC, false);
 }
 
 #pragma clang diagnostic push
@@ -170,13 +173,13 @@ void MAIN_GAME::event_timer()
 {
   if ((*KEYBOARD::get())[ESC])
   {
-    gameover_or_pause = PAUSE;
+    gameover_or_pause = true;
     return;
   }
 
   if (objects->no_hearts())
   {
-    gameover_or_pause = GAMEOVER;
+    gameover_or_pause = true;
     return;
   }
 
@@ -202,3 +205,6 @@ MAIN_GAME *MAIN_GAME::main_game_instance = 0;
 int MAIN_GAME::getW() const { return 640; }
 
 int MAIN_GAME::getH() const { return 480; }
+
+void MAIN_GAME::del()
+{ delete main_game_instance; }

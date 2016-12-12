@@ -108,6 +108,12 @@
 		<Unit filename="/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h">
 			<Option target="SpaceShip2"/>
 		</Unit>
+		<Unit filename="/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.cpp">
+			<Option target="SpaceShip2"/>
+		</Unit>
+		<Unit filename="/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.h">
+			<Option target="SpaceShip2"/>
+		</Unit>
 		<Unit filename="/home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp">
 			<Option target="SpaceShip2"/>
 		</Unit>
@@ -142,6 +148,12 @@
 			<Option target="SpaceShip2"/>
 		</Unit>
 		<Unit filename="/home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h">
+			<Option target="SpaceShip2"/>
+		</Unit>
+		<Unit filename="/home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.cpp">
+			<Option target="SpaceShip2"/>
+		</Unit>
+		<Unit filename="/home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h">
 			<Option target="SpaceShip2"/>
 		</Unit>
 		<Unit filename="/home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.cpp">

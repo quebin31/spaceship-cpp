@@ -8,33 +8,44 @@
 #define middle_nave_x 11
 #define middle_nave_y 10
 
-#include "../tools_and_headers/spaceship_includes.h"
 #include "../bitmap_objects/bullet.h"
+
+class BULLETS_STORE
+{
+  private:
+    static std::vector<BULLET*> store;
+  public:
+    BULLETS_STORE() {}
+    ~BULLETS_STORE();
+
+    static BULLET* check_for_store();
+    static void put_on_store(BULLET* bullet);
+};
 
 class NAVE_GUN
 {
   private:
     std::vector<BULLET*> bullets;
-    std::vector<BULLET*> store;
     int                  score;
-
-    BULLET* check_for_store();
 
   public:
     NAVE_GUN();
     ~NAVE_GUN();
 
-    void put_on_store(std::size_t index);
+    void erase(std::size_t index);
 
-    void create_bullet(const float naveX, const float naveY);
+    void create_bullet(const double naveX, const double naveY);
     void update_bullets();
-    void inc_score();
 
+    BULLET* operator[](std::size_t index);
+    BULLET* at(std::size_t index);
     std::size_t size();
     bool empty();
 
-    BULLET* operator[](std::size_t index);
-
+    void incScore();
+    void decScore();
+    void incScorein(const int incS);
+    void decScorein(const int decS);
     int getScore();
 };
 

@@ -8,9 +8,6 @@
 #include "../tools_and_headers/spaceship_includes.h"
 #include "../bitmap_interfaces/game_facade.h"
 
-#define GAMEOVER true
-#define PAUSE    true
-#define EXIT     true
 
 class MAIN_GAME
 {
@@ -49,6 +46,7 @@ class MAIN_GAME
     int64_t get_timer_count();
 
     static MAIN_GAME* get();
+    static void       del();
 };
 
 

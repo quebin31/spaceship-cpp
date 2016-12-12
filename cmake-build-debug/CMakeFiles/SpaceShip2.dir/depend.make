@@ -38,6 +38,13 @@ CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o: ../bitmap_ob
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o: ../tools_and_headers/int_to_string.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o: ../tools_and_headers/spaceship_includes.h
 
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_interfaces/powerups_interface.cpp
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_interfaces/powerups_interface.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_objects/bitmap.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_objects/power_up.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../tools_and_headers/int_to_string.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../tools_and_headers/spaceship_includes.h
+
 CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.o: ../bitmap_objects/asteroid.cpp
 CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.o: ../bitmap_objects/asteroid.h
 CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.o: ../bitmap_objects/bitmap.h
@@ -74,6 +81,12 @@ CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.o: ../bitmap_objects/nave.cpp
 CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.o: ../bitmap_objects/nave.h
 CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.o: ../tools_and_headers/int_to_string.h
 CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.o: ../tools_and_headers/spaceship_includes.h
+
+CMakeFiles/SpaceShip2.dir/bitmap_objects/power_up.cpp.o: ../bitmap_objects/bitmap.h
+CMakeFiles/SpaceShip2.dir/bitmap_objects/power_up.cpp.o: ../bitmap_objects/power_up.cpp
+CMakeFiles/SpaceShip2.dir/bitmap_objects/power_up.cpp.o: ../bitmap_objects/power_up.h
+CMakeFiles/SpaceShip2.dir/bitmap_objects/power_up.cpp.o: ../tools_and_headers/int_to_string.h
+CMakeFiles/SpaceShip2.dir/bitmap_objects/power_up.cpp.o: ../tools_and_headers/spaceship_includes.h
 
 CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o: ../game_interfaces/keyboard.cpp
 CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o: ../game_interfaces/keyboard.h

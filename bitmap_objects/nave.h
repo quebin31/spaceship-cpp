@@ -18,21 +18,21 @@ class NAVE : public BITMAP
   private:
     NAVE_GUN   *nave_gun;
     int64_t     destroyed_at;
+
   public:
     NAVE();
     ~NAVE() override;
 
-    void draw_bitmap(const int flags) override;
-    void reset_bitmap() override;
-
     void shoot_gun();
     void update_bullets();
+    NAVE_GUN* getGun();
+
     void make_invulnerable(const int64_t fps_count);
     void make_vulnerable();
     int64_t getWhenDestroyed();
 
-
-    NAVE_GUN* getGun();
+    void draw_bitmap(const int flags) override;
+    void reset_bitmap() override;
 };
 
 
