@@ -42,4 +42,8 @@ bool POWER_UP::check_colision_with(BITMAP *some)
   return false;
 }
 
-
+POWER_UP* POWER_UP::instance(){
+ if(!POWER_UP::power_up)
+  power_up = new POWER_UP;
+ return power_up;
+}

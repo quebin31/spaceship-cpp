@@ -13,10 +13,11 @@ class POWER_UP : public BITMAP
 {
   private:
     int generate_random_power_up();
+    static POWER_UP* power_up;
 
   public:
     POWER_UP();
-
+    static POWER_UP* instance();
     bool check_colision_with(BITMAP *some) override;
     void draw_bitmap(const int flags) override;
     void reset_bitmap() override;
