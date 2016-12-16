@@ -26,6 +26,7 @@ class POWER_UP : public BITMAP
     bool check_colision_with(BITMAP *some) override;
     void draw_bitmap(const int flags) override;
     void reset_bitmap() override;
+    bool aprove(int64_t)
 };
 
 

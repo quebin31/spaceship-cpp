@@ -119,8 +119,10 @@ void OBJS_FACADE::check_nave_with_asteroids()
 
 void OBJS_FACADE::check_nave_with_powerups()
 {
-  if (POWER_UP::instance()->check_colision_with(NAVE::instance()) == true)
+  if (POWER_UP::instance()->check_colision_with(NAVE::instance()) == true){
     std::cout << "PUN!" << std::endl;
+
+  }
 }
 
 void OBJS_FACADE::receive_score() { score = int_to_string(nave_gun->getScore()); }

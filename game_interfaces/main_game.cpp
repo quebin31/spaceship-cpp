@@ -189,6 +189,7 @@ void MAIN_GAME::event_timer()
   objects->draw_objects();
   objects->draw_information();
   objects->check_nave_with_powerups();
+
   al_flip_display();
 }
 

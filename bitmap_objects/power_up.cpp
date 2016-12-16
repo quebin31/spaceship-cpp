@@ -38,6 +38,7 @@ void POWER_UP::reset_bitmap()
 {
   posX = generate_random_power_up();
   posY = generate_random_power_up();
+  destroyed = false;
 }
 
 bool POWER_UP::check_colision_with(BITMAP *some)
@@ -50,6 +51,10 @@ bool POWER_UP::check_colision_with(BITMAP *some)
     }
   }
   return false;
+}
+
+bool POWER_UP::aprove(int64_t val){
+  if (val)
 }
 
 POWER_UP* POWER_UP::power_up = 0;
