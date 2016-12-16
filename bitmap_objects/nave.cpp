@@ -82,5 +82,4 @@ void NAVE::reset_bitmap()
   destroyed_at = 0;
 }
 
-
-
+NAVE* NAVE::nave = 0;

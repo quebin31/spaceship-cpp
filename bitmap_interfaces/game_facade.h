@@ -16,7 +16,7 @@
 class OBJS_FACADE
 {
   private:
-    NAVE            *nave;
+    //NAVE            *nave;
     NAVE_GUN        *nave_gun;
     ASTEROIDS       *asteroids;
     HEARTS          *hearts;

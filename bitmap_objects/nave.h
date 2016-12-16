@@ -17,12 +17,18 @@ class NAVE : public BITMAP
 {
   private:
     NAVE_GUN   *nave_gun;
+    static NAVE* nave;
     int64_t     destroyed_at;
 
   public:
     NAVE();
     ~NAVE() override;
 
+    static NAVE* instance(){
+      if (!nave)
+        nave = new NAVE;
+      return nave;
+    }
     void shoot_gun();
     void update_bullets();
     NAVE_GUN* getGun();

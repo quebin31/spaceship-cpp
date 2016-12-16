@@ -5,7 +5,7 @@
 #ifndef SPACESHIP2_POWER_UP_H
 #define SPACESHIP2_POWER_UP_H
 
-#include "bitmap.h"
+#include "../bitmap_objects/nave.h"
 
 extern int type_powerup[];
 
