@@ -14,6 +14,7 @@ class POWER_UP : public BITMAP
   private:
     int generate_random_power_up();
     static POWER_UP* power_up;
+    int64_t destroyed_at;
 
   public:
     POWER_UP();
@@ -26,7 +27,8 @@ class POWER_UP : public BITMAP
     bool check_colision_with(BITMAP *some) override;
     void draw_bitmap(const int flags) override;
     void reset_bitmap() override;
-    bool aprove(int64_t)
+    int64_t get_destroyed_at();
+    void set_destroyed_at(int64_t );
 };
 
 

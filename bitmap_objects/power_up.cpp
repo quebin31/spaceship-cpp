@@ -53,8 +53,8 @@ bool POWER_UP::check_colision_with(BITMAP *some)
   return false;
 }
 
-bool POWER_UP::aprove(int64_t val){
-  if (val)
-}
+int64_t POWER_UP::get_destroyed_at() {return destroyed_at;}
+
+void POWER_UP::set_destroyed_at(int64_t val) {destroyed_at=val;}
 
 POWER_UP* POWER_UP::power_up = 0;
