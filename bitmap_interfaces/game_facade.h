@@ -11,12 +11,11 @@
 #include "asteroids_interface.h"
 #include "bullet_interface.h"
 #include "hearts_interface.h"
-
+#include "../bitmap_objects/power_up.h"
 
 class OBJS_FACADE
 {
   private:
-    //NAVE            *nave;
     NAVE_GUN        *nave_gun;
     ASTEROIDS       *asteroids;
     HEARTS          *hearts;
