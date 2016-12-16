@@ -17,7 +17,11 @@ class POWER_UP : public BITMAP
 
   public:
     POWER_UP();
-    static POWER_UP* instance();
+    static POWER_UP* instance(){
+      if(!power_up)
+        power_up = new POWER_UP;
+      return power_up;
+    }
     bool check_colision_with(BITMAP *some) override;
     void draw_bitmap(const int flags) override;
     void reset_bitmap() override;

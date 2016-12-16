@@ -14,7 +14,7 @@ int POWER_UP::generate_random_power_up()
   return distr(eng);
 }
 
-POWER_UP::POWER_UP(): BITMAP("power_up")
+POWER_UP::POWER_UP(): BITMAP("power_up.png")
 {
   width  = 30;
   height = 30;
@@ -42,8 +42,3 @@ bool POWER_UP::check_colision_with(BITMAP *some)
   return false;
 }
 
-POWER_UP* POWER_UP::instance(){
- if(!POWER_UP::power_up)
-  power_up = new POWER_UP;
- return power_up;
-}
