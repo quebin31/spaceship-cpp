@@ -188,6 +188,8 @@ void MainGame::event_timer()
   objects->check_bullets_with_asteroids();
   objects->draw_objects();
   objects->draw_information();
+  objects->check_nave_with_powerups();
+
   al_flip_display();
 }
 

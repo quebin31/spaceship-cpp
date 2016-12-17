@@ -16,13 +16,23 @@ class NaveGun;
 class Nave : public Bitmap
 {
   private:
+<<<<<<< HEAD
     NaveGun   *nave_gun;
+=======
+    NAVE_GUN   *nave_gun;
+    static NAVE* nave;
+>>>>>>> 27e201519406282de8a3c267430e611e08b76ca1
     int64_t     destroyed_at;
 
   public:
     Nave();
     ~Nave() override;
 
+    static NAVE* instance(){
+      if (!nave)
+        nave = new NAVE;
+      return nave;
+    }
     void shoot_gun();
     void update_bullets();
     NaveGun* getGun();
