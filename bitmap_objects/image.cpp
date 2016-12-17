@@ -4,9 +4,9 @@
 
 #include "image.h"
 
-/* IMAGE
+/* Image
  * Recibe el nombre del archivo a cargar, el ancho y la altura de dicho objeto */
-IMAGE::IMAGE(const char *file, const int nwidth, const int nheight) : BITMAP(file)
+Image::Image(const char *file, const int nwidth, const int nheight) : Bitmap(file)
 {
   width  = nwidth;
   height = nheight;
@@ -14,14 +14,14 @@ IMAGE::IMAGE(const char *file, const int nwidth, const int nheight) : BITMAP(fil
 
 /* draw_bitmap
  * Dibuja la imagen normalmente */
-void IMAGE::draw_bitmap(const int flags)
+void Image::draw_bitmap(const int flags)
 { al_draw_bitmap(bitmap, posX, posY, flags); }
 
 /* reset_bitmap
  * Resetea la imagen, destruyendo la imagen que se cargó.
  * Referenciando bitmap a nullptr.
  * Y reseteando los demas valores por 0. */
-void IMAGE::reset_bitmap()
+void Image::reset_bitmap()
 {
   al_destroy_bitmap(bitmap);
   bitmap = nullptr;

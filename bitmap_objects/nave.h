@@ -11,21 +11,21 @@
 #define NAVE_RIGHT 32
 #define NAVE_LEFT  64
 
-class NAVE_GUN;
+class NaveGun;
 
-class NAVE : public BITMAP
+class Nave : public Bitmap
 {
   private:
-    NAVE_GUN   *nave_gun;
+    NaveGun   *nave_gun;
     int64_t     destroyed_at;
 
   public:
-    NAVE();
-    ~NAVE() override;
+    Nave();
+    ~Nave() override;
 
     void shoot_gun();
     void update_bullets();
-    NAVE_GUN* getGun();
+    NaveGun* getGun();
 
     void make_invulnerable(const int64_t fps_count);
     void make_vulnerable();

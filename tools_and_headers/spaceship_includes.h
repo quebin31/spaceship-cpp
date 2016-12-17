@@ -19,4 +19,11 @@
 #include <allegro5/allegro_audio.h>
 #include "int_to_string.h"
 
+typedef ALLEGRO_DISPLAY AllegroDisplay;
+typedef ALLEGRO_EVENT_QUEUE AllegroEventQueue;
+typedef ALLEGRO_TIMER AllegroTimer;
+typedef ALLEGRO_EVENT AllegroEvent;
+typedef ALLEGRO_BITMAP AllegroBitmap;
+typedef ALLEGRO_FONT AllegroFont;
+
 #endif //SPACESHIP2_SPACESHIP_INCLUDES_H

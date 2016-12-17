@@ -13,24 +13,23 @@
 #include "hearts_interface.h"
 
 
-class OBJS_FACADE
+class ObjectsFacade
 {
   private:
-    NAVE            *nave;
-    NAVE_GUN        *nave_gun;
-    ASTEROIDS       *asteroids;
-    HEARTS          *hearts;
-    IMAGE           *frame;
-    std::string      score;
+    Nave              *nave;
+    NaveGun           *nave_gun;
+    Hearts            *hearts;
+    Image             *frame;
+    std::string       score;
 
   private:
-    ALLEGRO_FONT    *title_font;
-    ALLEGRO_FONT    *options_font;
-    ALLEGRO_FONT    *score_font;
+    AllegroFont       *title_font;
+    AllegroFont       *options_font;
+    AllegroFont       *score_font;
 
   public:
-    OBJS_FACADE();
-    ~OBJS_FACADE();
+    ObjectsFacade();
+    ~ObjectsFacade();
 
     void show_menu();
 

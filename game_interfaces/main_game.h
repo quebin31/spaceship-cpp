@@ -8,24 +8,27 @@
 #include "../tools_and_headers/spaceship_includes.h"
 #include "../bitmap_interfaces/game_facade.h"
 
+#define GAMEOVER true
+#define PAUSE true
+#define EXIT true
 
-class MAIN_GAME
+class MainGame
 {
   private:
-    static MAIN_GAME    *main_game_instance;
-    MAIN_GAME();
+    static MainGame     *_instance;
+    MainGame();
 
   private:
-    ALLEGRO_DISPLAY     *display;
-    ALLEGRO_EVENT_QUEUE *event_queue;
-    ALLEGRO_TIMER       *timer;
-    OBJS_FACADE         *objects;
+    AllegroDisplay      *display;
+    AllegroEventQueue   *event_queue;
+    AllegroTimer        *timer;
+    ObjectsFacade       *objects;
 
     bool                 done_main;
     bool                 gameover_or_pause;
 
   public:
-    ~MAIN_GAME();
+    ~MainGame();
 
     int getW() const;
     int getH() const;
@@ -39,13 +42,13 @@ class MAIN_GAME
 
     void show_menu();
     void start_timer();
-    void wait_for_event(ALLEGRO_EVENT& event);
-    void manage_event(ALLEGRO_EVENT& event);
+    void wait_for_event(AllegroEvent& event);
+    void manage_event(AllegroEvent& event);
     void event_timer();
 
     int64_t get_timer_count();
 
-    static MAIN_GAME* get();
+    static MainGame* get();
     static void       del();
 };
 

@@ -8,10 +8,10 @@
 
 #include "bitmap.h"
 
-class IMAGE : public BITMAP
+class Image : public Bitmap
 {
   public:
-    IMAGE(const char* file, const int nwidth, const int nheight);
+    Image(const char* file, const int nwidth, const int nheight);
 
     void draw_bitmap(const int flags) override;
     void reset_bitmap() override;

@@ -14,7 +14,7 @@ int POWER_UP::generate_random_power_up()
   return distr(eng);
 }
 
-POWER_UP::POWER_UP(): BITMAP("power_up")
+POWER_UP::POWER_UP(): Bitmap("power_up")
 {
   width  = 30;
   height = 30;
@@ -31,7 +31,7 @@ void POWER_UP::reset_bitmap()
   sourceY = 0;
 }
 
-bool POWER_UP::check_colision_with(BITMAP *some)
+bool POWER_UP::check_colision_with(Bitmap *some)
 {
   if (this->posX + this->width >= some->getX() && this->posX <= some->getX() + some->getW())
     if (this->posY + this->height >= some->getY() && this->posY <= some->getY() + some->getH())

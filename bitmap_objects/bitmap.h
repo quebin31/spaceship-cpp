@@ -7,10 +7,10 @@
 
 #include "../tools_and_headers/spaceship_includes.h"
 
-class BITMAP
+class Bitmap
 {
   protected:
-    ALLEGRO_BITMAP *bitmap;
+    AllegroBitmap  *bitmap;
     int             width;
     int             height;
     double          posX;
@@ -20,8 +20,8 @@ class BITMAP
     bool            destroyed;
 
   public:
-    BITMAP(const char* file);
-    virtual ~BITMAP();
+    Bitmap(const char* file);
+    virtual ~Bitmap();
 
     double getX() const;
     double getY() const;
@@ -40,7 +40,7 @@ class BITMAP
     void setDestroyed(const bool destroyed);
     bool getDestroyed() const;
 
-    virtual bool check_colision_with(BITMAP *some);         /// Not pure
+    virtual bool check_colision_with(Bitmap *some);         /// Not pure
     virtual void draw_bitmap(const int flags) = 0;          /// Pure
     virtual void reset_bitmap() = 0;                        /// Pure
 };

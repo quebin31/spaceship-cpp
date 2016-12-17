@@ -10,7 +10,7 @@
 #define HEART_ALIVE 0
 #define HEART_DEAD  30
 
-class HEART : public BITMAP
+class HEART : public Bitmap
 {
   public:
     HEART();

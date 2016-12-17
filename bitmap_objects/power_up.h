@@ -9,7 +9,7 @@
 
 extern int type_powerup[];
 
-class POWER_UP : public BITMAP
+class POWER_UP : public Bitmap
 {
   private:
     int generate_random_power_up();
@@ -17,7 +17,7 @@ class POWER_UP : public BITMAP
   public:
     POWER_UP();
 
-    bool check_colision_with(BITMAP *some) override;
+    bool check_colision_with(Bitmap *some) override;
     void draw_bitmap(const int flags) override;
     void reset_bitmap() override;
 };

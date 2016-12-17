@@ -8,12 +8,12 @@
 
 #include "bitmap.h"
 
-class BULLET : public BITMAP
+class BULLET : public Bitmap
 {
   public:
     BULLET();
 
-    bool check_colision_with(BITMAP *some) override;
+    bool check_colision_with(Bitmap *some) override;
     void draw_bitmap(const int flags) override;
     void reset_bitmap() override;
 };

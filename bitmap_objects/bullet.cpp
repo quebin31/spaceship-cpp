@@ -7,17 +7,17 @@
 /* BULLET
  * Carga la imagen de la bala.
  * Configura sus valores de width / height */
-BULLET::BULLET(): BITMAP("bullet2.png")
+BULLET::BULLET(): Bitmap("bullet2.png")
 {
   width = 10;
   height = 10;
 }
 
-/* check_colision_with -> BITMAP
- * Verifica colisiones entre this y BITMAP
+/* check_colision_with -> Bitmap
+ * Verifica colisiones entre this y Bitmap
  * Si es que logran colisionar, cambia los valores de destroyed por true (para ambos objetos), y devuelve true.
  * Usado con asteroides.*/
-bool BULLET::check_colision_with(BITMAP *some)
+bool BULLET::check_colision_with(Bitmap *some)
 {
   if (this->posX + this->width >= some->getX() && this->posX <= some->getX() + some->getW())
     if (this->posY + this->height >= some->getY() && this->posY <= some->getY() + some->getH())

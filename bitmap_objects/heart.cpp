@@ -6,7 +6,7 @@
 
 /* HEART
  * Carga una imagen al bitmap que contiene los sprites de corazones y selecciona la coordenada que corresponde al corazon con vida. */
-HEART::HEART(): BITMAP("lifes.png")
+HEART::HEART(): Bitmap("lifes.png")
 {
   width = 30;
   height = 30;

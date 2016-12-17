@@ -9,7 +9,7 @@
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "CannotResolve"
-MAIN_GAME::MAIN_GAME()
+MainGame::MainGame()
 {
   std::cout << "GAME_ENGINE: Iniciando Allegro" << std::endl;
   if (!al_init())
@@ -102,7 +102,7 @@ MAIN_GAME::MAIN_GAME()
   }
   std::cout << "GAME_ENGINE: Timer creado correctamente @(" << timer << ")" << std::endl;
 
-  objects = new OBJS_FACADE;
+  objects = new ObjectsFacade;
   done_main = false;
   gameover_or_pause = false;
 
@@ -118,7 +118,7 @@ MAIN_GAME::MAIN_GAME()
 }
 #pragma clang diagnostic pop
 
-MAIN_GAME::~MAIN_GAME()
+MainGame::~MainGame()
 {
   al_destroy_display(display);
   al_destroy_timer(timer);
@@ -126,36 +126,36 @@ MAIN_GAME::~MAIN_GAME()
   delete objects;
 }
 
-void MAIN_GAME::set_display_color(unsigned char r, unsigned char g, unsigned char b)
+void MainGame::set_display_color(unsigned char r, unsigned char g, unsigned char b)
 {
   al_set_target_bitmap(al_get_backbuffer(display));
   al_clear_to_color(al_map_rgb(r,g,b));
 }
 
-bool MAIN_GAME::get_main_activity_state() { return done_main; }
+bool MainGame::get_main_activity_state() { return done_main; }
 
-bool MAIN_GAME::get_game_activity_state() { return gameover_or_pause; }
+bool MainGame::get_game_activity_state() { return gameover_or_pause; }
 
-void MAIN_GAME::set_main_activity_state(const bool state) { done_main = state; }
+void MainGame::set_main_activity_state(const bool state) { done_main = state; }
 
-void MAIN_GAME::set_game_activity_state(const bool state) { gameover_or_pause = state; }
+void MainGame::set_game_activity_state(const bool state) { gameover_or_pause = state; }
 
-void MAIN_GAME::show_menu() { objects->show_menu(); }
+void MainGame::show_menu() { objects->show_menu(); }
 
-void MAIN_GAME::wait_for_event(ALLEGRO_EVENT &event) { al_wait_for_event(event_queue, &event); }
+void MainGame::wait_for_event(AllegroEvent &event) { al_wait_for_event(event_queue, &event); }
 
-void MAIN_GAME::start_timer()
+void MainGame::start_timer()
 {
   if (get_timer_count() == 0)
     al_start_timer(timer);
 
   gameover_or_pause = false;
-  (*KEYBOARD::get()).set_state_to(ESC, false);
+  KEYBOARD::get()->set_state_to(ESC, false);
 }
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "CannotResolve"
-void MAIN_GAME::manage_event(ALLEGRO_EVENT &event)
+void MainGame::manage_event(AllegroEvent &event)
 {
   if (event.type == ALLEGRO_EVENT_TIMER)
     event_timer();
@@ -169,17 +169,17 @@ void MAIN_GAME::manage_event(ALLEGRO_EVENT &event)
 
 #pragma clang diagnostic pop
 
-void MAIN_GAME::event_timer()
+void MainGame::event_timer()
 {
   if ((*KEYBOARD::get())[ESC])
   {
-    gameover_or_pause = true;
+    gameover_or_pause = PAUSE;
     return;
   }
 
   if (objects->no_hearts())
   {
-    gameover_or_pause = true;
+    gameover_or_pause = GAMEOVER;
     return;
   }
 
@@ -191,20 +191,20 @@ void MAIN_GAME::event_timer()
   al_flip_display();
 }
 
-int64_t MAIN_GAME::get_timer_count() { return al_get_timer_count(timer); }
+int64_t MainGame::get_timer_count() { return al_get_timer_count(timer); }
 
-MAIN_GAME *MAIN_GAME::get()
+MainGame *MainGame::get()
 {
-  if (!main_game_instance)
-    main_game_instance = new MAIN_GAME;
-  return main_game_instance;
+  if (!_instance)
+    _instance = new MainGame;
+  return _instance;
 }
 
-MAIN_GAME *MAIN_GAME::main_game_instance = 0;
+MainGame *MainGame::_instance = 0;
 
-int MAIN_GAME::getW() const { return 640; }
+int MainGame::getW() const { return 640; }
 
-int MAIN_GAME::getH() const { return 480; }
+int MainGame::getH() const { return 480; }
 
-void MAIN_GAME::del()
-{ delete main_game_instance; }
+void MainGame::del()
+{ delete _instance; }

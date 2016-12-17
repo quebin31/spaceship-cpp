@@ -4,7 +4,7 @@
 
 #include "bullet_interface.h"
 //
-//BULLET *NAVE_GUN::check_for_store()
+//BULLET *NaveGun::check_for_store()
 //{
 //  if (!store.empty())
 //  {
@@ -16,15 +16,15 @@
 //  return new BULLET;
 //}
 
-NAVE_GUN::NAVE_GUN(): score(0) {}
+NaveGun::NaveGun(): score(0) {}
 
-NAVE_GUN::~NAVE_GUN()
+NaveGun::~NaveGun()
 {
   for (int i = 0; i < bullets.size(); i++)
     delete bullets[i];
 }
 
-void NAVE_GUN::create_bullet(const double naveX, const double naveY)
+void NaveGun::create_bullet(const double naveX, const double naveY)
 {
   BULLET* new_bullet = BULLETS_STORE::check_for_store();
   new_bullet->setX(naveX+middle_nave_x);
@@ -32,7 +32,7 @@ void NAVE_GUN::create_bullet(const double naveX, const double naveY)
   bullets.push_back(new_bullet);
 }
 
-void NAVE_GUN::update_bullets()
+void NaveGun::update_bullets()
 {
   for (int i = 0; i < bullets.size(); i++)
     if (!bullets[i]->getDestroyed())
@@ -42,42 +42,42 @@ void NAVE_GUN::update_bullets()
     }
 }
 
-BULLET *NAVE_GUN::operator[](std::size_t index)
+BULLET *NaveGun::operator[](std::size_t index)
 { return bullets[index]; }
 
-BULLET *NAVE_GUN::at(std::size_t index)
+BULLET *NaveGun::at(std::size_t index)
 { return bullets.at(index); }
 
-void NAVE_GUN::erase(std::size_t index)
+void NaveGun::erase(std::size_t index)
 {
   BULLET *temp = bullets[index];
   BULLETS_STORE::put_on_store(temp);
   bullets.erase(bullets.begin() + index);
 }
 
-std::size_t NAVE_GUN::size()
+std::size_t NaveGun::size()
 { return bullets.size(); }
 
-bool NAVE_GUN::empty()
+bool NaveGun::empty()
 { return bullets.empty(); }
 
-void NAVE_GUN::incScore()
+void NaveGun::incScore()
 { score += 5; }
 
-void NAVE_GUN::decScore()
+void NaveGun::decScore()
 {
   score -= (score >= 2)? 2 : score;
 }
 
-void NAVE_GUN::incScorein(const int incS)
+void NaveGun::incScorein(const int incS)
 { score += incS; }
 
-void NAVE_GUN::decScorein(const int decS)
+void NaveGun::decScorein(const int decS)
 {
   score -= (score >= 30)? 30 : score;
 }
 
-int NAVE_GUN::getScore()
+int NaveGun::getScore()
 { return score; }
 
 

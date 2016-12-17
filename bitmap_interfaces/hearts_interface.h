@@ -10,14 +10,14 @@
 
 #define NO_OF_HEARTS 3
 
-class HEARTS
+class Hearts
 {
   private:
     std::vector<HEART*> hearts;
 
   public:
-    HEARTS();
-    ~HEARTS();
+    Hearts();
+    ~Hearts();
 
     void draw_hearts();
     void lost_heart();

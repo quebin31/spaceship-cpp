@@ -22,15 +22,15 @@ class BULLETS_STORE
     static void put_on_store(BULLET* bullet);
 };
 
-class NAVE_GUN
+class NaveGun
 {
   private:
     std::vector<BULLET*> bullets;
     int                  score;
 
   public:
-    NAVE_GUN();
-    ~NAVE_GUN();
+    NaveGun();
+    ~NaveGun();
 
     void erase(std::size_t index);
 

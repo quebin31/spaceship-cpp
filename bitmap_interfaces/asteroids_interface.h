@@ -7,41 +7,88 @@
 
 #include "../bitmap_objects/asteroid.h"
 
-class ASTEROIDS_STORE
+class AsteroidFactory;
+class AsteroidObjectPool;
+class AsteroidInterface;
+
+class AsteroidFactory
 {
   private:
-    static std::vector<ASTEROID*> store;
+    static int fps_to_gen;
+
+  private:
+    static int generate_random_num_of_asters();
+    static int generate_random_fps_count();
+    static Asteroid* check_store(AsteroidObjectPool* setofasters);
 
   public:
-    ASTEROIDS_STORE() {}
-    ~ASTEROIDS_STORE();
-
-    static ASTEROID* check_for_store();
-    static void put_on_store(ASTEROID* aster);
+    static int  getFpsToGen();
+    static void createRow(AsteroidObjectPool* setofasters);
 };
 
-class ASTEROIDS
+class AsteroidObjectPool
 {
   private:
-    std::vector<ASTEROID*> aster;
-    int fps_to_gen;
+    std::vector<Asteroid*> asters_on_use;
+    std::vector<Asteroid*> store;
 
-    int  generate_random_num_of_asters();
-    int  generate_random_fps_count();
-    void create_new_row();
+  private:
+    friend class AsteroidFactory;
+    friend class AsteroidInterface;
 
   public:
-    ASTEROIDS();
-    ~ASTEROIDS();
+    class Iterator
+    {
+      private:
+        AsteroidObjectPool* ap;
+        int index;
 
-    void update_asteroids(int64_t frame_count);
+      private:
+        friend class AsteroidObjectPool;
 
-    ASTEROID* operator[](std::size_t index);
-    ASTEROID* at(std::size_t index);
+      public:
+        Iterator(AsteroidObjectPool& _ap);
+        Iterator(AsteroidObjectPool* _ap);
+        Iterator(const Iterator& itr);
+
+        Iterator&  operator++();
+        Iterator   operator++(int);
+        Iterator   operator+(const int sum);
+        bool       operator==(const Iterator& itr);
+        bool       operator!=(const Iterator& itr);
+        Asteroid*  operator*();
+
+
+    };
+
+    AsteroidObjectPool();
+    ~AsteroidObjectPool();
+
+    Asteroid*   at(int index);
+    Asteroid*   operator[](int index);
     std::size_t size();
-    bool empty();
+    void        erase(Iterator& itr);
 
-    void erase(std::size_t index);
+    Iterator begin();
+    Iterator end();
+};
+
+class AsteroidInterface
+{
+  private:
+    static AsteroidObjectPool *asteroidOP;
+
+  public:
+    static void createAsteroidObjectPool();
+    static void deleteAsteroidObjectPool();
+
+    static void updateAsteroids(int64_t actual_frames_count);
+    static void eraseAsteroid(AsteroidObjectPool::Iterator &itr);
+
+    static AsteroidObjectPool::Iterator getBegin();
+    static AsteroidObjectPool::Iterator getEnd();
+    static AsteroidObjectPool* getAOP();
+
 };
 
 

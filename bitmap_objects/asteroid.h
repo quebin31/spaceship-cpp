@@ -9,7 +9,7 @@
 
 //extern int type_asters[];
 
-class ASTEROID : public BITMAP
+class Asteroid : public Bitmap
 {
   private:
     static int type_asters[];
@@ -20,9 +20,9 @@ class ASTEROID : public BITMAP
     double generate_random_Y();
 
   public:
-    ASTEROID();
+    Asteroid();
 
-    bool check_colision_with(BITMAP *some) override;
+    bool check_colision_with(Bitmap *some) override;
     void draw_bitmap(const int flags) override;
     void reset_bitmap() override;
 };

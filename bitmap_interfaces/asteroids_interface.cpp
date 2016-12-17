@@ -4,25 +4,11 @@
 
 #include "asteroids_interface.h"
 
-/* check_for_store
- * Verifica si exista algun asteroide ya creado en el almacen para sacarlo y usarlo nuevamente.
- * Si es que no hay ninguno para usar, se crea uno nuevo */
-//ASTEROID *ASTEROIDS::check_for_store()
-//{
-//  if (!store.empty())
-//  {
-//    ASTEROID* aster = store.back();
-//    store.pop_back();
-//    aster->reset_bitmap();
-//    return aster;
-//  }
-//  return new ASTEROID;
-//}
+/* =======================================================================================================================================================================*/
 
-/* generate_random_num_of_asters
- * Genera un numero aleatorio (int) entre 3 y 7.
- * El numero aleatorio generado representa el numero de asteroides que se creara para esa ronda. */
-int ASTEROIDS::generate_random_num_of_asters()
+int AsteroidFactory::fps_to_gen = AsteroidFactory::generate_random_fps_count();
+
+int AsteroidFactory::generate_random_num_of_asters()
 {
   std::random_device randomDevice;
   std::mt19937 eng(randomDevice());
@@ -30,11 +16,7 @@ int ASTEROIDS::generate_random_num_of_asters()
   return distr(eng);
 }
 
-/* generate_random_fps_count
- * Genera un numero aleatorio (int) entre 90 y 110.
- * El numero aleatorio generado representa el cada cuantos frames se debe crear una nueva ronda de asteroides.
- * (Varia cada vez que se cree una nueva ronda) */
-int ASTEROIDS::generate_random_fps_count()
+int AsteroidFactory::generate_random_fps_count()
 {
   std::random_device randomDevice;
   std::mt19937 eng(randomDevice());
@@ -42,107 +24,143 @@ int ASTEROIDS::generate_random_fps_count()
   return distr(eng);
 }
 
-/* create_new_row
- * Crea una nueva ronda de asteroides
- * Genera un numero aleatorio de asteroides.
- * En cada iteracion, invoca a la funcion check_for_store, que usa un asteroide creado anteriormente o crea uno nuevo.
- * Luego hace push_back al "nuevo" asteroide. */
-void ASTEROIDS::create_new_row()
+Asteroid *AsteroidFactory::check_store(AsteroidObjectPool *setofasters)
 {
-  int num_of_asters = generate_random_num_of_asters();
-  for (int i = 0; i < num_of_asters; i++)
+  if (!setofasters->store.empty())
   {
-    ASTEROID *new_aster = ASTEROIDS_STORE::check_for_store();
-    aster.push_back(new_aster);
+    Asteroid* pAsteroid = setofasters->store.back();
+    setofasters->store.pop_back();
+    return pAsteroid;
   }
+  return new Asteroid;
 }
 
-/* ASTEROIDS
- * En la primera llamada crea una nueva ronda de asteroides.
- * Y genera un numero aleatorio para la generacion de asteroides. */
-ASTEROIDS::ASTEROIDS()
+int AsteroidFactory::getFpsToGen()
+{ return fps_to_gen; }
+
+void AsteroidFactory::createRow(AsteroidObjectPool *setofasters)
 {
-  create_new_row();
+  int number_of_asteroids = generate_random_num_of_asters();
+  for (int i = 0; i < number_of_asteroids; i++)
+  {
+    Asteroid* asteroid = check_store(setofasters);
+    setofasters->asters_on_use.push_back(asteroid);
+  }
   fps_to_gen = generate_random_fps_count();
 }
 
-/* ~ASTEROIDS
- * Borra los asteoides que se encuentran en aster y en store. */
-ASTEROIDS::~ASTEROIDS()
+/* =======================================================================================================================================================================*/
+AsteroidObjectPool::Iterator::Iterator(AsteroidObjectPool &_ap): ap(&_ap), index(0) {}
+AsteroidObjectPool::Iterator::Iterator(AsteroidObjectPool *_ap): ap(_ap), index(0) {}
+AsteroidObjectPool::Iterator::Iterator(const AsteroidObjectPool::Iterator &itr): ap(itr.ap), index(itr.index) {}
+
+AsteroidObjectPool::Iterator &AsteroidObjectPool::Iterator::operator++()
 {
-  for (int i = 0; i < aster.size(); i++)
-    delete aster[i];
-  std::cout << "Asteroides eliminados \n";
+  index++;
+  return (*this);
 }
 
-/* update_asteroids
- * En caso se tenga que crear una nueva ronda de asteroides se crea.
- * Luego recorre el vector de asteroides y los mueve y dibuja. */
-void ASTEROIDS::update_asteroids(int64_t frame_count)
+AsteroidObjectPool::Iterator AsteroidObjectPool::Iterator::operator++(int)
 {
-  if (frame_count%fps_to_gen == 0)
-  {
-    create_new_row();
-    fps_to_gen = generate_random_fps_count();
-  }
-
-  for (int i = 0; i < aster.size(); i++)
-  {
-    if (!aster[i]->getDestroyed())
-    {
-      aster[i]->moveY(2.5);
-      aster[i]->draw_bitmap(0);
-    }
-  }
+  Iterator temp_itr = *this;
+  ++(*this);
+  return temp_itr;
 }
 
-/* operator[], at
- * Devuelve por referencia el asteroide de la posicion index. */
-ASTEROID *ASTEROIDS::operator[](std::size_t index)
-{ return aster[index]; }
-ASTEROID *ASTEROIDS::at(std::size_t index)
-{ return aster.at(index); }
-
-/* size
- * Devuelve el tamaño del vector de asteroides.*/
-std::size_t ASTEROIDS::size()
-{ return aster.size(); }
-
-/* empty
- * Devuelve el valor que devuelva aster.empty(), que verifica si el vector esta vacio o no.*/
-bool ASTEROIDS::empty()
-{ return aster.empty(); }
-
-/* erase
- * Coloca el asteroide de la posicion index, en el almacen y lo borra del vector aster. */
-void ASTEROIDS::erase(std::size_t index)
+AsteroidObjectPool::Iterator AsteroidObjectPool::Iterator::operator+(const int sum)
 {
-  ASTEROID* temp = aster[index];
-  ASTEROIDS_STORE::put_on_store(temp);
-  aster.erase(aster.begin()+index);
+  Iterator temp_itr = *this;
+  temp_itr.index += sum;
+  return temp_itr;
 }
 
-std::vector<ASTEROID*> ASTEROIDS_STORE::store;
+bool AsteroidObjectPool::Iterator::operator==(const AsteroidObjectPool::Iterator &itr)
+{ return (this->index == itr.index); }
 
-ASTEROIDS_STORE::~ASTEROIDS_STORE()
+bool AsteroidObjectPool::Iterator::operator!=(const AsteroidObjectPool::Iterator &itr)
+{ return (this->index != itr.index); }
+
+Asteroid *AsteroidObjectPool::Iterator::operator*()
+{ return ap->asters_on_use[index]; }
+
+/* =======================================================================================================================================================================*/
+
+AsteroidObjectPool::AsteroidObjectPool()
+{ AsteroidFactory::createRow(this); }
+
+AsteroidObjectPool::~AsteroidObjectPool()
 {
+  for (int i = 0; i < asters_on_use.size(); i++)
+    delete asters_on_use[i];
   for (int i = 0; i < store.size(); i++)
     delete store[i];
 }
 
-ASTEROID *ASTEROIDS_STORE::check_for_store()
+Asteroid *AsteroidObjectPool::at(int index)
+{ return asters_on_use.at(index); }
+
+Asteroid *AsteroidObjectPool::operator[](int index)
+{ return asters_on_use[index]; }
+
+std::size_t AsteroidObjectPool::size()
+{ return asters_on_use.size(); }
+
+void AsteroidObjectPool::erase(AsteroidObjectPool::Iterator &itr)
 {
-  if (!store.empty())
-  {
-    ASTEROID* aster = store.back();
-    store.pop_back();
-    return aster;
-  }
-  return new ASTEROID;
+  Asteroid* asteroid = (*itr);
+  asteroid->reset_bitmap();
+  store.push_back(asteroid);
+  asters_on_use.erase(asters_on_use.begin() + itr.index);
+  itr.index -= 1;
 }
 
-void ASTEROIDS_STORE::put_on_store(ASTEROID *aster)
+AsteroidObjectPool::Iterator AsteroidObjectPool::begin()
 {
-  aster->reset_bitmap();
-  store.push_back(aster);
+  Iterator temp(this);
+  temp.index = 0;
+  return temp;
 }
+
+AsteroidObjectPool::Iterator AsteroidObjectPool::end()
+{
+  Iterator temp(this);
+  temp.index = asters_on_use.size() - 1;
+  return temp;
+}
+
+/* =======================================================================================================================================================================*/
+
+AsteroidObjectPool* AsteroidInterface::asteroidOP = 0;
+
+void AsteroidInterface::createAsteroidObjectPool()
+{ if (!asteroidOP) asteroidOP = new AsteroidObjectPool; }
+
+void AsteroidInterface::deleteAsteroidObjectPool()
+{ delete asteroidOP; }
+
+void AsteroidInterface::updateAsteroids(int64_t actual_frames_count)
+{
+  if (actual_frames_count % AsteroidFactory::getFpsToGen() == 0)
+    AsteroidFactory::createRow(asteroidOP);
+
+  for (AsteroidObjectPool::Iterator itr = asteroidOP->begin(); itr != asteroidOP->end() + 1; itr++)
+    if (!(*itr)->getDestroyed())
+    {
+      (*itr)->moveY(2.5);
+      (*itr)->draw_bitmap(0);
+    }
+}
+
+void AsteroidInterface::eraseAsteroid(AsteroidObjectPool::Iterator &itr)
+{ asteroidOP->erase(itr); }
+
+AsteroidObjectPool::Iterator AsteroidInterface::getBegin()
+{ return asteroidOP->begin(); }
+
+AsteroidObjectPool::Iterator AsteroidInterface::getEnd()
+{ return asteroidOP->end(); }
+
+AsteroidObjectPool *AsteroidInterface::getAOP()
+{ return asteroidOP; }
+
+/* =======================================================================================================================================================================*/

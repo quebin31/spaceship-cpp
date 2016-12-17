@@ -6,24 +6,24 @@
 #include "../game_interfaces/keyboard.h"
 #include "../game_interfaces/main_game.h"
 
-OBJS_FACADE::OBJS_FACADE(): nave(new NAVE),
+ObjectsFacade::ObjectsFacade(): nave(new Nave),
                             nave_gun(nave->getGun()),
-                            asteroids(new ASTEROIDS),
-                            hearts(new HEARTS),
-                            frame(new IMAGE("marco.png",600,440)),
+                            hearts(new Hearts),
+                            frame(new Image("marco.png",600,440)),
                             score("0"),
                             title_font(al_load_font("PressStart2P.ttf",30,0)),
                             options_font(al_load_font("Joystick.otf",20,0)),
                             score_font(al_load_font("PressStart2P.ttf", 12,0))
 {
+  AsteroidInterface::createAsteroidObjectPool();
   nave->setX((const float) (frame->getW() / 2.0 - nave->getW() / 2.0));
   nave->setY((const float) (frame->getH() / 2.0 - nave->getH() / 2.0 + 200));
 }
 
-OBJS_FACADE::~OBJS_FACADE()
+ObjectsFacade::~ObjectsFacade()
 {
   delete nave;
-  delete asteroids;
+  AsteroidInterface::deleteAsteroidObjectPool();
   delete hearts;
   delete frame;
   al_destroy_font(title_font);
@@ -31,9 +31,9 @@ OBJS_FACADE::~OBJS_FACADE()
   al_destroy_font(score_font);
 }
 
-void OBJS_FACADE::show_menu()
+void ObjectsFacade::show_menu()
 {
-  int64_t frames_when = MAIN_GAME::get()->get_timer_count();
+  int64_t frames_when = MainGame::get()->get_timer_count();
   std::string title;
   std::string options;
   if (frames_when == 0)
@@ -51,14 +51,14 @@ void OBJS_FACADE::show_menu()
     title = "PAUSE";
     options = "RESUMIR (PRESIONA ENTER)";
   }
-  MAIN_GAME::get()->set_display_color(26,26,26);
-  al_draw_text(title_font, al_map_rgb(200,10,50), MAIN_GAME::get()->getW()/2, MAIN_GAME::get()->getH()/2, ALLEGRO_ALIGN_CENTRE, title.c_str());
-  al_draw_text(options_font, al_map_rgb(20,30,60), MAIN_GAME::get()->getW()/2, MAIN_GAME::get()->getH()/2 + 60, ALLEGRO_ALIGN_CENTRE, options.c_str());
-  al_draw_text(options_font, al_map_rgb(20,30,60), MAIN_GAME::get()->getW()/2, MAIN_GAME::get()->getH()/2 + 120, ALLEGRO_ALIGN_CENTRE,"SALIR (PRESIONA ESCAPE)");
+  MainGame::get()->set_display_color(26,26,26);
+  al_draw_text(title_font, al_map_rgb(200,10,50), MainGame::get()->getW()/2, MainGame::get()->getH()/2, ALLEGRO_ALIGN_CENTRE, title.c_str());
+  al_draw_text(options_font, al_map_rgb(20,30,60), MainGame::get()->getW()/2, MainGame::get()->getH()/2 + 60, ALLEGRO_ALIGN_CENTRE, options.c_str());
+  al_draw_text(options_font, al_map_rgb(20,30,60), MainGame::get()->getW()/2, MainGame::get()->getH()/2 + 120, ALLEGRO_ALIGN_CENTRE,"SALIR (PRESIONA ESCAPE)");
   al_flip_display();
 }
 
-void OBJS_FACADE::check_bullets_with_asteroids()
+void ObjectsFacade::check_bullets_with_asteroids()
 {
   for (std::size_t i = 0; i < nave_gun->size(); i++)
   {
@@ -72,59 +72,73 @@ void OBJS_FACADE::check_bullets_with_asteroids()
     {
       nave_gun->erase(i);
     }
-    for (std::size_t j = 0; j < asteroids->size(); j++)
+    for (AsteroidObjectPool::Iterator aster_itr = AsteroidInterface::getBegin(), aster_end = AsteroidInterface::getEnd(); aster_itr != aster_end + 1; aster_itr++)
     {
-      if ((*nave_gun)[i]->check_colision_with((*asteroids)[j]))
+
+//      if ((*aster_itr)->getDestroyed())
+//      {
+//        AsteroidInterface::eraseAsteroid(aster_itr);
+//        aster_end = AsteroidInterface::getEnd();
+//        continue;
+//      }
+
+      if ((*nave_gun)[i]->check_colision_with(*aster_itr))
+      {
         nave_gun->incScore();
+        AsteroidInterface::eraseAsteroid(aster_itr);
+        aster_end = AsteroidInterface::getEnd();
+        continue;
+      }
     }
-    if (MAIN_GAME::get()->get_timer_count()%150 == 0)
-      nave_gun->decScore();
   }
+  if (MainGame::get()->get_timer_count()%150 == 0)
+    nave_gun->decScore();
 }
 
-void OBJS_FACADE::check_nave_with_asteroids()
+void ObjectsFacade::check_nave_with_asteroids()
 {
   if (nave->getDestroyed())
   {
-    if (nave->getWhenDestroyed() + 90 == MAIN_GAME::get()->get_timer_count())
+    if (nave->getWhenDestroyed() + 90 == MainGame::get()->get_timer_count())
     {
-      std::cout << "NAVE: Haciendo vulnerable\n";
+      std::cout << "Nave: Haciendo vulnerable\n";
       nave->make_vulnerable();
     }
   }
   else
   {
-    for (std::size_t i = 0; i < asteroids->size(); i++)
+    for (AsteroidObjectPool::Iterator aster_itr = AsteroidInterface::getBegin(); aster_itr != AsteroidInterface::getEnd(); aster_itr++)
     {
-      if (asteroids->at(i)->getY() >= 480)
+
+      if ((*aster_itr)->getDestroyed())
       {
-        (*asteroids)[i]->setDestroyed(true);
-        asteroids->erase(i);
+        AsteroidInterface::eraseAsteroid(aster_itr);
+        break;
       }
+      if ((*aster_itr)->getY() >= 480)
+        (*aster_itr)->setDestroyed(true);
 
-      if ((*asteroids)[i]->getDestroyed())
-        asteroids->erase(i);
 
-      if ((*asteroids)[i]->check_colision_with(nave))
+      if ((*aster_itr)->check_colision_with(nave))
       {
-        nave->make_invulnerable(MAIN_GAME::get()->get_timer_count());
+        nave->make_invulnerable(MainGame::get()->get_timer_count());
         hearts->lost_heart();
 
-        std::cout << "NAVE: Haciendo invulnerable\n";
+        std::cout << "Nave: Haciendo invulnerable\n";
         return;
       }
     }
   }
 }
 
-void OBJS_FACADE::check_nave_with_powerups()
+void ObjectsFacade::check_nave_with_powerups()
 {
 
 }
 
-void OBJS_FACADE::receive_score() { score = int_to_string(nave_gun->getScore()); }
+void ObjectsFacade::receive_score() { score = int_to_string(nave_gun->getScore()); }
 
-void OBJS_FACADE::update_objects()
+void ObjectsFacade::update_objects()
 {
   if ((*KEYBOARD::get())[UP] && nave->getY() >= 4.3 + 76)
   {
@@ -151,20 +165,20 @@ void OBJS_FACADE::update_objects()
     nave->setSourceX(NAVE_UP);
   }
 
-  if ((*KEYBOARD::get())[CHAR_A] && MAIN_GAME::get()->get_timer_count()%13 == 0)
+  if ((*KEYBOARD::get())[CHAR_A] && MainGame::get()->get_timer_count()%13 == 0)
   {
     nave->shoot_gun();
   }
 
   nave->draw_bitmap(0);
   nave->update_bullets();
-  asteroids->update_asteroids(MAIN_GAME::get()->get_timer_count());
+  AsteroidInterface::updateAsteroids(MainGame::get()->get_timer_count());
 }
 
-void OBJS_FACADE::draw_objects()
+void ObjectsFacade::draw_objects()
 { update_objects(); }
 
-void OBJS_FACADE::draw_information()
+void ObjectsFacade::draw_information()
 {
   receive_score();
   frame->draw_bitmap(0);
@@ -173,5 +187,5 @@ void OBJS_FACADE::draw_information()
   hearts->draw_hearts();
 }
 
-bool OBJS_FACADE::no_hearts()
+bool ObjectsFacade::no_hearts()
 { return hearts->empty(); }
