@@ -26,6 +26,7 @@ CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../bitmap_objects
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../bitmap_objects/heart.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../bitmap_objects/image.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../bitmap_objects/nave.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../bitmap_objects/power_up.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../game_interfaces/keyboard.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../game_interfaces/main_game.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../tools_and_headers/int_to_string.h
@@ -41,6 +42,7 @@ CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o: ../tools_and
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_interfaces/powerups_interface.cpp
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_interfaces/powerups_interface.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_objects/bitmap.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_objects/nave.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_objects/power_up.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../tools_and_headers/int_to_string.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../tools_and_headers/spaceship_includes.h
@@ -83,6 +85,7 @@ CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.o: ../tools_and_headers/int_to
 CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.o: ../tools_and_headers/spaceship_includes.h
 
 CMakeFiles/SpaceShip2.dir/bitmap_objects/power_up.cpp.o: ../bitmap_objects/bitmap.h
+CMakeFiles/SpaceShip2.dir/bitmap_objects/power_up.cpp.o: ../bitmap_objects/nave.h
 CMakeFiles/SpaceShip2.dir/bitmap_objects/power_up.cpp.o: ../bitmap_objects/power_up.cpp
 CMakeFiles/SpaceShip2.dir/bitmap_objects/power_up.cpp.o: ../bitmap_objects/power_up.h
 CMakeFiles/SpaceShip2.dir/bitmap_objects/power_up.cpp.o: ../tools_and_headers/int_to_string.h
@@ -103,6 +106,7 @@ CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../bitmap_objects/bul
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../bitmap_objects/heart.h
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../bitmap_objects/image.h
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../bitmap_objects/nave.h
+CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../bitmap_objects/power_up.h
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../game_interfaces/keyboard.h
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../game_interfaces/main_game.cpp
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../game_interfaces/main_game.h
@@ -119,6 +123,7 @@ CMakeFiles/SpaceShip2.dir/main.cpp.o: ../bitmap_objects/bullet.h
 CMakeFiles/SpaceShip2.dir/main.cpp.o: ../bitmap_objects/heart.h
 CMakeFiles/SpaceShip2.dir/main.cpp.o: ../bitmap_objects/image.h
 CMakeFiles/SpaceShip2.dir/main.cpp.o: ../bitmap_objects/nave.h
+CMakeFiles/SpaceShip2.dir/main.cpp.o: ../bitmap_objects/power_up.h
 CMakeFiles/SpaceShip2.dir/main.cpp.o: ../game_interfaces/main_game.h
 CMakeFiles/SpaceShip2.dir/main.cpp.o: ../main.cpp
 CMakeFiles/SpaceShip2.dir/main.cpp.o: ../tools_and_headers/int_to_string.h

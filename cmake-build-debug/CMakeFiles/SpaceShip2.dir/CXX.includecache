@@ -41,6 +41,8 @@ bullet_interface.h
 /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
 hearts_interface.h
 /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h
+../bitmap_objects/power_up.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
 
 /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.cpp
 hearts_interface.h
@@ -113,8 +115,8 @@ power_up.h
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
 
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
-bitmap.h
-/home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+../bitmap_objects/nave.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
 
 /home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.cpp
 keyboard.h

@@ -6,7 +6,7 @@
 
 int type_powerup[] = {0,30,60,90};
 
-int POWER_UP::generate_random_power_up()
+int PowerUp::generate_random_power_up()
 {
   std::random_device randomDevice;
   std::mt19937 eng(randomDevice());
@@ -14,11 +14,7 @@ int POWER_UP::generate_random_power_up()
   return distr(eng);
 }
 
-<<<<<<< HEAD
-POWER_UP::POWER_UP(): Bitmap("power_up")
-=======
-POWER_UP::POWER_UP(): BITMAP("power_up.png")
->>>>>>> 27e201519406282de8a3c267430e611e08b76ca1
+PowerUp::PowerUp(): Bitmap("power_up.png")
 {
   width  = 40;
   height = 40;
@@ -31,24 +27,31 @@ POWER_UP::POWER_UP(): BITMAP("power_up.png")
   destroyed = true;
 }
 
-POWER_UP::~POWER_UP(){
+PowerUp::~PowerUp(){
   delete power_up;
 }
 
-void POWER_UP::draw_bitmap(const int flags)
+PowerUp *PowerUp::instance()
 {
-  if (destroyed == false)
-    al_draw_bitmap(bitmap,posX,posY,0);
+  if (!power_up)
+    power_up = new PowerUp;
+  return power_up;
 }
 
-void POWER_UP::reset_bitmap()
+void PowerUp::draw_bitmap(const int flags)
+{
+  if (!destroyed)
+    al_draw_bitmap(bitmap,float (posX),float (posY),0);
+}
+
+void PowerUp::reset_bitmap()
 {
   posX = generate_random_power_up();
   posY = generate_random_power_up();
   destroyed = false;
 }
 
-bool POWER_UP::check_colision_with(Bitmap *some)
+bool PowerUp::check_colision_with(Bitmap *some)
 {
   if (posX + width >= some->getX() && posX <= some->getX() + some->getW()){
     if (posY + height >= some->getY() && posY <= some->getY() + some->getH()){
@@ -59,8 +62,8 @@ bool POWER_UP::check_colision_with(Bitmap *some)
   return false;
 }
 
-int64_t POWER_UP::get_destroyed_at() {return destroyed_at;}
+int64_t PowerUp::get_destroyed_at() {return destroyed_at;}
 
-void POWER_UP::set_destroyed_at(int64_t val) {destroyed_at=val;}
+void PowerUp::set_destroyed_at(int64_t val) {destroyed_at=val;}
 
-POWER_UP* POWER_UP::power_up = 0;
+PowerUp* PowerUp::power_up = 0;

@@ -5,6 +5,8 @@
 #include "nave.h"
 #include "../bitmap_interfaces/bullet_interface.h"
 
+Nave* Nave::_instance = 0;
+
 /* Nave
  * Carga una imagen para nave.
  * Selecciona el sourceX.
@@ -23,6 +25,13 @@ Nave::~Nave()
 {
   delete nave_gun;
   std::cout << "Destruyendo la nave" << std::endl;
+}
+
+Nave *Nave::Instance()
+{
+  if (!_instance)
+    _instance = new Nave;
+  return _instance;
 }
 
 /* shoot_gun
@@ -82,4 +91,3 @@ void Nave::reset_bitmap()
   destroyed_at = 0;
 }
 
-NAVE* NAVE::nave = 0;

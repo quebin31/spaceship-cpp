@@ -16,19 +16,10 @@
 class ObjectsFacade
 {
   private:
-<<<<<<< HEAD
-    Nave              *nave;
     NaveGun           *nave_gun;
     Hearts            *hearts;
     Image             *frame;
     std::string       score;
-=======
-    NAVE_GUN        *nave_gun;
-    ASTEROIDS       *asteroids;
-    HEARTS          *hearts;
-    IMAGE           *frame;
-    std::string      score;
->>>>>>> 27e201519406282de8a3c267430e611e08b76ca1
 
   private:
     AllegroFont       *title_font;

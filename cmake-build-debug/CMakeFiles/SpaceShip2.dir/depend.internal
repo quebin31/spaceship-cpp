@@ -27,6 +27,7 @@ CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/image.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
+ /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
  /home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.h
  /home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.h
  /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
@@ -42,6 +43,7 @@ CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o
  /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.cpp
  /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+ /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
  /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
  /home/kevin/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
@@ -84,6 +86,7 @@ CMakeFiles/SpaceShip2.dir/bitmap_objects/nave.cpp.o
  /home/kevin/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
 CMakeFiles/SpaceShip2.dir/bitmap_objects/power_up.cpp.o
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+ /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.cpp
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
  /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
@@ -104,6 +107,7 @@ CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/image.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
+ /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
  /home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.h
  /home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.cpp
  /home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.h
@@ -120,6 +124,7 @@ CMakeFiles/SpaceShip2.dir/main.cpp.o
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/image.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
+ /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
  /home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.h
  /home/kevin/IPOO/SpaceShip2/main.cpp
  /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
