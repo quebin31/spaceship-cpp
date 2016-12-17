@@ -22,6 +22,9 @@ POWER_UP::POWER_UP(): BITMAP("power_up.png")
   posX = generate_random_power_up();
   posY = generate_random_power_up();
   sourceY = 0;
+  pun = false;
+  destroyed_at = 0;
+  destroyed = true;
 }
 
 POWER_UP::~POWER_UP(){
@@ -46,7 +49,6 @@ bool POWER_UP::check_colision_with(BITMAP *some)
   if (posX + width >= some->getX() && posX <= some->getX() + some->getW()){
     if (posY + height >= some->getY() && posY <= some->getY() + some->getH()){
       destroyed = true;
-      reset_bitmap();
       return true;
     }
   }

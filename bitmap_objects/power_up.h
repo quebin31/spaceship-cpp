@@ -29,6 +29,7 @@ class POWER_UP : public BITMAP
     void reset_bitmap() override;
     int64_t get_destroyed_at();
     void set_destroyed_at(int64_t );
+    bool pun;
 };
 
 

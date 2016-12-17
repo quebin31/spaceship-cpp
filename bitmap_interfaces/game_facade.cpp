@@ -119,12 +119,18 @@ void OBJS_FACADE::check_nave_with_asteroids()
 
 void OBJS_FACADE::check_nave_with_powerups()
 {
-  if (POWER_UP::instance()->check_colision_with(NAVE::instance()) == true){
-    std::cout << "PUN!" << std::endl;
-    POWER_UP::instance()->set_destroyed_at(MAIN_GAME::get()->get_timer_count());
+  if (POWER_UP::instance()->pun == false){
+    if (POWER_UP::instance()->check_colision_with(NAVE::instance()) == true){
+      std::cout << "PUN!" << MAIN_GAME::get()->get_timer_count() << std::endl;
+      POWER_UP::instance()->set_destroyed_at(MAIN_GAME::get()->get_timer_count());
+      POWER_UP::instance()->pun = true;
+    }
   }
-  if (MAIN_GAME::get()->get_timer_count() == POWER_UP::instance()->get_destroyed_at() + 3000)
+  if (MAIN_GAME::get()->get_timer_count() == POWER_UP::instance()->get_destroyed_at()+800){
     POWER_UP::instance()->reset_bitmap();
+    std::cout << MAIN_GAME::get()->get_timer_count() << std::endl;
+    POWER_UP::instance()->pun = false;
+  }
 }
 
 void OBJS_FACADE::receive_score() { score = int_to_string(nave_gun->getScore()); }
