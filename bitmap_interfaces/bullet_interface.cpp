@@ -16,9 +16,11 @@
 //  return new BULLET;
 //}
 
-NaveGun::NaveGun(const char* _archivo, int _width, int _height): score(0), archivo(_archivo), width(_width), height(_height){
+NaveGun::NaveGun(const char* _archivo, int _width, int _height): archivo(_archivo), width(_width), height(_height){
   store_bullets = new BULLETS_STORE(archivo, width, height);
 }
+
+int NaveGun::score = 0;
 
 NaveGun::~NaveGun()
 {
@@ -79,6 +81,8 @@ void NaveGun::decScorein(const int decS)
 {
   score = (score >= 30)? 30 : score;
 }
+
+void NaveGun::resetScore() {score = 0;}
 
 int NaveGun::getScore()
 { return score; }

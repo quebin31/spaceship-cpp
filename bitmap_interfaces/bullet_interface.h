@@ -29,7 +29,7 @@ class NaveGun
 {
   private:
     std::vector<BULLET*> bullets;
-    int                  score;
+    static int           score;
     BULLETS_STORE* store_bullets;
     const char* archivo;
     int width;
@@ -50,6 +50,7 @@ class NaveGun
 
     void incScore();
     void decScore();
+    void resetScore();
     void incScorein(const int incS);
     void decScorein(const int decS);
     int getScore();

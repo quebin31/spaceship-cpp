@@ -147,8 +147,7 @@ void ObjectsFacade::check_nave_with_powerups()
 }
 
 void ObjectsFacade::receive_score(){
-  SCORE = Nave::Instance()->getGun()->getScore();
-  score = int_to_string(SCORE);
+  score = int_to_string(SCORE = Nave::Instance()->getGun()->getScore());
 }
 
 void ObjectsFacade::update_objects()
