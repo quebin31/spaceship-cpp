@@ -109,8 +109,6 @@ nave.h
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
 bitmap.h
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
-../strategys/strategy_power_up.h
-/home/kevin/IPOO/SpaceShip2/strategys/strategy_power_up.h
 ../bitmap_interfaces/bullet_interface.h
 /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
 
@@ -119,8 +117,10 @@ power_up.h
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
 
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
-../bitmap_objects/nave.h
-/home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
+../bitmap_interfaces/bullet_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
+bitmap.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
 
 /home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.cpp
 keyboard.h
@@ -147,24 +147,6 @@ iostream
 -
 game_interfaces/main_game.h
 /home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.h
-
-/home/kevin/IPOO/SpaceShip2/strategys/strategy_nave_gun.cpp
-strategy_nave_gun.h
-/home/kevin/IPOO/SpaceShip2/strategys/strategy_nave_gun.h
-
-/home/kevin/IPOO/SpaceShip2/strategys/strategy_nave_gun.h
-
-/home/kevin/IPOO/SpaceShip2/strategys/strategy_power_up.cpp
-strategy_power_up.h
-/home/kevin/IPOO/SpaceShip2/strategys/strategy_power_up.h
-
-/home/kevin/IPOO/SpaceShip2/strategys/strategy_power_up.h
-../bitmap_objects/power_up.h
-/home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
-../bitmap_objects/bullet.h
-/home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.h
-../bitmap_interfaces/bullet_interface.h
-/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
 
 /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp
 iostream

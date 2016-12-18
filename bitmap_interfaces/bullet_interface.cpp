@@ -31,6 +31,9 @@ BaseBullet *BulletFactory::check_for_store(BulletObjPool *setofbullets)
 void BulletFactory::changeFactoryType(const int new_type)
 { actual_type = new_type; }
 
+int BulletFactory::returnFactoryType()
+{ return actual_type; }
+
 BaseBullet *BulletFactory::generateBulletFor(BulletObjPool *setofbullets)
 {
   BaseBullet* pBaseBullet = check_for_store(setofbullets);
@@ -99,7 +102,7 @@ void BulletObjPool::erase(BulletObjPool::Iterator &itr)
   bbullet->reset_bitmap();
   store.push_back(bbullet);
   bullets_on_use.erase(bullets_on_use.begin() + itr.index);
-  itr.index -= 1;
+//  itr.index -= 1;
 }
 
 BulletObjPool::Iterator BulletObjPool::begin()
@@ -129,7 +132,7 @@ void BulletInterface::deleteBulletObjPool()
 
 void BulletInterface::updateBullets()
 {
-  for (BulletObjPool::Iterator itr = bulletOP->begin(); itr != bulletOP->end(); itr++)
+  for (BulletObjPool::Iterator itr = bulletOP->begin(); itr != bulletOP->end() + 1; itr++)
     if (!(*itr)->getDestroyed())
     {
       (*itr)->moveY(-3.0);
@@ -141,7 +144,7 @@ void BulletInterface::createBullet(const double naveX, const double naveY)
 {
   BaseBullet* pBBullet = BulletFactory::generateBulletFor(bulletOP);
   pBBullet->setX(naveX+middle_nave_x);
-  pBBullet->setY(naveY+middle_nave_y);
+  pBBullet->setY(naveY-middle_nave_y);
   bulletOP->bullets_on_use.push_back(pBBullet);
 }
 
@@ -156,6 +159,15 @@ void BulletInterface::decGunScoreIn(const int decS)
 
 void BulletInterface::resetGunScore()
 { score = 0; }
+
+void BulletInterface::changeType(const int new_type)
+{
+  BulletFactory::changeFactoryType(new_type);
+  bulletOP->store.clear();
+}
+
+int BulletInterface::returnType()
+{ return BulletFactory::returnFactoryType(); }
 
 BulletObjPool::Iterator BulletInterface::getBegin()
 { return bulletOP->begin(); }

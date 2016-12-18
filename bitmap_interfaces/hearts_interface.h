@@ -10,19 +10,36 @@
 
 #define NO_OF_HEARTS 3
 
-class Hearts
+class HeartsContainer;
+class HeartsInterface;
+
+class HeartsContainer
 {
   private:
     std::vector<Heart*> hearts;
 
+  private:
+    friend class HeartsInterface;
+
+    HeartsContainer();
+    ~HeartsContainer();
+};
+
+class HeartsInterface
+{
+  private:
+    static HeartsContainer* heartsC;
+
   public:
-    Hearts();
-    ~Hearts();
+    static void createHeartsContainer();
+    static void deleteHeartsContainer();
 
-    void draw_hearts();
-    void lost_heart();
+  public:
 
-    bool empty();
+    static void draw_hearts();
+    static void lost_heart();
+
+    static bool empty();
 };
 
 

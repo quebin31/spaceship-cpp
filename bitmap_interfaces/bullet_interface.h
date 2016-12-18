@@ -27,6 +27,7 @@ class BulletFactory
 
   public:
     static void        changeFactoryType(const int new_type);
+    static int         returnFactoryType();
     static BaseBullet* generateBulletFor(BulletObjPool *setofbullets);
 
 };
@@ -79,8 +80,8 @@ class BulletObjPool
 class BulletInterface
 {
   private:
-    static BulletObjPool* bulletOP;
-    static int score;
+    static BulletObjPool *bulletOP;
+    static int            score;
 
   public:
     static void createBulletObjPool();
@@ -94,56 +95,13 @@ class BulletInterface
     static void decGunScoreIn(const int decS = 2);
     static void resetGunScore();
 
+    static void changeType(const int new_type);
+    static int  returnType();
+
     static int                     getScore();
     static BulletObjPool::Iterator getBegin();
     static BulletObjPool::Iterator getEnd();
     static BulletObjPool*          getBOP();
 };
-
-//class BULLETS_STORE
-//{
-//  private:
-//    std::vector<BaseBullet*> store;
-//    const char* archivo;
-//    int width;
-//    int height;
-//  public:
-//    BULLETS_STORE(const char*, int, int);
-//    ~BULLETS_STORE();
-//
-//    BaseBullet* check_for_store();
-//    void put_on_store(BaseBullet* bullet);
-//};
-//
-//class NaveGun
-//{
-//  private:
-//    std::vector<BaseBullet*> bullets;
-//    static int           score;
-//    BULLETS_STORE* store_bullets;
-//    const char* archivo;
-//    int width;
-//    int height;
-//  public:
-//    NaveGun(const char*, int, int);
-//    ~NaveGun();
-//
-//    void erase(std::size_t index);
-//
-//    void create_bullet(const double naveX, const double naveY);
-//    void update_bullets();
-//
-//    BaseBullet* operator[](std::size_t index);
-//    BaseBullet* at(std::size_t index);
-//    std::size_t size();
-//    bool empty();
-//
-//    void incScore();
-//    void decScore();
-//    void resetScore();
-//    void incScorein(const int incS);
-//    void decScorein(const int decS);
-//    int getScore();
-//};
 
 #endif //SPACESHIP2_BULLET_INTERFACE_H

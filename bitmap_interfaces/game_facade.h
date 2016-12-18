@@ -16,7 +16,6 @@
 class ObjectsInterface
 {
   private:
-    Hearts            *hearts;
     Image             *frame;
     std::string        score;
 

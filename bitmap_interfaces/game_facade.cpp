@@ -7,15 +7,16 @@
 #include "../game_interfaces/main_game.h"
 
 ObjectsInterface::ObjectsInterface():
-                            hearts(new Hearts),
                             frame(new Image("marco.png",600,440)),
                             score("0"),
                             title_font(al_load_font("PressStart2P.ttf",30,0)),
                             options_font(al_load_font("Joystick.otf",20,0)),
                             score_font(al_load_font("PressStart2P.ttf", 12,0))
 {
+  HeartsInterface::createHeartsContainer();
   BulletInterface::createBulletObjPool();
   AsteroidInterface::createAsteroidObjPool();
+  PowerUpInterface::createPowerUpInstance();
   Nave::Instance()->setX((const float) (frame->getW() / 2.0 - Nave::Instance()->getW() / 2.0));
   Nave::Instance()->setY((const float) (frame->getH() / 2.0 - Nave::Instance()->getH() / 2.0 + 200));
 }
@@ -23,9 +24,10 @@ ObjectsInterface::ObjectsInterface():
 ObjectsInterface::~ObjectsInterface()
 {
   Nave::deleteNave();
+  HeartsInterface::deleteHeartsContainer();
   BulletInterface::deleteBulletObjPool();
   AsteroidInterface::deleteAsteroidObjPool();
-  delete hearts;
+  PowerUpInterface::deletePowerUpInstance();
   delete frame;
   al_destroy_font(title_font);
   al_destroy_font(options_font);
@@ -42,7 +44,7 @@ void ObjectsInterface::show_menu()
     title = "ASTEROID GAME";
     options = "INICIAR (PRESIONA ENTER)";
   }
-  else if (hearts->empty())
+  else if (HeartsInterface::empty())
   {
     title = "GAME OVER";
     options = "REINICIAR (PRESIONA ENTER)";
@@ -76,6 +78,8 @@ void ObjectsInterface::check_bullets_with_asteroids()
       {
         BulletInterface::incGunScoreIn();
         AsteroidInterface::eraseAsteroid(aster_itr);
+        BulletInterface::eraseBullet(bullet_itr);
+        bullet_itr = BulletInterface::getEnd();
         aster_end = AsteroidInterface::getEnd();
         continue;
       }
@@ -91,7 +95,7 @@ void ObjectsInterface::check_nave_with_asteroids()
       Nave::Instance()->make_vulnerable();
 
   else
-    for (AsteroidObjPool::Iterator aster_itr = AsteroidInterface::getBegin(), aster_end = AsteroidInterface::getEnd(); aster_itr != aster_end; aster_itr++)
+    for (AsteroidObjPool::Iterator aster_itr = AsteroidInterface::getBegin(), aster_end = AsteroidInterface::getEnd(); aster_itr != aster_end + 1; aster_itr++)
     {
       if ((*aster_itr)->getY() >= 480)
       {
@@ -105,7 +109,7 @@ void ObjectsInterface::check_nave_with_asteroids()
         std::cout << "Nave: Haciendo invulnerable\n";
         AsteroidInterface::eraseAsteroid(aster_itr);
         Nave::Instance()->make_invulnerable(MainGame::get()->get_timer_count());
-        hearts->lost_heart();
+        HeartsInterface::lost_heart();
         return;
       }
     }
@@ -113,18 +117,10 @@ void ObjectsInterface::check_nave_with_asteroids()
 
 void ObjectsInterface::check_nave_with_powerups()
 {
-  if (!PowerUp::instance()->pun)
-    if (PowerUp::instance()->check_colision_with(Nave::Instance()))
-    {
-      std::cout << "PUN!" << MainGame::get()->get_timer_count() << std::endl;
-      PowerUp::instance()->set_destroyed_at(MainGame::get()->get_timer_count());
-      PowerUp::instance()->pun = true;
-    }
-  if (MainGame::get()->get_timer_count() == PowerUp::instance()->get_destroyed_at()+800)
+  if (PowerUpInterface::Instance()->check_colision_with(Nave::Instance()))
   {
-    PowerUp::instance()->reset_bitmap();
-    std::cout << MainGame::get()->get_timer_count() << std::endl;
-    PowerUp::instance()->pun = false;
+    PowerUpInterface::changeType();
+    PowerUpInterface::Instance()->reset_bitmap();
   }
 }
 
@@ -166,7 +162,7 @@ void ObjectsInterface::update_objects()
   Nave::Instance()->draw_bitmap(0);
   BulletInterface::updateBullets();
   AsteroidInterface::updateAsteroids(MainGame::get()->get_timer_count());
-  PowerUp::instance()->draw_bitmap(0);
+  PowerUpInterface::updatePowerUp(MainGame::get()->get_timer_count());
 }
 
 void ObjectsInterface::draw_objects()
@@ -178,8 +174,8 @@ void ObjectsInterface::draw_information()
   frame->draw_bitmap(0);
   al_draw_text(score_font,al_map_rgb(110,110,100),400,45,0,"SCORE:");
   al_draw_text(score_font,al_map_rgb(110,110,100),500,45,0,score.c_str());
-  hearts->draw_hearts();
+  HeartsInterface::draw_hearts();
 }
 
 bool ObjectsInterface::no_hearts()
-{ return hearts->empty(); }
+{ return HeartsInterface::empty(); }

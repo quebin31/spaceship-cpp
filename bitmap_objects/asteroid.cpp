@@ -21,22 +21,11 @@ int Asteroid::generate_random_type()
 /* generate_random_X
  * Genera un numero aleatorio (double) del 30 al 490.
  * El numero generado representa la coordenada x donde sera dibujado inicialmente el asteroide */
-double Asteroid::generate_random_X()
+double Asteroid::generate_random_coord(const int x, const int y)
 {
   std::random_device randomDevice;
   std::mt19937 eng(randomDevice());
-  std::uniform_real_distribution<> distr(30, 490);
-  return distr(eng);
-}
-
-/* generate_random_Y
- * Genera un numero aleatorio (double) del 0 al 30
- * El numero generado representa la coordenada y donde sera dibujado inicialmente el asteroide */
-double Asteroid::generate_random_Y()
-{
-  std::random_device randomDevice;
-  std::mt19937 eng(randomDevice());
-  std::uniform_real_distribution<> distr(0,30);
+  std::uniform_real_distribution<> distr(x,y);
   return distr(eng);
 }
 
@@ -47,8 +36,8 @@ Asteroid::Asteroid(): Bitmap("asteroides.png")
 {
   width    = 45;
   height   = 45;
-  posX     = generate_random_X();
-  posY     = generate_random_Y();
+  posX     = generate_random_coord(30,490);
+  posY     = generate_random_coord(0,30);
   int type = generate_random_type();
   sourceX  = type_asters[type];
 }
@@ -79,8 +68,8 @@ void Asteroid::draw_bitmap(const int flags)
  * Todo generado aleatoriamente otra vez */
 void Asteroid::reset_bitmap()
 {
-  posX      = generate_random_X();
-  posY      = generate_random_Y();
+  posX      = generate_random_coord(30,490);
+  posY      = generate_random_coord(0,30);
   int type  = generate_random_type();
   sourceX   = type_asters[type];
   destroyed = false;

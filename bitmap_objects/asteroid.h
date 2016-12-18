@@ -15,9 +15,8 @@ class Asteroid : public Bitmap
     static int type_asters[];
 
   private:
-    int generate_random_type();
-    double generate_random_X();
-    double generate_random_Y();
+    int    generate_random_type();
+    double generate_random_coord(const int x, const int y);
 
   public:
     Asteroid();

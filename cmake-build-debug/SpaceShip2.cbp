@@ -171,12 +171,6 @@
 		<Unit filename="/home/kevin/IPOO/SpaceShip2/main.cpp">
 			<Option target="SpaceShip2"/>
 		</Unit>
-		<Unit filename="/home/kevin/IPOO/SpaceShip2/strategys/strategy_power_up.cpp">
-			<Option target="SpaceShip2"/>
-		</Unit>
-		<Unit filename="/home/kevin/IPOO/SpaceShip2/strategys/strategy_power_up.h">
-			<Option target="SpaceShip2"/>
-		</Unit>
 		<Unit filename="/home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp">
 			<Option target="SpaceShip2"/>
 		</Unit>

@@ -6,7 +6,6 @@
 #define SPACESHIP2_NAVE_H
 
 #include "bitmap.h"
-#include "../strategys/strategy_power_up.h"
 #include "../bitmap_interfaces/bullet_interface.h"
 
 #define NAVE_UP    0
@@ -27,6 +26,7 @@ class Nave : public Bitmap
     static Nave* Instance();
     static void  deleteNave();
 
+  public:
     void shootGun();
 
     void    make_invulnerable(const int64_t fps_count);

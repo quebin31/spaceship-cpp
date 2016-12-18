@@ -4,7 +4,9 @@
 
 #include "hearts_interface.h"
 
-Hearts::Hearts()
+/* =======================================================================================================================================================================*/
+
+HeartsContainer::HeartsContainer()
 {
   float posX = 50.0;
   for (int i = 0; i < NO_OF_HEARTS; i++)
@@ -17,29 +19,39 @@ Hearts::Hearts()
   }
 }
 
-Hearts::~Hearts()
+HeartsContainer::~HeartsContainer()
 {
   for (int i = 0; i < NO_OF_HEARTS; i++)
     delete hearts[i];
 }
 
-void Hearts::draw_hearts()
+/* =======================================================================================================================================================================*/
+
+HeartsContainer* HeartsInterface::heartsC = 0;
+
+void HeartsInterface::createHeartsContainer()
+{ if (!heartsC) heartsC = new HeartsContainer; }
+
+void HeartsInterface::deleteHeartsContainer()
+{ delete heartsC; }
+
+void HeartsInterface::draw_hearts()
 {
   for (int i = 0; i < NO_OF_HEARTS; i++)
-    hearts[i]->draw_bitmap(0);
+    heartsC->hearts[i]->draw_bitmap(0);
 }
 
-void Hearts::lost_heart()
+void HeartsInterface::lost_heart()
 {
   for (int i = NO_OF_HEARTS - 1; i >= 0; i--)
-    if (!hearts[i]->getDestroyed())
+    if (!heartsC->hearts[i]->getDestroyed())
     {
-      hearts[i]->broken_heart();
+      heartsC->hearts[i]->broken_heart();
       return;
     }
 }
 
-bool Hearts::empty()
-{
-  return hearts.front()->getDestroyed();
-}
+bool HeartsInterface::empty()
+{ return heartsC->hearts.front()->getDestroyed(); }
+
+/* =======================================================================================================================================================================*/
