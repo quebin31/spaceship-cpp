@@ -42,7 +42,6 @@ class AsteroidObjPool
       private:
         AsteroidObjPool* ap;
         int index;
-        int size;
 
       private:
         friend class AsteroidObjPool;
@@ -58,6 +57,8 @@ class AsteroidObjPool
         bool       operator==(const Iterator& itr);
         bool       operator!=(const Iterator& itr);
         Asteroid*  operator*();
+
+        int getIndex();
     };
 
     AsteroidObjPool();

@@ -75,6 +75,9 @@ bool BulletObjPool::Iterator::operator!=(const BulletObjPool::Iterator &itr)
 BaseBullet *BulletObjPool::Iterator::operator*()
 { return bp->bullets_on_use[index]; }
 
+int BulletObjPool::Iterator::getIndex()
+{ return index; }
+
 /* =======================================================================================================================================================================*/
 
 BulletObjPool::BulletObjPool() {}
@@ -102,7 +105,7 @@ void BulletObjPool::erase(BulletObjPool::Iterator &itr)
   bbullet->reset_bitmap();
   store.push_back(bbullet);
   bullets_on_use.erase(bullets_on_use.begin() + itr.index);
-//  itr.index -= 1;
+  itr.index -= 1;
 }
 
 BulletObjPool::Iterator BulletObjPool::begin()

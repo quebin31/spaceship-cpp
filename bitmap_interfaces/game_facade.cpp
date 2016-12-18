@@ -63,9 +63,8 @@ void ObjectsInterface::show_menu()
 
 void ObjectsInterface::check_bullets_with_asteroids()
 {
-  for (BulletObjPool::Iterator bullet_itr = BulletInterface::getBegin(), bullet_end = BulletInterface::getEnd(); bullet_itr != bullet_end + 1; bullet_itr++)
+  for (BulletObjPool::Iterator bullet_itr = BulletInterface::getBegin(), bullet_end = BulletInterface::getEnd(); bullet_itr != bullet_end + 1; ++bullet_itr)
   {
-
     if ((*bullet_itr)->getY() <= 0)
     {
       BulletInterface::eraseBullet(bullet_itr);
@@ -73,16 +72,18 @@ void ObjectsInterface::check_bullets_with_asteroids()
       continue;
     }
 
-    for (AsteroidObjPool::Iterator aster_itr = AsteroidInterface::getBegin(), aster_end = AsteroidInterface::getEnd(); aster_itr != aster_end + 1; aster_itr++)
+    for (AsteroidObjPool::Iterator aster_itr = AsteroidInterface::getBegin(), aster_end = AsteroidInterface::getEnd(); aster_itr != aster_end + 1; ++aster_itr)
+    {
       if ((*bullet_itr)->check_colision_with(*aster_itr))
       {
         BulletInterface::incGunScoreIn();
         AsteroidInterface::eraseAsteroid(aster_itr);
         BulletInterface::eraseBullet(bullet_itr);
-        bullet_itr = BulletInterface::getEnd();
+        bullet_end = BulletInterface::getEnd();
         aster_end = AsteroidInterface::getEnd();
-        continue;
+        break;
       }
+    }
   }
 
   if (MainGame::get()->get_timer_count()%150 == 0)
@@ -91,28 +92,31 @@ void ObjectsInterface::check_bullets_with_asteroids()
 
 void ObjectsInterface::check_nave_with_asteroids()
 {
-  if (Nave::Instance()->getDestroyed() && (Nave::Instance()->getWhenDestroyed() + 90 == MainGame::get()->get_timer_count()) )
+  if (Nave::Instance()->getDestroyed())
+  {
+    if (Nave::Instance()->getWhenDestroyed() + 90 == MainGame::get()->get_timer_count())
       Nave::Instance()->make_vulnerable();
+    return;
+  }
 
-  else
-    for (AsteroidObjPool::Iterator aster_itr = AsteroidInterface::getBegin(), aster_end = AsteroidInterface::getEnd(); aster_itr != aster_end + 1; aster_itr++)
+  for (AsteroidObjPool::Iterator aster_itr = AsteroidInterface::getBegin(), aster_end = AsteroidInterface::getEnd(); aster_itr != aster_end + 1; aster_itr++)
+  {
+    if ((*aster_itr)->getY() >= 480)
     {
-      if ((*aster_itr)->getY() >= 480)
-      {
-        AsteroidInterface::eraseAsteroid(aster_itr);
-        aster_end = AsteroidInterface::getEnd();
-        continue;
-      }
-
-      if ((*aster_itr)->check_colision_with(Nave::Instance()))
-      {
-        std::cout << "Nave: Haciendo invulnerable\n";
-        AsteroidInterface::eraseAsteroid(aster_itr);
-        Nave::Instance()->make_invulnerable(MainGame::get()->get_timer_count());
-        HeartsInterface::lost_heart();
-        return;
-      }
+      AsteroidInterface::eraseAsteroid(aster_itr);
+      aster_end = AsteroidInterface::getEnd();
+      continue;
     }
+
+    if ((*aster_itr)->check_colision_with(Nave::Instance()))
+    {
+      std::cout << "Nave: Haciendo invulnerable\n";
+      AsteroidInterface::eraseAsteroid(aster_itr);
+      Nave::Instance()->make_invulnerable(MainGame::get()->get_timer_count());
+      HeartsInterface::lost_heart();
+      return;
+    }
+  }
 }
 
 void ObjectsInterface::check_nave_with_powerups()

@@ -63,6 +63,8 @@ class BulletObjPool
         bool      operator==(const Iterator& itr);
         bool      operator!=(const Iterator& itr);
         BaseBullet*   operator*();
+
+        int getIndex();
     };
 
     BulletObjPool();

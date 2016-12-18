@@ -84,6 +84,9 @@ bool AsteroidObjPool::Iterator::operator!=(const AsteroidObjPool::Iterator &itr)
 Asteroid *AsteroidObjPool::Iterator::operator*()
 { return ap->asters_on_use[index]; }
 
+int AsteroidObjPool::Iterator::getIndex()
+{ return index; }
+
 /* =======================================================================================================================================================================*/
 
 AsteroidObjPool::AsteroidObjPool()

@@ -186,10 +186,9 @@ void MainGame::event_timer()
   set_display_color(26,26,26);
   objects->check_nave_with_asteroids();
   objects->check_bullets_with_asteroids();
+  objects->check_nave_with_powerups();
   objects->draw_objects();
   objects->draw_information();
-  objects->check_nave_with_powerups();
-
   al_flip_display();
 }
 
