@@ -73,11 +73,11 @@ void NaveGun::decScore()
 }
 
 void NaveGun::incScorein(const int incS)
-{ score += incS; }
+{ score = incS; }
 
 void NaveGun::decScorein(const int decS)
 {
-  score -= (score >= 30)? 30 : score;
+  score = (score >= 30)? 30 : score;
 }
 
 int NaveGun::getScore()

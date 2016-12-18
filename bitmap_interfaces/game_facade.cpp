@@ -7,13 +7,14 @@
 #include "../game_interfaces/main_game.h"
 
 ObjectsFacade::ObjectsFacade():
-                            nave_gun(Nave::Instance()->getGun()),
                             hearts(new Hearts),
                             frame(new Image("marco.png",600,440)),
                             score("0"),
                             title_font(al_load_font("PressStart2P.ttf",30,0)),
                             options_font(al_load_font("Joystick.otf",20,0)),
-                            score_font(al_load_font("PressStart2P.ttf", 12,0))
+                            score_font(al_load_font("PressStart2P.ttf", 12,0)),
+                            SCORE(0),
+                            _SCORE(0)
 {
   AsteroidInterface::createAsteroidObjectPool();
   Nave::Instance()->setX((const float) (frame->getW() / 2.0 - Nave::Instance()->getW() / 2.0));
@@ -59,17 +60,17 @@ void ObjectsFacade::show_menu()
 
 void ObjectsFacade::check_bullets_with_asteroids()
 {
-  for (std::size_t i = 0; i < nave_gun->size(); i++)
+  for (std::size_t i = 0; i < Nave::Instance()->getGun()->size(); i++)
   {
 
-    if ((*nave_gun)[i]->getY() <= 0)
+    if ((*Nave::Instance()->getGun())[i]->getY() <= 0)
     {
-      (*nave_gun)[i]->setDestroyed(true);
-      nave_gun->erase(i);
+      (*Nave::Instance()->getGun())[i]->setDestroyed(true);
+      Nave::Instance()->getGun()->erase(i);
     }
-    if ((*nave_gun)[i]->getDestroyed())
+    if ((*Nave::Instance()->getGun())[i]->getDestroyed())
     {
-      nave_gun->erase(i);
+      Nave::Instance()->getGun()->erase(i);
     }
     for (AsteroidObjectPool::Iterator aster_itr = AsteroidInterface::getBegin(), aster_end = AsteroidInterface::getEnd(); aster_itr != aster_end + 1; aster_itr++)
     {
@@ -81,9 +82,9 @@ void ObjectsFacade::check_bullets_with_asteroids()
 //        continue;
 //      }
 
-      if ((*nave_gun)[i]->check_colision_with(*aster_itr))
+      if ((*Nave::Instance()->getGun())[i]->check_colision_with(*aster_itr))
       {
-        nave_gun->incScore();
+        Nave::Instance()->getGun()->incScore();
         AsteroidInterface::eraseAsteroid(aster_itr);
         aster_end = AsteroidInterface::getEnd();
         continue;
@@ -91,7 +92,7 @@ void ObjectsFacade::check_bullets_with_asteroids()
     }
   }
   if (MainGame::get()->get_timer_count()%150 == 0)
-    nave_gun->decScore();
+    Nave::Instance()->getGun()->decScore();
 }
 
 void ObjectsFacade::check_nave_with_asteroids()
@@ -135,8 +136,11 @@ void ObjectsFacade::check_nave_with_powerups()
     if (PowerUp::instance()->check_colision_with(Nave::Instance())){
       std::cout << "PUN!" << MainGame::get()->get_timer_count() << std::endl;
       PowerUp::instance()->set_destroyed_at(MainGame::get()->get_timer_count());
+      int val = PowerUp::instance()->get_state();
       PowerUp::instance()->pun = true;
       Nave::Instance()->set_state_gun(PowerUp::instance()->get_state());
+      if(val != PowerUp::instance()->get_state())
+        SCORE = _SCORE;
     }
   }
   if (MainGame::get()->get_timer_count() == PowerUp::instance()->get_destroyed_at()+800){
@@ -146,7 +150,11 @@ void ObjectsFacade::check_nave_with_powerups()
   }
 }
 
-void ObjectsFacade::receive_score() { score = int_to_string(nave_gun->getScore()); }
+void ObjectsFacade::receive_score(){
+  _SCORE = SCORE;
+  SCORE = Nave::Instance()->getGun()->getScore();
+  score = int_to_string(SCORE);
+}
 
 void ObjectsFacade::update_objects()
 {
