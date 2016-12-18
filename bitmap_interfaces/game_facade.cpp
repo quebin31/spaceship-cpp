@@ -136,11 +136,8 @@ void ObjectsFacade::check_nave_with_powerups()
     if (PowerUp::instance()->check_colision_with(Nave::Instance())){
       std::cout << "PUN!" << MainGame::get()->get_timer_count() << std::endl;
       PowerUp::instance()->set_destroyed_at(MainGame::get()->get_timer_count());
-      int val = PowerUp::instance()->get_state();
       PowerUp::instance()->pun = true;
       Nave::Instance()->set_state_gun(PowerUp::instance()->get_state());
-      if(val != PowerUp::instance()->get_state())
-        SCORE = _SCORE;
     }
   }
   if (MainGame::get()->get_timer_count() == PowerUp::instance()->get_destroyed_at()+800){
@@ -151,9 +148,8 @@ void ObjectsFacade::check_nave_with_powerups()
 }
 
 void ObjectsFacade::receive_score(){
-  _SCORE = SCORE;
   SCORE = Nave::Instance()->getGun()->getScore();
-  score = int_to_string(SCORE);
+  score = int_to_string(SCORE)
 }
 
 void ObjectsFacade::update_objects()

@@ -20,7 +20,6 @@ class ObjectsFacade
     Image             *frame;
     std::string       score;
     int               SCORE;
-    int               _SCORE;
   private:
     AllegroFont       *title_font;
     AllegroFont       *options_font;
