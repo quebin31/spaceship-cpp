@@ -13,6 +13,7 @@ class Image : public Bitmap
   public:
     Image(const char* file, const int nwidth, const int nheight);
 
+    bool check_colision_with(Bitmap *some) override;
     void draw_bitmap(const int flags) override;
     void reset_bitmap() override;
 };

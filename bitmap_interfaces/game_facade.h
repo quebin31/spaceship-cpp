@@ -8,26 +8,26 @@
 
 #include "../bitmap_objects/image.h"
 #include "../bitmap_objects/nave.h"
+#include "../bitmap_objects/power_up.h"
 #include "asteroids_interface.h"
 #include "bullet_interface.h"
 #include "hearts_interface.h"
-#include "../bitmap_objects/power_up.h"
 
-class ObjectsFacade
+class ObjectsInterface
 {
   private:
     Hearts            *hearts;
     Image             *frame;
-    std::string       score;
-    int               SCORE;
+    std::string        score;
+
   private:
     AllegroFont       *title_font;
     AllegroFont       *options_font;
     AllegroFont       *score_font;
 
   public:
-    ObjectsFacade();
-    ~ObjectsFacade();
+    ObjectsInterface();
+    ~ObjectsInterface();
 
     void show_menu();
 

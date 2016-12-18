@@ -28,3 +28,6 @@ void Image::reset_bitmap()
   width  = 0;
   height = 0;
 }
+
+bool Image::check_colision_with(Bitmap *some)
+{ return false; }

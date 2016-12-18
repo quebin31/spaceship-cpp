@@ -31,6 +31,8 @@ set(SOURCE_FILES main.cpp
         bitmap_interfaces/powerups_interface.h
         bitmap_interfaces/game_facade.cpp
         bitmap_interfaces/game_facade.h
+        strategys/strategy_power_up.h
+        strategys/strategy_power_up.cpp
         game_interfaces/keyboard.cpp
         game_interfaces/keyboard.h
         game_interfaces/main_game.cpp

@@ -35,14 +35,14 @@ game_facade.h
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/image.h
 ../bitmap_objects/nave.h
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
+../bitmap_objects/power_up.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
 asteroids_interface.h
 /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.h
 bullet_interface.h
 /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
 hearts_interface.h
 /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h
-../bitmap_objects/power_up.h
-/home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
 
 /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.cpp
 hearts_interface.h
@@ -109,6 +109,10 @@ nave.h
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.h
 bitmap.h
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
+../strategys/strategy_power_up.h
+/home/kevin/IPOO/SpaceShip2/strategys/strategy_power_up.h
+../bitmap_interfaces/bullet_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
 
 /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.cpp
 power_up.h
@@ -143,6 +147,24 @@ iostream
 -
 game_interfaces/main_game.h
 /home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.h
+
+/home/kevin/IPOO/SpaceShip2/strategys/strategy_nave_gun.cpp
+strategy_nave_gun.h
+/home/kevin/IPOO/SpaceShip2/strategys/strategy_nave_gun.h
+
+/home/kevin/IPOO/SpaceShip2/strategys/strategy_nave_gun.h
+
+/home/kevin/IPOO/SpaceShip2/strategys/strategy_power_up.cpp
+strategy_power_up.h
+/home/kevin/IPOO/SpaceShip2/strategys/strategy_power_up.h
+
+/home/kevin/IPOO/SpaceShip2/strategys/strategy_power_up.h
+../bitmap_objects/power_up.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
+../bitmap_objects/bullet.h
+/home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.h
+../bitmap_interfaces/bullet_interface.h
+/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
 
 /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp
 iostream

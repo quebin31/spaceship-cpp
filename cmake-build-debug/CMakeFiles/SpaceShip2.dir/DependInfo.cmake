@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o"
   "/home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o"
   "/home/kevin/IPOO/SpaceShip2/main.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/main.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/strategys/strategy_power_up.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/strategys/strategy_power_up.cpp.o"
   "/home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/tools_and_headers/int_to_string.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

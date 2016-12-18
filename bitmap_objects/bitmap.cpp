@@ -68,16 +68,6 @@ void Bitmap::setDestroyed(const bool destroyed)
 bool Bitmap::getDestroyed() const
 { return destroyed; }
 
-/* check_colision_with -> Bitmap
- * Verifica si hay o no colision entre this y el bitmap del parametro */
-bool Bitmap::check_colision_with(Bitmap* some)
-{
-  if (this->posX + this->width >= some->posX && this->posX <= some->posX + some->width)
-    if (this->posY + this->height >= some->posY && this->posY <= some->posY + some->height)
-      return true;
-  return false;
-}
-
 
 
 

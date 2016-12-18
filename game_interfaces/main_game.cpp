@@ -102,7 +102,7 @@ MainGame::MainGame()
   }
   std::cout << "GAME_ENGINE: Timer creado correctamente @(" << timer << ")" << std::endl;
 
-  objects = new ObjectsFacade;
+  objects = new ObjectsInterface;
   done_main = false;
   gameover_or_pause = false;
 

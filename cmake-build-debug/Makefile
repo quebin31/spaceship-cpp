@@ -528,6 +528,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+strategys/strategy_power_up.o: strategys/strategy_power_up.cpp.o
+
+.PHONY : strategys/strategy_power_up.o
+
+# target to build an object file
+strategys/strategy_power_up.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/strategys/strategy_power_up.cpp.o
+.PHONY : strategys/strategy_power_up.cpp.o
+
+strategys/strategy_power_up.i: strategys/strategy_power_up.cpp.i
+
+.PHONY : strategys/strategy_power_up.i
+
+# target to preprocess a source file
+strategys/strategy_power_up.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/strategys/strategy_power_up.cpp.i
+.PHONY : strategys/strategy_power_up.cpp.i
+
+strategys/strategy_power_up.s: strategys/strategy_power_up.cpp.s
+
+.PHONY : strategys/strategy_power_up.s
+
+# target to generate assembly for a file
+strategys/strategy_power_up.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/strategys/strategy_power_up.cpp.s
+.PHONY : strategys/strategy_power_up.cpp.s
+
 tools_and_headers/int_to_string.o: tools_and_headers/int_to_string.cpp.o
 
 .PHONY : tools_and_headers/int_to_string.o
@@ -609,6 +636,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... strategys/strategy_power_up.o"
+	@echo "... strategys/strategy_power_up.i"
+	@echo "... strategys/strategy_power_up.s"
 	@echo "... tools_and_headers/int_to_string.o"
 	@echo "... tools_and_headers/int_to_string.i"
 	@echo "... tools_and_headers/int_to_string.s"

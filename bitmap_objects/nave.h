@@ -7,35 +7,33 @@
 
 #include "bitmap.h"
 #include "../strategys/strategy_power_up.h"
+#include "../bitmap_interfaces/bullet_interface.h"
 
 #define NAVE_UP    0
 #define NAVE_RIGHT 32
 #define NAVE_LEFT  64
 
-class NaveGun;
 
 class Nave : public Bitmap
 {
   private:
-    NaveGun       *nave_gun;
-    static Nave   *_instance;
-    int64_t        destroyed_at;
+    int64_t destroyed_at;
+
+  private:
+    static Nave *_instance;
+    Nave();
 
   public:
-    Nave();
-    ~Nave() override;
-
     static Nave* Instance();
+    static void  deleteNave();
 
-    void shoot_gun();
-    void update_bullets();
-    NaveGun* getGun();
+    void shootGun();
 
-    void make_invulnerable(const int64_t fps_count);
-    void make_vulnerable();
+    void    make_invulnerable(const int64_t fps_count);
+    void    make_vulnerable();
     int64_t getWhenDestroyed();
-    void set_state_gun(int);
 
+    bool check_colision_with(Bitmap *some) override;
     void draw_bitmap(const int flags) override;
     void reset_bitmap() override;
 };

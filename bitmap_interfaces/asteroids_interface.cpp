@@ -24,7 +24,7 @@ int AsteroidFactory::generate_random_fps_count()
   return distr(eng);
 }
 
-Asteroid *AsteroidFactory::check_store(AsteroidObjectPool *setofasters)
+Asteroid *AsteroidFactory::check_store(AsteroidObjPool *setofasters)
 {
   if (!setofasters->store.empty())
   {
@@ -38,7 +38,7 @@ Asteroid *AsteroidFactory::check_store(AsteroidObjectPool *setofasters)
 int AsteroidFactory::getFpsToGen()
 { return fps_to_gen; }
 
-void AsteroidFactory::createRow(AsteroidObjectPool *setofasters)
+void AsteroidFactory::generateRowFor(AsteroidObjPool *setofasters)
 {
   int number_of_asteroids = generate_random_num_of_asters();
   for (int i = 0; i < number_of_asteroids; i++)
@@ -50,45 +50,46 @@ void AsteroidFactory::createRow(AsteroidObjectPool *setofasters)
 }
 
 /* =======================================================================================================================================================================*/
-AsteroidObjectPool::Iterator::Iterator(AsteroidObjectPool &_ap): ap(&_ap), index(0) {}
-AsteroidObjectPool::Iterator::Iterator(AsteroidObjectPool *_ap): ap(_ap), index(0) {}
-AsteroidObjectPool::Iterator::Iterator(const AsteroidObjectPool::Iterator &itr): ap(itr.ap), index(itr.index) {}
 
-AsteroidObjectPool::Iterator &AsteroidObjectPool::Iterator::operator++()
+AsteroidObjPool::Iterator::Iterator(AsteroidObjPool &_ap): ap(&_ap), index(0) {}
+AsteroidObjPool::Iterator::Iterator(AsteroidObjPool *_ap): ap(_ap), index(0) {}
+AsteroidObjPool::Iterator::Iterator(const AsteroidObjPool::Iterator &itr): ap(itr.ap), index(itr.index) {}
+
+AsteroidObjPool::Iterator &AsteroidObjPool::Iterator::operator++()
 {
   index++;
   return (*this);
 }
 
-AsteroidObjectPool::Iterator AsteroidObjectPool::Iterator::operator++(int)
+AsteroidObjPool::Iterator AsteroidObjPool::Iterator::operator++(int)
 {
   Iterator temp_itr = *this;
   ++(*this);
   return temp_itr;
 }
 
-AsteroidObjectPool::Iterator AsteroidObjectPool::Iterator::operator+(const int sum)
+AsteroidObjPool::Iterator AsteroidObjPool::Iterator::operator+(const int sum)
 {
   Iterator temp_itr = *this;
   temp_itr.index += sum;
   return temp_itr;
 }
 
-bool AsteroidObjectPool::Iterator::operator==(const AsteroidObjectPool::Iterator &itr)
+bool AsteroidObjPool::Iterator::operator==(const AsteroidObjPool::Iterator &itr)
 { return (this->index == itr.index); }
 
-bool AsteroidObjectPool::Iterator::operator!=(const AsteroidObjectPool::Iterator &itr)
+bool AsteroidObjPool::Iterator::operator!=(const AsteroidObjPool::Iterator &itr)
 { return (this->index != itr.index); }
 
-Asteroid *AsteroidObjectPool::Iterator::operator*()
+Asteroid *AsteroidObjPool::Iterator::operator*()
 { return ap->asters_on_use[index]; }
 
 /* =======================================================================================================================================================================*/
 
-AsteroidObjectPool::AsteroidObjectPool()
-{ AsteroidFactory::createRow(this); }
+AsteroidObjPool::AsteroidObjPool()
+{ AsteroidFactory::generateRowFor(this); }
 
-AsteroidObjectPool::~AsteroidObjectPool()
+AsteroidObjPool::~AsteroidObjPool()
 {
   for (unsigned i = 0; i < asters_on_use.size(); i++)
     delete asters_on_use[i];
@@ -96,16 +97,16 @@ AsteroidObjectPool::~AsteroidObjectPool()
     delete store[i];
 }
 
-Asteroid *AsteroidObjectPool::at(int index)
-{ return asters_on_use.at(index); }
+Asteroid *AsteroidObjPool::at(const int index)
+{ return asters_on_use.at((unsigned long) index); }
 
-Asteroid *AsteroidObjectPool::operator[](int index)
+Asteroid *AsteroidObjPool::operator[](const int index)
 { return asters_on_use[index]; }
 
-std::size_t AsteroidObjectPool::size()
+std::size_t AsteroidObjPool::size()
 { return asters_on_use.size(); }
 
-void AsteroidObjectPool::erase(AsteroidObjectPool::Iterator &itr)
+void AsteroidObjPool::erase(AsteroidObjPool::Iterator &itr)
 {
   Asteroid* asteroid = (*itr);
   asteroid->reset_bitmap();
@@ -114,36 +115,36 @@ void AsteroidObjectPool::erase(AsteroidObjectPool::Iterator &itr)
   itr.index -= 1;
 }
 
-AsteroidObjectPool::Iterator AsteroidObjectPool::begin()
+AsteroidObjPool::Iterator AsteroidObjPool::begin()
 {
   Iterator temp(this);
   temp.index = 0;
   return temp;
 }
 
-AsteroidObjectPool::Iterator AsteroidObjectPool::end()
+AsteroidObjPool::Iterator AsteroidObjPool::end()
 {
   Iterator temp(this);
-  temp.index = asters_on_use.size() - 1;
+  temp.index = (int) (asters_on_use.size() - 1);
   return temp;
 }
 
 /* =======================================================================================================================================================================*/
 
-AsteroidObjectPool* AsteroidInterface::asteroidOP = 0;
+AsteroidObjPool* AsteroidInterface::asteroidOP = 0;
 
-void AsteroidInterface::createAsteroidObjectPool()
-{ if (!asteroidOP) asteroidOP = new AsteroidObjectPool; }
+void AsteroidInterface::createAsteroidObjPool()
+{ if (!asteroidOP) asteroidOP = new AsteroidObjPool; }
 
-void AsteroidInterface::deleteAsteroidObjectPool()
+void AsteroidInterface::deleteAsteroidObjPool()
 { delete asteroidOP; }
 
 void AsteroidInterface::updateAsteroids(int64_t actual_frames_count)
 {
   if (actual_frames_count % AsteroidFactory::getFpsToGen() == 0)
-    AsteroidFactory::createRow(asteroidOP);
+    AsteroidFactory::generateRowFor(asteroidOP);
 
-  for (AsteroidObjectPool::Iterator itr = asteroidOP->begin(); itr != asteroidOP->end() + 1; itr++)
+  for (AsteroidObjPool::Iterator itr = asteroidOP->begin(); itr != asteroidOP->end() + 1; itr++)
     if (!(*itr)->getDestroyed())
     {
       (*itr)->moveY(2.5);
@@ -151,16 +152,16 @@ void AsteroidInterface::updateAsteroids(int64_t actual_frames_count)
     }
 }
 
-void AsteroidInterface::eraseAsteroid(AsteroidObjectPool::Iterator &itr)
+void AsteroidInterface::eraseAsteroid(AsteroidObjPool::Iterator &itr)
 { asteroidOP->erase(itr); }
 
-AsteroidObjectPool::Iterator AsteroidInterface::getBegin()
+AsteroidObjPool::Iterator AsteroidInterface::getBegin()
 { return asteroidOP->begin(); }
 
-AsteroidObjectPool::Iterator AsteroidInterface::getEnd()
+AsteroidObjPool::Iterator AsteroidInterface::getEnd()
 { return asteroidOP->end(); }
 
-AsteroidObjectPool *AsteroidInterface::getAOP()
+AsteroidObjPool *AsteroidInterface::getAOP()
 { return asteroidOP; }
 
 /* =======================================================================================================================================================================*/

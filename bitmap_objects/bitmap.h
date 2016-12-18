@@ -40,7 +40,7 @@ class Bitmap
     void setDestroyed(const bool destroyed);
     bool getDestroyed() const;
 
-    virtual bool check_colision_with(Bitmap *some);         /// Not pure
+    virtual bool check_colision_with(Bitmap *some) = 0;     /// Pure
     virtual void draw_bitmap(const int flags) = 0;          /// Pure
     virtual void reset_bitmap() = 0;                        /// Pure
 };

@@ -13,7 +13,7 @@
 class Hearts
 {
   private:
-    std::vector<HEART*> hearts;
+    std::vector<Heart*> hearts;
 
   public:
     Hearts();

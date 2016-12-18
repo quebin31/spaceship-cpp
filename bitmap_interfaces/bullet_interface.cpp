@@ -3,112 +3,170 @@
 //
 
 #include "bullet_interface.h"
-//
-//BULLET *NaveGun::check_for_store()
-//{
-//  if (!store.empty())
-//  {
-//    BULLET* bullet = store.back();
-//    store.pop_back();
-//    bullet->reset_bitmap();
-//    return bullet;
-//  }
-//  return new BULLET;
-//}
+/* =======================================================================================================================================================================*/
 
-NaveGun::NaveGun(const char* _archivo, int _width, int _height): archivo(_archivo), width(_width), height(_height){
-  store_bullets = new BULLETS_STORE(archivo, width, height);
+int BulletFactory::actual_type = BULLET_TYPE;
+
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "missing_default_case"
+BaseBullet *BulletFactory::check_for_store(BulletObjPool *setofbullets)
+{
+  if (!setofbullets->store.empty())
+  {
+    BaseBullet* pBullet = setofbullets->store.back();
+    setofbullets->store.pop_back();
+    return pBullet;
+  }
+
+  switch (actual_type)
+  {
+    case BULLET_TYPE:
+      return new Bullet;
+    case LASER_TYPE:
+      return new Laser;
+  }
+}
+#pragma clang diagnostic pop
+
+void BulletFactory::changeFactoryType(const int new_type)
+{ actual_type = new_type; }
+
+BaseBullet *BulletFactory::generateBulletFor(BulletObjPool *setofbullets)
+{
+  BaseBullet* pBaseBullet = check_for_store(setofbullets);
+  return pBaseBullet;
 }
 
-int NaveGun::score = 0;
+/* =======================================================================================================================================================================*/
 
-NaveGun::~NaveGun()
+BulletObjPool::Iterator::Iterator(BulletObjPool &_bp): bp(&_bp), index(0) {}
+BulletObjPool::Iterator::Iterator(BulletObjPool *_bp): bp(_bp), index (0) {}
+BulletObjPool::Iterator::Iterator(const BulletObjPool::Iterator &itr): bp(itr.bp), index (itr.index) {}
+
+BulletObjPool::Iterator &BulletObjPool::Iterator::operator++()
 {
-  for (unsigned i = 0; i < bullets.size(); i++)
-    delete bullets[i];
-  delete store_bullets;
+  index++;
+  return (*this);
 }
 
-void NaveGun::create_bullet(const double naveX, const double naveY)
+BulletObjPool::Iterator BulletObjPool::Iterator::operator++(int)
 {
-  BULLET* new_bullet = store_bullets->check_for_store();
-  new_bullet->setX(naveX+middle_nave_x);
-  new_bullet->setY(naveY-middle_nave_y);
-  bullets.push_back(new_bullet);
+  Iterator temp_itr = *this;
+  ++(*this);
+  return temp_itr;
 }
 
-void NaveGun::update_bullets()
+BulletObjPool::Iterator BulletObjPool::Iterator::operator+(const int sum)
 {
-  for (unsigned i = 0; i < bullets.size(); i++)
-    if (!bullets[i]->getDestroyed())
-    {
-      bullets[i]->moveY(-3.0);
-      bullets[i]->draw_bitmap(0);
-    }
+  Iterator temp_itr = *this;
+  temp_itr.index += sum;
+  return temp_itr;
 }
 
-BULLET *NaveGun::operator[](std::size_t index)
-{ return bullets[index]; }
+bool BulletObjPool::Iterator::operator==(const BulletObjPool::Iterator &itr)
+{ return (this->index == itr.index); }
 
-BULLET *NaveGun::at(std::size_t index)
-{ return bullets.at(index); }
+bool BulletObjPool::Iterator::operator!=(const BulletObjPool::Iterator &itr)
+{ return (this->index != itr.index); }
 
-void NaveGun::erase(std::size_t index)
+BaseBullet *BulletObjPool::Iterator::operator*()
+{ return bp->bullets_on_use[index]; }
+
+/* =======================================================================================================================================================================*/
+
+BulletObjPool::BulletObjPool() {}
+
+BulletObjPool::~BulletObjPool()
 {
-  BULLET *temp = bullets[index];
-  store_bullets->put_on_store(temp);
-  bullets.erase(bullets.begin() + index);
-}
-
-std::size_t NaveGun::size()
-{ return bullets.size(); }
-
-bool NaveGun::empty()
-{ return bullets.empty(); }
-
-void NaveGun::incScore()
-{ score += 5; }
-
-void NaveGun::decScore()
-{
-  score -= (score >= 2)? 2 : score;
-}
-
-void NaveGun::incScorein(const int incS)
-{ score = incS; }
-
-void NaveGun::decScorein(const int decS)
-{
-  score = (score >= 30)? 30 : score;
-}
-
-void NaveGun::resetScore() {score = 0;}
-
-int NaveGun::getScore()
-{ return score; }
-
-BULLETS_STORE::BULLETS_STORE(const char*_archivo, int _width, int _height): archivo(_archivo), width(_width), height(_height) {}
-
-BULLETS_STORE::~BULLETS_STORE()
-{
+  for (unsigned i = 0; i < bullets_on_use.size(); i++)
+    delete bullets_on_use[i];
   for (unsigned i = 0; i < store.size(); i++)
     delete store[i];
 }
 
-BULLET *BULLETS_STORE::check_for_store()
+BaseBullet *BulletObjPool::at(const int index)
+{ return bullets_on_use.at((unsigned long) index);}
+
+BaseBullet *BulletObjPool::operator[](const int index)
+{ return bullets_on_use[index]; }
+
+std::size_t BulletObjPool::size()
+{ return bullets_on_use.size(); }
+
+void BulletObjPool::erase(BulletObjPool::Iterator &itr)
 {
-  if (!store.empty())
-  {
-    BULLET* bullet = store.back();
-    store.pop_back();
-    return bullet;
-  }
-  return new BULLET(archivo, width, height);
+  BaseBullet* bbullet = (*itr);
+  bbullet->reset_bitmap();
+  store.push_back(bbullet);
+  bullets_on_use.erase(bullets_on_use.begin() + itr.index);
+  itr.index -= 1;
 }
 
-void BULLETS_STORE::put_on_store(BULLET *bullet)
+BulletObjPool::Iterator BulletObjPool::begin()
 {
-  bullet->reset_bitmap();
-  store.push_back(bullet);
+  Iterator temp(this);
+  temp.index = 0;
+  return temp;
 }
 
+BulletObjPool::Iterator BulletObjPool::end()
+{
+  Iterator temp(this);
+  temp.index = (int) (bullets_on_use.size() - 1);
+  return temp;
+}
+
+/* =======================================================================================================================================================================*/
+
+BulletObjPool* BulletInterface::bulletOP = 0;
+int            BulletInterface::score = 0;
+
+void BulletInterface::createBulletObjPool()
+{ if (!bulletOP) bulletOP = new BulletObjPool; }
+
+void BulletInterface::deleteBulletObjPool()
+{ delete bulletOP; }
+
+void BulletInterface::updateBullets()
+{
+  for (BulletObjPool::Iterator itr = bulletOP->begin(); itr != bulletOP->end(); itr++)
+    if (!(*itr)->getDestroyed())
+    {
+      (*itr)->moveY(-3.0);
+      (*itr)->draw_bitmap(0);
+    }
+}
+
+void BulletInterface::createBullet(const double naveX, const double naveY)
+{
+  BaseBullet* pBBullet = BulletFactory::generateBulletFor(bulletOP);
+  pBBullet->setX(naveX+middle_nave_x);
+  pBBullet->setY(naveY+middle_nave_y);
+  bulletOP->bullets_on_use.push_back(pBBullet);
+}
+
+void BulletInterface::eraseBullet(BulletObjPool::Iterator &itr)
+{ bulletOP->erase(itr); }
+
+void BulletInterface::incGunScoreIn(const int incS)
+{ score += incS; }
+
+void BulletInterface::decGunScoreIn(const int decS)
+{ score -= (score >= decS)? decS : score; }
+
+void BulletInterface::resetGunScore()
+{ score = 0; }
+
+BulletObjPool::Iterator BulletInterface::getBegin()
+{ return bulletOP->begin(); }
+
+BulletObjPool::Iterator BulletInterface::getEnd()
+{ return bulletOP->end(); }
+
+int BulletInterface::getScore()
+{ return score; }
+
+BulletObjPool *BulletInterface::getBOP()
+{ return bulletOP; }
+
+/* =======================================================================================================================================================================*/

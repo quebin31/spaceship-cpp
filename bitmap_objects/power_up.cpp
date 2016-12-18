@@ -53,13 +53,13 @@ void PowerUp::reset_bitmap()
 
 bool PowerUp::check_colision_with(Bitmap *some)
 {
-  if (posX + width >= some->getX() && posX <= some->getX() + some->getW()){
-    if (posY + height >= some->getY() && posY <= some->getY() + some->getH()){
+  if (posX + width >= some->getX() && posX <= some->getX() + some->getW())
+    if (posY + height >= some->getY() && posY <= some->getY() + some->getH())
+    {
       generate_state();
       destroyed = true;
       return true;
     }
-  }
   return false;
 }
 

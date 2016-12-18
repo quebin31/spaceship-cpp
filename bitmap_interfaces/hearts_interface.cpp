@@ -9,7 +9,7 @@ Hearts::Hearts()
   float posX = 50.0;
   for (int i = 0; i < NO_OF_HEARTS; i++)
   {
-    HEART* new_heart = new HEART;
+    Heart* new_heart = new Heart;
     new_heart->setX(posX);
     new_heart->setY(35.0);
     hearts.push_back(new_heart);

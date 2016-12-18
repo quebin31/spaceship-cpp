@@ -22,7 +22,7 @@ class MainGame
     AllegroDisplay      *display;
     AllegroEventQueue   *event_queue;
     AllegroTimer        *timer;
-    ObjectsFacade       *objects;
+    ObjectsInterface       *objects;
 
     bool                 done_main;
     bool                 gameover_or_pause;

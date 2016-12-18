@@ -16,7 +16,6 @@ typedef struct FILES{
 class strategy_power_up{
   private:
     static strategy_power_up* _instance;
-    static std::vector<NaveGun*> guns;
     static std::vector<FILES*> files;
   public:
     strategy_power_up();
@@ -26,8 +25,5 @@ class strategy_power_up{
         _instance = new strategy_power_up;
       return _instance;
     }
-    NaveGun* get_gun(int);
-    int get_guns_size();
-};
 
 #endif // STRATEGY_POWER_UP_H

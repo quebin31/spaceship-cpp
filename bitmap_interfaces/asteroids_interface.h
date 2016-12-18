@@ -8,7 +8,7 @@
 #include "../bitmap_objects/asteroid.h"
 
 class AsteroidFactory;
-class AsteroidObjectPool;
+class AsteroidObjPool;
 class AsteroidInterface;
 
 class AsteroidFactory
@@ -19,14 +19,14 @@ class AsteroidFactory
   private:
     static int generate_random_num_of_asters();
     static int generate_random_fps_count();
-    static Asteroid* check_store(AsteroidObjectPool* setofasters);
+    static Asteroid* check_store(AsteroidObjPool* setofasters);
 
   public:
     static int  getFpsToGen();
-    static void createRow(AsteroidObjectPool* setofasters);
+    static void generateRowFor(AsteroidObjPool *setofasters);
 };
 
-class AsteroidObjectPool
+class AsteroidObjPool
 {
   private:
     std::vector<Asteroid*> asters_on_use;
@@ -40,15 +40,16 @@ class AsteroidObjectPool
     class Iterator
     {
       private:
-        AsteroidObjectPool* ap;
+        AsteroidObjPool* ap;
         int index;
+        int size;
 
       private:
-        friend class AsteroidObjectPool;
+        friend class AsteroidObjPool;
 
       public:
-        Iterator(AsteroidObjectPool& _ap);
-        Iterator(AsteroidObjectPool* _ap);
+        Iterator(AsteroidObjPool& _ap);
+        Iterator(AsteroidObjPool* _ap);
         Iterator(const Iterator& itr);
 
         Iterator&  operator++();
@@ -57,15 +58,13 @@ class AsteroidObjectPool
         bool       operator==(const Iterator& itr);
         bool       operator!=(const Iterator& itr);
         Asteroid*  operator*();
-
-
     };
 
-    AsteroidObjectPool();
-    ~AsteroidObjectPool();
+    AsteroidObjPool();
+    ~AsteroidObjPool();
 
-    Asteroid*   at(int index);
-    Asteroid*   operator[](int index);
+    Asteroid*   at(const int index);
+    Asteroid*   operator[](const int index);
     std::size_t size();
     void        erase(Iterator& itr);
 
@@ -76,19 +75,18 @@ class AsteroidObjectPool
 class AsteroidInterface
 {
   private:
-    static AsteroidObjectPool *asteroidOP;
+    static AsteroidObjPool *asteroidOP;
 
   public:
-    static void createAsteroidObjectPool();
-    static void deleteAsteroidObjectPool();
+    static void createAsteroidObjPool();
+    static void deleteAsteroidObjPool();
 
     static void updateAsteroids(int64_t actual_frames_count);
-    static void eraseAsteroid(AsteroidObjectPool::Iterator &itr);
+    static void eraseAsteroid(AsteroidObjPool::Iterator &itr);
 
-    static AsteroidObjectPool::Iterator getBegin();
-    static AsteroidObjectPool::Iterator getEnd();
-    static AsteroidObjectPool* getAOP();
-
+    static AsteroidObjPool::Iterator getBegin();
+    static AsteroidObjPool::Iterator getEnd();
+    static AsteroidObjPool*          getAOP();
 };
 
 
