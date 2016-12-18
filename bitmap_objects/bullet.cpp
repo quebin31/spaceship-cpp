@@ -7,10 +7,10 @@
 /* BULLET
  * Carga la imagen de la bala.
  * Configura sus valores de width / height */
-BULLET::BULLET(): Bitmap("bullet2.png")
+BULLET::BULLET(const char* _archivo, int _width, int _height): Bitmap(_archivo)
 {
-  width = 10;
-  height = 10;
+  width = _width;
+  height = _height;
 }
 
 /* check_colision_with -> Bitmap

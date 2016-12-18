@@ -16,17 +16,20 @@
 //  return new BULLET;
 //}
 
-NaveGun::NaveGun(): score(0) {}
+NaveGun::NaveGun(const char* _archivo, int _width, int _height): score(0), archivo(_archivo), width(_width), height(_height){
+  store_bullets = new BULLETS_STORE(archivo, width, height);
+}
 
 NaveGun::~NaveGun()
 {
-  for (int i = 0; i < bullets.size(); i++)
+  for (unsigned i = 0; i < bullets.size(); i++)
     delete bullets[i];
+  delete store_bullets;
 }
 
 void NaveGun::create_bullet(const double naveX, const double naveY)
 {
-  BULLET* new_bullet = BULLETS_STORE::check_for_store();
+  BULLET* new_bullet = store_bullets->check_for_store();
   new_bullet->setX(naveX+middle_nave_x);
   new_bullet->setY(naveY-middle_nave_y);
   bullets.push_back(new_bullet);
@@ -34,7 +37,7 @@ void NaveGun::create_bullet(const double naveX, const double naveY)
 
 void NaveGun::update_bullets()
 {
-  for (int i = 0; i < bullets.size(); i++)
+  for (unsigned i = 0; i < bullets.size(); i++)
     if (!bullets[i]->getDestroyed())
     {
       bullets[i]->moveY(-3.0);
@@ -51,7 +54,7 @@ BULLET *NaveGun::at(std::size_t index)
 void NaveGun::erase(std::size_t index)
 {
   BULLET *temp = bullets[index];
-  BULLETS_STORE::put_on_store(temp);
+  store_bullets->put_on_store(temp);
   bullets.erase(bullets.begin() + index);
 }
 
@@ -80,12 +83,11 @@ void NaveGun::decScorein(const int decS)
 int NaveGun::getScore()
 { return score; }
 
-
-std::vector<BULLET*> BULLETS_STORE::store;
+BULLETS_STORE::BULLETS_STORE(const char*_archivo, int _width, int _height): archivo(_archivo), width(_width), height(_height) {}
 
 BULLETS_STORE::~BULLETS_STORE()
 {
-  for (int i = 0; i < store.size(); i++)
+  for (unsigned i = 0; i < store.size(); i++)
     delete store[i];
 }
 
@@ -97,7 +99,7 @@ BULLET *BULLETS_STORE::check_for_store()
     store.pop_back();
     return bullet;
   }
-  return new BULLET;
+  return new BULLET(archivo, width, height);
 }
 
 void BULLETS_STORE::put_on_store(BULLET *bullet)

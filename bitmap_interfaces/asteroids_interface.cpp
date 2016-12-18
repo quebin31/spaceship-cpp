@@ -90,9 +90,9 @@ AsteroidObjectPool::AsteroidObjectPool()
 
 AsteroidObjectPool::~AsteroidObjectPool()
 {
-  for (int i = 0; i < asters_on_use.size(); i++)
+  for (unsigned i = 0; i < asters_on_use.size(); i++)
     delete asters_on_use[i];
-  for (int i = 0; i < store.size(); i++)
+  for (unsigned i = 0; i < store.size(); i++)
     delete store[i];
 }
 

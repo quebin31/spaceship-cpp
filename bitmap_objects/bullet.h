@@ -11,7 +11,7 @@
 class BULLET : public Bitmap
 {
   public:
-    BULLET();
+    BULLET(const char*, int, int);
 
     bool check_colision_with(Bitmap *some) override;
     void draw_bitmap(const int flags) override;

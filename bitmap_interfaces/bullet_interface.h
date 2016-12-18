@@ -13,13 +13,16 @@
 class BULLETS_STORE
 {
   private:
-    static std::vector<BULLET*> store;
+    std::vector<BULLET*> store;
+    const char* archivo;
+    int width;
+    int height;
   public:
-    BULLETS_STORE() {}
+    BULLETS_STORE(const char*, int, int);
     ~BULLETS_STORE();
 
-    static BULLET* check_for_store();
-    static void put_on_store(BULLET* bullet);
+    BULLET* check_for_store();
+    void put_on_store(BULLET* bullet);
 };
 
 class NaveGun
@@ -27,9 +30,12 @@ class NaveGun
   private:
     std::vector<BULLET*> bullets;
     int                  score;
-
+    BULLETS_STORE* store_bullets;
+    const char* archivo;
+    int width;
+    int height;
   public:
-    NaveGun();
+    NaveGun(const char*, int, int);
     ~NaveGun();
 
     void erase(std::size_t index);
@@ -47,6 +53,10 @@ class NaveGun
     void incScorein(const int incS);
     void decScorein(const int decS);
     int getScore();
+};
+
+class AbstractFactory{
+
 };
 
 
