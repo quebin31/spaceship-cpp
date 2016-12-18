@@ -12,10 +12,10 @@ extern int type_powerup[];
 class PowerUp : public Bitmap
 {
   private:
-    int generate_random_power_up();
+    int generate_random_power_up(int, int);
     static PowerUp* power_up;
     int64_t destroyed_at;
-
+    int state;
   public:
     PowerUp();
     ~PowerUp();
@@ -28,6 +28,8 @@ class PowerUp : public Bitmap
     int64_t get_destroyed_at();
     void set_destroyed_at(int64_t );
     bool pun;
+    int get_state();
+    void generate_state();
 };
 
 

@@ -136,6 +136,7 @@ void ObjectsFacade::check_nave_with_powerups()
       std::cout << "PUN!" << MainGame::get()->get_timer_count() << std::endl;
       PowerUp::instance()->set_destroyed_at(MainGame::get()->get_timer_count());
       PowerUp::instance()->pun = true;
+      Nave::Instance()->set_state_gun(PowerUp::instance()->get_state());
     }
   }
   if (MainGame::get()->get_timer_count() == PowerUp::instance()->get_destroyed_at()+800){

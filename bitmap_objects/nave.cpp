@@ -13,7 +13,7 @@ Nave* Nave::_instance = 0;
  * Configura los valores de altura y ancho */
 Nave::Nave(): Bitmap("nave1.png")
 {
-  nave_gun     = new NaveGun("bullet2.png", 10, 10);
+  nave_gun     = strategy_power_up::Instance()->get_gun(0);
   width        = 32;
   height       = 32;
   sourceX      = NAVE_UP;
@@ -91,3 +91,6 @@ void Nave::reset_bitmap()
   destroyed_at = 0;
 }
 
+void Nave::set_state_gun(int num){
+  nave_gun = strategy_power_up::Instance()->get_gun(num);
+}

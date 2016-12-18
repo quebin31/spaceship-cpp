@@ -6,6 +6,7 @@
 #define SPACESHIP2_NAVE_H
 
 #include "bitmap.h"
+#include "../strategys/strategy_power_up.h"
 
 #define NAVE_UP    0
 #define NAVE_RIGHT 32
@@ -33,6 +34,7 @@ class Nave : public Bitmap
     void make_invulnerable(const int64_t fps_count);
     void make_vulnerable();
     int64_t getWhenDestroyed();
+    void set_state_gun(int);
 
     void draw_bitmap(const int flags) override;
     void reset_bitmap() override;
