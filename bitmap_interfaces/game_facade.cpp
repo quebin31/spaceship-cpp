@@ -13,8 +13,7 @@ ObjectsFacade::ObjectsFacade():
                             title_font(al_load_font("PressStart2P.ttf",30,0)),
                             options_font(al_load_font("Joystick.otf",20,0)),
                             score_font(al_load_font("PressStart2P.ttf", 12,0)),
-                            SCORE(0),
-                            _SCORE(0)
+                            SCORE(0)
 {
   AsteroidInterface::createAsteroidObjectPool();
   Nave::Instance()->setX((const float) (frame->getW() / 2.0 - Nave::Instance()->getW() / 2.0));
@@ -149,7 +148,7 @@ void ObjectsFacade::check_nave_with_powerups()
 
 void ObjectsFacade::receive_score(){
   SCORE = Nave::Instance()->getGun()->getScore();
-  score = int_to_string(SCORE)
+  score = int_to_string(SCORE);
 }
 
 void ObjectsFacade::update_objects()
