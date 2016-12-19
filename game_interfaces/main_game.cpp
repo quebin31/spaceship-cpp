@@ -151,8 +151,7 @@ void MainGame::wait_for_event(AllegroEvent &event) { al_wait_for_event(event_que
 
 void MainGame::start_timer()
 {
-  if (get_timer_count() == 0)
-    al_start_timer(timer);
+  al_start_timer(timer);
 
   if (HeartsInterface::empty())
     resetgame();

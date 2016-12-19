@@ -112,6 +112,7 @@ void ObjectsInterface::check_nave_with_asteroids()
       AsteroidInterface::eraseAsteroid(aster_itr);
       Nave::Instance()->make_invulnerable(MainGame::get()->get_timer_count());
       HeartsInterface::lost_heart();
+      BulletInterface::changeType(BULLET_TYPE);
       return;
     }
   }

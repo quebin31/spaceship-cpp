@@ -23,10 +23,8 @@ BaseBullet *BulletFactory::check_for_store(BulletObjPool *setofbullets)
   switch (BulletFactory::actual_type)
   {
     case BULLET_TYPE:
-      std::cout << "Generando balas normales" << std::endl;
       return new Bullet;
     case LASER_TYPE:
-      std::cout << "Generando balas laser" << std::endl;
       return new Laser;
   }
 }
