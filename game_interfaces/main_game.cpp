@@ -126,6 +126,11 @@ MainGame::~MainGame()
   delete objects;
 }
 
+int MainGame::getW() const { return 640; }
+
+int MainGame::getH() const { return 480; }
+
+
 void MainGame::set_display_color(unsigned char r, unsigned char g, unsigned char b)
 {
   al_set_target_bitmap(al_get_backbuffer(display));
@@ -148,6 +153,9 @@ void MainGame::start_timer()
 {
   if (get_timer_count() == 0)
     al_start_timer(timer);
+
+  if (HeartsInterface::empty())
+    resetgame();
 
   gameover_or_pause = false;
   KEYBOARD::get()->set_state_to(ESC, false);
@@ -194,6 +202,8 @@ void MainGame::event_timer()
 
 int64_t MainGame::get_timer_count() { return al_get_timer_count(timer); }
 
+MainGame *MainGame::_instance = 0;
+
 MainGame *MainGame::get()
 {
   if (!_instance)
@@ -201,11 +211,12 @@ MainGame *MainGame::get()
   return _instance;
 }
 
-MainGame *MainGame::_instance = 0;
-
-int MainGame::getW() const { return 640; }
-
-int MainGame::getH() const { return 480; }
-
 void MainGame::del()
 { delete _instance; }
+
+
+void MainGame::resetgame()
+{
+  gameover_or_pause = false;
+  objects->resetobjects();
+}

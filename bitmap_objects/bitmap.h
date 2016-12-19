@@ -40,6 +40,8 @@ class Bitmap
     void setDestroyed(const bool destroyed);
     bool getDestroyed() const;
 
+    void changeBitmap(const char *new_file);
+
     virtual bool check_colision_with(Bitmap *some) = 0;     /// Pure
     virtual void draw_bitmap(const int flags) = 0;          /// Pure
     virtual void reset_bitmap() = 0;                        /// Pure

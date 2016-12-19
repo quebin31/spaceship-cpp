@@ -20,6 +20,7 @@ CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../bitmap_interfa
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../bitmap_interfaces/game_facade.cpp
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../bitmap_interfaces/game_facade.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../bitmap_interfaces/hearts_interface.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../bitmap_interfaces/power_up_interface.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../bitmap_objects/asteroid.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../bitmap_objects/bitmap.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o: ../bitmap_objects/bullet.h
@@ -39,14 +40,14 @@ CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o: ../bitmap_ob
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o: ../tools_and_headers/int_to_string.h
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o: ../tools_and_headers/spaceship_includes.h
 
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_interfaces/bullet_interface.h
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_interfaces/powerups_interface.cpp
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_interfaces/powerups_interface.h
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_objects/bitmap.h
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_objects/bullet.h
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../bitmap_objects/power_up.h
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../tools_and_headers/int_to_string.h
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o: ../tools_and_headers/spaceship_includes.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o: ../bitmap_interfaces/bullet_interface.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o: ../bitmap_interfaces/power_up_interface.cpp
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o: ../bitmap_interfaces/power_up_interface.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o: ../bitmap_objects/bitmap.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o: ../bitmap_objects/bullet.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o: ../bitmap_objects/power_up.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o: ../tools_and_headers/int_to_string.h
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o: ../tools_and_headers/spaceship_includes.h
 
 CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.o: ../bitmap_objects/asteroid.cpp
 CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.o: ../bitmap_objects/asteroid.h
@@ -102,6 +103,7 @@ CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../bitmap_interfaces/
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../bitmap_interfaces/bullet_interface.h
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../bitmap_interfaces/game_facade.h
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../bitmap_interfaces/hearts_interface.h
+CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../bitmap_interfaces/power_up_interface.h
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../bitmap_objects/asteroid.h
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../bitmap_objects/bitmap.h
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../bitmap_objects/bullet.h
@@ -119,6 +121,7 @@ CMakeFiles/SpaceShip2.dir/main.cpp.o: ../bitmap_interfaces/asteroids_interface.h
 CMakeFiles/SpaceShip2.dir/main.cpp.o: ../bitmap_interfaces/bullet_interface.h
 CMakeFiles/SpaceShip2.dir/main.cpp.o: ../bitmap_interfaces/game_facade.h
 CMakeFiles/SpaceShip2.dir/main.cpp.o: ../bitmap_interfaces/hearts_interface.h
+CMakeFiles/SpaceShip2.dir/main.cpp.o: ../bitmap_interfaces/power_up_interface.h
 CMakeFiles/SpaceShip2.dir/main.cpp.o: ../bitmap_objects/asteroid.h
 CMakeFiles/SpaceShip2.dir/main.cpp.o: ../bitmap_objects/bitmap.h
 CMakeFiles/SpaceShip2.dir/main.cpp.o: ../bitmap_objects/bullet.h

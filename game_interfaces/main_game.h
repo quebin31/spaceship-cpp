@@ -22,7 +22,7 @@ class MainGame
     AllegroDisplay      *display;
     AllegroEventQueue   *event_queue;
     AllegroTimer        *timer;
-    ObjectsInterface       *objects;
+    ObjectsInterface    *objects;
 
     bool                 done_main;
     bool                 gameover_or_pause;
@@ -48,8 +48,10 @@ class MainGame
 
     int64_t get_timer_count();
 
+    void resetgame();
+
     static MainGame* get();
-    static void       del();
+    static void      del();
 };
 
 

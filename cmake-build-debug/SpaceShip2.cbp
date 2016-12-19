@@ -108,10 +108,10 @@
 		<Unit filename="/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h">
 			<Option target="SpaceShip2"/>
 		</Unit>
-		<Unit filename="/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.cpp">
+		<Unit filename="/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp">
 			<Option target="SpaceShip2"/>
 		</Unit>
-		<Unit filename="/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.h">
+		<Unit filename="/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.h">
 			<Option target="SpaceShip2"/>
 		</Unit>
 		<Unit filename="/home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp">

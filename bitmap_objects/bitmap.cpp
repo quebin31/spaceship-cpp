@@ -68,6 +68,10 @@ void Bitmap::setDestroyed(const bool destroyed)
 bool Bitmap::getDestroyed() const
 { return destroyed; }
 
-
+void Bitmap::changeBitmap(const char *new_file)
+{
+  al_destroy_bitmap(bitmap);
+  bitmap = al_load_bitmap(new_file);
+}
 
 

@@ -27,14 +27,12 @@ set(SOURCE_FILES main.cpp
         bitmap_interfaces/asteroids_interface.h
         bitmap_interfaces/bullet_interface.cpp
         bitmap_interfaces/bullet_interface.h
-        bitmap_interfaces/powerups_interface.cpp
-        bitmap_interfaces/powerups_interface.h
         bitmap_interfaces/game_facade.cpp
         bitmap_interfaces/game_facade.h
         game_interfaces/keyboard.cpp
         game_interfaces/keyboard.h
         game_interfaces/main_game.cpp
-        game_interfaces/main_game.h)
+        game_interfaces/main_game.h bitmap_interfaces/power_up_interface.cpp bitmap_interfaces/power_up_interface.h)
 
 add_executable(SpaceShip2 ${SOURCE_FILES})
 

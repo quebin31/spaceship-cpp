@@ -12,6 +12,7 @@ BaseBullet::BaseBullet(const char* file): Bitmap(file) {}
 
 Bullet::Bullet(): BaseBullet("bullet2.png")
 {
+  type = BULLET_TYPE;
   width  = 10;
   height = 10;
 }
@@ -43,6 +44,7 @@ void Bullet::reset_bitmap()
 
 Laser::Laser(): BaseBullet("laser.png")
 {
+  type = LASER_TYPE;
   width  = 10;
   height = 39;
 }
@@ -67,6 +69,27 @@ void Laser::reset_bitmap()
   posX = 0;
   posY = 0;
   destroyed = false;
+}
+
+/* =======================================================================================================================================================================*/
+
+BaseBullet *BulletConverter::convert_to(BaseBullet *baseB, const int new_type)
+{
+  if (baseB->type == new_type)
+    return baseB;
+
+  if (new_type == BULLET_TYPE)
+  {
+    baseB->type = BULLET_TYPE;
+    baseB->changeBitmap("bullet2.png");
+  }
+  else if (new_type == LASER_TYPE)
+  {
+    baseB->type = LASER_TYPE;
+    baseB->changeBitmap("laser.png");
+
+  }
+  return baseB;
 }
 
 /* =======================================================================================================================================================================*/

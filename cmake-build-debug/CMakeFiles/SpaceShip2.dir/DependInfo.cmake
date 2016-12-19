@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.o"
   "/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/game_facade.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o"
   "/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o"
-  "/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o"
+  "/home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o"
   "/home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/asteroid.cpp.o"
   "/home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/bitmap.cpp.o"
   "/home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.cpp" "/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_objects/bullet.cpp.o"

@@ -8,8 +8,6 @@
 #define middle_nave_x 11
 #define middle_nave_y 10
 
-#define BULLET_TYPE 0
-#define LASER_TYPE  1
 
 #include "../bitmap_objects/bullet.h"
 
@@ -104,6 +102,8 @@ class BulletInterface
     static BulletObjPool::Iterator getBegin();
     static BulletObjPool::Iterator getEnd();
     static BulletObjPool*          getBOP();
+
+    static void reset_bullets();
 };
 
 #endif //SPACESHIP2_BULLET_INTERFACE_H

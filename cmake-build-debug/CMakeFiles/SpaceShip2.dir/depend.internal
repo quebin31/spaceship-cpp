@@ -21,6 +21,7 @@ CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o
  /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/game_facade.cpp
  /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/game_facade.h
  /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h
+ /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.h
@@ -39,10 +40,10 @@ CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.h
  /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.h
  /home/kevin/IPOO/SpaceShip2/tools_and_headers/spaceship_includes.h
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o
  /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
- /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.cpp
- /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/powerups_interface.h
+ /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp
+ /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.h
@@ -103,6 +104,7 @@ CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o
  /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
  /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/game_facade.h
  /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h
+ /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.h
@@ -120,6 +122,7 @@ CMakeFiles/SpaceShip2.dir/main.cpp.o
  /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.h
  /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/game_facade.h
  /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.h
+ /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.h
  /home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.h

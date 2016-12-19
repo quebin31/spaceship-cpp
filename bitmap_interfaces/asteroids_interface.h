@@ -88,6 +88,8 @@ class AsteroidInterface
     static AsteroidObjPool::Iterator getBegin();
     static AsteroidObjPool::Iterator getEnd();
     static AsteroidObjPool*          getAOP();
+
+    static void reset_asteroids();
 };
 
 

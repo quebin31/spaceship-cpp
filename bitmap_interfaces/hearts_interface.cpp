@@ -51,6 +51,12 @@ void HeartsInterface::lost_heart()
     }
 }
 
+void HeartsInterface::reset_hearts()
+{
+  for (int i = 0; i < NO_OF_HEARTS; i++)
+    heartsC->hearts[i]->reset_bitmap();
+}
+
 bool HeartsInterface::empty()
 { return heartsC->hearts.front()->getDestroyed(); }
 

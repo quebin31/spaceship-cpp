@@ -27,6 +27,8 @@ class KEYBOARD
     void key_dw_event(ALLEGRO_EVENT&);
     void key_up_event(ALLEGRO_EVENT&);
 
+    void reset_keyboard();
+
     static KEYBOARD* get();
 
 };

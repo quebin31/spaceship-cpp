@@ -3,9 +3,10 @@
 //
 
 #include "bullet_interface.h"
+
 /* =======================================================================================================================================================================*/
 
-int BulletFactory::actual_type = LASER_TYPE;
+int BulletFactory::actual_type = BULLET_TYPE;
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "missing_default_case"
@@ -15,6 +16,7 @@ BaseBullet *BulletFactory::check_for_store(BulletObjPool *setofbullets)
   {
     BaseBullet* pBullet = setofbullets->store.back();
     setofbullets->store.pop_back();
+    pBullet = BulletConverter::convert_to(pBullet, actual_type);
     return pBullet;
   }
 
@@ -187,5 +189,16 @@ int BulletInterface::getScore()
 
 BulletObjPool *BulletInterface::getBOP()
 { return bulletOP; }
+
+void BulletInterface::reset_bullets()
+{
+  resetGunScore();
+  if (bulletOP->size() == 0) return;
+  for (BulletObjPool::Iterator bullet_itr = getBegin(), bullet_end = getEnd(); bullet_itr != bullet_end; bullet_itr++)
+  {
+    bulletOP->erase(bullet_itr);
+    bullet_end = getEnd();
+  }
+}
 
 /* =======================================================================================================================================================================*/

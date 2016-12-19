@@ -76,4 +76,14 @@ KEYBOARD *KEYBOARD::get()
   return keyboard_instance;
 }
 
+void KEYBOARD::reset_keyboard()
+{
+  key[UP]     = false;
+  key[DOWN]   = false;
+  key[LEFT]   = false;
+  key[RIGHT]  = false;
+  key[CHAR_A] = false;
+  key[ESC]    = false;
+}
+
 KEYBOARD *KEYBOARD::keyboard_instance = 0;

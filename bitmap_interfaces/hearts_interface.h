@@ -38,6 +38,7 @@ class HeartsInterface
 
     static void draw_hearts();
     static void lost_heart();
+    static void reset_hearts();
 
     static bool empty();
 };

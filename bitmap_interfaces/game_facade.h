@@ -12,6 +12,7 @@
 #include "asteroids_interface.h"
 #include "bullet_interface.h"
 #include "hearts_interface.h"
+#include "power_up_interface.h"
 
 class ObjectsInterface
 {
@@ -41,6 +42,8 @@ class ObjectsInterface
     void draw_information();
 
     bool no_hearts();
+
+    void resetobjects();
 };
 
 

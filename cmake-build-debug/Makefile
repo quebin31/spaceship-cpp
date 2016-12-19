@@ -231,32 +231,32 @@ bitmap_interfaces/hearts_interface.cpp.s:
 	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.s
 .PHONY : bitmap_interfaces/hearts_interface.cpp.s
 
-bitmap_interfaces/powerups_interface.o: bitmap_interfaces/powerups_interface.cpp.o
+bitmap_interfaces/power_up_interface.o: bitmap_interfaces/power_up_interface.cpp.o
 
-.PHONY : bitmap_interfaces/powerups_interface.o
+.PHONY : bitmap_interfaces/power_up_interface.o
 
 # target to build an object file
-bitmap_interfaces/powerups_interface.cpp.o:
-	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.o
-.PHONY : bitmap_interfaces/powerups_interface.cpp.o
+bitmap_interfaces/power_up_interface.cpp.o:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o
+.PHONY : bitmap_interfaces/power_up_interface.cpp.o
 
-bitmap_interfaces/powerups_interface.i: bitmap_interfaces/powerups_interface.cpp.i
+bitmap_interfaces/power_up_interface.i: bitmap_interfaces/power_up_interface.cpp.i
 
-.PHONY : bitmap_interfaces/powerups_interface.i
+.PHONY : bitmap_interfaces/power_up_interface.i
 
 # target to preprocess a source file
-bitmap_interfaces/powerups_interface.cpp.i:
-	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.i
-.PHONY : bitmap_interfaces/powerups_interface.cpp.i
+bitmap_interfaces/power_up_interface.cpp.i:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.i
+.PHONY : bitmap_interfaces/power_up_interface.cpp.i
 
-bitmap_interfaces/powerups_interface.s: bitmap_interfaces/powerups_interface.cpp.s
+bitmap_interfaces/power_up_interface.s: bitmap_interfaces/power_up_interface.cpp.s
 
-.PHONY : bitmap_interfaces/powerups_interface.s
+.PHONY : bitmap_interfaces/power_up_interface.s
 
 # target to generate assembly for a file
-bitmap_interfaces/powerups_interface.cpp.s:
-	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/powerups_interface.cpp.s
-.PHONY : bitmap_interfaces/powerups_interface.cpp.s
+bitmap_interfaces/power_up_interface.cpp.s:
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.s
+.PHONY : bitmap_interfaces/power_up_interface.cpp.s
 
 bitmap_objects/asteroid.o: bitmap_objects/asteroid.cpp.o
 
@@ -576,9 +576,9 @@ help:
 	@echo "... bitmap_interfaces/hearts_interface.o"
 	@echo "... bitmap_interfaces/hearts_interface.i"
 	@echo "... bitmap_interfaces/hearts_interface.s"
-	@echo "... bitmap_interfaces/powerups_interface.o"
-	@echo "... bitmap_interfaces/powerups_interface.i"
-	@echo "... bitmap_interfaces/powerups_interface.s"
+	@echo "... bitmap_interfaces/power_up_interface.o"
+	@echo "... bitmap_interfaces/power_up_interface.i"
+	@echo "... bitmap_interfaces/power_up_interface.s"
 	@echo "... bitmap_objects/asteroid.o"
 	@echo "... bitmap_objects/asteroid.i"
 	@echo "... bitmap_objects/asteroid.s"

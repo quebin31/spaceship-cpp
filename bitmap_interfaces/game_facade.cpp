@@ -123,6 +123,7 @@ void ObjectsInterface::check_nave_with_powerups()
   {
     PowerUpInterface::changeType();
     PowerUpInterface::Instance()->reset_bitmap();
+    BulletInterface::incGunScoreIn(30);
   }
 }
 
@@ -156,7 +157,7 @@ void ObjectsInterface::update_objects()
     Nave::Instance()->setSourceX(NAVE_UP);
   }
 
-  if ((*KEYBOARD::get())[CHAR_A] && MainGame::get()->get_timer_count()%13 == 0)
+  if ((*KEYBOARD::get())[CHAR_A] && MainGame::get()->get_timer_count()%12 == 0)
   {
     Nave::Instance()->shootGun();
   }
@@ -181,3 +182,15 @@ void ObjectsInterface::draw_information()
 
 bool ObjectsInterface::no_hearts()
 { return HeartsInterface::empty(); }
+
+void ObjectsInterface::resetobjects()
+{
+  score = "0";
+  KEYBOARD::get()->reset_keyboard();
+  Nave::Instance()->setX((const float) (frame->getW() / 2.0 - Nave::Instance()->getW() / 2.0));
+  Nave::Instance()->setY((const float) (frame->getH() / 2.0 - Nave::Instance()->getH() / 2.0 + 200));
+  HeartsInterface::reset_hearts();
+  BulletInterface::reset_bullets();
+  AsteroidInterface::reset_asteroids();
+  PowerUpInterface::Instance()->reset_bitmap();
+}
