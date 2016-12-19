@@ -11,16 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="910078bb-c2f7-4c4a-9fab-d00cfa6b45c1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/SpaceShip2" afterPath="$PROJECT_DIR$/cmake-build-debug/SpaceShip2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitmap_interfaces/bullet_interface.cpp" afterPath="$PROJECT_DIR$/bitmap_interfaces/bullet_interface.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bitmap_interfaces/game_facade.cpp" afterPath="$PROJECT_DIR$/bitmap_interfaces/game_facade.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game_interfaces/main_game.cpp" afterPath="$PROJECT_DIR$/game_interfaces/main_game.cpp" />
-    </list>
+    <list default="true" id="910078bb-c2f7-4c4a-9fab-d00cfa6b45c1" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -521,12 +512,12 @@
       <workItem from="1481848309127" duration="2233000" />
       <workItem from="1481956685542" duration="1225000" />
       <workItem from="1482080471142" duration="21907000" />
-      <workItem from="1482177090052" duration="7137000" />
+      <workItem from="1482177090052" duration="7168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138385000" />
+    <option name="totallyTimeSpent" value="138416000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
