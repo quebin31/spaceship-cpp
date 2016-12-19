@@ -5,7 +5,7 @@
 #include "bullet_interface.h"
 /* =======================================================================================================================================================================*/
 
-int BulletFactory::actual_type = BULLET_TYPE;
+int BulletFactory::actual_type = LASER_TYPE;
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "missing_default_case"
@@ -18,21 +18,23 @@ BaseBullet *BulletFactory::check_for_store(BulletObjPool *setofbullets)
     return pBullet;
   }
 
-  switch (actual_type)
+  switch (BulletFactory::actual_type)
   {
     case BULLET_TYPE:
+      std::cout << "Generando balas normales" << std::endl;
       return new Bullet;
     case LASER_TYPE:
+      std::cout << "Generando balas laser" << std::endl;
       return new Laser;
   }
 }
 #pragma clang diagnostic pop
 
 void BulletFactory::changeFactoryType(const int new_type)
-{ actual_type = new_type; }
+{ BulletFactory::actual_type = new_type; }
 
 int BulletFactory::returnFactoryType()
-{ return actual_type; }
+{ return BulletFactory::actual_type; }
 
 BaseBullet *BulletFactory::generateBulletFor(BulletObjPool *setofbullets)
 {
@@ -166,6 +168,8 @@ void BulletInterface::resetGunScore()
 void BulletInterface::changeType(const int new_type)
 {
   BulletFactory::changeFactoryType(new_type);
+  for (unsigned i = 0; i < bulletOP->store.size(); i++)
+    delete bulletOP->store[i];
   bulletOP->store.clear();
 }
 

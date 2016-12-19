@@ -73,7 +73,6 @@ void ObjectsInterface::check_bullets_with_asteroids()
     }
 
     for (AsteroidObjPool::Iterator aster_itr = AsteroidInterface::getBegin(), aster_end = AsteroidInterface::getEnd(); aster_itr != aster_end + 1; ++aster_itr)
-    {
       if ((*bullet_itr)->check_colision_with(*aster_itr))
       {
         BulletInterface::incGunScoreIn();
@@ -83,7 +82,6 @@ void ObjectsInterface::check_bullets_with_asteroids()
         aster_end = AsteroidInterface::getEnd();
         break;
       }
-    }
   }
 
   if (MainGame::get()->get_timer_count()%150 == 0)
@@ -121,7 +119,7 @@ void ObjectsInterface::check_nave_with_asteroids()
 
 void ObjectsInterface::check_nave_with_powerups()
 {
-  if (PowerUpInterface::Instance()->check_colision_with(Nave::Instance()))
+  if (!PowerUpInterface::Instance()->getDestroyed() && PowerUpInterface::Instance()->check_colision_with(Nave::Instance()))
   {
     PowerUpInterface::changeType();
     PowerUpInterface::Instance()->reset_bitmap();
