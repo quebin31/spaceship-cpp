@@ -92,7 +92,7 @@ void ObjectsInterface::check_nave_with_asteroids()
 {
   if (Nave::Instance()->getDestroyed())
   {
-    if (Nave::Instance()->getWhenDestroyed() + 90 >= MainGame::get()->get_timer_count())
+    if (Nave::Instance()->getWhenDestroyed() + 90 <= MainGame::get()->get_timer_count())
       Nave::Instance()->make_vulnerable();
     return;
   }

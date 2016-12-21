@@ -369,9 +369,33 @@ CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o.provides: CMakeFil
 CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o.provides.build: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o
 
 
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o: CMakeFiles/SpaceShip2.dir/flags.make
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o: ../bitmap_interfaces/power_up_interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp
+
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp > CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.i
+
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp -o CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.s
+
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.requires:
+
+.PHONY : CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.requires
+
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.provides: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.provides.build
+.PHONY : CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.provides
+
+CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.provides.build: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o
+
+
 CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o: CMakeFiles/SpaceShip2.dir/flags.make
 CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o: ../game_interfaces/keyboard.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o -c /home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.cpp
 
 CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.i: cmake_force
@@ -395,7 +419,7 @@ CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: CMakeFiles/SpaceShip2.dir/flags.make
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o: ../game_interfaces/main_game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o -c /home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.cpp
 
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.i: cmake_force
@@ -417,30 +441,6 @@ CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o.provides: CMakeFiles/S
 CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o.provides.build: CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o
 
 
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o: CMakeFiles/SpaceShip2.dir/flags.make
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o: ../bitmap_interfaces/power_up_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp
-
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp > CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.i
-
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp -o CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.s
-
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.requires:
-
-.PHONY : CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.requires
-
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.provides: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.requires
-	$(MAKE) -f CMakeFiles/SpaceShip2.dir/build.make CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.provides.build
-.PHONY : CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.provides
-
-CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.provides.build: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o
-
-
 # Object files for target SpaceShip2
 SpaceShip2_OBJECTS = \
 "CMakeFiles/SpaceShip2.dir/main.cpp.o" \
@@ -456,9 +456,9 @@ SpaceShip2_OBJECTS = \
 "CMakeFiles/SpaceShip2.dir/bitmap_interfaces/asteroids_interface.cpp.o" \
 "CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.o" \
 "CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o" \
+"CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o" \
 "CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o" \
-"CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o" \
-"CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o"
+"CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o"
 
 # External object files for target SpaceShip2
 SpaceShip2_EXTERNAL_OBJECTS =
@@ -476,9 +476,9 @@ SpaceShip2: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/hearts_interface.cpp.o
 SpaceShip2: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/asteroids_interface.cpp.o
 SpaceShip2: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.o
 SpaceShip2: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o
+SpaceShip2: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o
 SpaceShip2: CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o
 SpaceShip2: CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o
-SpaceShip2: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o
 SpaceShip2: CMakeFiles/SpaceShip2.dir/build.make
 SpaceShip2: CMakeFiles/SpaceShip2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kevin/IPOO/SpaceShip2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable SpaceShip2"
@@ -502,9 +502,9 @@ CMakeFiles/SpaceShip2.dir/requires: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/
 CMakeFiles/SpaceShip2.dir/requires: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/asteroids_interface.cpp.o.requires
 CMakeFiles/SpaceShip2.dir/requires: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.o.requires
 CMakeFiles/SpaceShip2.dir/requires: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o.requires
+CMakeFiles/SpaceShip2.dir/requires: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.requires
 CMakeFiles/SpaceShip2.dir/requires: CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o.requires
 CMakeFiles/SpaceShip2.dir/requires: CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o.requires
-CMakeFiles/SpaceShip2.dir/requires: CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o.requires
 
 .PHONY : CMakeFiles/SpaceShip2.dir/requires
 

@@ -12,9 +12,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/SpaceShip2.dir/bitmap_interfaces/asteroids_interface.cpp.o"
   "CMakeFiles/SpaceShip2.dir/bitmap_interfaces/bullet_interface.cpp.o"
   "CMakeFiles/SpaceShip2.dir/bitmap_interfaces/game_facade.cpp.o"
+  "CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o"
   "CMakeFiles/SpaceShip2.dir/game_interfaces/keyboard.cpp.o"
   "CMakeFiles/SpaceShip2.dir/game_interfaces/main_game.cpp.o"
-  "CMakeFiles/SpaceShip2.dir/bitmap_interfaces/power_up_interface.cpp.o"
   "SpaceShip2.pdb"
   "SpaceShip2"
 )

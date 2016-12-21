@@ -7,6 +7,9 @@ Proyecto para IPOO (Introduccion a la Programación Orientada a Objetos)
 Actualmente, el juego se puede decir que tiene lo que debe de tener todo juego, es funcional,
 el juego fue desarrollado con la libreria de Allegro para facilitar la carga de imagenes.
 
+# Compilar el código fuente
+- Lo primero de todo, se necesital allegr
+
 # Juego
 - ¿Como jugar?
     - En el momento en el que se entra por  primera vez al juego, se puede observar el menu
@@ -31,3 +34,4 @@ el juego fue desarrollado con la libreria de Allegro para facilitar la carga de 
     #
         ESC: Pausa el juego
     #
+    
