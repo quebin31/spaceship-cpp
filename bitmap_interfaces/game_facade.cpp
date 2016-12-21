@@ -108,7 +108,6 @@ void ObjectsInterface::check_nave_with_asteroids()
 
     if ((*aster_itr)->check_colision_with(Nave::Instance()))
     {
-      std::cout << "Nave: Haciendo invulnerable\n";
       AsteroidInterface::eraseAsteroid(aster_itr);
       Nave::Instance()->make_invulnerable(MainGame::get()->get_timer_count());
       HeartsInterface::lost_heart();
