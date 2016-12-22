@@ -42,7 +42,8 @@ include_directories(allegro_includes/allegro5)
 
 link_directories(allegro_libs)
 
-target_link_libraries(SpaceShip2 allegro_acodec
+target_link_libraries(SpaceShip2
+        allegro_acodec
         allegro_audio
         allegro_color
         allegro_dialog
