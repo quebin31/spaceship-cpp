@@ -12,7 +12,6 @@ el juego fue desarrollado con la libreria de Allegro para facilitar la carga de 
 
     - Arch Linux:
         - 
-        
             # pacman -S allegro
             
         Este comando instala la ultima versión de Allegro disponible.

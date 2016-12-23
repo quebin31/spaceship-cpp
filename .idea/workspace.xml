@@ -12,112 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="910078bb-c2f7-4c4a-9fab-d00cfa6b45c1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/alcompat.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro5.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_acodec.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_audio.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_color.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_direct3d.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_font.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_image.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_memfile.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_native_dialog.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_opengl.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_physfs.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_primitives.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_ttf.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_video.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/allegro_x.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/altime.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/base.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/bitmap.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/bitmap_draw.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/bitmap_io.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/bitmap_lock.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/blender.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/clipboard.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/color.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/config.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/cpu.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/debug.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/display.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/drawing.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/error.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/events.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/file.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/fixed.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/fmaths.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/fshook.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/fullscreen_mode.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/haptic.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/inline/fmaths.inl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/internal/alconfig.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/joystick.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/keyboard.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/keycodes.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/memory.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/monitor.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/mouse.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/mouse_cursor.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/opengl/GLext/gl_ext_alias.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/opengl/GLext/gl_ext_api.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/opengl/GLext/gl_ext_defs.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/opengl/GLext/gl_ext_list.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/opengl/GLext/glx_ext_alias.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/opengl/GLext/glx_ext_api.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/opengl/GLext/glx_ext_defs.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/opengl/GLext/glx_ext_list.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/opengl/GLext/wgl_ext_alias.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/opengl/GLext/wgl_ext_api.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/opengl/GLext/wgl_ext_defs.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/opengl/GLext/wgl_ext_list.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/opengl/gl_ext.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/path.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/alandroid.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/alandroidcfg.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/albcc32.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/aliphone.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/aliphonecfg.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/allegro_sdl_config.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/almngw32.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/almsvc.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/alosx.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/alosxcfg.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/alplatf.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/alraspberrypi.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/alraspberrypicfg.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/alucfg.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/alunix.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/alwatcom.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/alwin.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/astdbool.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/platform/astdint.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/render_state.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/shader.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/system.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/threads.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/timer.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/tls.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/touch_input.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/transformations.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_includes/allegro5/utf8.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_libs/liballegro.so.5.2.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_libs/liballegro_acodec.so.5.2.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_libs/liballegro_audio.so.5.2.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_libs/liballegro_color.so.5.2.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_libs/liballegro_dialog.so.5.2.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_libs/liballegro_font.so.5.2.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_libs/liballegro_image.so.5.2.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_libs/liballegro_main.so.5.2.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_libs/liballegro_memfile.so.5.2.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_libs/liballegro_physfs.so.5.2.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_libs/liballegro_primitives.so.5.2.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_libs/liballegro_ttf.so.5.2.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/allegro_libs/liballegro_video.so.5.2.1" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -150,8 +44,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="60">
-                <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+              <first_editor relative-caret-position="240">
+                <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -502,7 +396,7 @@
       <workItem from="1482279021793" duration="3594000" />
       <workItem from="1482336311649" duration="1910000" />
       <workItem from="1482353219031" duration="1776000" />
-      <workItem from="1482448748814" duration="3557000" />
+      <workItem from="1482448748814" duration="3701000" />
     </task>
     <task id="LOCAL-00001" summary="clion">
       <created>1482449487236</created>
@@ -515,7 +409,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153767000" />
+    <option name="totallyTimeSpent" value="153911000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -888,8 +782,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <first_editor relative-caret-position="240">
+            <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
             <folding />
           </first_editor>
           <second_editor />
