@@ -44,8 +44,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="240">
-                <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+              <first_editor relative-caret-position="180">
+                <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -396,7 +396,7 @@
       <workItem from="1482279021793" duration="3594000" />
       <workItem from="1482336311649" duration="1910000" />
       <workItem from="1482353219031" duration="1776000" />
-      <workItem from="1482448748814" duration="3701000" />
+      <workItem from="1482448748814" duration="3806000" />
     </task>
     <task id="LOCAL-00001" summary="clion">
       <created>1482449487236</created>
@@ -409,7 +409,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153911000" />
+    <option name="totallyTimeSpent" value="154016000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -782,8 +782,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <first_editor relative-caret-position="180">
+            <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
             <folding />
           </first_editor>
           <second_editor />

@@ -11,7 +11,7 @@ el juego fue desarrollado con la libreria de Allegro para facilitar la carga de 
 - Lo primero de todo, se necesita Allegro 5.x, lo ideal es compilarlo desde el codigo fuente pero tambien hay alternativas más sencillas.
 
     - Arch Linux:
-        - 
+        -
             # pacman -S allegro
             
         Este comando instala la ultima versión de Allegro disponible.
@@ -21,6 +21,7 @@ el juego fue desarrollado con la libreria de Allegro para facilitar la carga de 
             $ sudo add-apt-repository ppa:allegro/5.2
             $ sudo apt-get update
             $ sudo apt-get install liballegro5-dev
+            
     - Más información y otros SO (Windows, Mac):
         - 
         https://wiki.allegro.cc/index.php?title=Getting_Started#Installing_Allegro
