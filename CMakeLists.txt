@@ -38,9 +38,9 @@ set(SOURCE_FILES main.cpp
 
 add_executable(SpaceShip2 ${SOURCE_FILES})
 
-include_directories(allegro_includes/allegro5)
+include_directories(/usr/include/allegro5)
 
-link_directories(allegro_libs)
+link_directories(/usr/lib)
 
 target_link_libraries(SpaceShip2
         allegro_acodec

@@ -9,7 +9,9 @@
       <file path="$PROJECT_DIR$/tools_and_headers" />
     </sourceRoots>
     <excludeRoots>
+      <file path="$PROJECT_DIR$/CMakeFiles" />
       <file path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles" />
+      <file path="$PROJECT_DIR$/cmake-build-release/CMakeFiles" />
       <file path="$PROJECT_DIR$/resources" />
     </excludeRoots>
   </component>
