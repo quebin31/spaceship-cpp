@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kevin/IPOO/SpaceShip2
+CMAKE_SOURCE_DIR = "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kevin/IPOO/SpaceShip2
+CMAKE_BINARY_DIR = "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SpaceShip.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/SpaceShip.dir/flags.make
 
 CMakeFiles/SpaceShip.dir/main.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SpaceShip.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/main.cpp.o -c /home/kevin/IPOO/SpaceShip2/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SpaceShip.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/main.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/main.cpp"
 
 CMakeFiles/SpaceShip.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/main.cpp > CMakeFiles/SpaceShip.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/main.cpp" > CMakeFiles/SpaceShip.dir/main.cpp.i
 
 CMakeFiles/SpaceShip.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/main.cpp -o CMakeFiles/SpaceShip.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/main.cpp" -o CMakeFiles/SpaceShip.dir/main.cpp.s
 
 CMakeFiles/SpaceShip.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/SpaceShip.dir/main.cpp.o.provides.build: CMakeFiles/SpaceShip.dir/mai
 
 CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.o: tools_and_headers/int_to_string.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.o -c /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp"
 
 CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp > CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp" > CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.i
 
 CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp -o CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/tools_and_headers/int_to_string.cpp" -o CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.s
 
 CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/SpaceShip.dir/tools_and_headers/int_to_string.cpp.o.provides.build: C
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.o: bitmap_objects/bitmap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/bitmap.cpp"
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.cpp > CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/bitmap.cpp" > CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.i
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_objects/bitmap.cpp -o CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/bitmap.cpp" -o CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.s
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/SpaceShip.dir/bitmap_objects/bitmap.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.o: bitmap_objects/nave.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/nave.cpp"
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.cpp > CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/nave.cpp" > CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.i
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_objects/nave.cpp -o CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/nave.cpp" -o CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.s
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/SpaceShip.dir/bitmap_objects/nave.cpp.o.provides.build: CMakeFiles/Sp
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.o: bitmap_objects/asteroid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp"
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp > CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp" > CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.i
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp -o CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/asteroid.cpp" -o CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.s
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/SpaceShip.dir/bitmap_objects/asteroid.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.o: bitmap_objects/bullet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/bullet.cpp"
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.cpp > CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/bullet.cpp" > CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.i
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_objects/bullet.cpp -o CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/bullet.cpp" -o CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.s
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/SpaceShip.dir/bitmap_objects/bullet.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.o: bitmap_objects/heart.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/heart.cpp"
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.cpp > CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/heart.cpp" > CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.i
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_objects/heart.cpp -o CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/heart.cpp" -o CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.s
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/SpaceShip.dir/bitmap_objects/heart.cpp.o.provides.build: CMakeFiles/S
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.o: bitmap_objects/image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_objects/image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/image.cpp"
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_objects/image.cpp > CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/image.cpp" > CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.i
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_objects/image.cpp -o CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/image.cpp" -o CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.s
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/SpaceShip.dir/bitmap_objects/image.cpp.o.provides.build: CMakeFiles/S
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.o: bitmap_objects/power_up.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/power_up.cpp"
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.cpp > CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/power_up.cpp" > CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.i
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_objects/power_up.cpp -o CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_objects/power_up.cpp" -o CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.s
 
 CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/SpaceShip.dir/bitmap_objects/power_up.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.o: bitmap_interfaces/hearts_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.cpp"
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.cpp > CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.cpp" > CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.i
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.cpp -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/hearts_interface.cpp" -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.s
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.o.requires:
 
@@ -299,16 +299,16 @@ CMakeFiles/SpaceShip.dir/bitmap_interfaces/hearts_interface.cpp.o.provides.build
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.o: bitmap_interfaces/asteroids_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.cpp"
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.cpp > CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.cpp" > CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.i
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.cpp -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/asteroids_interface.cpp" -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.s
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.o.requires:
 
@@ -323,16 +323,16 @@ CMakeFiles/SpaceShip.dir/bitmap_interfaces/asteroids_interface.cpp.o.provides.bu
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.o: bitmap_interfaces/bullet_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.cpp"
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.cpp > CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.cpp" > CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.i
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.cpp -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/bullet_interface.cpp" -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.s
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.o.requires:
 
@@ -347,16 +347,16 @@ CMakeFiles/SpaceShip.dir/bitmap_interfaces/bullet_interface.cpp.o.provides.build
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.o: bitmap_interfaces/game_facade.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/game_facade.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/game_facade.cpp"
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/game_facade.cpp > CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/game_facade.cpp" > CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.i
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/game_facade.cpp -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/game_facade.cpp" -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.s
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.o.requires:
 
@@ -371,16 +371,16 @@ CMakeFiles/SpaceShip.dir/bitmap_interfaces/game_facade.cpp.o.provides.build: CMa
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.o: bitmap_interfaces/power_up_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.o -c /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp"
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp > CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp" > CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.i
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/bitmap_interfaces/power_up_interface.cpp" -o CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.s
 
 CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.o.requires:
 
@@ -395,16 +395,16 @@ CMakeFiles/SpaceShip.dir/bitmap_interfaces/power_up_interface.cpp.o.provides.bui
 
 CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.o: game_interfaces/keyboard.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.o -c /home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/game_interfaces/keyboard.cpp"
 
 CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.cpp > CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/game_interfaces/keyboard.cpp" > CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.i
 
 CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/game_interfaces/keyboard.cpp -o CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/game_interfaces/keyboard.cpp" -o CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.s
 
 CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.o.requires:
 
@@ -419,16 +419,16 @@ CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.o: CMakeFiles/SpaceShip.dir/flags.make
 CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.o: game_interfaces/main_game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.o -c /home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.o -c "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/game_interfaces/main_game.cpp"
 
 CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.cpp > CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/game_interfaces/main_game.cpp" > CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.i
 
 CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/IPOO/SpaceShip2/game_interfaces/main_game.cpp -o CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/game_interfaces/main_game.cpp" -o CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.s
 
 CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.o.requires:
 
@@ -481,7 +481,7 @@ resources/SpaceShip: CMakeFiles/SpaceShip.dir/game_interfaces/keyboard.cpp.o
 resources/SpaceShip: CMakeFiles/SpaceShip.dir/game_interfaces/main_game.cpp.o
 resources/SpaceShip: CMakeFiles/SpaceShip.dir/build.make
 resources/SpaceShip: CMakeFiles/SpaceShip.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kevin/IPOO/SpaceShip2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable resources/SpaceShip"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable resources/SpaceShip"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SpaceShip.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -513,6 +513,6 @@ CMakeFiles/SpaceShip.dir/clean:
 .PHONY : CMakeFiles/SpaceShip.dir/clean
 
 CMakeFiles/SpaceShip.dir/depend:
-	cd /home/kevin/IPOO/SpaceShip2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kevin/IPOO/SpaceShip2 /home/kevin/IPOO/SpaceShip2 /home/kevin/IPOO/SpaceShip2 /home/kevin/IPOO/SpaceShip2 /home/kevin/IPOO/SpaceShip2/CMakeFiles/SpaceShip.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2" "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2" "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2" "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2" "/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles/SpaceShip.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/SpaceShip.dir/depend
 

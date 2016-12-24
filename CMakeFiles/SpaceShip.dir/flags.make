@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/kevin/IPOO/SpaceShip2/allegro5 
+CXX_INCLUDES = -I"/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/allegro5" 
 
