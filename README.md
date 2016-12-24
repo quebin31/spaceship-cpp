@@ -24,8 +24,12 @@ el juego fue desarrollado con la libreria de Allegro para facilitar la carga de 
             $ git clone https://github.com/lans98/SpaceShip.git
             $ cd SpaceShip
 
-    - Generemos los archivos para el cmake:
+    - Antes nos aseguraremos de limpiar, el directorio en caso exista una build creada:
+            $ make clean
+
+    - Generaremos los archivos para el cmake:
             $ ccmake .
+
         Apretamos una vez la tecla [c] y luego la tecla [g]
 
     - Compilemos el juego:
