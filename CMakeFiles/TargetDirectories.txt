@@ -1,3 +1,0 @@
-/home/kevin/IPOO/SpaceShip2/CMakeFiles/edit_cache.dir
-/home/kevin/IPOO/SpaceShip2/CMakeFiles/rebuild_cache.dir
-/home/kevin/IPOO/SpaceShip2/CMakeFiles/SpaceShip2.dir

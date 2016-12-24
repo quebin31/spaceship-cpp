@@ -74,4 +74,3 @@ void Asteroid::reset_bitmap()
   sourceX   = type_asters[type];
   destroyed = false;
 }
-
