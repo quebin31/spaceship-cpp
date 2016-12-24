@@ -11,9 +11,11 @@ el juego fue desarrollado con la libreria de Allegro para facilitar la carga de 
 - Para poder compilar con CMake, lo primero que necesitamos instalar CMake
 
     - Arch Linux:
+
             # pacman -S cmake
 
     - Ubuntu y distros basadas en él:
+
             $ sudo add-apt-repository ppa:george-edison55/cmake-3.x
             $ sudo apt-get update
             $ sudo apt-get install cmake
@@ -21,21 +23,26 @@ el juego fue desarrollado con la libreria de Allegro para facilitar la carga de 
 - Si todo salio bien, ya tenemos CMake instalado, en este caso no necesitamos, instalar allegro, ya que cmake se  encargara de eso de una manera más simple.
 
     - Hagamos clone al repositorio
+
             $ git clone https://github.com/lans98/SpaceShip.git
             $ cd SpaceShip
 
     - Antes nos aseguraremos de limpiar, el directorio en caso exista una build creada:
+
             $ make clean
 
     - Generaremos los archivos para el cmake:
+    
             $ ccmake .
 
         Apretamos una vez la tecla [c] y luego la tecla [g]
 
     - Compilemos el juego:
+
             $ cmake --build . -- -j4
 
     - ¿Donde esta el juego?
+
             $ cd resources
             $ ./SpaceShip
 
@@ -46,11 +53,13 @@ el juego fue desarrollado con la libreria de Allegro para facilitar la carga de 
 - Lo primero de todo, se necesita Allegro 5.x, lo ideal es compilarlo desde el codigo fuente pero tambien hay alternativas más sencillas.
 
     - Arch Linux:
+
             # pacman -S allegro
 
         Este comando instala la ultima versión de Allegro disponible.
 
     - Ubuntu y distros basadas en él:
+
             $ sudo add-apt-repository ppa:allegro/5.2
             $ sudo apt-get update
             $ sudo apt-get install liballegro5-dev
