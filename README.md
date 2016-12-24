@@ -20,7 +20,7 @@ el juego fue desarrollado con la libreria de Allegro para facilitar la carga de 
             $ sudo apt-get update
             $ sudo apt-get install cmake
 
-- Si todo salio bien, ya tenemos CMake instalado, en este caso no necesitamos, instalar allegro, ya que cmake se  encargara de eso de una manera más simple.
+- Si todo salio bien, ya tenemos CMake instalado, en este caso no necesitamos instalar allegro, ya que dentro del source incluimos una carpeta que contiene todas las librerias de allegro.
 
     - Hagamos clone al repositorio
 
@@ -32,7 +32,7 @@ el juego fue desarrollado con la libreria de Allegro para facilitar la carga de 
             $ make clean
 
     - Generaremos los archivos para el cmake:
-    
+
             $ ccmake .
 
         Apretamos una vez la tecla [c] y luego la tecla [g]
@@ -47,6 +47,7 @@ el juego fue desarrollado con la libreria de Allegro para facilitar la carga de 
             $ ./SpaceShip
 
     - **Nota:** La carpeta `./resources` es fundamental para que el juego funcione correctamente, como se observa en el anterior nos movimos a `resources` ya que ahí se genera el binario, por lo tanto, se puede borrar cualquier otra carpeta, excepto `resources`.
+    - **Nota:** La capera `./libs` tambien es fundamental para que el juego funcione ya que ahi se encuentran los `.so` de allegro, que nos obviamos de instalar por esa razón.
 
 
 # Compilar el código fuente (GCC)
@@ -65,6 +66,7 @@ el juego fue desarrollado con la libreria de Allegro para facilitar la carga de 
             $ sudo apt-get install liballegro5-dev
 
     - Más información y otros SO (Windows, Mac):
+    
         https://wiki.allegro.cc/index.php?title=Getting_Started#Installing_Allegro
 
 
