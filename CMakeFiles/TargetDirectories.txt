@@ -1,3 +1,0 @@
-/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles/rebuild_cache.dir
-/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles/edit_cache.dir
-/mnt/Windows/Users/Baymax pc/Documents/Ciencia de la Computacion/IPOO/SpaceShip2/CMakeFiles/SpaceShip.dir
