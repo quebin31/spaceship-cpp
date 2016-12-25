@@ -47,6 +47,9 @@ el juego fue desarrollado con la libreria de Allegro para facilitar la carga de 
     - **Nota:** La carpeta `./resources` es fundamental para que el juego funcione correctamente, como se observa en el anterior nos movimos a `resources` ya que ahí se genera el binario, por lo tanto, se puede borrar cualquier otra carpeta, excepto `resources`.
     - **Nota:** La capera `./libs` tambien es fundamental para que el juego funcione ya que ahi se encuentran los `.so` de allegro, que nos obviamos de instalar por esa razón.
 
+    - **Nota:** En caso existan errores con dependencias incumplidas, verificar el contenido de esta pagina:
+    https://wiki.allegro.cc/index.php?title=Install_Allegro5_From_Git/Linux/Debian#Direct_Dependencies
+
 
 # Compilar el código fuente (GCC)
 - Lo primero de todo, se necesita Allegro 5.x, lo ideal es compilarlo desde el codigo fuente pero tambien hay alternativas más sencillas.
