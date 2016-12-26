@@ -25,5 +25,7 @@ typedef ALLEGRO_TIMER AllegroTimer;
 typedef ALLEGRO_EVENT AllegroEvent;
 typedef ALLEGRO_BITMAP AllegroBitmap;
 typedef ALLEGRO_FONT AllegroFont;
+typedef ALLEGRO_SAMPLE AllegroAudio;
+typedef ALLEGRO_SAMPLE_INSTANCE AllegroAudioInstancia;
 
 #endif //SPACESHIP2_SPACESHIP_INCLUDES_H

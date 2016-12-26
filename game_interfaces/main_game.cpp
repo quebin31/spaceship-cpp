@@ -106,6 +106,13 @@ MainGame::MainGame()
   done_main = false;
   gameover_or_pause = false;
 
+  al_reserve_samples(2);
+
+  song = al_load_sample("theme_song.ogg");
+  instance_song = al_create_sample_instance(song);
+  al_set_sample_instance_playmode(instance_song, ALLEGRO_PLAYMODE_LOOP);
+  al_attach_sample_instance_to_mixer(instance_song, al_get_default_mixer());
+
   std::cout << "GAME_ENGINE: Registrando todos los eventos" << std::endl;
   al_register_event_source(event_queue, al_get_display_event_source(display));
   al_register_event_source(event_queue, al_get_timer_event_source(timer));
@@ -123,6 +130,8 @@ MainGame::~MainGame()
   al_destroy_display(display);
   al_destroy_timer(timer);
   al_destroy_event_queue(event_queue);
+  al_destroy_sample(song);
+  al_destroy_sample_instance(instance_song);
   delete objects;
 }
 
@@ -145,12 +154,13 @@ void MainGame::set_main_activity_state(const bool state) { done_main = state; }
 
 void MainGame::set_game_activity_state(const bool state) { gameover_or_pause = state; }
 
-void MainGame::show_menu() { objects->show_menu(); }
+void MainGame::show_menu() { objects->show_menu(); al_play_sample_instance(instance_song);}
 
 void MainGame::wait_for_event(AllegroEvent &event) { al_wait_for_event(event_queue, &event); }
 
 void MainGame::start_timer()
 {
+  al_stop_sample_instance(instance_song);
   al_start_timer(timer);
 
   if (HeartsInterface::empty())

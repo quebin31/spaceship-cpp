@@ -23,7 +23,8 @@ class MainGame
     AllegroEventQueue   *event_queue;
     AllegroTimer        *timer;
     ObjectsInterface    *objects;
-
+    AllegroAudio        *song;
+    AllegroAudioInstancia *instance_song;
     bool                 done_main;
     bool                 gameover_or_pause;
 
