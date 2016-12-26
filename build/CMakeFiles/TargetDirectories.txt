@@ -1,3 +1,0 @@
-/home/jesus/SpaceShip/build/CMakeFiles/rebuild_cache.dir
-/home/jesus/SpaceShip/build/CMakeFiles/edit_cache.dir
-/home/jesus/SpaceShip/build/CMakeFiles/SpaceShip.dir
