@@ -192,7 +192,7 @@ void BulletInterface::reset_bullets()
 {
   resetGunScore();
   if (bulletOP->size() == 0) return;
-  for (BulletObjPool::Iterator bullet_itr = getBegin(), bullet_end = getEnd(); bullet_itr != bullet_end; bullet_itr++)
+  for (BulletObjPool::Iterator bullet_itr = getBegin(), bullet_end = getEnd(); bullet_itr != bullet_end+1; bullet_itr++)
   {
     bulletOP->erase(bullet_itr);
     bullet_end = getEnd();
