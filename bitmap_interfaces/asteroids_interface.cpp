@@ -169,7 +169,7 @@ AsteroidObjPool *AsteroidInterface::getAOP()
 
 void AsteroidInterface::reset_asteroids()
 {
-  for (AsteroidObjPool::Iterator aster_itr = getBegin(), aster_end = getEnd(); aster_itr != aster_end; aster_itr++)
+  for (AsteroidObjPool::Iterator aster_itr = getBegin(), aster_end = getEnd(); aster_itr != aster_end+1; aster_itr++)
   {
     asteroidOP->erase(aster_itr);
     aster_end = getEnd();
