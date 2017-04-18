@@ -76,7 +76,7 @@ MainGame::MainGame()
     al_show_native_message_box(display,"Ups!","Vaya...","Algo salió mal mientras creaba el display",NULL,ALLEGRO_MESSAGEBOX_ERROR);
     std::cout << "GAME_ENGINE: Informar de este error" << std::endl;
     exit(EXIT_FAILURE);
-  }
+}
   std::cout << "GAME_ENGINE: Display creado correctamente @(" << display << ")" << std::endl;
 
   std::cout << "GAME_ENGINE: Creando la cola de eventos" << std::endl;
