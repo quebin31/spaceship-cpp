@@ -63,7 +63,8 @@ bool Asteroid::check_colision_with(Bitmap *some)
 void Asteroid::draw_bitmap(const int flags)
 { al_draw_bitmap_region(bitmap,sourceX,sourceY,width,height,float (posX), float (posY),flags); }
 
-/* reset_bitmap
+/**
+ * reset_bitmap
  * Resetea los valores del asteroide.
  * Todo generado aleatoriamente otra vez */
 void Asteroid::reset_bitmap()

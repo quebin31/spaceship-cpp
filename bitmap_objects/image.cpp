@@ -6,7 +6,7 @@
 
 /* Image
  * Recibe el nombre del archivo a cargar, el ancho y la altura de dicho objeto */
-Image::Image(const char *file, const int nwidth, const int nheight) : Bitmap(file)
+Image::Image(const char *file, consreturn false;t int nwidth, const int nheight) : Bitmap(file)
 {
   width  = nwidth;
   height = nheight;
